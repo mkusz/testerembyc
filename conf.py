@@ -879,11 +879,12 @@ IMAGE_FOLDERS = {'images': 'images'}
 # Used to create favicon link like this:
 # <link rel="name" href="file" sizes="size"/>
 FAVICONS = (
-    ("icon", "/icon_16x16.png", "16x16"),
-    ("icon", "/icon_32x32.png", "32x32"),
-    ("icon", "/icon_64x64.png", "64x64"),
-    ("icon", "/icon_128x128.png", "128x128"),
-    ("icon", "/icon_256x256.png", "256x256"),
+    ("icon", "/images/icon_16x16.png", "16x16"),
+    ("icon", "/images/icon_32x32.png", "32x32"),
+    ("icon", "/images/icon_64x64.png", "64x64"),
+    ("icon", "/images/icon_128x128.png", "128x128"),
+    ("icon", "/images/icon_256x256.png", "256x256"),
+    ("icon", "/images/icon_512x512.png", "512x512"),
 )
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
@@ -930,7 +931,13 @@ LICENSE = ""
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         {license}'
+CONTENT_FOOTER = """
+&copy; {date} <span style="font-weight: bold; color: #ffffff;">{author}</span> 
+w oparciu o silnik <a href="https://getnikola.com/" rel="nofollow">
+<img style="max-height: 20px; max-width: 50px" src="https://getnikola.com/assets/img/logo.svg" /></a> 
+z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow">
+<img style="max-height: 15px" src="https://pages.github.com/images/logo.svg" /></a> {license}
+"""
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
@@ -1361,19 +1368,19 @@ WARN_ABOUT_TAG_METADATA = False
 # It can be anything, data, functions, modules, etc.
 GLOBAL_CONTEXT = {'blog_sidebar': """\
 <div class="sidebar-module sidebar-module-inset">
-  <h4>About</h4>
-  <p>This is the Bootstrap Blog theme by @mdo, adapted for Nikola by @Kwpolska.
-  And this sidebar is completely customizable — you can put anything you want
-  here!</p>
+  <h4>O mnie</h4>
+  <p></p>
 </div>
 <div class="sidebar-module">
-  <h4>Links</h4>
+  <h4>Linki</h4>
   <ol class="list-unstyled">
+  <!--
     <li><a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog Theme</a></li>
     <li><a href="https://getnikola.com/">Nikola</a></li>
     <li><a href="https://twitter.com/mdo">@mdo</a></li>
     <li><a href="https://twitter.com/Kwpolska">@Kwpolska</a></li>
     <li><a href="https://twitter.com/GetNikola">@GetNikola</a></li>
+  -->
   </ol>
 </div>
 """

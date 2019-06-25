@@ -1,4 +1,0 @@
-Sitemap: https://testerembyc.pl/sitemapindex.xml
-
-User-Agent: *
-Host: testerembyc.pl

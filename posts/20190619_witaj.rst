@@ -1,11 +1,12 @@
-.. title: Witaj
-.. slug: witaj
+.. title: Hello world
+.. slug: hello-world
 .. date: 2019-06-19 14:33:27 UTC+02:00
-.. tags: witaj, o mnie, tester, po co
-.. category: 
+.. tags: hello, o mnie
+.. category: o mnie
 .. link: 
-.. description: Powitanie na blogu
+.. description: Pierwszy post na blogu
 .. type: text
+.. status: draft
 
 Aż chciało by się zakrzycznąć *"w końcu zabrał się do roboty i stworzył tego bloga"*.
 No niestety proces twórczy, a często i motywacja do niego to droga przez mękę.
