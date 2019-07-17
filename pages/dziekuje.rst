@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-Dziękuję za zapisanie się do newsletter'a i mam nadzieję, że wiedza, którą będę tutaj poruszać pozwoli Ci
-w realizacji Twoich marzeń, czy to związanych z pracą zawodową, czy też osobistych. Jednym z moich marzeń
+Dziękuję za zapisanie się do newsletter'a i mam nadzieję, że wiedza, którą będę się tutaj z Tobą dzielił, pozwoli Ci
+na realizacji Twoich marzeń, czy to związanych z pracą zawodową, czy też osobistych. Jednyo z moich marzeń
 widzisz poniżej i choć to tylko, krótka wizyta w `Muzeum Porsche w Stuttgarcie <https://www.porsche.com/museum/en/>`_
 to jednak mam nadzieję, że kiedyś uda mi się je zrealizować.
 
