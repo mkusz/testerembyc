@@ -1200,7 +1200,7 @@ INDEX_DISPLAY_POST_COUNT = 10
 # Bootstrap is served from BootstrapCDN (provided by MaxCDN)
 # Set this to False if you want to host your site without requiring access to
 # external resources.
-USE_CDN = False
+# USE_CDN = False
 
 # Check for USE_CDN compatibility.
 # If you are using custom themes, have configured the CSS properly and are
