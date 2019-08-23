@@ -1,16 +1,68 @@
 .. title: Hello world
 .. slug: hello-world
-.. date: 2019-06-19 14:33:27 UTC+02:00
-.. tags: hello, o mnie
+.. date: 2019-08-22 22:22:22 UTC+02:00
+.. tags: hello, o mnie, lenistwo
 .. category: o mnie
 .. link: 
 .. description: Pierwszy post na blogu
 .. type: text
-.. status: draft
+.. status: published
 
-Aż chciało by się zakrzycznąć *"w końcu zabrał się do roboty i stworzył tego bloga"*.
-No niestety proces twórczy, a często i motywacja do niego to droga przez mękę.
-U mnie jest nie inaczej. Zapewne u Ciebie bywa podobnie, choć znam osoby,
-które nigdy nie mają z tym problemu (a przynajmniej takie stwarzają pozory).
+Aż chciało by się zakrzycznąć *"w końcu zabrał się do roboty i stworzył tego bloga"*. No niestety proces twórczy, a często i motywacja do niego to droga przez mękę. U mnie jest nie inaczej. Zapewne u Ciebie bywa podobnie, choć znam osoby, które nigdy nie mają z tym problemu (a przynajmniej takie stwarzają pozory).
 
+.. END_TEASER
 
+Dlaczego powstał ten blog?
+==========================
+
+1. Z lenistwa
+-------------
+
+Z lenistwa (zapytasz zapewne)?
+
+No tak. Dobrze czytasz. Lenistwo często popycha mnie do różnych dziwnych rzeczy. Tylko jaki jest powód tego lenistwa? A no bardzo prosty: nie lubię się potwarzać i wolę coś spisać i podsyłać swojemu rozmówcy link do tego co już kiedyś powiedziałem lub napisałem, niż tłumaczyć 2 raz to samo.
+
+2. Pamiętnik
+------------
+
+Blog ma być również formą pamiętnika dla mnie samego oraz próbą dokumentacji moich spostrzeżeń i poglądów na pewne sprawy. Być może w przyszłości umożliwi mi to wyciągnięcie ciekawych wniosków poprzez porównanie tego co myślę obecnie (ja za 5-10 lat) z tym co myślałem kiedyś (teraz w momencie pisania, konkretnego wpisu).
+
+3. Dzielenie się wiedzą
+-----------------------
+
+Tu chyba nie ma czego tłumaczyć ;)
+
+Kim jestem?
+===========
+
+Na to pytanie najlepiej odpowiedziałem na podstronie `o mnie </pages/o-mnie>`_.
+
+O czym będę pisał?
+==================
+
+Zapewne większość materiałów, które będę tutaj umieszczał, to będą materiały dotyczące testowania w Pythonie, ale będę również wstawiał jakieś swoje przemyślenia dotyczące rynku pracy dla testerów, innych aspektów z życia testera (np. relacji na linii tester <> developer) oraz innych ciekawostek ze świata IT w aspekcie testowania. To co możesz Ty zrobić, czytając artykuły mojego autorstwa, to komentowanie ich i jeśli masz zamiar to robić, proszę przeczytaj `ten krótki regulamin </pages/regulamin>`_.
+
+Zapraszam Cię również do mojego newsletter'a, w którym będę wysyłał do Ciebie krótkie informacje związane z blogiem (np. nowe artykuły) lub krótkie ciekawości związane tematyką blog'a, ale zbyt krótkie, aby stworzyć z nich wpis na blogu. Obiecuję, że nie będę Ci zbytnio zaśmiecał skrzynki, bo sam spamu nie lubię.
+
+Jak często będą pojawiały się wpisy?
+====================================
+
+Tu niczego nie obiecuję, ale chciał bym aby pojawiały się mniej więcej co max 2 tygodnie. Zastrzegam sobie jednak prawo do odstępstw od tej reguły, gdyż z jednej blog to (póki co) dodatek do codziennych obowiązków, a z drugiej strony staram się dbać o to, aby wpisy na nim, były jednak odpowiedniej jakości z szacunku dla siebie (nie lubie bylejakości) oraz Ciebie. Szanuję swój i Twój czas i czas poświęcony na słabej jakości wpisy jest czasem podwójnie straconym:
+
+- dla mnie, bo przygotowałem coś co wystraszyło Ciebie i już raczej tu nie wrócisz, nawet jeśli kolejne wpisy będą zdecydowanie lepsze,
+- dla Ciebie, bo poświęcisz go na coś, co Ci się nie spodoba i już raczej tu nie wrócisz, a tego bym nie chciał.
+
+Czy można mnie gdzieś spotkać na żywo?
+======================================
+
+Tak można. Bywam na różnych meetup'ach w roli zarówno prelegenta jak i widza. Na pewno będę wrzucał tutaj informacje, jeśli gdzieś na tego typu spotkanie.
+
+Czy mogę Ci zadać pytanie?
+==========================
+
+Tak jak najbardziej. Na dole po prawej jest ikonka z piorunem, gdzie możesz zadać mi pytanie lub zapisz się do newsletter'a i wyślij mi maila w odpowiedzi. Staram się czytać i odpowiadać na wszystkie pytania. W przyszłości, jeśli będzie ich zbyt dużo, będę szukał innej formy odpowiedzi na nie, ale póki co jestem na początki tej drogi, a więc Twoja szansa na odpowiedź jest zdecydowanie większa.
+
+Witaj
+=====
+
+Tak wiec zapraszam Cię i będzie mi bardzo miło Cię gościć w moim kawałku przepastnego internetu.

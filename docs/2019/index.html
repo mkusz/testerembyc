@@ -57,7 +57,7 @@
 <article class="listpage"><header><h1>Posty z roku 2019</h1>
     </header><ul class="postlist">
 <li>
-<time class="listdate" datetime="2019-06-19T14:33:27+02:00" title="2019-06-19 14:33">2019-06-19 14:33</time><a href="../posts/hello-world/" class="listtitle">Hello world</a>
+<time class="listdate" datetime="2019-08-22T22:22:22+02:00" title="2019-08-22 22:22">2019-08-22 22:22</time><a href="../posts/hello-world/" class="listtitle">Hello world</a>
 </li>
     </ul></article>
 </div>
@@ -418,13 +418,16 @@ window._load_script = function(url, callback) {
 </div>
 <div class="sidebar-module sidebar-module-inset">
   <h4>Linki</h4>
-  <ol class="list-unstyled"><!--
-    <li><a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog Theme</a></li>
+  <ol class="list-unstyled">
+<li><a href="../pages/polityka-prywatnosci/">Polityka prywatności</a></li>
+    <li><a href="../pages/regulamin/">Regulamin</a></li>
+    <!--
     <li><a href="https://getnikola.com/">Nikola</a></li>
     <li><a href="https://twitter.com/mdo">@mdo</a></li>
     <li><a href="https://twitter.com/Kwpolska">@Kwpolska</a></li>
     <li><a href="https://twitter.com/GetNikola">@GetNikola</a></li>
-  --></ol>
+    -->
+  </ol>
 </div>
 
             </div>
@@ -435,7 +438,7 @@ window._load_script = function(url, callback) {
 <!-- START Bootstrap-Cookie-Alert -->
 <div class="alert text-center cookiealert" role="alert">
     <p><b>Lubisz ciasteczka?</b> 🍪</p>
-    <p>Używam ich, aby bardziej dostarczyć Ci lepszych treści. Chcęsz wiedzieć więcej?
+    <p>Używam ich, aby dostarczyć Ci lepszych treści. Chcęsz wiedzieć więcej?
         <a href="../pages/polityka-prywatnosci/" target="_blank">Kliknij tu.</a></p>
     <p><button type="button" class="btn btn-primary btn-sm acceptcookies">Lubię i akcpetuje ciasteczka</button></p>
 
@@ -513,7 +516,26 @@ z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_bla
         captions: function(element) {
             return element.getElementsByTagName('img')[0].alt;
     }});
-    </script><!-- Facebook Pixel Code --><script>
+    </script><!-- Load Facebook SDK for JavaScript --><div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v3.3'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script><!-- Your customer chat code --><div class="fb-customerchat" attribution="setup_tool" page_id="391052181505294" theme_color="#337ab7" logged_in_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)" logged_out_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)">
+</div>
+
+<!-- Facebook Pixel Code -->
+<script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};

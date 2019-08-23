@@ -308,9 +308,9 @@ article.post-micro {
   font-style: italic;
 }
 
-.body-content {
-  padding-bottom: 50px;
-}
+/*.body-content {*/
+/*  padding-bottom: 50px;*/
+/*}*/
 
 .row {
   margin-left: -15px;
@@ -318,7 +318,7 @@ article.post-micro {
 }
 
 #footer {
-  position: fixed;
+  /*position: fixed;*/
   bottom: 0px;
   padding-top: 10px;
   background-color: #000000;

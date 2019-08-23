@@ -7,19 +7,19 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://testerembyc.pl/</loc>
-  <lastmod>2019-07-15T09:39:00Z</lastmod>
+  <lastmod>2019-08-23T13:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/2019/</loc>
-  <lastmod>2019-06-25T20:43:00Z</lastmod>
+  <lastmod>2019-08-23T13:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/archive.html</loc>
-  <lastmod>2019-07-19T18:02:00Z</lastmod>
+  <lastmod>2019-08-23T14:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/</loc>
-  <lastmod>2019-07-15T09:39:00Z</lastmod>
+  <lastmod>2019-08-23T14:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/cat_o-mnie/</loc>
@@ -28,6 +28,10 @@
  <url>
   <loc>https://testerembyc.pl/categories/hello/</loc>
   <lastmod>2019-06-25T20:46:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/lenistwo/</loc>
+  <lastmod>2019-08-23T14:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/o-mnie/</loc>
@@ -47,11 +51,11 @@
  </url>
  <url>
   <loc>https://testerembyc.pl/galleries/</loc>
-  <lastmod>2019-07-15T09:39:00Z</lastmod>
+  <lastmod>2019-08-23T13:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/listings/</loc>
-  <lastmod>2019-07-15T09:39:00Z</lastmod>
+  <lastmod>2019-08-23T13:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/dziekuje-za-newsletter/</loc>
@@ -63,7 +67,7 @@
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/dziekuje-za-zapisanie-do-newslettera/</loc>
-  <lastmod>2019-07-17T13:52:00Z</lastmod>
+  <lastmod>2019-08-23T13:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/dziekuje/</loc>
@@ -71,15 +75,23 @@
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/o-mnie/</loc>
-  <lastmod>2019-07-15T09:39:00Z</lastmod>
+  <lastmod>2019-08-23T13:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/polityka-prywatnosci/</loc>
-  <lastmod>2019-07-15T09:39:00Z</lastmod>
+  <lastmod>2019-08-23T13:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/pages/regulamin/</loc>
+  <lastmod>2019-08-23T13:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/regulmin/</loc>
   <lastmod>2019-07-17T14:30:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/posts/hello-world/</loc>
+  <lastmod>2019-08-23T13:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/posts/witaj/</loc>
