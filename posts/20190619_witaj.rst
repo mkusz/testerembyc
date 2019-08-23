@@ -1,6 +1,6 @@
 .. title: Hello world
 .. slug: hello-world
-.. date: 2019-08-22 23:22:22 UTC+02:00
+.. date: 2019-08-23 22:22:22 UTC+02:00
 .. tags: hello, o mnie, lenistwo
 .. category: o mnie
 .. link: 
