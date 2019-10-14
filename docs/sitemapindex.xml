@@ -6,31 +6,15 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>https://testerembyc.pl/categories/cat_o-mnie.xml</loc>
-  <lastmod>2019-09-05T11:13:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://testerembyc.pl/categories/hello.xml</loc>
-  <lastmod>2019-09-05T11:13:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://testerembyc.pl/categories/lenistwo.xml</loc>
-  <lastmod>2019-09-05T11:13:00Z</lastmod>
- </sitemap>
- <sitemap>
-  <loc>https://testerembyc.pl/categories/o-mnie.xml</loc>
-  <lastmod>2019-09-05T11:13:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://testerembyc.pl/galleries/rss.xml</loc>
-  <lastmod>2019-10-14T21:58:00Z</lastmod>
+  <lastmod>2019-10-14T22:04:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/rss.xml</loc>
-  <lastmod>2019-10-14T21:58:00Z</lastmod>
+  <lastmod>2019-10-14T22:04:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/sitemap.xml</loc>
-  <lastmod>2019-10-14T21:58:00Z</lastmod>
+  <lastmod>2019-10-14T22:04:00Z</lastmod>
  </sitemap>
 </sitemapindex>
