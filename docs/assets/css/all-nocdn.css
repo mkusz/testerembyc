@@ -326,8 +326,12 @@ article.post-micro {
   width: 100%;
   z-index: 2000;
 }
-
-
+a {
+  color: #ff0000
+}
+a:hover {
+  color: black;
+}
 /*! SOURCE: http://getbootstrap.com/examples/blog/blog.css !*/
 
 /*
@@ -349,7 +353,7 @@ h6, .h6 {
   margin-top: 0;
   font-family: 'LatoLatinWebMedium', sans-serif;
   font-weight: normal;
-  color: #333;
+  color: #ff0000;
 }
 
 img {
@@ -422,7 +426,7 @@ img {
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
-  color: #fff;
+  color: #ff0000;
   text-decoration: none;
 }
 
@@ -464,7 +468,6 @@ img {
   color: #999;
 }
 
-
 /*
  * Main column and sidebar layout
  */
@@ -490,7 +493,6 @@ img {
   margin-bottom: 0;
 }
 
-
 /* Pagination */
 .pager {
   margin-bottom: 60px;
@@ -511,15 +513,16 @@ img {
 .blog-post {
   margin-bottom: 60px;
 }
+
 .blog-post-title {
   margin-bottom: 5px;
   font-size: 40px;
 }
+
 .blog-post-meta {
   margin-bottom: 20px;
   color: #999;
 }
-
 
 /*
  * Footer
@@ -532,6 +535,7 @@ img {
   background-color: #f9f9f9;
   border-top: 1px solid #e5e5e5;
 }
+
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
@@ -554,7 +558,8 @@ img {
 }
 
 .lead span {
-    color: #337ab7;
+    /*color: #337ab7;*/
+    color: #ff0000;
 }
 
 /*
@@ -562,4 +567,8 @@ img {
  */
 #_form_3_ .input-group {
   padding-bottom: 5px;
+}
+
+#basic-lastname-group {
+  display: None;
 }

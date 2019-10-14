@@ -64,7 +64,7 @@
         
     </header><ul class="postlist">
 <li>
-<time class="listdate" datetime="2019-08-22T23:22:22+02:00" title="2019-08-22 23:22">2019-08-22 23:22</time><a href="../../posts/hello-world/" class="listtitle">Hello world</a><a></a>
+<time class="listdate" datetime="2019-08-23T22:22:22+02:00" title="2019-08-23 22:22">2019-08-23 22:22</time><a href="../../posts/hello-world/" class="listtitle">Hello world</a><a></a>
 </li>
         </ul></article>
 </div>
@@ -98,11 +98,15 @@
   <div class="_form-content">
     <p>Chcesz być powiadamiany o nowościach na tej stronie oraz innych moich projektach?</p>
     <p>Jeśli tak, to zapisz się poniżej do newsletter'a.</p>
-    <div class="input-group">
+    <div class="input-group" id="basic-fullname-group">
       <span class="input-group-addon" id="basic-fullname">Imię</span>
       <input type="text" class="form-control" name="fullname" placeholder="Wpisz swoje imię" aria-describedby="basic-fullname">
 </div>
-    <div class="input-group">
+    <div class="input-group" id="basic-lastname-group">
+      <span class="input-group-addon" id="basic-lastname">Nazwisko</span>
+      <input type="text" class="form-control" name="lastname" placeholder="Wpisz swoje nazwisko" aria-describedby="basic-fullname">
+</div>
+    <div class="input-group" id="basic-email-group">
       <span class="input-group-addon" id="basic-email">E-mail</span>
       <input type="text" class="form-control" name="email" placeholder="Wpisz swój e-mail" aria-describedby="basic-email" required>
 </div>
@@ -523,7 +527,12 @@ z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_bla
         captions: function(element) {
             return element.getElementsByTagName('img')[0].alt;
     }});
-    </script><!-- Load Facebook SDK for JavaScript --><div id="fb-root"></div>
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-143859058-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-143859058-1');
+</script><!-- Load Facebook SDK for JavaScript --><div id="fb-root"></div>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -555,12 +564,7 @@ z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_bla
   fbq('track', 'PageView');
 </script><noscript><img height="1" width="1" style="display:none" alt="Facebook Pixel" src="https://www.facebook.com/tr?id=444619046317574&amp;ev=PageView&amp;noscript=1"></noscript>
 <!-- End Facebook Pixel Code -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143859058-1"></script><script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-143859058-1');
-</script>
+
+
 </body>
 </html>

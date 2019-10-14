@@ -1216,6 +1216,15 @@ INDEX_DISPLAY_POST_COUNT = 10
 # in the default template (base.tmpl).
 # (translatable)
 BODY_END = """
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143859058-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-143859058-1');
+</script>
+
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
@@ -1260,15 +1269,6 @@ BODY_END = """
   src="https://www.facebook.com/tr?id=444619046317574&ev=PageView&noscript=1"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143859058-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-143859058-1');
-</script>
-
 """
 
 # The possibility to extract metadata from the filename by using a
@@ -1413,7 +1413,7 @@ GLOBAL_CONTEXT = {'blog_sidebar': """
     <div class="input-group">
       <input type="text" class="form-control" name="q" placeholder="Szukaj" aria-describedby="basic-search">
       <div class="input-group-btn">
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-danger">
           <span class="glyphicon glyphicon-search" id="basic-search"></span> 
         </button>
       </div>
@@ -1424,10 +1424,12 @@ GLOBAL_CONTEXT = {'blog_sidebar': """
 
 <div class="sidebar-module sidebar-module-inset">
   <h4>O mnie</h4>
-  <p>Skoro tu zajrzałeś, to chcesz się dowiedzieć czym się zajmuję i czy w ogóle warto w przyszłości zaglądać
-  na mojego bloga. Myślę, że się nie zawiedziesz wpisami, ale ocenisz to dopiero jak je przeczytasz
-  (do czego serdecznie zachęcam), a w miedzy czasie, skoro już tu jesteś,
-  przeczytaj te kilka słów <a href="/pages/o-mnie">o mnie</a>.</p>
+  <p>Nazywam się <strong>Maciej Kusz</strong> i od 2008 roku zajmuję się testowaniem oprogramowania.
+  Na początku były to testy manualne, od 2011 początku testów automatycznych,
+  a od 2013 automatyzacja testów z wykorzystaniem <strong>Python'a</strong>.
+  Przez te kilka lat, zdarzyło mi się już być w kilku firmach i w kilku różnych projektach.
+  Jeśli chcesz wiedzieć coś więcej to zapraszam na stronę <a href="/pages/o-mnie">o mnie</a>,
+  gdzie znajduję się ciut więcej informacji.</p>
 </div>
 <div class="sidebar-module sidebar-module-inset">
 
@@ -1443,11 +1445,15 @@ GLOBAL_CONTEXT = {'blog_sidebar': """
   <div class="_form-content">
     <p>Chcesz być powiadamiany o nowościach na tej stronie oraz innych moich projektach?</p>
     <p>Jeśli tak, to zapisz się poniżej do newsletter'a.</p>
-    <div class="input-group">
+    <div class="input-group" id="basic-fullname-group">
       <span class="input-group-addon" id="basic-fullname">Imię</span>
       <input type="text" class="form-control" name="fullname" placeholder="Wpisz swoje imię" aria-describedby="basic-fullname">
     </div>
-    <div class="input-group">
+    <div class="input-group" id="basic-lastname-group">
+      <span class="input-group-addon" id="basic-lastname">Nazwisko</span>
+      <input type="text" class="form-control" name="lastname" placeholder="Wpisz swoje nazwisko" aria-describedby="basic-fullname">
+    </div>
+    <div class="input-group" id="basic-email-group">
       <span class="input-group-addon" id="basic-email">E-mail</span>
       <input type="text" class="form-control" name="email" placeholder="Wpisz swój e-mail" aria-describedby="basic-email" required>
     </div>
