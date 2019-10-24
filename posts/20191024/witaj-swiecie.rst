@@ -1,10 +1,10 @@
 .. title: Witaj świecie
 .. slug: witaj-swiecie
 .. date: 2019-10-24 15:00:00 UTC+02:00
-.. tags: 
-.. category: 
+.. tags: witaj, pierwszy post
+.. category: przywitanie
 .. link: 
-.. description: 
+.. description: Pierwszy post na blog'u testerembyc.pl
 .. type: text
 
 *Hello world* tak zaczyna się każda nowa przygoda w świecie IT. W większości tą przygodą jest nauka jakiegoś języka programowania i próba wyświetlenia tego napisu na ekranie użytkownika. W niektórych języka programowania wymaga to kilku linijek kodu, w innych (jak np. w **Python'ie**) aż 1. Nie wierzysz?
