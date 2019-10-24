@@ -11,7 +11,7 @@ Skoro tu zajrzałeś, to chcesz się dowiedzieć czym się zajmuję i czy w ogó
 
 Nazywam się **Maciej Kusz**, niektórzy znajomi wołają do mnie **maQ** lub **maku** choć nie jest to regułą. Urodziłem się w 1982 roku, a więc już kilka wiosen mam za sobą. Prywatnie mąż i ojciec 2 dorastających chłopaków. W wolnych chwilach, poza spędzaniem czasu z rodziną, spędzam go na własnoręcznym robieniu różnych rzeczy w domu i jego okolicy, czyli potocznie **DIY** (Do It Yourself). Jednym z przykładów może być poniższe zdjęcie:
 
-.. image:: /images/diy-garden.jpg
+.. image:: /images/page_about_me/diy_garden.jpg
 
 Można powiedzieć, że DIY jest moim hobby, które pozwala mi się oderwać od ekranu i wyciszyć oraz być kreatywnym nie tylko przy klawiaturze.
 
@@ -64,6 +64,6 @@ Jako ciekawostkę podam, że do obecnej pracy dostałem się również dlatego, 
 
 Na zakończenie tego prawie życiorysu, zapewne zastanawiasz się jak wyglądam? Już rozwiewam Twoje wątpliwości.
 
-.. image:: /images/me-in-the-mountians.jpg
+.. image:: /images/page_about_me/me_in_the_mountians.jpg
 
 Jeśli interesuje Cię coś więcej, to zapraszam do kontaktu przez dowolne kanały komunikacji, które wyszczególnione są po prawej w sekcji **Linki**.

@@ -7,39 +7,43 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://testerembyc.pl/</loc>
-  <lastmod>2019-10-14T22:04:00Z</lastmod>
+  <lastmod>2019-10-24T12:31:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/2019/</loc>
+  <lastmod>2019-10-24T08:40:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/archive.html</loc>
-  <lastmod>2019-10-14T22:04:00Z</lastmod>
+  <lastmod>2019-10-24T12:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/</loc>
-  <lastmod>2019-10-14T22:04:00Z</lastmod>
+  <lastmod>2019-10-24T12:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/galleries/</loc>
-  <lastmod>2019-10-14T22:04:00Z</lastmod>
+  <lastmod>2019-10-24T12:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/listings/</loc>
-  <lastmod>2019-10-14T22:03:00Z</lastmod>
+  <lastmod>2019-10-24T12:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/dziekuje-za-zapisanie-do-newslettera/</loc>
-  <lastmod>2019-10-14T22:04:00Z</lastmod>
+  <lastmod>2019-10-24T12:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/o-mnie/</loc>
-  <lastmod>2019-10-14T22:04:00Z</lastmod>
+  <lastmod>2019-10-24T12:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/polityka-prywatnosci/</loc>
-  <lastmod>2019-10-14T22:04:00Z</lastmod>
+  <lastmod>2019-10-24T12:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/regulamin/</loc>
-  <lastmod>2019-10-14T22:04:00Z</lastmod>
+  <lastmod>2019-10-24T12:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/posts/hello-world/</loc>

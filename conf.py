@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import time
+import re
 
 # !! This is the configuration of Nikola. !! #
 # !!  You should edit it to your liking.  !! #
@@ -880,16 +881,18 @@ IMAGE_FOLDERS = {'images': 'images'}
 # Used to create favicon link like this:
 # <link rel="name" href="file" sizes="size"/>
 FAVICONS = (
-    ("icon", "/images/icon_16x16.png", "16x16"),
-    ("icon", "/images/icon_32x32.png", "32x32"),
-    ("icon", "/images/icon_64x64.png", "64x64"),
-    ("icon", "/images/icon_128x128.png", "128x128"),
-    ("icon", "/images/icon_256x256.png", "256x256"),
-    ("icon", "/images/icon_512x512.png", "512x512"),
+    ("icon", "/images/icons/icon_16x16.png", "16x16"),
+    ("icon", "/images/icons/icon_32x32.png", "32x32"),
+    ("icon", "/images/icons/icon_64x64.png", "64x64"),
+    ("icon", "/images/icons/icon_128x128.png", "128x128"),
+    ("icon", "/images/icons/icon_256x256.png", "256x256"),
+    ("icon", "/images/icons/icon_512x512.png", "512x512"),
 )
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
 INDEX_TEASERS = True
+TEASER_REGEXP = re.compile('<!--\s*(more|MORE|TEASER_END|END_TEASER)(:(.+))?\s*-->', re.IGNORECASE)
+
 
 # HTML fragments with the Read more... links.
 # The following tags exist and are replaced for you:
