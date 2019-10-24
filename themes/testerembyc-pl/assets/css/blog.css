@@ -187,6 +187,11 @@ img {
   margin-bottom: 0;
 }
 
+.sidebar-module .icons li {
+  display: inline;
+  font-size: 32px;
+}
+
 /* Pagination */
 .pager {
   margin-bottom: 60px;
