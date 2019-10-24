@@ -1782,6 +1782,9 @@ window._load_script = function(url, callback) {
   <ol class="list-unstyled">
     <li><a href="/pages/polityka-prywatnosci/">Polityka prywatności</a></li>
     <li><a href="/pages/regulamin/">Regulamin</a></li>
+  <ol>
+  <ol class="list-unstyled">
+    <li><a target="_blank" href="https://www.linkedin.com/in/maciej-kusz/">LinkedIn</a></li>
     <!--
     <li><a href="https://getnikola.com/">Nikola</a></li>
     <li><a href="https://twitter.com/mdo">@mdo</a></li>
