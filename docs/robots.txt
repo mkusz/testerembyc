@@ -1,5 +1,0 @@
-Sitemap: https://testerembyc.pl/sitemapindex.xml
-
-User-Agent: *
-Disallow: /pages/dziekuje-za-zapisanie-do-newslettera/index.html
-Host: testerembyc.pl
