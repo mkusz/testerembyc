@@ -20,15 +20,15 @@ Oto jak prosto można to zrobić:
 
 Prawda, że proste?
 
-Jaki to ma związek z tym wpisem? Ano taki, że ten blog oraz wszystko co z nim związane będzie swojego rodzaju przygodą i jak każdą inną przygodę, trzeba postawić ten 1 krok, aby ją rozpocząć.
+Jaki to ma związek z tym wpisem? Ano taki, że ten blog oraz wszystko co z nim związane, będzie swojego rodzaju przygodą i jak w każdej innej przygodzie, trzeba postawić ten pierwszy krok, aby ją rozpocząć.
 
 Czym jeszcze ma być ten blog?
 -----------------------------
 
-Zdecydowanie ma być miejscem dla wszystkich, którzy są zainteresowani szeroko rozumianym *testowaniem oprogramowania* oraz wszystkim co z nim jest związane. Będę starał się dostarczyć Tobie drogi czytelniku, jak najlepszych treści, które wprowadzą Cie w ten świat jeśli dopiero zaczynasz lub pozwolą Ci rozwinąć swoje skrzydła i pozwolą na realizację marzeń związanych z pracą testera.
+Zdecydowanie ma być miejscem dla wszystkich, którzy są zainteresowani szeroko rozumianym *testowaniem oprogramowania* oraz wszystkim co jest z nim związane. Będę starał się dostarczyć Tobie drogi czytelniku, jak najlepszych treści, które wprowadzą Cie w ten świat, jeśli dopiero zaczynasz przygodę z testowaniem oprogramowania lub pozwolą Ci rozwinąć swoje skrzydła i być może pomogą w realizację Twoich planów związanych z pracą testera.
 
 Jeśli zastanawiasz się kim jestem i dlaczego sądzę, że jestem w stanie Ci w tym pomóc, to zachęcam do zapoznania się ze stroną `o mnie </pages/o-mnie>`_. Możesz również zajrzeć na mój profil na `LinkedIn <https://www.linkedin.com/in/maciej-kusz/>`_.
 
-Mam nadzieję, zę choć trochę zainteresowałem Cię do tego, aby częściej odwiedzać to miejsce.
+Mam nadzieję, zę choć trochę zainteresowałem Cię do tego, aby częściej odwiedzać tego blog'a.
 
 Jeśli chcesz być informowany o nowościach na moim blog'u to zapraszam Cię do zapisania się do mojego **newsletter'a** (formularz zapisu znajduje się to prawej stronie). Obiecuję, że nie będę spamował i poza informacjami o nowościach na mojej stronie, w newsletterze znajdziesz dodatkowe, ciekawe informacje ze świata IT oraz testowania oprogramowania.
