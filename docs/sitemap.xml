@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://testerembyc.pl/</loc>
-  <lastmod>2019-10-27T21:15:00Z</lastmod>
+  <lastmod>2019-10-29T22:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/2019/</loc>
@@ -15,19 +15,35 @@
  </url>
  <url>
   <loc>https://testerembyc.pl/archive.html</loc>
-  <lastmod>2019-10-29T22:34:00Z</lastmod>
+  <lastmod>2019-10-30T13:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/</loc>
-  <lastmod>2019-10-27T21:15:00Z</lastmod>
+  <lastmod>2019-10-30T13:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/cat_definicja/</loc>
+  <lastmod>2019-10-30T13:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/cat_przywitanie/</loc>
   <lastmod>2019-10-27T21:15:00Z</lastmod>
  </url>
  <url>
+  <loc>https://testerembyc.pl/categories/definicja/</loc>
+  <lastmod>2019-10-30T13:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/natura-testow/</loc>
+  <lastmod>2019-10-30T13:57:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://testerembyc.pl/categories/pierwszy-post/</loc>
   <lastmod>2019-10-27T21:15:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/testy/</loc>
+  <lastmod>2019-10-30T13:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/witaj/</loc>
@@ -60,5 +76,9 @@
  <url>
   <loc>https://testerembyc.pl/posts/20191024/witaj-swiecie/</loc>
   <lastmod>2019-10-27T21:15:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/</loc>
+  <lastmod>2019-10-30T13:57:00Z</lastmod>
  </url>
 </urlset>
