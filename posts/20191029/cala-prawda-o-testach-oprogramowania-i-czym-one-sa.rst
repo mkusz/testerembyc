@@ -6,6 +6,7 @@
 .. link: 
 .. description: Opis natury testów oprogramowania oraz krótka informacja o reperkusjach z tego wynikających
 .. type: text
+.. previewimage: /images/posts/testerembyc_600x600.png
 
 Tytuł szumny i jeśli zwrócił Twoją uwagę to bardzo się cieszę, bo pewnie tak jak ja swego czasu nie znalazłeś odpowiedzi na pytanie czym są testy oprogramowania? Zapewne przeglądając wikipedię i inne szanowane źródła wiedzy dla testerów, widziałeś mój czytelniku, definicję dotyczącą testowania oprogramowania. Mówi ona m.in. że testowanie oprogramowania jest jednym z procesów zapewnienia jakości wytwarzanego oprogramowania, który ma na celu jego weryfikację (sprawdzenie zgodności ze specyfikacją) oraz walidację (sprawdzenie zgodności z oczekiwaniami użytkownika).  Super definicja tylko, że nie mówi nic na temat tego czym są testy? Dlaczego to takie ważne i co wiedza o tym może nam dać?
 

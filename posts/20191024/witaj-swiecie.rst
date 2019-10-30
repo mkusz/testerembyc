@@ -6,6 +6,7 @@
 .. link: 
 .. description: Pierwszy post na blog'u testerembyc.pl
 .. type: text
+.. previewimage: /images/posts/testerembyc_600x600.png
 
 *Hello world* tak zaczyna się każda nowa przygoda w świecie IT. W większości tą przygodą jest nauka jakiegoś języka programowania i próba wyświetlenia tego napisu na ekranie użytkownika. W niektórych języka programowania wymaga to kilku linijek kodu, w innych (jak np. w **Python'ie**) aż 1. Nie wierzysz?
 
