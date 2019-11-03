@@ -2,12 +2,6 @@
 /*  padding-bottom: 50px;*/
 /*}*/
 
-@media (max-width: 600px) {
-  .blog-description {
-    font-size: 10px;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -182,6 +176,12 @@ img {
 .blog-description {
   font-size: 20px;
   color: #999;
+}
+
+@media (max-width: 600px) {
+  .blog-description {
+    font-size: 10px;
+  }
 }
 
 /*
