@@ -29,7 +29,7 @@
             <p class="lead blog-description">{{ blog_description }}</p>
             {{ template_hooks['page_header']() }}
         </div>
-        <nav class="blog-nav" role="navigation">
+         <nav class="blog-nav" role="navigation">
             {{ base.html_navigation_links() }}
             {{ template_hooks['menu']() }}
 
@@ -44,38 +44,40 @@
                 {{ template_hooks['menu_alt']() }}
             </ul>
         </nav>
-    </div><!-- /.container -->
-</div>
-<!-- End of Menubar -->
-
-<div class="container" id="content" role="main">
-    <div class="body-content">
-
-        <!--Body content-->
-        <div class="row">
-            <div class="col-sm-8 blog-main">
-                {% block content %}{% endblock %}
-            </div>
-            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-                {% if search_form %}
-                    {{ search_form }}
-                    <hr />
-                {% endif %}
-                {{ blog_sidebar }}
-            </div>
-        <!--End of body content-->
+        <!-- START Bootstrap-Cookie-Alert -->
+        <div class="alert text-center cookiealert" role="alert">
+            <p><b>Lubisz ciasteczka?</b> &#x1F36A;</p>
+            <p>Używam ich, aby dostarczyć Ci lepszych treści. Chcęsz wiedzieć więcej?
+                <a href="/pages/polityka-prywatnosci/" target="_blank">Kliknij tu.</a></p>
+            <p><button type="button" class="btn btn-danger btn-sm acceptcookies">Lubię i akceptuję ciasteczka</button></p>
         </div>
+        <!-- END Bootstrap-Cookie-Alert -->
+        <div class="body-content">
+
+            <!--Body content-->
+            <div class="row">
+                <div class="col-sm-8 blog-main">
+                    {% block content %}{% endblock %}
+                </div>
+                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                    {% if search_form %}
+                        {{ search_form }}
+                        <hr />
+                    {% endif %}
+                    {{ blog_sidebar }}
+                </div>
+            <!--End of body content-->
+            </div>
+        </div>
+        <footer class="blog-footer" id="footer">
+            {{ content_footer }}
+            {{ template_hooks['page_footer']() }}
+        </footer>
     </div>
-</div>
-<!-- START Bootstrap-Cookie-Alert -->
-<div class="alert text-center cookiealert" role="alert">
-    <p><b>Lubisz ciasteczka?</b> &#x1F36A;</p>
-    <p>Używam ich, aby dostarczyć Ci lepszych treści. Chcęsz wiedzieć więcej?
-        <a href="/pages/polityka-prywatnosci/" target="_blank">Kliknij tu.</a></p>
-    <p><button type="button" class="btn btn-danger btn-sm acceptcookies">Lubię i akcpetuje ciasteczka</button></p>
 
 </div>
-<!-- END Bootstrap-Cookie-Alert -->
+
+
 <script type="text/javascript">
 /*
  * Bootstrap Cookie Alert by Wruczek
@@ -92,11 +94,13 @@
        return;
     }
 
-    cookieAlert.offsetHeight; // Force browser to trigger reflow (https://stackoverflow.com/a/39451131)
+    {#cookieAlert.offsetHeight; // Force browser to trigger reflow (https://stackoverflow.com/a/39451131)#}
 
     // Show the alert if we cant find the "acceptCookies" cookie
     if (!getCookie("acceptCookies")) {
         cookieAlert.classList.add("show");
+    } else {
+        cookieAlert.classList.remove("show")
     }
 
     // When clicking on the agree button, create a 1 year
@@ -131,10 +135,6 @@
     }
 })();
 </script>
-<footer class="blog-footer" id="footer">
-    {{ content_footer }}
-    {{ template_hooks['page_footer']() }}
-</footer>
 
 {{ base.late_load_js() }}
     <!-- fancy dates -->
