@@ -65,26 +65,27 @@ img {
  */
 
 .cookiealert {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 45px;
-    left: 0;
-    width: 100%;
-    z-index: 2050;
-    display: none;
-    border-radius: 0;
-    color: #999;
-    background-color: #000000;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  z-index: 2050;
+  display: none;
+  border-radius: 0;
+  color: #999;
+  background-color: #000000;
 }
 
 .cookiealert.show {
-    margin-top: 5px;
-    display: inline;
+  margin-top: 5px;
+  margin-bottom: 0;
+  display: inline;
 }
 
 .cookiealert .acceptcookies {
-    margin-left: 10px;
-    vertical-align: baseline;
+  margin-left: 10px;
+  vertical-align: baseline;
 }
 
 /*
