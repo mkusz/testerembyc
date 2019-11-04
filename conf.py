@@ -139,11 +139,13 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/", "<span class='glyphicon glyphicon-home'></span>"),
-        ("/archive.html", "Archiwum"),
-        ("/categories/", "Tagi"),
-        ("/pages/o-mnie/", "O mnie"),
-        ("/rss.xml", "<span class='fas fa-rss'></span>")
+        ("/", "<img src='/images/icons/icon.svg' height='16' width='16' title='Strona główna' />"),
+        ("/archive.html", "<i class='fas fa-archive' title='Archiwum'></i>"),
+        ("/categories/", "<i class='fas fa-tags' title='Tagi i kategorie'></i>"),
+        ("/pages/o-mnie/", "<i class='fas fa-user' title='O mnie'></i>"),
+        # ("/categories/podcast/", "<i class='fas fa-podcast' title='Podcast'></i>"),
+        ("/rss.xml", "<i class='fas fa-rss' title='RSS'></i>"),
+        # ("https://testujwpythonie.pl/", "testujwpythonie.pl")
     ),
 }
 
