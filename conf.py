@@ -139,13 +139,14 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/", "<img src='/images/icons/icon.svg' height='16' width='16' title='Strona główna' />"),
-        ("/archive.html", "<i class='fas fa-archive' title='Archiwum'></i>"),
-        ("/categories/", "<i class='fas fa-tags' title='Tagi i kategorie'></i>"),
-        ("/pages/o-mnie/", "<i class='fas fa-user' title='O mnie'></i>"),
-        # ("/categories/podcast/", "<i class='fas fa-podcast' title='Podcast'></i>"),
-        ("/rss.xml", "<i class='fas fa-rss' title='RSS'></i>"),
-        # ("https://testujwpythonie.pl/", "testujwpythonie.pl")
+        ("/", "<img src='/images/icons/icon.svg' height='16' width='16' title='Strona główna' /><span>Strona&nbsp;główna</span>"),
+        ("/archive.html", "<i class='fas fa-archive' title='Archiwum'></i><span>Archiwum</span>"),
+        ("/categories/", "<i class='fas fa-tags' title='Tagi i kategorie'></i><span>Tagi&nbsp;i&nbsp;kategorie</span>"),
+        ("/pages/o-mnie/", "<i class='fas fa-user' title='O mnie'></i><span>O&nbsp;mnie</span>"),
+        # ("/categories/podcast/", "<i class='fas fa-podcast' title='Podcast'></i><span>Podcast</span>"),
+        ("/rss.xml", "<i class='fas fa-rss' title='RSS'></i><span>RSS</span>"),
+        # ("/pages/wydarzenia/", "<i class='fa fa-calendar' title='Wydarzenia'></i><span>Wydarzenia</span>"),
+        # ("https://testujwpythonie.pl/", "<span>Szkolenia</span>")
     ),
 }
 
@@ -1430,11 +1431,10 @@ GLOBAL_CONTEXT = {'blog_sidebar': """
 <div class="sidebar-module sidebar-module-inset">
   <h4>O mnie</h4>
   <p>Nazywam się <strong>Maciej Kusz</strong> i od 2008 roku zajmuję się testowaniem oprogramowania.
-  Na początku były to testy manualne, od 2011 początku testów automatycznych,
+  Na początku były to testy manualne, od 2011 początki testów automatycznych,
   a od 2013 automatyzacja testów z wykorzystaniem <strong>Python'a</strong>.
   Przez te kilka lat, zdarzyło mi się już być w kilku firmach i w kilku różnych projektach.
-  Jeśli chcesz wiedzieć coś więcej to zapraszam na stronę <a href="/pages/o-mnie">o mnie</a>,
-  gdzie znajduję się ciut więcej informacji.</p>
+  Na stronę <a href="/pages/o-mnie">o mnie</a>, znajdujdziesz ciut więcej informacji na ten temat.</p>
 </div>
 <div class="sidebar-module sidebar-module-inset">
 

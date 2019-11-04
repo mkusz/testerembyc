@@ -115,6 +115,24 @@ img {
 }
 
 /* Nav links */
+a.blog-nav-item span {
+  margin-left: 5px;
+  display: none;
+}
+
+a.blog-nav-item:hover span {
+  display: inline-block;
+  position: absolute;
+  top: 36px;
+  left: -12px;
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  vertical-align: center;
+  background-color: #000000;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
 .blog-nav-item-aside {
   font-style: italic;
 }
@@ -124,12 +142,12 @@ img {
   display: inline-block;
   padding: 10px;
   font-weight: 500;
-  color: #cdddeb;
+  color: #CDDDEB;
 }
 
 .blog-nav-item:hover,
 .blog-nav-item:focus {
-  color: #ff0000;
+  color: #FF0000;
   text-decoration: none;
 }
 
