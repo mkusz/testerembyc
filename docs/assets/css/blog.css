@@ -26,6 +26,7 @@ a {
 
 a:hover {
   color: black;
+  text-decoration: none;
 }
 
 /*! SOURCE: http://getbootstrap.com/examples/blog/blog.css !*/
@@ -224,11 +225,15 @@ img {
 }
 .pager > li > a {
   width: 140px;
-  padding: 10px 20px;
+  padding: 5px 20px;
   text-align: center;
-  border-radius: 30px;
+  border-radius: 4px;
 }
 
+.tags > li, .badge {
+  border-radius: 4px;
+  background-color: #000000;
+}
 
 /*
  * Blog posts
