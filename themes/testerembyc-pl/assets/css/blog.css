@@ -185,7 +185,9 @@ a.blog-nav-item:hover span {
 /*
  * Blog name and description
  */
-
+#blog-title {
+  display: none;
+}
 .blog-header {
   padding: 10px 15px 0 15px;
   background-color: #000000;
@@ -234,6 +236,7 @@ a.blog-nav-item:hover span {
 .sidebar-module .icons li {
   display: inline;
   font-size: 32px;
+  margin-right: 5px;
 }
 
 /* Pagination */

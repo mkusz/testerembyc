@@ -7,7 +7,11 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://testerembyc.pl/categories/cat_definicja.xml</loc>
-  <lastmod>2019-11-03T21:38:00Z</lastmod>
+  <lastmod>2019-11-14T22:08:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://testerembyc.pl/categories/cat_felieton.xml</loc>
+  <lastmod>2019-11-14T22:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/cat_przywitanie.xml</loc>
@@ -15,11 +19,19 @@
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/definicja.xml</loc>
-  <lastmod>2019-11-03T21:38:00Z</lastmod>
+  <lastmod>2019-11-14T22:08:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://testerembyc.pl/categories/istqb.xml</loc>
+  <lastmod>2019-11-14T22:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/natura-testow.xml</loc>
-  <lastmod>2019-11-03T21:38:00Z</lastmod>
+  <lastmod>2019-11-14T22:08:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://testerembyc.pl/categories/nauka.xml</loc>
+  <lastmod>2019-11-14T22:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/pierwszy-post.xml</loc>
@@ -27,7 +39,7 @@
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/testy.xml</loc>
-  <lastmod>2019-11-03T21:38:00Z</lastmod>
+  <lastmod>2019-11-14T22:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/witaj.xml</loc>
@@ -35,14 +47,14 @@
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/galleries/rss.xml</loc>
-  <lastmod>2019-11-04T09:57:00Z</lastmod>
+  <lastmod>2019-11-14T22:08:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/rss.xml</loc>
-  <lastmod>2019-11-03T21:38:00Z</lastmod>
+  <lastmod>2019-11-14T22:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/sitemap.xml</loc>
-  <lastmod>2019-11-04T09:57:00Z</lastmod>
+  <lastmod>2019-11-14T22:33:00Z</lastmod>
  </sitemap>
 </sitemapindex>

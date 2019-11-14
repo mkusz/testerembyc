@@ -15,15 +15,19 @@
  </url>
  <url>
   <loc>https://testerembyc.pl/archive.html</loc>
-  <lastmod>2019-11-04T09:57:00Z</lastmod>
+  <lastmod>2019-11-14T22:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/</loc>
-  <lastmod>2019-11-03T21:38:00Z</lastmod>
+  <lastmod>2019-11-14T22:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/cat_definicja/</loc>
   <lastmod>2019-11-03T21:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/cat_felieton/</loc>
+  <lastmod>2019-11-14T22:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/cat_przywitanie/</loc>
@@ -34,8 +38,16 @@
   <lastmod>2019-11-03T21:38:00Z</lastmod>
  </url>
  <url>
+  <loc>https://testerembyc.pl/categories/istqb/</loc>
+  <lastmod>2019-11-14T22:33:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://testerembyc.pl/categories/natura-testow/</loc>
   <lastmod>2019-11-03T21:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/nauka/</loc>
+  <lastmod>2019-11-14T22:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/pierwszy-post/</loc>
@@ -80,5 +92,9 @@
  <url>
   <loc>https://testerembyc.pl/posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/</loc>
   <lastmod>2019-11-03T21:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/</loc>
+  <lastmod>2019-11-14T22:08:00Z</lastmod>
  </url>
 </urlset>

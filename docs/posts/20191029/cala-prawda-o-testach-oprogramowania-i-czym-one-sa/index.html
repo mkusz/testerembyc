@@ -26,6 +26,7 @@ og: http://ogp.me/ns#
 <!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="description" itemprop="description" content="Opis natury testów oprogramowania oraz krótka informacja o reperkusjach z tego wynikających">
 <meta name="author" content="Maciej Kusz">
 <link rel="prev" href="../../20191024/witaj-swiecie/" title="Witaj świecie" type="text/html">
+<link rel="next" href="../../20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/" title="Dlaczego nie będziesz testerem i co możesz z tym fantem zrobić jeśli bardzo chcesz?" type="text/html">
 <meta property="og:site_name" content="testerembyc.pl">
 <meta property="og:title" content="Cała prawda o testach oprogramowania i czym one są">
 <meta property="og:url" content="https://testerembyc.pl/posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/">
@@ -51,8 +52,10 @@ og: http://ogp.me/ns#
         <div class="blog-header">
             <h1 class="blog-title">
                 <a href="https://testerembyc.pl/">
-                    <img src="../../../images/testerembyc_logo.svg" alt="testerembyc.pl" id="logo"></a>
+                    <img src="../../../images/testerembyc_logo.svg" alt="testerembyc.pl" id="logo"><span id="blog-title">testerembyc.pl</span>
+                </a>
             </h1>
+            <!-- <p class="lead blog-description">Czyli blog o tym, jak to jest być testerem i nie tylko</p> # Oryginal one-->
             <p class="lead blog-description">Czyli blog o tym, jak to jest być testerem <span>i nie tylko</span></p>
             
         </div>
@@ -68,7 +71,7 @@ og: http://ogp.me/ns#
             
         </nav><!-- START Bootstrap-Cookie-Alert --><div class="alert text-center cookiealert" role="alert">
             <p><b>Lubisz ciasteczka?</b> 🍪</p>
-            <p>Używam ich, aby dostarczyć Ci lepszych treści. Chcęsz wiedzieć więcej?
+            <p>Używam ich, aby dostarczyć Ci lepszych treści. Chcesz wiedzieć więcej?
                 <a href="../../../pages/polityka-prywatnosci/" target="_blank">Kliknij tu.</a></p>
             <p><button type="button" class="btn btn-danger btn-sm acceptcookies">Lubię i akceptuję ciasteczka</button></p>
         </div>
@@ -92,40 +95,36 @@ og: http://ogp.me/ns#
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>Tytuł szumny i jeśli zwrócił Twoją uwagę to bardzo się cieszę, bo pewnie tak jak ja swego czasu nie znalazłeś odpowiedzi na pytanie czym są testy oprogramowania? Zapewne przeglądając wikipedię i inne szanowane źródła wiedzy dla testerów, widziałeś mój czytelniku, definicję dotyczącą testowania oprogramowania. Mówi ona m.in. że testowanie oprogramowania jest jednym z procesów zapewnienia jakości wytwarzanego oprogramowania, który ma na celu jego weryfikację (sprawdzenie zgodności ze specyfikacją) oraz walidację (sprawdzenie zgodności z oczekiwaniami użytkownika).  Super definicja tylko, że nie mówi nic na temat tego czym są testy? Dlaczego to takie ważne i co wiedza o tym może nam dać?</p>
+<p>Tytuł szumny i jeśli zwrócił Twoją uwagę, to bardzo się cieszę, bo pewnie tak jak ja swego czasu nie znalazłeś odpowiedzi na pytanie, czym są testy oprogramowania? Zapewne przeglądając Wikipedię i inne szanowane źródła wiedzy dla testerów, widziałeś mój czytelniku, definicję dotyczącą testowania oprogramowania. Mówi ona m.in. że testowanie oprogramowania jest jednym z procesów zapewnienia jakości wytwarzanego oprogramowania, który ma na celu jego weryfikację (sprawdzenie zgodności ze specyfikacją) oraz walidację (sprawdzenie zgodności z oczekiwaniami użytkownika). Super definicja tylko, że nie mówi nic na temat tego, czym są testy? Dlaczego to takie ważne i co wiedza o tym może nam dać?</p>
 <!-- more -->
 <div class="section" id="wiedza-o-naturze-testow">
 <h2>Wiedza o naturze testów</h2>
-<p>Odpowiedzmy sobie najpierw na drugie pytanie, czyli co wiedza o tym czym są testy moze nam dać? Odpowiedź jest nieoczywista i może wydawać się ciut dziwna, bo pomaga rozwiązać bardzo dużo różnych problemów, np.:</p>
+<p>Odpowiedzmy sobie najpierw na drugie pytanie, czyli co wiedza o tym, czym są testy może nam dać? Odpowiedź jest nieoczywista i może wydawać się ciut dziwna, bo pomaga rozwiązać bardzo dużo różnych problemów, np.:</p>
 <ul class="simple">
 <li>w przypadku kodu testów automatycznych, odpowiada na pytanie, czy kod testów powinien mieć swoje oddzielne repozytorium, czy może powinien być częścią kodu aplikacji,</li>
 <li>w jakim języku należy pisać testy automatyczne,</li>
-<li>tester vs programista, kto ma rację i dlaczego tak często testerzy są tak mało doceniani przez programistów.</li>
+<li>tester kontra programista, kto ma rację i dlaczego tak często testerzy są tak mało doceniani przez programistów.</li>
 </ul>
-<p>Dlaczego większość punktów odnosi się do testów automatycznych? Bo z tym typem testów jest zawsze najwięcej problemów i jeśli my, jako tester, musimy podjąć pewne decyzje aby wdrożyć w naszym projekcie testy automatyczne, im bardziej będziemy świadomi potencjalnych problemów i ich przyczyn, tym łatwiej będzie nam zacząć oraz lepsze będą nasze testy. Wróćmy jednak do sedna tematu, czyli:</p>
+<p>Dlaczego większość punktów odnosi się do testów automatycznych? Bo z tym typem testów jest zawsze najwięcej problemów i jeśli my, jako tester, musimy podjąć pewne decyzje, aby wdrożyć w naszym projekcie testy automatyczne, im bardziej będziemy świadomi potencjalnych problemów i ich przyczyn, tym łatwiej będzie nam zacząć oraz lepsze będą nasze testy. Wróćmy jednak do sedna tematu, czyli:</p>
 </div>
 <div class="section" id="czym-sa-testy">
 <h2>Czym są testy?</h2>
 <p>Odpowiem, krótko i zwięźle: <strong>testy są produktem</strong>.</p>
-<p>Pewnie pytasz teraz: ale dlaczego? Zacznijmy od początku, czyli czym w ogóle jest produkt. Według Wikipedii, produktu to obiekt rynkowej wymiany i może być zarówno dobrem materialnym, usługą, miejscem, organizacją lub ideą. Widać, że w przypadku testów, możemy mówić o usłudze, a testerzy w zamian za jej dostarczenie dostają wynagrodzenie. Widać więc, że określenie testów produktem jest jak najbardziej poprawne.</p>
-<p>Skoro już wiemy czym są testy, to teraz zastanówmy się nad tym, kim jest klient, który kupuje usługę testowania.</p>
+<p>Pewnie pytasz teraz: ale dlaczego? Zacznijmy od początku, czyli czym w ogóle jest produkt. Według Wikipedii produktu to obiekt rynkowej wymiany i może być zarówno dobrem materialnym, usługą, miejscem, organizacją lub ideą. Widać, że w przypadku testów, możemy mówić o usłudze, a testerzy w zamian za jej dostarczenie dostają wynagrodzenie. Widać więc, że określenie testów produktem jest jak najbardziej poprawne.</p>
+<p>Skoro już wiemy, czym są testy, to teraz zastanówmy się nad tym, kim jest klient, który kupuje usługę testowania.</p>
 </div>
 <div class="section" id="klient-uslugi-testowania">
 <h2>Klient usługi testowania</h2>
-<p>Znów posłużę się definicją z Wikipedii. Klient to nabywca towaru na własny użytek, a więc ostatnie ogniwo w łańcuchu ekonomicznym, czyli ktoś kto korzysta z towaru i nie odsprzedaje go dalej (wtedy był by sprzedawcą lub pośrednikiem).</p>
-<p>Zastanówmy się kto najwięcej korzysta z produktu jakim są testy:
-project menadżer,
-dział marketingu,
-a może programiści?
-Prześledźmy to po kolei, komu może na tym najbardziej zależeć.</p>
-<p>Na pierwszy ogień weźmy <em>project menadżera</em>? Czy jemu w ogóle potrzebne są testy? Raczej nie, bo dla project menadżera najważniejsze jest wytworzenie oprogramowania w zadanym terminie i przy zadanym budżecie. Z tej perspektywy, testy są wręcz dodatkową przeszkodą i kosztem. Tak przynajmniej sądzi część PM'ów (choć widzę na tym polu zdecydowaną poprawę na przestrzeni ostatnich kilku lat), którzy nie rozumieją co dają testy. A testy polepszają jakość produktu oraz potrafią uchronić od kosztownych błędów, które mogą nadszarpnąć reputację firmy, a w niektórych przypadkach również doprowadzić do utraty życia przez ludzi (przykładem niech będzie , <a class="reference external" href="http://www.safetyresearch.net/blog/articles/toyota-unintended-acceleration-and-big-bowl-%E2%80%9Cspaghetti%E2%80%9D-code">błąd w oprogramowaniu samochodów marki Toyota</a>, który odpowiadał za obsługę pedału gazu).</p>
-<p>No to może <em>dział marketingu</em>? Ich zadaniem jest przedstawienie zalet sprzedawanego oprogramowania i argument o tym, że oprogramowanie zostało dobrze przetestowane, nie jest czymś, na co zwraca uwagę klient. Zastanów się, czy kiedykolwiek pytałeś sprzedawcy w sklepie AGD, czy lodówka lub pralka którą kupujesz została należycie przetestowana? Jako klient, wychodzisz z założenia, że kupowany produkt będzie po prostu działał poprawnie.</p>
-<p>W takim razie, może <em>programiści</em>? W końcu to oni piszą kod programu i jeśli będzie on miał jakieś błędy, to będą musieli je poprawić. To oni najbardziej ucierpią, gdy będą musieli poprawiać błędy kosztem implementacji nowych funkcjonalności, które powinny byś wdrożone zgodnie z harmonogramem. Również oni będą musieli się tłumaczyć dlaczego są obsuwy w terminach itp. Wychodzi więc na to, że tak naprawdę to właśnie programiści są głównym odbiorcą produktu, jakim są testy. Niestety wciąż wielu programistów uważa, że testerze przeszkadzają im w pracy, bo ciągle zgłaszają błędy i ogólnie rzecz biorąc czepiają się. Na szczęście takie podejście spotykane jest coraz rzadziej, szczególnie wtedy, gdy tworzone są interdyscyplinarne zespoły, gdzie zarówno tester jak i programista jest członkiem tego samego zespołu, a tzw. dowiezienie implementowanej funkcjonalności zależy również od tego czy została ona przetestowana.</p>
+<p>Znów posłużę się definicją z Wikipedii. Klient to nabywca towaru na własny użytek, a więc ostatnie ogniwo w łańcuchu ekonomicznym, czyli ktoś, kto korzysta z towaru i nie odsprzedaje go dalej (wtedy byłby sprzedawcą lub pośrednikiem).</p>
+<p>Zastanówmy się, kto najwięcej korzysta z produktu, jakim są testy: projekt menadżer, dział marketingu, a może programiści? Prześledźmy to po kolei, komu może na tym najbardziej zależeć.</p>
+<p>Na pierwszy ogień weźmy <em>projekt menadżera</em>? Czy jemu w ogóle potrzebne są testy? Raczej nie, bo dla projekt menadżera najważniejsze jest wytworzenie oprogramowania w zadanym terminie i przy zadanym budżecie. Z tej perspektywy, testy są wręcz dodatkową przeszkodą i kosztem. Tak przynajmniej sądzi część PM'ów (choć widzę na tym polu zdecydowaną poprawę na przestrzeni ostatnich kilku lat), którzy nie rozumieją, co dają testy. A testy polepszają jakość produktu oraz potrafią uchronić od kosztownych błędów, które mogą nadszarpnąć reputację firmy, a w niektórych przypadkach również doprowadzić do utraty życia przez ludzi (przykładem niech będzie, 'błąd w oprogramowaniu samochodów marki Toyota &lt;<a class="reference external" href="http://www.safetyresearch.net/blog/articles/toyota-unintended-acceleration-and-big-bowl">http://www.safetyresearch.net/blog/articles/toyota-unintended-acceleration-and-big-bowl</a>-“spaghetti”-code&gt;'_, który odpowiadał za obsługę pedału gazu).</p>
+<p>No to może <em>dział marketingu</em>? Ich zadaniem jest przedstawienie zalet sprzedawanego oprogramowania i argument o tym, że oprogramowanie zostało dobrze przetestowane, nie jest czymś, na co zwraca uwagę klient. Zastanów się, czy kiedykolwiek pytałeś sprzedawcy w sklepie AGD, czy lodówka lub pralka, którą kupujesz, została należycie przetestowana? Jako klient, wychodzisz z założenia, że kupowany produkt będzie po prostu działał poprawnie.</p>
+<p>W takim razie może <em>programiści</em>? W końcu to oni piszą kod programu i jeśli będzie on miał jakieś błędy, to będą musieli je poprawić. To oni najbardziej ucierpią, gdy będą musieli poprawiać błędy kosztem implementacji nowych funkcjonalności, które powinny byś wdrożone zgodnie z harmonogramem. Również oni będą musieli się tłumaczyć, dlaczego są obsuwy w terminach itp. Wychodzi więc na to, że tak naprawdę to właśnie programiści są głównym odbiorcą produktu, jakim są testy. Niestety wciąż wielu programistów uważa, że testerze przeszkadzają im w pracy, bo ciągle zgłaszają błędy i ogólnie rzecz biorąc, "czepiają się". Na szczęście takie podejście spotykane jest coraz rzadziej, szczególnie wtedy, gdy tworzone są interdyscyplinarne zespoły, gdzie zarówno tester, jak i programista jest członkiem tego samego zespołu, a tzw. dowiezienie implementowanej funkcjonalności zależy również od tego, czy została ona przetestowana.</p>
 </div>
 <div class="section" id="podsumowanie">
 <h2>Podsumowanie</h2>
-<p>Testy są produktem i to nie zależnie od tego czy są to testy automatyczne, manualne, penetracyjne, wydajnościowe czy dowolny inny ich rodzaj. Nawet testy jednostkowe (z ang. unit testy) również są produktem, choć w tym przypadku, jest on wytworem wewnętrznym zespołu programistów. Ich cel jest taki sam, czyli dostarczyć informacji na temat oprogramowania i poprawności jego implementacji.</p>
-<p>Podejście do testów, jako produktu niesie za sobą bardzo dużo reperkusji i daje testerom, bardzo mocny argument w sporach pomiędzy testerami, a programistami, którzy czasem zbyt bardzo próbują ingerować w testy (np. próbując narzucić w jakim języku programowania należy implementować testy automatyczne). Podniesienie argumentów dotyczących tego, że to testerzy są wytwórcą testów i mają odpowiednią wiedzę oraz umiejętności do ich wytworzenia, a programiści są klientem, który może co najwyżej podpowiadać w jakim kierunku produkt się rozwija, powinno kończyć wszelkie spory. Tak zdaję sobie sprawę, że nie do każdego takie argumenty mogą trafić oraz, że narzucają na testerów odpowiedzialność z testy, ale jak to mówił pewien klasyk "with great power, comes great responsibility".</p>
+<p>Testy są produktem i to nie zależnie od tego, czy są to testy automatyczne, manualne, penetracyjne, wydajnościowe czy dowolny inny ich rodzaj. Nawet testy jednostkowe (z ang. unit testy) również są produktem, choć w tym przypadku, jest on wytworem wewnętrznym zespołu programistów. Ich cel jest taki sam, czyli dostarczyć informacji na temat oprogramowania i poprawności jego implementacji.</p>
+<p>Podejście do testów, jako produktu niesie za sobą bardzo dużo reperkusji i daje testerom, bardzo mocny argument w sporach pomiędzy testerami a programistami, którzy czasem zbyt bardzo próbują ingerować w testy (np. próbując narzucić, w jakim języku programowania należy implementować testy automatyczne). Podniesienie argumentów dotyczących tego, że to testerzy są wytwórcą testów i mają odpowiednią wiedzę oraz umiejętności do ich wytworzenia, a programiści są klientem, który może co najwyżej podpowiadać, w jakim kierunku produkt się rozwija, powinno kończyć wszelkie spory. Tak zdaję sobie sprawę, że nie do każdego takie argumenty mogą trafić oraz że narzucają na testerów odpowiedzialność za testy, ale jak to mówił pewien klasyk "with great power, comes great responsibility".</p>
 </div>
 </div>
     </div>
@@ -137,6 +136,9 @@ Prześledźmy to po kolei, komu może na tym najbardziej zależeć.</p>
 <ul class="pager hidden-print">
 <li class="previous">
                 <a href="../../20191024/witaj-swiecie/" rel="prev" title="Witaj świecie">Poprzedni post</a>
+            </li>
+            <li class="next">
+                <a href="../../20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/" rel="next" title="Dlaczego nie będziesz testerem i co możesz z tym fantem zrobić jeśli bardzo chcesz?">Następny post</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Komentarze</h2>
                         <div id="disqus_thread"></div>
@@ -177,7 +179,7 @@ Prześledźmy to po kolei, komu może na tym najbardziej zależeć.</p>
 </div>
 
 <div class="sidebar-module sidebar-module-inset">
-  <h4>O mnie</h4>
+  <h3>O mnie</h3>
   <p>Nazywam się <strong>Maciej Kusz</strong> i od 2008 roku zajmuję się testowaniem oprogramowania.
   Na początku były to testy manualne, od 2011 początki testów automatycznych,
   a od 2013 automatyzacja testów z wykorzystaniem <strong>Python'a</strong>.
@@ -187,7 +189,7 @@ Prześledźmy to po kolei, komu może na tym najbardziej zależeć.</p>
 <div class="sidebar-module sidebar-module-inset">
 
 <form method="POST" action="https://maciejkusz.activehosted.com/proc.php" id="_form_3_" novalidate>
-  <input type="hidden" name="u" value="3"><input type="hidden" name="f" value="3"><input type="hidden" name="s"><input type="hidden" name="c" value="0"><input type="hidden" name="m" value="0"><input type="hidden" name="act" value="sub"><input type="hidden" name="v" value="2"><h4>Newsletter</h4>
+  <input type="hidden" name="u" value="3"><input type="hidden" name="f" value="3"><input type="hidden" name="s"><input type="hidden" name="c" value="0"><input type="hidden" name="m" value="0"><input type="hidden" name="act" value="sub"><input type="hidden" name="v" value="2"><h3>Newsletter</h3>
   <div class="_form-content">
     <p>Chcesz być powiadamiany o nowościach na tej stronie oraz innych moich projektach?</p>
     <p>Jeśli tak, to zapisz się poniżej do newsletter'a.</p>
@@ -521,15 +523,15 @@ window._load_script = function(url, callback) {
 </script>
 </div>
 <div class="sidebar-module sidebar-module-inset">
-  <h4>Linki</h4>
+  <h3>Linki</h3>
   <ol class="list-unstyled">
 <li><a href="../../../pages/polityka-prywatnosci/">Polityka prywatności</a></li>
     <li><a href="../../../pages/regulamin/">Regulamin</a></li>
   </ol>
 <ol class="list-unstyled icons">
-<li><a target="_blank" class="fab fa-linkedin" href="https://www.linkedin.com/in/maciej-kusz/"></a></li>
-    <li><a target="_blank" class="fab fa-facebook-square" href="https://www.facebook.com/testerembyc/"></a></li>
+<li><a target="_blank" class="fab fa-facebook-f" href="https://www.facebook.com/testerembyc/"></a></li>
     <li><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/testerembyc.pl/"></a></li>
+    <li><a target="_blank" class="fab fa-linkedin-in" href="https://www.linkedin.com/in/maciej-kusz/"></a></li>
   </ol>
 </div>
 
