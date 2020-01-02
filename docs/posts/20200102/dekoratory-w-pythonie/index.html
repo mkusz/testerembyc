@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+" lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Dekoratory w Pythonie. Czym są? Jak je stworzyć i używać.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dekoratory w Pythonie | testerembyc.pl</title>
+<link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/theme.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/latolatinfonts.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/blog.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/fa.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://testerembyc.pl/posts/20200102/dekoratory-w-pythonie/">
+<link rel="icon" href="../../../images/icons/icon_16x16.png" sizes="16x16">
+<link rel="icon" href="../../../images/icons/icon_32x32.png" sizes="32x32">
+<link rel="icon" href="../../../images/icons/icon_64x64.png" sizes="64x64">
+<link rel="icon" href="../../../images/icons/icon_128x128.png" sizes="128x128">
+<link rel="icon" href="../../../images/icons/icon_256x256.png" sizes="256x256">
+<link rel="icon" href="../../../images/icons/icon_512x512.png" sizes="512x512">
+<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="description" itemprop="description" content="Dekoratory w Pythonie. Czym są? Jak je stworzyć i używać.">
+<meta name="author" content="Maciej Kusz">
+<meta property="og:site_name" content="testerembyc.pl">
+<meta property="og:title" content="Dekoratory w Pythonie">
+<meta property="og:url" content="https://testerembyc.pl/posts/20200102/dekoratory-w-pythonie/">
+<meta property="og:description" content="Dekoratory w Pythonie. Czym są? Jak je stworzyć i używać.">
+<meta property="og:image" content="https://testerembyc.pl/images/posts/testerembyc_600x600.png">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-01-02T23:26:38+01:00">
+<meta property="article:tag" content="dekorator">
+<meta property="article:tag" content="funkcje">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@website">
+<meta name="twitter:creator" content="@username">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Przejdź do treści</a>
+
+<!-- Menubar -->
+
+<div class="blog-masthead">
+    <div class="container">
+<!-- This keeps the margins nice -->
+        <div class="blog-header">
+            <h1 class="blog-title">
+                <a href="https://testerembyc.pl/">
+                    <img src="../../../images/testerembyc_logo.svg" alt="testerembyc.pl" id="logo"><span id="blog-title">testerembyc.pl</span>
+                </a>
+            </h1>
+            <!-- <p class="lead blog-description">Czyli blog o tym, jak to jest być testerem i nie tylko</p> # Oryginal one-->
+            <p class="lead blog-description">Czyli blog o tym, jak to jest być testerem <span>i nie tylko</span></p>
+            
+        </div>
+         <nav class="blog-nav" role="navigation"><a href="../../../" class="blog-nav-item"><img src="../../../images/icons/icon.svg" height="16" width="16" title="Strona główna"><span>Strona główna</span></a>
+            <a href="../../../archive.html" class="blog-nav-item"><i class="fas fa-archive" title="Archiwum"></i><span>Archiwum</span></a>
+            <a href="../../../categories/" class="blog-nav-item"><i class="fas fa-tags" title="Tagi i kategorie"></i><span>Tagi i kategorie</span></a>
+            <a href="../../../pages/o-mnie/" class="blog-nav-item"><i class="fas fa-user" title="O mnie"></i><span>O mnie</span></a>
+            <a href="../../../rss.xml" class="blog-nav-item"><i class="fas fa-rss" title="RSS"></i><span>RSS</span></a>
+
+            
+
+                
+            
+        </nav><!-- START Bootstrap-Cookie-Alert --><div class="alert text-center cookiealert" role="alert">
+            <p><b>Lubisz ciasteczka?</b> 🍪</p>
+            <p>Używam ich, aby dostarczyć Ci lepszych treści. Chcesz wiedzieć więcej?
+                <a href="../../../pages/polityka-prywatnosci/" target="_blank">Kliknij tu.</a></p>
+            <p><button type="button" class="btn btn-danger btn-sm acceptcookies">Lubię i akceptuję ciasteczka</button></p>
+        </div>
+        <!-- END Bootstrap-Cookie-Alert -->
+        <div class="body-content">
+
+            <!--Body content-->
+            <div class="row">
+                <div class="col-sm-8 blog-main">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h2 class="p-name entry-title blog-post-title" itemprop="headline name"><a href="." class="u-url">Dekoratory w Pythonie</a></h2>
+
+        <div class="metadata blog-post-meta">
+            <p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2020-01-02T23:26:38+01:00" itemprop="datePublished" title="2020-01-02 23:26">2020-01-02 23:26</time></a></p>
+                <p class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/20200102/dekoratory-w-pythonie.html">Comments</a>
+
+
+            
+                <meta name="description" itemprop="description" content="Dekoratory w Pythonie. Czym są? Jak je stworzyć i używać."></p>
+</div>
+        
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Ostatnich kilka artykułów na tym blogu, było związane z ogólnikami dotyczącymi <a class="reference external" href="../../20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/">testów</a> i <a class="reference external" href="../../20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/">zawodu testera</a>. Tym razem wpis typowo techniczny związany z moim ulubionym językiem programowania, czyli Python'em. Język ten ma pewne <em>magiczne</em> metody i elementy nie spotykane w innych językach lub sposób ich użycia i implementacja są dużo bardziej złożone. Jednym z takich elementów jest tzw. <strong>dekorator</strong>.</p>
+<!-- more -->
+<div class="section" id="czym-jest-dekorator">
+<h2>Czym jest dekorator?</h2>
+<p>W skrócie <a class="reference external" href="https://pl.wikipedia.org/wiki/Dekorator_(wzorzec_projektowy)">dekorator</a> to jeden ze strukturalnych wzorców projektowych. Pozwala on na dynamiczne dodanie nowej funkcji do istniejącej klasy podczas działania programu.</p>
+<p>W Pythonie, implementacja dekoratorów dla metod po raz pierwszy została dodana w wersji <strong>2.4</strong> języka, a dokument, który to opisywał to <a class="reference external" href="https://www.python.org/dev/peps/pep-0318/">PEP 318 - Decorators for Functions and Methods</a> (<strong>PEP</strong> to skrót od <a class="reference external" href="https://www.python.org/dev/peps/">Python Enhancement Proposal's</a>). W Pythonie <strong>3.0</strong> wprowadzono natomiast możliwość tworzenia dekoratorów dla klas, a dokumentem, który to opisywał to <a class="reference external" href="https://www.python.org/dev/peps/pep-3129/">PEP 3129 - Class Decorators</a>.</p>
+<p>Zasada działania dekoratorów polega na <strong>opakowaniu</strong> (tzw. <a class="reference external" href="https://pl.wikipedia.org/wiki/Enkapsulacja">enkapsulacji</a>) oryginalnej klasy, nową klasą, tzw. klasą <strong>dekorującą</strong>.</p>
+<p>Na czym polega opakowywanie? Najprościej porównać to do starej rosyjskiej zabawki, <a class="reference external" href="https://pl.wikipedia.org/wiki/Matrioszka">matrioszki</a>.</p>
+<img alt="/images/posts/20200102/matrioszka.jpeg" src="../../../images/posts/20200102/matrioszka.jpeg"><p>Jeśli nie to polecam zapoznać się z poniższym filmikiem, bo zasada działania idealnie odzwierciedla mechanizm opakowywania (a jeśli znasz tą zabawkę, tzn. że zapewne jesteś co najmniej tak stary jak ja <img alt="wink" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/wink.png" style="width: 24px; height: 24px;">).</p>
+<div class="youtube-video">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lz6Olxb29qA?rel=0&amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+</div>
+<p>Jak widać Matrioszka, to zabawka, w której mniejsze Matrioszki, wkładane sa w środek większej. Mniejsza Matrioszka jest wtedy <em>enkapsulowana</em> w większej. Ta mniejsza Matrioszka to nasza klasa <strong>dekorowana</strong>, a większa to klasa <strong>dekorująca</strong>. Tak jak i w przypadku Matrioszek, tak i dekoratorów może być więcej niż jeden. Jedyna różnica pomiędzy Matrioszką, a dekoratorem jest taka, że Matrioszka to w zasadzie taka sama lalka jak jej mniejsza wersja (różnią się głównie rozmiarem). Dekorator natomiast to zupełnie inna klasa, która dodaje nowe możliwości do już istniejącej klasy (Matrioszka tego nie potrafi).</p>
+<p>Zauważ jedną, bardzo istotną rzecz: wszędzie powyżej wspominam, że dekorator jest klasą <strong>opakowującą</strong> inną klasę, a wspomniany PEP 318 mówi o dekorowaniu funkcji i metod. Czy przypadkiem nie ma tu gdzieś błędu?</p>
+</div>
+<div class="section" id="funkcja-jest-obiektem">
+<h2>Funkcja jest obiektem</h2>
+<p>Zanim przejdziemy do sedna, to zapoznajmy się z definicją <a class="reference external" href="https://pl.wikipedia.org/wiki/Obiekt_(programowanie_obiektowe)">obiektu</a>. Mocno streszczając, obiekt to struktura zawierająca dane i metody/funkcje służące do wykonania jakichś operacje na tych danych. Bardzo szybko zauważymy, że ten opis idealnie pasuje do <a class="reference external" href="https://pl.wikipedia.org/wiki/Klasa_(programowanie_obiektowe)">klasy</a>. Obiekt stworzony na podstawie definicji klasy, jest <em>instancją</em> danej klasy.</p>
+<p>Dlaczego więc, w Pythonie mówimy o dekorowaniu funkcji lub metod danej klasy (które też są funkcjami)? Otóż przyczyna jest bardzo prosta: funkcje w Pythonie są obiektami/klasami (nie zdziw się, bo od teraz będę używał tych nazw zamiennie). Jak każdy obiekt w Pythonie, tak i funkcja ma swój typ:</p>
+<pre class="code python"><a name="rest_code_cb913fd3fe174ea0a586d078afdf9821-1"></a><span class="k">def</span> <span class="nf">example_function</span><span class="p">():</span>
+<a name="rest_code_cb913fd3fe174ea0a586d078afdf9821-2"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"Example"</span><span class="p">)</span>
+<a name="rest_code_cb913fd3fe174ea0a586d078afdf9821-3"></a>
+<a name="rest_code_cb913fd3fe174ea0a586d078afdf9821-4"></a><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; function
+</pre>
+<p>Ponieważ funkcja jest obiektem, możemy ją przechowywać w zmiennej:</p>
+<pre class="code python"><a name="rest_code_69cc58a8274440818457cd82ffd37f41-1"></a><span class="k">def</span> <span class="nf">example_function</span><span class="p">():</span>
+<a name="rest_code_69cc58a8274440818457cd82ffd37f41-2"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"Example"</span><span class="p">)</span>
+<a name="rest_code_69cc58a8274440818457cd82ffd37f41-3"></a>
+<a name="rest_code_69cc58a8274440818457cd82ffd37f41-4"></a><span class="n">var</span> <span class="o">=</span> <span class="n">example_function</span>
+<a name="rest_code_69cc58a8274440818457cd82ffd37f41-5"></a>
+<a name="rest_code_69cc58a8274440818457cd82ffd37f41-6"></a><span class="n">var</span><span class="p">()</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; Example
+</pre>
+<pre class="code python"><a name="rest_code_8b2cee7e4b844c86bfbca585bb75c1ce-1"></a><span class="n">example_function</span><span class="p">()</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; Example
+</pre>
+<p>Zauważ, że podczas przypisywania funkcji do zmiennej pominąłem nawiasy <code>()</code>. Pominięcie nawiasów powoduje, że do zmiennej <code>var</code> przypisany jest adres w pamięci, gdzie przechowywane jest kod funkcji. Dopiero wywołanie <code>var()</code> powoduje taki sam efekt jak bezpośrednie wywołanie funkcji <code>example_function()</code>.</p>
+<p>Dodatkowo w ciele funkcji, można zdefiniować inną funkcję. Funkcja wewnętrzna nie będzie jednak mogła być wywołana spoza funkcji, w której jest umieszczona:</p>
+<pre class="code python"><a name="rest_code_92591cf6aa71468a981f084c11cfdf70-1"></a><span class="k">def</span> <span class="nf">external_function</span><span class="p">():</span>
+<a name="rest_code_92591cf6aa71468a981f084c11cfdf70-2"></a>    <span class="k">def</span> <span class="nf">internal_function</span><span class="p">():</span>
+<a name="rest_code_92591cf6aa71468a981f084c11cfdf70-3"></a>        <span class="k">print</span><span class="p">(</span><span class="s2">"Internal"</span><span class="p">)</span>
+<a name="rest_code_92591cf6aa71468a981f084c11cfdf70-4"></a>
+<a name="rest_code_92591cf6aa71468a981f084c11cfdf70-5"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"External"</span><span class="p">)</span>
+<a name="rest_code_92591cf6aa71468a981f084c11cfdf70-6"></a>    <span class="n">internal_function</span><span class="p">()</span>
+<a name="rest_code_92591cf6aa71468a981f084c11cfdf70-7"></a>
+<a name="rest_code_92591cf6aa71468a981f084c11cfdf70-8"></a><span class="n">external_function</span><span class="p">()</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; External
+    Internal
+</pre>
+<pre class="code python"><a name="rest_code_2ee577dcc0aa4c7a804b3b8efe4e610f-1"></a><span class="n">internal_function</span><span class="p">()</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; Traceback (most recent call last):
+      File "/.../interactiveshell.py", line 3326, in run_code
+        exec(code_obj, self.user_global_ns, self.user_ns)
+      File "&lt;ipython-input-17-6f1c04ea4501&gt;", line 1, in &lt;module&gt;
+        internal_function()
+    NameError: name 'internal_function' is not defined
+</pre>
+<p>Widzimy, że interpreter Python'a nie zna definicji funkcji <code>internal_function</code>.</p>
+<p>Skoro już wiemy, że funkcja jest obiektem, to ciekawe czy obiekt może być funkcją?</p>
+</div>
+<div class="section" id="czy-obiekt-moze-byc-funkcja">
+<h2>Czy obiekt może być funkcją?</h2>
+<p>W Python'ie klasy posiadają pewne <a class="reference external" href="https://docs.python.org/3/reference/datamodel.html#basic-customization">metody magiczne</a>. Jedną z nich jest metoda <code>__call__</code>. W przypadku klasy, funkcja ta umożliwia uruchomienie instancji klasy, tak jak by była funkcją:</p>
+<pre class="code python"><a name="rest_code_02cbb2169c6a4f4dab06a7e7764fe55d-1"></a><span class="k">class</span> <span class="nc">FuncClass</span><span class="p">():</span>
+<a name="rest_code_02cbb2169c6a4f4dab06a7e7764fe55d-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a name="rest_code_02cbb2169c6a4f4dab06a7e7764fe55d-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">var</span> <span class="o">=</span> <span class="p">[]</span>
+<a name="rest_code_02cbb2169c6a4f4dab06a7e7764fe55d-4"></a>
+<a name="rest_code_02cbb2169c6a4f4dab06a7e7764fe55d-5"></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+<a name="rest_code_02cbb2169c6a4f4dab06a7e7764fe55d-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</pre>
+<p>Powyżej widzisz klasę, która ma zaimplementowane 2 <em>metody magiczne</em>:</p>
+<ul class="simple">
+<li>
+<code>__init__</code>, która definiuje zmienną <code>var</code> jako pustą listę i wywoływana jest podczas inicjalizacji instancji klasy (<strong>uwaga</strong>, to nie jest konstruktor, choć wiele osób tą metodę tak określa),</li>
+<li>
+<code>__call__</code>, która przyjmuje jako argument wywołania dowolny <code>element</code> i dodanie go do listy w zmiennej <code>var</code>.</li>
+</ul>
+<p>Powyższa implementacja to nic skomplikowanego. Sprawdźmy zatem jak zachowuje się taka klasa.</p>
+<pre class="code python"><a name="rest_code_94dd2df342f540ca912828a3ea8b494a-1"></a><span class="n">f</span> <span class="o">=</span> <span class="n">FuncClass</span><span class="p">()</span>  <span class="c1"># Utworzenie instancji klasy</span>
+<a name="rest_code_94dd2df342f540ca912828a3ea8b494a-2"></a><span class="n">f</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Wywołujemy bezpośrednio metodę __call__ instancji f</span>
+<a name="rest_code_94dd2df342f540ca912828a3ea8b494a-3"></a><span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">var</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; [1]
+</pre>
+<pre class="code python"><a name="rest_code_c58ac2c4052646bc815d06e8a3f37ec1-1"></a><span class="c1"># Tym razem odnosimy się do instancji f z pominięciem metody __call__</span>
+<a name="rest_code_c58ac2c4052646bc815d06e8a3f37ec1-2"></a><span class="c1"># (zostanie ona automatycznie wywołana przez interpreter)</span>
+<a name="rest_code_c58ac2c4052646bc815d06e8a3f37ec1-3"></a>
+<a name="rest_code_c58ac2c4052646bc815d06e8a3f37ec1-4"></a><span class="n">f</span><span class="p">(</span><span class="s2">"Drugi"</span><span class="p">)</span>
+<a name="rest_code_c58ac2c4052646bc815d06e8a3f37ec1-5"></a><span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">var</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; [1, 'Drugi']
+</pre>
+<p>Widać powyżej, że klasa, może zachowywać się jak funkcja. Każdy obiekt w języku Python, może (nie musi) mieć zaimplementowaną metodę <code>__call__</code>. Skoro tak jest, to sprawdźmy czy normalna funkcja też ją ma. Wróćmy więc do naszej bardzo prostej funkcji:</p>
+<pre class="code python"><a name="rest_code_714672df5d4a484fba42fe8b26ddfea0-1"></a><span class="k">def</span> <span class="nf">example_function</span><span class="p">():</span>
+<a name="rest_code_714672df5d4a484fba42fe8b26ddfea0-2"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"Example"</span><span class="p">)</span>
+</pre>
+<p>Wiemy już, że możemy ją wywołać poprzez <code>example_function()</code> co w wyniku spowoduje wyświetlenie napisu <code>Example</code>. A co metodą <code>__call__</code>? Sprawdźmy:</p>
+<pre class="code python"><a name="rest_code_9ac2fb99f25641ff8a25b0a835ce00cb-1"></a><span class="n">example_function</span><span class="o">.</span><span class="fm">__call__</span><span class="p">()</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; Example
+</pre>
+<p>Udowodniliśmy właśnie, że klasa może zachowywać się jak funkcja oraz, że funkcja jest obiektem. Co prawda obiekt ten jest w pewien sposób ograniczony (nie da się do niego np. dynamicznie dodać zmiennej lub odczytać zmiennych z ciała funkcji), ale jednak jest obiektem.</p>
+<p>Wróćmy jednak do dekoratorów.</p>
+</div>
+<div class="section" id="pierwszy-dekorator">
+<h2>Pierwszy dekorator</h2>
+<p>Na początku pisałem, że dekorator to klasa, która opakowuje inną klasę dodając do opakowywanej klasy nową funkcjonalność. Skoro już wiemy, że funkcja jest klasą/obiektem to w Python'ie dekoratorem może być zarówno funkcja jak i klasa. Aby sobie nie utrudniać na początku, zacznijmy od implementacji dekoratora w postaci funkcji. Jednak, aby móc zaimplementować dekorator, musimy mieć co udekorować. Rozpatrzmy zatem taką prostą funkcję:</p>
+<pre class="code python"><a name="rest_code_f9a5fb986ed2488b803363cfbc844e44-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_f9a5fb986ed2488b803363cfbc844e44-2"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+</pre>
+<p>Powyższa funkcja ma za zadanie dodać do siebie 2 elementy. Sprawdźmy więc jak działa:</p>
+<pre class="code python"><a name="rest_code_eb63c59a971a406e8a4beb9253c117cf-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; 3
+</pre>
+<p>Wszystko super. Wynik taki jak się spodziewaliśmy. Sprawdźmy zatem inny zestaw argumentów:</p>
+<pre class="code python"><a name="rest_code_9fdddf4728364c0c9c877b4a36e18d33-1"></a><span class="n">add</span><span class="p">(</span><span class="s2">"1"</span><span class="p">,</span> <span class="s2">"2"</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; 12
+</pre>
+<p>Co? Jak to możliwe, że dostaliśmy <code>12</code>? Zauważ, że jako argumenty podaliśmy tekst z cyframi 1 i 2, a nie liczby 1 i 2. Interpreter Python'a uznał, że zamiast dodawania dwóch liczb, chcemy połączyć dwa ciągi znaków w jeden dłuższy ciąg znaków. Jak naprawić taki, kod nie zmieniając ciała funkcji <code>add</code>?</p>
+<p>Wykorzystamy w tym celu dekorator. Zacznijmy jednak od kilku rzeczy, które pomogą nam zrozumieć jak w swoim wnętrzu działa taki dekorator. Sprawdźmy jak działa poniższy kod:</p>
+<pre class="code python"><a name="rest_code_e2ad4ac7e4cb48978adc837d47f32673-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<a name="rest_code_e2ad4ac7e4cb48978adc837d47f32673-2"></a>    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"Decorated function name: {func.__name__}"</span><span class="p">)</span>
+<a name="rest_code_e2ad4ac7e4cb48978adc837d47f32673-3"></a>    <span class="k">return</span> <span class="n">func</span>
+<a name="rest_code_e2ad4ac7e4cb48978adc837d47f32673-4"></a>
+<a name="rest_code_e2ad4ac7e4cb48978adc837d47f32673-5"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_e2ad4ac7e4cb48978adc837d47f32673-6"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+<a name="rest_code_e2ad4ac7e4cb48978adc837d47f32673-7"></a>
+<a name="rest_code_e2ad4ac7e4cb48978adc837d47f32673-8"></a><span class="n">add</span> <span class="o">=</span> <span class="n">decorator</span><span class="p">(</span><span class="n">add</span><span class="p">)</span>
+<a name="rest_code_e2ad4ac7e4cb48978adc837d47f32673-9"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; Decorated function name: add
+    3
+</pre>
+<p>Implementacji funkcja <code>decorator</code> jako argument przyjmuje ciało innej funkcji oraz ma za zadnie wyświetlić jej nazwę oraz po prostu ją zwrócić.</p>
+<p>Następnie wykorzystana została właściwość, o której pisałem powyżej, czyli możliwości przypisania funkcji do zmiennej (w tym przypadku funkcję <code>add</code> przypisujemy do zmiennej o tej samej nazwie, czyli również <code>add</code>). Takie przypisanie powoduje, że zmienna <code>add</code> staje się funkcją, która w pierwszej kolejności wywoła dekorator, którego argumentem będzie rzeczywista funkcja <code>add</code>.</p>
+<p>Niestety taki zapis jest mało czytelny i nie do końca widać, patrząc tylko na definicję funkcji <code>add</code>, że została ona udekorowana. W Python'ie na szczęście istnieje na to prosty sposób:</p>
+<pre class="code python"><a name="rest_code_c22a1bd59d2641c38eaf5ac217c49713-1"></a><span class="nd">@decorator</span>
+<a name="rest_code_c22a1bd59d2641c38eaf5ac217c49713-2"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_c22a1bd59d2641c38eaf5ac217c49713-3"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+<a name="rest_code_c22a1bd59d2641c38eaf5ac217c49713-4"></a>
+<a name="rest_code_c22a1bd59d2641c38eaf5ac217c49713-5"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; Decorated function name: add
+    3
+</pre>
+<p>Implementację funkcji <code>decorator</code> pozostawiłem bez zmian, natomiast funkcja <code>add</code> została udekorowaną. Służy do tego zapis <code>@decorator</code> tuż powyżej jej definicji.</p>
+<p>Na końcu funkcja <code>add</code> została wywołana z dwoma argumentami w taki sam sposób jak wcześniej.</p>
+<p>W obu przypadkach wynikiem działania jest wyświetlenie nazwy funkcji (część za którą odpowiedzialny jest dekorator) oraz wynik dodawania dwóch liczb (za to odpowiedzialna jest funkcja <code>add</code>, która nie została w żadne sposób zmodyfikowana).</p>
+<p>Notacji z wykorzystaniem <code>@decorator</code>, jest tzw. <a class="reference external" href="https://pl.wikipedia.org/wiki/Lukier_sk%C5%82adniowy">syntactic sugar</a> dla poprzedniego zapisu (<code>add = decorator(add)</code>).</p>
+<p>Jeśli używasz już Python'a od pewnego czasu, to powyższy zapis nie powinien być dla Ciebie zupełnie obcy. Zapewne spotkałeś się z nim już nie raz, podczas tworzenia swoich własnych klas, gdzie często wykorzystywane są m.in. następujące dekoratory:</p>
+<ul class="simple">
+<li><code>@classmethod</code></li>
+<li><code>@staticmethod</code></li>
+<li><code>@property</code></li>
+</ul>
+</div>
+<div class="section" id="args-i-kwargs">
+<h2>args i kwargs</h2>
+<p>Wiemy już, jak stworzyć prosty (jeszcze nic nie robiący) dekorator. Skoro do środka dekoratora przekazujemy funkcję, to gdzieś powinny być jeszcze widoczne wszystkie argumenty, które do danej funkcji są przekazywane w momencie jej wywołania. Rozważmy poniższą definicję dekoratora (implementację funkcji <code>add</code> pominę, gdyż założyliśmy na początki, że jej nie zmieniamy):</p>
+<pre class="code python"><a name="rest_code_d3c3e2761ebd450199d7ddd7f333a6e0-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<a name="rest_code_d3c3e2761ebd450199d7ddd7f333a6e0-2"></a>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_d3c3e2761ebd450199d7ddd7f333a6e0-3"></a>        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"args (type: {type(args)}): {args}"</span><span class="p">)</span>
+<a name="rest_code_d3c3e2761ebd450199d7ddd7f333a6e0-4"></a>        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"kwargs (type: {type(kwargs)}): {kwargs}"</span><span class="p">)</span>
+<a name="rest_code_d3c3e2761ebd450199d7ddd7f333a6e0-5"></a>    <span class="k">return</span> <span class="n">wrapper</span>
+</pre>
+<p>Do definicji wewnętrznej funkcji <code>wrapper</code> dodałem dwa atrybuty:</p>
+<ul class="simple">
+<li><code>*args</code></li>
+<li><code>*kwargs</code></li>
+</ul>
+<p>Zobaczmy teraz co się stanie jak wywołamy poniższy kod:</p>
+<pre class="code python"><a name="rest_code_7e0d65fc023a4e17aa335597b64d4cca-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; args (type: &lt;class 'tuple'&gt;): (1, 2)
+    kwargs (type: &lt;class 'dict'&gt;): {}
+</pre>
+<p>Widzimy, że argumenty przekazane do funkcji tworzą zmienną <code>args</code> o typie <em>touple</em> (<em>krotka</em>), natomiast zmienną <code>kwargs</code> jest typu <em>dict</em> (<em>słownik</em>), ale jest to pusty słownik.</p>
+<p>Co się stanie, jak wywołamy funkcję <code>add</code> w inny sposób:</p>
+<pre class="code python"><a name="rest_code_b6eaac7d7a304363865e10e5881e6b92-1"></a><span class="n">add</span><span class="p">(</span><span class="n">first</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; *args (type: &lt;class 'tuple'&gt;): ()
+    **kwargs (type: &lt;class 'dict'&gt;): {'first': 1, 'second': 2}
+</pre>
+<p>Widzimy teraz, że <code>args</code> jest puste, natomiast <code>kwargs</code> zostało wypełnione.</p>
+<p>Możemy wywołać funkcję <code>add</code> również jako miks powyższych wywołań:</p>
+<pre class="code python"><a name="rest_code_5a8c3897c8e5492c9adb57d54a82f782-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; *args (type: &lt;class 'tuple'&gt;): (1,)
+    **kwargs (type: &lt;class 'dict'&gt;): {'second': 2}
+</pre>
+<p>Teraz zarówno <code>args</code> jak i <code>kwargs</code> zostały wypełnione.</p>
+<p>Domyślasz się już zapewne czym są <code>args</code> i <code>kwargs</code>, ale dla ścisłości odpowiedzmy sobie na pytanie:</p>
+<ul class="simple">
+<li>
+<code>*args</code> - nienazwane argumenty przekazywane do funkcji przyjmujące postać <em>krotki</em> ze względu na zachowanie kolejności argumentów</li>
+<li>
+<code>*kwargs</code> - nazwane argumenty przekazywane do funkcji przyjmujące postać <em>słownika</em> ze względu na powiązanie nazwy argumentu (<em>key</em>), z jej wartością (<em>value</em>).</li>
+</ul>
+<p>Możliwość przekazania argumentów do funkcji przy użyciu <code>args</code> i <code>kwargs</code> niesie za sobą pewne implikacje. Najważniejszą implikacją jest konieczność obsłużenia obu przypadków w ciele dekoratora, jeśli chcemy w jakiś sposób modyfikować przekazywane do dekorowanej funkcji atrybuty.</p>
+<p>Wróćmy teraz do napisania dekoratora, który ma za zadanie sprawdzić typ argumentów przekazywanych do funkcji <code>add</code> tak, aby przeprowadziła działanie dodawania dwóch liczb.</p>
+<p>Przyjmijmy najprostsze założenie, że aby funkcja zadziałała poprawnie, argumenty funkcji muszą być typu <em>int</em> lub <em>float</em>. W przypadku jeśli dowolny z argumentów, będzie inny typem, funkcja nie zostanie uruchomiona i zostanie zwrócony wyjątek typu <em>TypeErrror</em>.</p>
+<pre class="code python"><a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-2"></a>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-3"></a>        <span class="c1"># Zmienna określająca czy typy argumentów są poprawne</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-4"></a>        <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-5"></a>        <span class="c1"># Utworzenie kopi listy argumentów</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-6"></a>        <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-7"></a>        <span class="c1"># Rozszerzenie listy argumenów</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-8"></a>        <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-9"></a>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-10"></a>        <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-11"></a>            <span class="c1"># Poniższe wyrażenia zawiera w sobie dwie ciekawe</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-12"></a>            <span class="c1"># konstrukcje:</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-13"></a>            <span class="c1"># 1. tzw. short if sprawdzający czy podany argument jest</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-14"></a>            <span class="c1"># typu int lub float i zwracający odpowiednią wartość</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-15"></a>            <span class="c1"># 2. operator mnożenia z przypisaniem *= powoduje, że gdy</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-16"></a>            <span class="c1"># choć jeden z atrybutów nie będzie odpowiedniego typy</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-17"></a>            <span class="c1"># to zmienna is_correct przybierze wartość False</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-18"></a>            <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-19"></a>                <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="k">else</span> <span class="bp">False</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-20"></a>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-21"></a>        <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-22"></a>            <span class="c1"># Przekazanie argumentów do dekorowanej funkcji,</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-23"></a>            <span class="c1"># która zostaje wywołana, a jej wynik zwrócony</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-24"></a>            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-25"></a>        <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-26"></a>            <span class="c1"># Zwrócenie wyjątku, gdy choć jeden atrybut przekazany do</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-27"></a>            <span class="c1"># funkcji nie jest typu int lub float</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-28"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"One of the arguments is not int or float"</span><span class="p">)</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-29"></a>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-30"></a>    <span class="k">return</span> <span class="n">wrapper</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-31"></a>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-32"></a><span class="nd">@decorator</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-33"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_1f94058a51384c67a75f4f3cbe3e296d-34"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+</pre>
+<p>Mam nadzieję, że powyższy kod jest dla Ciebie zrozumiały (umieściłem odpowiednie komentarze w samym kodzie, aby lepiej wyjaśnić co on robi).</p>
+<p>Jeśli jednak masz problem ze zrozumieniem zapisu <code>is_correct *= True if any(isinstance(arg, t) for t in [int, float]) else False</code> poniżej umieszczam jego ekwiwalent:</p>
+<pre class="code python"><a name="rest_code_647403f36bae4caf987bb7a2f95ee014-1"></a><span class="n">is_correct_helper</span> <span class="o">=</span> <span class="bp">False</span>
+<a name="rest_code_647403f36bae4caf987bb7a2f95ee014-2"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+<a name="rest_code_647403f36bae4caf987bb7a2f95ee014-3"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<a name="rest_code_647403f36bae4caf987bb7a2f95ee014-4"></a>        <span class="n">is_correct_helper</span> <span class="o">=</span> <span class="bp">True</span>
+<a name="rest_code_647403f36bae4caf987bb7a2f95ee014-5"></a><span class="n">is_correct</span> <span class="o">*=</span> <span class="n">is_correct_helper</span>
+</pre>
+<p>Zauważ jednak, że ten kawałek kodu wymaga wprowadzenia dodatkowej zmiennej pomocniczej <code>is_correct_helper</code> i nie jest tak zwięzły jak wcześniejszy zapis (wcześniejszy zapis będę używał w późniejszych przykładach).</p>
+<p>Sprawdźmy teraz czy powyższy kod działa poprawnie dla argumentów o poprawnych typach:</p>
+<pre class="code python"><a name="rest_code_a45a9107ad9040ee9e185b404264a9b3-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; 3.0
+</pre>
+<p>Wynik jest poprawny. A co jeśli jeden z argumentów będzie ciągiem znaków?</p>
+<pre class="code python"><a name="rest_code_1f861b28580f47a7bd4c2ced069baeea-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"2.0"</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; Traceback (most recent call last):
+      File "/.../interactiveshell.py", line 3326, in run_code
+        exec(code_obj, self.user_global_ns, self.user_ns)
+      File "&lt;ipython-input-2-fc0327af835d&gt;", line 20, in &lt;module&gt;
+        add(1, "2.0")
+      File "&lt;ipython-input-2-fc0327af835d&gt;", line 13, in wrapper
+        raise TypeError("One of the arguments is not int or float")
+    TypeError: One of the arguments is not int or float
+</pre>
+<p>Zgodnie z podejrzeniem wynikiem działania jest wyjątek typu <em>TypeError</em>, a więc taki jaki zakładaliśmy.</p>
+<p>Widzimy więc, że nasz dekorator działa tak jak tego oczekiwaliśmy, a nasza funkcja dekorowana (<code>add</code>) nie została zmodyfikowana.</p>
+</div>
+<div class="section" id="dekorator-z-parametrami">
+<h2>Dekorator z parametrami</h2>
+<p>A co gdybyśmy chcieli np. wymusić, aby dekorator (poza już istniejącą implementacją) sprawdzał, czy oba parametry były tego samego typu? Musielibyśmy być w stanie przekazać do dekoratora jakieś dodatkowy parametr. Skoro wiemy, że dekorator jest funkcją, to być może dało by się do takiego dekoratora przekazać ten parametr jako argument funkcji? Sprawdźmy więc.</p>
+<pre class="code python"><a name="rest_code_e8900fe436874887b83f6cf63c814836-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">args_type_list</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>  <span class="c1"># Dekorator z argumentem</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-2"></a>    <span class="k">def</span> <span class="nf">inner_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>  <span class="c1"># Wcześniejszy dekorator</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-3"></a>        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-4"></a>            <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-5"></a>            <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-6"></a>            <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-7"></a>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-8"></a>            <span class="c1"># Zmienna pomocnicza użyta podczas sprawdzania typów,</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-9"></a>            <span class="c1"># która przyjmuje przyjmuje listę typów przekazaną do</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-10"></a>            <span class="c1"># dekoratora lub domyślną listę typów</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-11"></a>            <span class="n">types_list</span> <span class="o">=</span> <span class="n">args_type_list</span> <span class="k">if</span> \
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-12"></a>                <span class="nb">isinstance</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-13"></a>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-14"></a>            <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-15"></a>                <span class="c1"># Lista typów zamieniona na zmienną pomocniczą</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-16"></a>                <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-17"></a>                    <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">types_list</span><span class="p">)</span> \
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-18"></a>                    <span class="k">else</span> <span class="bp">False</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-19"></a>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-20"></a>            <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-21"></a>                <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-22"></a>            <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-23"></a>                <span class="c1"># Drobna modyfikacja</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-24"></a>                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">f</span><span class="s2">"One of the arguments is not one type of: "</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-25"></a>                                <span class="n">f</span><span class="s2">"{args_type_list}"</span><span class="p">)</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-26"></a>        <span class="k">return</span> <span class="n">wrapper</span>
+<a name="rest_code_e8900fe436874887b83f6cf63c814836-27"></a>    <span class="k">return</span> <span class="n">inner_decorator</span>
+</pre>
+<p>Wprowadziliśmy tutaj dodatkowy poziom zagnieżdżenia oraz dokonaliśmy drobnej modyfikacji podczas sprawdzenia typów (wszystkie zmiany opatrzone zostały komentarzem w kodzie).</p>
+<p>Sprawdźmy teraz jak udekorować naszą funkcję i jakie wyniki zostaną wyświetlone jak spróbujemy jej użyć.</p>
+<pre class="code python"><a name="rest_code_06bd8587853541c6afd7e5c267eb6a8f-1"></a><span class="nd">@decorator</span><span class="p">([</span><span class="nb">int</span><span class="p">])</span>  <span class="c1"># Wywołanie dekoratora z parametrem</span>
+<a name="rest_code_06bd8587853541c6afd7e5c267eb6a8f-2"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_06bd8587853541c6afd7e5c267eb6a8f-3"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+<a name="rest_code_06bd8587853541c6afd7e5c267eb6a8f-4"></a>
+<a name="rest_code_06bd8587853541c6afd7e5c267eb6a8f-5"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; 3
+</pre>
+<p>Nic wielkiego, wszystko jest ok. A jak zmienimy typ jednego z argumentów wywołania funkcji <code>add</code>?</p>
+<pre class="code python"><a name="rest_code_2b8c3dc11125459d98059a75d9445e66-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; Traceback (most recent call last):
+      File "/.../interactiveshell.py", line 3326, in run_code
+        exec(code_obj, self.user_global_ns, self.user_ns)
+      File "&lt;ipython-input-2-7a51c39f1784&gt;", line 38, in &lt;module&gt;
+        add(1, 2.0)
+      File "&lt;ipython-input-2-7a51c39f1784&gt;", line 21, in wrapper
+        raise TypeError(f"One of the arguments is not one type of: "
+    TypeError: One of the arguments is not one type of: [&lt;class 'int'&gt;]
+</pre>
+<p>Super. Wynik spodziewany, ponieważ jeden z argumentów jest typu <em>float</em>.</p>
+<p>Niestety jeśli spróbujemy teraz użyć dekoratora bez parametrów czyli zamiast zapisu <code>decorator(...)</code> użyjemy <code>decorator</code> tak jak wcześniej, otrzymamy następujący komunikat błędu:</p>
+<pre class="doctest-block">
+&gt;&gt;&gt; Traceback (most recent call last):
+      File "/.../interactiveshell.py", line 3326, in run_code
+        exec(code_obj, self.user_global_ns, self.user_ns)
+      File "&lt;ipython-input-3-50502c662126&gt;", line 38, in &lt;module&gt;
+        add(1, 2.0)
+    TypeError: inner_decorator() takes 1 positional argument but 2 were given
+</pre>
+<p>Czy możemy sobie z tym problemem jakoś poradzić?</p>
+<img alt="/images/posts/20200102/this_is_python.jpg" src="../../../images/posts/20200102/this_is_python.jpg"><p>Co ciekawe, taka modyfikacja wcale nie jest taka trudna do zrobienia. Wystarczy zmienić jedną linijkę kodu w dekoratorze. Przeprowadźmy więc wymaganą modyfikację oraz sprawdźmy stary zapis dekoratora wraz z wywołaniem udekorowanej funkcji:</p>
+<pre class="code python"><a name="rest_code_844523620bc545488ae33d28e11bdf57-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">args_type_list</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-2"></a>    <span class="k">def</span> <span class="nf">inner_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-3"></a>        <span class="c1"># @wraps(func)</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-4"></a>        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-5"></a>            <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-6"></a>            <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-7"></a>            <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-8"></a>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-9"></a>            <span class="n">types_list</span> <span class="o">=</span> <span class="n">args_type_list</span> <span class="k">if</span> \
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-10"></a>                <span class="nb">isinstance</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-11"></a>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-12"></a>            <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-13"></a>                <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-14"></a>                    <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">types_list</span><span class="p">)</span> \
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-15"></a>                    <span class="k">else</span> <span class="bp">False</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-16"></a>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-17"></a>            <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-18"></a>                <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-19"></a>            <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-20"></a>                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">f</span><span class="s2">"One of the arguments is not one type of: "</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-21"></a>                                <span class="n">f</span><span class="s2">"{args_type_list}"</span><span class="p">)</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-22"></a>        <span class="k">return</span> <span class="n">wrapper</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-23"></a>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-24"></a>    <span class="c1"># Tutaj następuje zmiana tego, co przez dekorator jest zwracane</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-25"></a>    <span class="c1"># w zależności od tego czy przekażemy argumenty do dekoratora czy nie</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-26"></a>    <span class="k">return</span> <span class="n">inner_decorator</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">)</span> <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">)</span> \
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-27"></a>        <span class="k">else</span> <span class="n">inner_decorator</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-28"></a>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-29"></a><span class="nd">@decorator</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-30"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-31"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-32"></a>
+<a name="rest_code_844523620bc545488ae33d28e11bdf57-33"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+</pre>
+<pre class="doctest-block">
+&gt;&gt;&gt; 3.0
+</pre>
+<p>We własnym zakresie sprawdź jeszcze czy przekazanie argumentów do dekoratora również działa <img alt="wink" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/wink.png" style="width: 24px; height: 24px;">.</p>
+<p>Dlaczego w ogóle taka modyfikacja była potrzebna? Zauważ czym różnią się oba zapisy dekoratora:</p>
+<ol class="arabic simple">
+<li>
+<code>decorator</code> - przekazanie adresu pamięci do funkcji (pisałem o tym wcześniej)</li>
+<li>
+<code>decorator(...)</code> - wywołanie funkcji z parametrami</li>
+</ol>
+<p>Powyższe zapisy powoduję, że do zmiennej <code>args_type_list</code> przypisane są zupełnie inne wartości:</p>
+<ol class="arabic simple">
+<li>
+<code>args_type_list</code> jest adresem dekorowanej funkcji (w naszym przypadku będzie to <code>add</code>
+</li>
+<li>
+<code>args_type_list</code> jest argumentem przekazanym do dekoratora (w naszym przypadku będzie to lista typów do przeprowadzenia weryfikacji)</li>
+</ol>
+<p>Dlatego też musimy przeprowadzić sprawdzenia czy przekazywany argument jest funkcją czy nie. Do tego służy funkcja <code>callable()</code>.</p>
+</div>
+<div class="section" id="wraps">
+<h2>@wraps</h2>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/dekorator/" rel="tag">dekorator</a></li>
+            <li><a class="tag p-category" href="../../../categories/funkcje/" rel="tag">funkcje</a></li>
+            <li><a class="tag p-category" href="../../../categories/python/" rel="tag">python</a></li>
+        </ul>
+<div id="newsletter_invitation">
+            <form method="POST" action="https://maciejkusz.activehosted.com/proc.php" id="_form_5_" novalidate>
+              <input type="hidden" name="u" value="5"><input type="hidden" name="f" value="5"><input type="hidden" name="s"><input type="hidden" name="c" value="0"><input type="hidden" name="m" value="0"><input type="hidden" name="act" value="sub"><input type="hidden" name="v" value="2"><h3>Zapraszam do newsletter'a</h3>
+              <div class="_form-content">
+                <p>Zachęcam Cię do zapisania się do mojego newslettera. Obiecuję, że nie będę Cię spamował,
+                    a tylko czasu do czasu wyślę Ci powiadomienie o nowym artykule lub prześlę krótkiego maila
+                    z ciekawymi informacjami. Poza tym w każdej chwili możesz zrezygnować z subskrypcji.</p>
+                <div class="input-group" id="basic-fullname-group">
+                  <span class="input-group-addon" id="basic-fullname">Imię</span>
+                  <input type="text" class="form-control" name="fullname" placeholder="Wpisz swoje imię" aria-describedby="basic-fullname">
+</div>
+                <div class="input-group" id="basic-lastname-group">
+                  <span class="input-group-addon" id="basic-lastname">Nazwisko</span>
+                  <input type="text" class="form-control" name="lastname" placeholder="Wpisz swoje nazwisko" aria-describedby="basic-fullname">
+</div>
+                <div class="input-group" id="basic-email-group">
+                  <span class="input-group-addon" id="basic-email">E-mail</span>
+                  <input type="text" class="form-control" name="email" placeholder="Wpisz swój e-mail" aria-describedby="basic-email" required>
+</div>
+                <button id="_form_5_submit" class="_submit btn btn-danger" style="margin-left: auto; margin-right: auto; display: block;" type="submit">Zapisz się</button>
+                <div class="_clear-element">
+                </div>
+              </div>
+              <div class="_form-thank-you" style="display:none;">
+              </div>
+              <p style="font-size: 10px; margin-top: 5px;">Wszystkie podane przez Ciebie dane, będą przetwarzane zgodnie z <a href="../../../pages/polityka-prywatnosci">polityką prywatności</a>.</p>
+            </form>
+            <script type="text/javascript">
+            window.cfields = [];
+            window._show_thank_you = function(id, message, trackcmp_url) {
+              var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
+              form.querySelector('._form-content').style.display = 'none';
+              thank_you.innerHTML = message;
+              thank_you.style.display = 'block';
+              if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+                // Site tracking URL to use after inline form submission.
+                _load_script(trackcmp_url);
+              }
+              if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+            };
+            window._show_error = function(id, message, html) {
+              var form = document.getElementById('_form_' + id + '_'), err = document.createElement('div'), button = form.querySelector('button'), old_error = form.querySelector('._form_error');
+              if (old_error) old_error.parentNode.removeChild(old_error);
+              err.innerHTML = message;
+              err.className = '_error-inner _form_error _no_arrow';
+              var wrapper = document.createElement('div');
+              wrapper.className = '_form-inner';
+              wrapper.appendChild(err);
+              button.parentNode.insertBefore(wrapper, button);
+              document.querySelector('[id^="_form"][id$="_submit"]').disabled = false;
+              if (html) {
+                var div = document.createElement('div');
+                div.className = '_error-html';
+                div.innerHTML = html;
+                err.appendChild(div);
+              }
+            };
+            window._load_script = function(url, callback) {
+                var head = document.querySelector('head'), script = document.createElement('script'), r = false;
+                script.type = 'text/javascript';
+                script.charset = 'utf-8';
+                script.src = url;
+                if (callback) {
+                  script.onload = script.onreadystatechange = function() {
+                  if (!r && (!this.readyState || this.readyState == 'complete')) {
+                    r = true;
+                    callback();
+                    }
+                  };
+                }
+                head.appendChild(script);
+            };
+            (function() {
+              if (window.location.search.search("excludeform") !== -1) return false;
+              var getCookie = function(name) {
+                var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)'));
+                return match ? match[2] : null;
+              }
+              var setCookie = function(name, value) {
+                var now = new Date();
+                var time = now.getTime();
+                var expireTime = time + 1000 * 60 * 60 * 24 * 365;
+                now.setTime(expireTime);
+                document.cookie = name + '=' + value + '; expires=' + now + ';path=/';
+              }
+                  var addEvent = function(element, event, func) {
+                if (element.addEventListener) {
+                  element.addEventListener(event, func);
+                } else {
+                  var oldFunc = element['on' + event];
+                  element['on' + event] = function() {
+                    oldFunc.apply(this, arguments);
+                    func.apply(this, arguments);
+                  };
+                }
+              }
+              var _removed = false;
+              var form_to_submit = document.getElementById('_form_5_');
+              var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
+
+              var getUrlParam = function(name) {
+                var regexStr = '[\?&]' + name + '=([^&#]*)';
+                var results = new RegExp(regexStr, 'i').exec(window.location.href);
+                return results != undefined ? decodeURIComponent(results[1]) : false;
+              };
+
+              for (var i = 0; i < allInputs.length; i++) {
+                var regexStr = "field\\[(\\d+)\\]";
+                var results = new RegExp(regexStr).exec(allInputs[i].name);
+                if (results != undefined) {
+                  allInputs[i].dataset.name = window.cfields[results[1]];
+                } else {
+                  allInputs[i].dataset.name = allInputs[i].name;
+                }
+                var fieldVal = getUrlParam(allInputs[i].dataset.name);
+
+                if (fieldVal) {
+                        if (allInputs[i].dataset.autofill === "false") {
+                            continue;
+                        }
+                  if (allInputs[i].type == "radio" || allInputs[i].type == "checkbox") {
+                    if (allInputs[i].value == fieldVal) {
+                      allInputs[i].checked = true;
+                    }
+                  } else {
+                    allInputs[i].value = fieldVal;
+                  }
+                }
+              }
+
+              var remove_tooltips = function() {
+                for (var i = 0; i < tooltips.length; i++) {
+                  tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
+                }
+                  tooltips = [];
+              };
+              var remove_tooltip = function(elem) {
+                for (var i = 0; i < tooltips.length; i++) {
+                  if (tooltips[i].elem === elem) {
+                    tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
+                    tooltips.splice(i, 1);
+                    return;
+                  }
+                }
+              };
+              var create_tooltip = function(elem, text) {
+                var tooltip = document.createElement('div'), arrow = document.createElement('div'), inner = document.createElement('div'), new_tooltip = {};
+                if (elem.type != 'radio' && elem.type != 'checkbox') {
+                  tooltip.className = '_error';
+                  arrow.className = '_error-arrow';
+                  inner.className = '_error-inner';
+                  inner.innerHTML = text;
+                  tooltip.appendChild(arrow);
+                  tooltip.appendChild(inner);
+                  elem.parentNode.appendChild(tooltip);
+                } else {
+                  tooltip.className = '_error-inner _no_arrow';
+                  tooltip.innerHTML = text;
+                  elem.parentNode.insertBefore(tooltip, elem);
+                  new_tooltip.no_arrow = true;
+                }
+                new_tooltip.tip = tooltip;
+                new_tooltip.elem = elem;
+                tooltips.push(new_tooltip);
+                return new_tooltip;
+              };
+              var resize_tooltip = function(tooltip) {
+                var rect = tooltip.elem.getBoundingClientRect();
+                var doc = document.documentElement, scrollPosition = rect.top - ((window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0));
+                if (scrollPosition < 40) {
+                  tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _below';
+                } else {
+                  tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _above';
+                }
+              };
+              var resize_tooltips = function() {
+                if (_removed) return;
+                for (var i = 0; i < tooltips.length; i++) {
+                  if (!tooltips[i].no_arrow) resize_tooltip(tooltips[i]);
+                }
+              };
+              var validate_field = function(elem, remove) {
+                var tooltip = null, value = elem.value, no_error = true;
+                remove ? remove_tooltip(elem) : false;
+                if (elem.type != 'checkbox') elem.className = elem.className.replace(/ ?_has_error ?/g, '');
+                if (elem.getAttribute('required') !== null) {
+                  if (elem.type == 'radio' || (elem.type == 'checkbox' && /any/.test(elem.className))) {
+                    var elems = form_to_submit.elements[elem.name];
+                    if (!(elems instanceof NodeList || elems instanceof HTMLCollection) || elems.length <= 1) {
+                      no_error = elem.checked;
+                    }
+                    else {
+                      no_error = false;
+                      for (var i = 0; i < elems.length; i++) {
+                        if (elems[i].checked) no_error = true;
+                      }
+                    }
+                    if (!no_error) {
+                      tooltip = create_tooltip(elem, "Wybierz opcję.");
+                    }
+                  } else if (elem.type =='checkbox') {
+                    var elems = form_to_submit.elements[elem.name], found = false, err = [];
+                    no_error = true;
+                    for (var i = 0; i < elems.length; i++) {
+                      if (elems[i].getAttribute('required') === null) continue;
+                      if (!found && elems[i] !== elem) return true;
+                      found = true;
+                      elems[i].className = elems[i].className.replace(/ ?_has_error ?/g, '');
+                      if (!elems[i].checked) {
+                        no_error = false;
+                        elems[i].className = elems[i].className + ' _has_error';
+                        err.push("Zaznaczenie %s jest wymagane".replace("%s", elems[i].value));
+                      }
+                    }
+                    if (!no_error) {
+                      tooltip = create_tooltip(elem, err.join('<br/>'));
+                    }
+                  } else if (elem.tagName == 'SELECT') {
+                    var selected = true;
+                    if (elem.multiple) {
+                      selected = false;
+                      for (var i = 0; i < elem.options.length; i++) {
+                        if (elem.options[i].selected) {
+                          selected = true;
+                          break;
+                        }
+                      }
+                    } else {
+                      for (var i = 0; i < elem.options.length; i++) {
+                        if (elem.options[i].selected && !elem.options[i].value) {
+                          selected = false;
+                        }
+                      }
+                    }
+                    if (!selected) {
+                      elem.className = elem.className + ' _has_error';
+                      no_error = false;
+                      tooltip = create_tooltip(elem, "Wybierz opcję.");
+                    }
+                  } else if (value === undefined || value === null || value === '') {
+                    elem.className = elem.className + ' _has_error';
+                    no_error = false;
+                    tooltip = create_tooltip(elem, "To pole jest wymagane.");
+                  }
+                }
+                if (no_error && elem.name == 'email') {
+                  if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) {
+                    elem.className = elem.className + ' _has_error';
+                    no_error = false;
+                    tooltip = create_tooltip(elem, "Wpisz poprawny adres e-mail.");
+                  }
+                }
+                if (no_error && /date_field/.test(elem.className)) {
+                  if (!value.match(/^\d\d\d\d-\d\d-\d\d$/)) {
+                    elem.className = elem.className + ' _has_error';
+                    no_error = false;
+                    tooltip = create_tooltip(elem, "Wpisz poprawną datę.");
+                  }
+                }
+                tooltip ? resize_tooltip(tooltip) : false;
+                return no_error;
+              };
+              var needs_validate = function(el) {
+                return el.name == 'email' || el.getAttribute('required') !== null;
+              };
+              var validate_form = function(e) {
+                var err = form_to_submit.querySelector('._form_error'), no_error = true;
+                if (!submitted) {
+                  submitted = true;
+                  for (var i = 0, len = allInputs.length; i < len; i++) {
+                    var input = allInputs[i];
+                    if (needs_validate(input)) {
+                      if (input.type == 'text') {
+                        addEvent(input, 'blur', function() {
+                          this.value = this.value.trim();
+                          validate_field(this, true);
+                        });
+                        addEvent(input, 'input', function() {
+                          validate_field(this, true);
+                        });
+                      } else if (input.type == 'radio' || input.type == 'checkbox') {
+                        (function(el) {
+                          var radios = form_to_submit.elements[el.name];
+                          for (var i = 0; i < radios.length; i++) {
+                            addEvent(radios[i], 'click', function() {
+                              validate_field(el, true);
+                            });
+                          }
+                        })(input);
+                      } else if (input.tagName == 'SELECT') {
+                        addEvent(input, 'change', function() {
+                          validate_field(this, true);
+                        });
+                      } else if (input.type == 'textarea'){
+                        addEvent(input, 'input', function() {
+                          validate_field(this, true);
+                        });
+                      }
+                    }
+                  }
+                }
+                remove_tooltips();
+                for (var i = 0, len = allInputs.length; i < len; i++) {
+                  var elem = allInputs[i];
+                  if (needs_validate(elem)) {
+                    if (elem.tagName.toLowerCase() !== "select") {
+                      elem.value = elem.value.trim();
+                    }
+                    validate_field(elem) ? true : no_error = false;
+                  }
+                }
+                if (!no_error && e) {
+                  e.preventDefault();
+                }
+                resize_tooltips();
+                return no_error;
+              };
+              addEvent(window, 'resize', resize_tooltips);
+              addEvent(window, 'scroll', resize_tooltips);
+              window._old_serialize = null;
+              if (typeof serialize !== 'undefined') window._old_serialize = window.serialize;
+              _load_script("//d3rxaij56vjege.cloudfront.net/form-serialize/0.3/serialize.min.js", function() {
+                window._form_serialize = window.serialize;
+                if (window._old_serialize) window.serialize = window._old_serialize;
+              });
+              var form_submit = function(e) {
+                e.preventDefault();
+                if (validate_form()) {
+                  // use this trick to get the submit button & disable it using plain javascript
+                  document.querySelector('#_form_5_submit').disabled = true;
+                        var serialized = _form_serialize(document.getElementById('_form_5_'));
+                  var err = form_to_submit.querySelector('._form_error');
+                  err ? err.parentNode.removeChild(err) : false;
+                  _load_script('https://maciejkusz.activehosted.com/proc.php?' + serialized + '&jsonp=true');
+                }
+                return false;
+              };
+              addEvent(form_to_submit, 'submit', form_submit);
+            })();
+
+            </script>
+</div>
+        
+        </nav></aside><section class="comments hidden-print"><h2>Komentarze</h2>
+                        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="testerembyc",
+            disqus_url="https://testerembyc.pl/posts/20200102/dekoratory-w-pythonie/",
+        disqus_title="Dekoratory w Pythonie",
+        disqus_identifier="cache/posts/20200102/dekoratory-w-pythonie.html",
+        disqus_config = function () {
+            this.language = "pl";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="testerembyc";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                    
+
+<div class="sidebar-module sidebar-module-inset">
+  <form method="get" action="https://www.google.com/search" role="search">
+    <input type="hidden" name="cx" value="013548426528546093847:kxj9yxvrzlu"><input type="hidden" name="ie" value="utf-8"><input type="hidden" name="hl" value="pl"><div class="input-group">
+      <input type="text" class="form-control" name="q" placeholder="Szukaj" aria-describedby="basic-search"><div class="input-group-btn">
+        <button type="submit" class="btn btn-danger">
+          <span class="glyphicon glyphicon-search" id="basic-search"></span> 
+        </button>
+      </div>
+    </div>
+    <input type="hidden" name="sitesearch" value="testerembyc">
+</form>
+</div>
+
+<div class="sidebar-module sidebar-module-inset">
+  <h3>O mnie</h3>
+  <p>Nazywam się <strong>Maciej Kusz</strong> i od 2008 roku zajmuję się testowaniem oprogramowania.
+  Na początku były to testy manualne, od 2011 początki testów automatycznych,
+  a od 2013 automatyzacja testów z wykorzystaniem <strong>Python'a</strong>.
+  Przez te kilka lat, zdarzyło mi się już być w kilku firmach i w kilku różnych projektach.
+  Na stronę <a href="../../../pages/o-mnie">o mnie</a>, znajdujdziesz ciut więcej informacji na ten temat.</p>
+</div>
+<div class="sidebar-module sidebar-module-inset">
+
+<form method="POST" action="https://maciejkusz.activehosted.com/proc.php" id="_form_3_" novalidate>
+  <input type="hidden" name="u" value="3"><input type="hidden" name="f" value="3"><input type="hidden" name="s"><input type="hidden" name="c" value="0"><input type="hidden" name="m" value="0"><input type="hidden" name="act" value="sub"><input type="hidden" name="v" value="2"><h3>Newsletter</h3>
+  <div class="_form-content">
+    <p>Chcesz być powiadamiany o nowościach na tej stronie oraz innych moich projektach?</p>
+    <p>Jeśli tak, to zapisz się poniżej do newsletter'a.</p>
+    <div class="input-group" id="basic-fullname-group">
+      <span class="input-group-addon" id="basic-fullname">Imię</span>
+      <input type="text" class="form-control" name="fullname" placeholder="Wpisz swoje imię" aria-describedby="basic-fullname">
+</div>
+    <div class="input-group" id="basic-lastname-group">
+      <span class="input-group-addon" id="basic-lastname">Nazwisko</span>
+      <input type="text" class="form-control" name="lastname" placeholder="Wpisz swoje nazwisko" aria-describedby="basic-fullname">
+</div>
+    <div class="input-group" id="basic-email-group">
+      <span class="input-group-addon" id="basic-email">E-mail</span>
+      <input type="text" class="form-control" name="email" placeholder="Wpisz swój e-mail" aria-describedby="basic-email" required>
+</div>
+    <button id="_form_3_submit" class="_submit btn btn-danger" style="margin-left: auto; margin-right: auto; display: block;" type="submit">Zapisz się</button>
+    
+    <div class="_clear-element">
+    </div>
+  </div>
+  <div class="_form-thank-you" style="display:none;">
+  </div>
+  <p style="font-size: 10px; margin-top: 5px;">Wszystkie podane przez Ciebie dane, będą przetwarzane zgodnie z <a href="../../../pages/polityka-prywatnosci">polityką prywatności</a>.</p>
+</form>
+<script type="text/javascript">
+window.cfields = [];
+window._show_thank_you = function(id, message, trackcmp_url) {
+  var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
+  form.querySelector('._form-content').style.display = 'none';
+  thank_you.innerHTML = message;
+  thank_you.style.display = 'block';
+  if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+    // Site tracking URL to use after inline form submission.
+    _load_script(trackcmp_url);
+  }
+  if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+};
+window._show_error = function(id, message, html) {
+  var form = document.getElementById('_form_' + id + '_'), err = document.createElement('div'), button = form.querySelector('button'), old_error = form.querySelector('._form_error');
+  if (old_error) old_error.parentNode.removeChild(old_error);
+  err.innerHTML = message;
+  err.className = '_error-inner _form_error _no_arrow';
+  var wrapper = document.createElement('div');
+  wrapper.className = '_form-inner';
+  wrapper.appendChild(err);
+  button.parentNode.insertBefore(wrapper, button);
+  document.querySelector('[id^="_form"][id$="_submit"]').disabled = false;
+  if (html) {
+    var div = document.createElement('div');
+    div.className = '_error-html';
+    div.innerHTML = html;
+    err.appendChild(div);
+  }
+};
+window._load_script = function(url, callback) {
+    var head = document.querySelector('head'), script = document.createElement('script'), r = false;
+    script.type = 'text/javascript';
+    script.charset = 'utf-8';
+    script.src = url;
+    if (callback) {
+      script.onload = script.onreadystatechange = function() {
+      if (!r && (!this.readyState || this.readyState == 'complete')) {
+        r = true;
+        callback();
+        }
+      };
+    }
+    head.appendChild(script);
+};
+(function() {
+  if (window.location.search.search("excludeform") !== -1) return false;
+  var getCookie = function(name) {
+    var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+  }
+  var setCookie = function(name, value) {
+    var now = new Date();
+    var time = now.getTime();
+    var expireTime = time + 1000 * 60 * 60 * 24 * 365;
+    now.setTime(expireTime);
+    document.cookie = name + '=' + value + '; expires=' + now + ';path=/';
+  }
+      var addEvent = function(element, event, func) {
+    if (element.addEventListener) {
+      element.addEventListener(event, func);
+    } else {
+      var oldFunc = element['on' + event];
+      element['on' + event] = function() {
+        oldFunc.apply(this, arguments);
+        func.apply(this, arguments);
+      };
+    }
+  }
+  var _removed = false;
+  var form_to_submit = document.getElementById('_form_3_');
+  var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
+
+  var getUrlParam = function(name) {
+    var regexStr = '[\?&]' + name + '=([^&#]*)';
+    var results = new RegExp(regexStr, 'i').exec(window.location.href);
+    return results != undefined ? decodeURIComponent(results[1]) : false;
+  };
+
+  for (var i = 0; i < allInputs.length; i++) {
+    var regexStr = "field\[(\d+)\]";
+    var results = new RegExp(regexStr).exec(allInputs[i].name);
+    if (results != undefined) {
+      allInputs[i].dataset.name = window.cfields[results[1]];
+    } else {
+      allInputs[i].dataset.name = allInputs[i].name;
+    }
+    var fieldVal = getUrlParam(allInputs[i].dataset.name);
+
+    if (fieldVal) {
+      if (allInputs[i].type == "radio" || allInputs[i].type == "checkbox") {
+        if (allInputs[i].value == fieldVal) {
+          allInputs[i].checked = true;
+        }
+      } else {
+        allInputs[i].value = fieldVal;
+      }
+    }
+  }
+
+  var remove_tooltips = function() {
+    for (var i = 0; i < tooltips.length; i++) {
+      tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
+    }
+      tooltips = [];
+  };
+  var remove_tooltip = function(elem) {
+    for (var i = 0; i < tooltips.length; i++) {
+      if (tooltips[i].elem === elem) {
+        tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
+        tooltips.splice(i, 1);
+        return;
+      }
+    }
+  };
+  var create_tooltip = function(elem, text) {
+    var tooltip = document.createElement('label'), arrow = document.createElement('div'), inner = document.createElement('div'), new_tooltip = {};
+    if (elem.type != 'radio' && elem.type != 'checkbox') {
+      tooltip.className = 'label label-danger';
+      tooltip.innerHTML = text;
+      elem.parentNode.parentNode.insertBefore(tooltip, elem.parentNode);
+    } else {
+      tooltip.className = '_error-inner _no_arrow';
+      tooltip.innerHTML = text;
+      elem.parentNode.insertBefore(tooltip, elem);
+      new_tooltip.no_arrow = true;
+    }
+    new_tooltip.tip = tooltip;
+    new_tooltip.elem = elem;
+    tooltips.push(new_tooltip);
+    return new_tooltip;
+  };
+  var resize_tooltip = function(tooltip) {
+    var rect = tooltip.elem.getBoundingClientRect();
+    var doc = document.documentElement, scrollPosition = rect.top - ((window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0));
+    if (scrollPosition < 40) {
+      tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _below';
+    } else {
+      tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _above';
+    }
+  };
+  var resize_tooltips = function() {
+    if (_removed) return;
+    for (var i = 0; i < tooltips.length; i++) {
+      if (!tooltips[i].no_arrow) resize_tooltip(tooltips[i]);
+    }
+  };
+  var validate_field = function(elem, remove) {
+    var tooltip = null, value = elem.value, no_error = true;
+    remove ? remove_tooltip(elem) : false;
+    if (elem.type != 'checkbox') elem.className = elem.className.replace(/ ?_has_error ?/g, '');
+    if (elem.getAttribute('required') !== null) {
+      if (elem.type == 'radio' || (elem.type == 'checkbox' && /any/.test(elem.className))) {
+        var elems = form_to_submit.elements[elem.name];
+        if (!(elems instanceof NodeList || elems instanceof HTMLCollection) || elems.length <= 1) {
+          no_error = elem.checked;
+        }
+        else {
+          no_error = false;
+          for (var i = 0; i < elems.length; i++) {
+            if (elems[i].checked) no_error = true;
+          }
+        }
+        if (!no_error) {
+          tooltip = create_tooltip(elem, "Wybierz opcję.");
+        }
+      } else if (elem.type =='checkbox') {
+        var elems = form_to_submit.elements[elem.name], found = false, err = [];
+        no_error = true;
+        for (var i = 0; i < elems.length; i++) {
+          if (elems[i].getAttribute('required') === null) continue;
+          if (!found && elems[i] !== elem) return true;
+          found = true;
+          elems[i].className = elems[i].className.replace(/ ?_has_error ?/g, '');
+          if (!elems[i].checked) {
+            no_error = false;
+            elems[i].className = elems[i].className + ' _has_error';
+            err.push("Zaznaczenie %s jest wymagane".replace("%s", elems[i].value));
+          }
+        }
+        if (!no_error) {
+          tooltip = create_tooltip(elem, err.join('<br/>'));
+        }
+      } else if (elem.tagName == 'SELECT') {
+        var selected = true;
+        if (elem.multiple) {
+          selected = false;
+          for (var i = 0; i < elem.options.length; i++) {
+            if (elem.options[i].selected) {
+              selected = true;
+              break;
+            }
+          }
+        } else {
+          for (var i = 0; i < elem.options.length; i++) {
+            if (elem.options[i].selected && !elem.options[i].value) {
+              selected = false;
+            }
+          }
+        }
+        if (!selected) {
+          elem.className = elem.className + ' _has_error';
+          no_error = false;
+          tooltip = create_tooltip(elem, "Wybierz opcję.");
+        }
+      } else if (value === undefined || value === null || value === '') {
+        elem.className = elem.className + ' _has_error';
+        no_error = false;
+        tooltip = create_tooltip(elem, "To pole jest wymagane.");
+      }
+    }
+    if (no_error && elem.name == 'email') {
+      if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) {
+        elem.className = elem.className + ' _has_error';
+        no_error = false;
+        tooltip = create_tooltip(elem, "Wpisz poprawny adres e-mail.");
+      }
+    }
+    if (no_error && /date_field/.test(elem.className)) {
+      if (!value.match(/^\d\d\d\d-\d\d-\d\d$/)) {
+        elem.className = elem.className + ' _has_error';
+        no_error = false;
+        tooltip = create_tooltip(elem, "Wpisz poprawną datę.");
+      }
+    }
+    tooltip ? resize_tooltip(tooltip) : false;
+    return no_error;
+  };
+  var needs_validate = function(el) {
+    return el.name == 'email' || el.getAttribute('required') !== null;
+  };
+  var validate_form = function(e) {
+    var err = form_to_submit.querySelector('._form_error'), no_error = true;
+    if (!submitted) {
+      submitted = true;
+      for (var i = 0, len = allInputs.length; i < len; i++) {
+        var input = allInputs[i];
+        if (needs_validate(input)) {
+          if (input.type == 'text') {
+            addEvent(input, 'blur', function() {
+              this.value = this.value.trim();
+              validate_field(this, true);
+            });
+            addEvent(input, 'input', function() {
+              validate_field(this, true);
+            });
+          } else if (input.type == 'radio' || input.type == 'checkbox') {
+            (function(el) {
+              var radios = form_to_submit.elements[el.name];
+              for (var i = 0; i < radios.length; i++) {
+                addEvent(radios[i], 'click', function() {
+                  validate_field(el, true);
+                });
+              }
+            })(input);
+          } else if (input.tagName == 'SELECT') {
+            addEvent(input, 'change', function() {
+              validate_field(this, true);
+            });
+          } else if (input.type == 'textarea'){
+            addEvent(input, 'input', function() {
+              validate_field(this, true);
+            });
+          }
+        }
+      }
+    }
+    remove_tooltips();
+    for (var i = 0, len = allInputs.length; i < len; i++) {
+      var elem = allInputs[i];
+      if (needs_validate(elem)) {
+        if (elem.tagName.toLowerCase() !== "select") {
+          elem.value = elem.value.trim();
+        }
+        validate_field(elem) ? true : no_error = false;
+      }
+    }
+    if (!no_error && e) {
+      e.preventDefault();
+    }
+    resize_tooltips();
+    return no_error;
+  };
+  addEvent(window, 'resize', resize_tooltips);
+  addEvent(window, 'scroll', resize_tooltips);
+  window._old_serialize = null;
+  if (typeof serialize !== 'undefined') window._old_serialize = window.serialize;
+  _load_script("//d3rxaij56vjege.cloudfront.net/form-serialize/0.3/serialize.min.js", function() {
+    window._form_serialize = window.serialize;
+    if (window._old_serialize) window.serialize = window._old_serialize;
+  });
+  var form_submit = function(e) {
+    e.preventDefault();
+    if (validate_form()) {
+      // use this trick to get the submit button & disable it using plain javascript
+      document.querySelector('#_form_3_submit').disabled = true;
+            var serialized = _form_serialize(document.getElementById('_form_3_'));
+      var err = form_to_submit.querySelector('._form_error');
+      err ? err.parentNode.removeChild(err) : false;
+      _load_script('https://maciejkusz.activehosted.com/proc.php?' + serialized + '&jsonp=true');
+    }
+    return false;
+  };
+  addEvent(form_to_submit, 'submit', form_submit);
+})();
+
+</script>
+</div>
+<div class="sidebar-module sidebar-module-inset">
+  <h3>Linki</h3>
+  <ol class="list-unstyled">
+<li><a href="../../../pages/polityka-prywatnosci/">Polityka prywatności</a></li>
+    <li><a href="../../../pages/regulamin/">Regulamin</a></li>
+  </ol>
+<ol class="list-unstyled icons">
+<li><a target="_blank" class="fab fa-facebook-f" href="https://www.facebook.com/testerembyc/"></a></li>
+    <li><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/testerembyc.pl/"></a></li>
+    <li><a target="_blank" class="fab fa-linkedin-in" href="https://www.linkedin.com/in/maciej-kusz/"></a></li>
+  </ol>
+</div>
+
+                </div>
+            <!--End of body content-->
+            </div>
+        </div>
+        <footer class="blog-footer" id="footer">
+            
+© 2020 <span style="font-weight: bold; color: #ffffff;">Maciej Kusz</span> 
+w oparciu o silnik <a href="https://getnikola.com/" rel="nofollow" target="_blank">
+<img style="max-height: 20px; max-width: 50px" src="../../../images/nikola_logo.svg"></a> 
+z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_blank">
+<img style="max-height: 15px; max-width: 80px;" src="../../../images/githubpages_logo.svg"></a> 
+
+            
+        </footer>
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+/*
+ * Bootstrap Cookie Alert by Wruczek
+ * https://github.com/Wruczek/Bootstrap-Cookie-Alert
+ * Released under MIT license
+ */
+(function () {
+    "use strict";
+
+    var cookieAlert = document.querySelector(".cookiealert");
+    var acceptCookies = document.querySelector(".acceptcookies");
+
+    if (!cookieAlert) {
+       return;
+    }
+
+
+    // Show the alert if we cant find the "acceptCookies" cookie
+    if (!getCookie("acceptCookies")) {
+        cookieAlert.classList.add("show");
+    } else {
+        cookieAlert.classList.remove("show")
+    }
+
+    // When clicking on the agree button, create a 1 year
+    // cookie to remember user's choice and close the banner
+    acceptCookies.addEventListener("click", function () {
+        setCookie("acceptCookies", true, 365);
+        cookieAlert.classList.remove("show");
+    });
+
+    // Cookie functions from w3schools
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+})();
+</script><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/bootstrap.min.js"></script><script src="../../../assets/js/baguetteBox.min.js"></script><script src="../../../assets/js/moment-with-locales.min.js"></script><script src="../../../assets/js/fancydates.min.js"></script><!-- fancy dates --><script>
+    moment.locale("pl");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-143859058-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-143859058-1');
+</script><!-- Load Facebook SDK for JavaScript --><div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v3.3'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script><!-- Your customer chat code --><div class="fb-customerchat" attribution="setup_tool" page_id="391052181505294" theme_color="#337ab7" logged_in_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)" logged_out_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)">
+</div>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '444619046317574');
+  fbq('track', 'PageView');
+</script><noscript><img height="1" width="1" style="display:none" alt="Facebook Pixel" src="https://www.facebook.com/tr?id=444619046317574&amp;ev=PageView&amp;noscript=1"></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+</body>
+</html>

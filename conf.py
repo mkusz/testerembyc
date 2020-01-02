@@ -1470,7 +1470,8 @@ GLOBAL_CONTEXT = {'blog_sidebar': """
   <div class="_form-thank-you" style="display:none;">
   </div>
   <p style="font-size: 10px; margin-top: 5px;">Wszystkie podane przez Ciebie dane, będą przetwarzane zgodnie z <a href="/pages/polityka-prywatnosci">polityką prywatności</a>.</p>
-</form><script type="text/javascript">
+</form>
+<script type="text/javascript">
 window.cfields = [];
 window._show_thank_you = function(id, message, trackcmp_url) {
   var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');

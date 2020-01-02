@@ -4,24 +4,24 @@
 .. tags: testy, istqb, nauka
 .. category: felieton
 .. link: 
-.. description: 
+.. description: Powody dla których tak dużo osób jest zainteresowanych przejściem do branży IT oraz dlaczego wybierają testowanie oprogramowania jako najprostszy sposób
 .. type: text
 .. previewimage: /images/posts/testerembyc_600x600.png
 
-Zachęcony `wątkiem <https://www.facebook.com/groups/TestowanieOprogramowania/permalink/2602961303059765/>`_ z Facebook'owej grupy dotyczącej `testowania oprogramowania <https://www.facebook.com/groups/TestowanieOprogramowania/>`_, w którym mowa o problemach z podjęciem pracy w zawodzie testera oprogramowania, dorzucę swoje 3 grosze do tej rozmowy. Pamiętaj, mój drogi czytelniku, że jestem zupełnie oderwany od "juniorskiej" rzeczywistości, bo mam już te "kilka" lat stażu pracy w tym zawodzie, zachęcam cię jednak do przeczytania poniższego wpisu, szczególnie jeśli jesteś w sytuacji opisanej powyżej.
+Zachęcony `wątkiem <https://www.facebook.com/groups/TestowanieOprogramowania/permalink/2602961303059765/>`_ z Facebook'owej grupy dotyczącej `testowania oprogramowania <https://www.facebook.com/groups/TestowanieOprogramowania/>`_, w którym mowa o problemach z podjęciem pracy w zawodzie testera oprogramowania, dorzucę swoje 3 grosze do tej rozmowy. Pamiętaj, mój drogi czytelniku, że jestem zupełnie oderwany od **juniorskiej** rzeczywistości, bo mam już te **kilka** lat stażu pracy w tym zawodzie, zachęcam cię jednak do przeczytania poniższego wpisu, szczególnie jeśli jesteś w sytuacji opisanej powyżej.
 
 .. more
 
 Poznajmy fakty
 --------------
 
-`W Polsce brakuje około 50 tyś rąk do pracy w branży IT <https://zielonalinia.gov.pl/-/boom-na-programistow-potrwa-do-2030-roku-prognoza-ekspertow>`_. W naszym kraju powstaje też bardzo dużo stanowisk w tej branży. Dlaczego tak się dzieje? Są 2 bardzo istotne aspekty. Pierwszy z nich to fakt, że `jesteśmy bardzo cenionymi fachowcami <https://blog.hackerrank.com/which-country-would-win-in-the-programming-olympics/>`_ w tej branży (spójrz również na poniższe zestawienie, gdzie nasz klas plasował się na 3 miejscu w punktacji ogólnej programistów w 2016 roku).
+`W Polsce brakuje około 50 tyś rąk do pracy w branży IT <https://zielonalinia.gov.pl/-/boom-na-programistow-potrwa-do-2030-roku-prognoza-ekspertow>`_. W naszym kraju powstaje też bardzo dużo stanowisk w tej branży. Dlaczego tak się dzieje? Są 2 bardzo istotne aspekty. Pierwszy z nich to fakt, że `jesteśmy bardzo cenionymi fachowcami <https://blog.hackerrank.com/which-country-would-win-in-the-programming-olympics/>`_ w tej branży (spójrz również na poniższe zestawienie, gdzie nasz kraj plasował się na 3 miejscu w punktacji ogólnej programistów w 2016 roku).
 
 .. image:: /images/posts/20191114/best_developers.png
 
 W porównaniu z innymi krajami, jesteśmy jeszcze stosunkowo tani (pamiętam, jak w jednej z firm, przelicznik był mniej więcej taki, że jeden programista z USA był liczony jak 3 w Polsce).
 
-Dla tzw. biznesu patrzącego na cyferki w Excelu, Polacy są pracownikami o bardzo dobrym stosunku jakości do ceny, a więc bardzo dużo firm przenosi swoje działy do naszego kraju. Powoduje to efekt domina, gdzie zapotrzebowanie na pracowników rośnie, a więc rośnie też presja dla firm na pozyskiwanie nowych pracowników, co z kolei powoduje wzrost płacy, gdyż firmy nie są w stanie pozyskać doświadczonym pracowników i przekują ich coraz wyższym wynagrodzeniem. Efekt jest taki, że mediana zarobków szybuje w górę. W 2018 wg portalu `NoFluffJobs <https://nofluffjobs.com>`_ mediana zarobków dla osób z ponad 5-letnim doświadczeniem oraz zatrudnieniu na podstawie umowy o pracę (UOP) wynosiła ponad 9 tys. zł brutto (zerknij na poniższą infografikę z `danymi za rok 2018 <https://nofluffjobs.com/static/zarobki-w-branzy-it-raport.pdf>`_).
+Dla tzw. biznesu patrzącego na cyferki w Excelu, Polacy są pracownikami o bardzo dobrym stosunku jakości do ceny, a więc bardzo dużo firm przenosi swoje działy do naszego kraju. Powoduje to efekt domina, gdzie zapotrzebowanie na pracowników rośnie, a więc rośnie też presja dla firm na pozyskiwanie nowych pracowników, co z kolei powoduje wzrost płacy. Firmy natomiast nie są w stanie pozyskać doświadczonym pracowników i przekują ich coraz wyższym wynagrodzeniem. Efekt jest taki, że mediana zarobków szybuje w górę. W 2018 wg portalu `NoFluffJobs <https://nofluffjobs.com>`_ mediana zarobków dla osób z ponad 5-letnim doświadczeniem oraz zatrudnieniu na podstawie umowy o pracę (UOP) wynosiła ponad 9 tys. zł brutto (zerknij na poniższą infografikę z `danymi za rok 2018 <https://nofluffjobs.com/static/zarobki-w-branzy-it-raport.pdf>`_).
 
 .. image:: /images/posts/20191114/nofluffjobs_wynagrodzenia.png
 

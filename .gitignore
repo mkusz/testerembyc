@@ -3,4 +3,4 @@ venv
 cache
 __pycache__
 .idea
-spellchecking/*.dic
+sandbox*.py
