@@ -30,7 +30,7 @@ Jeśli nie wiesz czym jest ta zabawka, to polecam zapoznać się z poniższym fi
 
 .. youtube:: lz6Olxb29qA
 
-Jak widać Matrioszka, to zabawka, w której mniejsze Matrioszki, wkładane sa w środek większej. Mniejsza Matrioszka jest wtedy *enkapsulowana* w większej. Ta mniejsza Matrioszka to nasza klasa **dekorowana**, a większa to klasa **dekorująca**. Tak jak i w przypadku Matrioszek, tak i dekoratorów może być więcej niż jeden. Jedyna różnica pomiędzy Matrioszką, a dekoratorem jest taka, że Matrioszka to w zasadzie taka sama lalka jak jej mniejsza wersja (różnią się głównie rozmiarem). Dekorator natomiast to zupełnie inna klasa, która dodaje nowe możliwości do już istniejącej klasy (Matrioszka tego nie potrafi).
+Jak widać Matrioszka, to zabawka, w której mniejsze Matrioszki, umieszczane są w środku większej. Mniejsza Matrioszka jest wtedy *enkapsulowana* w większej. Ta mniejsza Matrioszka to nasza klasa **dekorowana**, a większa to klasa **dekorująca**. Tak jak i w przypadku Matrioszek, tak i dekoratorów może być więcej niż jeden. Jedyna różnica pomiędzy Matrioszką, a dekoratorem jest taka, że Matrioszka to w zasadzie taka sama lalka jak jej mniejsza wersja (różnią się głównie rozmiarem). Dekorator natomiast to zupełnie inna klasa, która dodaje nowe możliwości do już istniejącej klasy (Matrioszka tego nie potrafi).
 
 Zauważ jedną, bardzo istotną rzecz: wszędzie powyżej wspominam, że dekorator jest klasą **opakowującą** inną klasę, a wspomniany PEP 318 mówi o dekorowaniu funkcji i metod. Czy przypadkiem nie ma tu gdzieś błędu?
 
