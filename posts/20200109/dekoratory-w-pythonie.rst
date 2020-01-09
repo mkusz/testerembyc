@@ -4,7 +4,7 @@
 .. tags: python, funkcje, dekorator
 .. category: python
 .. link: 
-.. description: Dekoratory w Pythonie. Czym są? Jak je stworzyć i używać.
+.. description: Dekoratory w Pythonie. Co dają i jak je implementować.
 .. type: text
 .. previewimage: /images/posts/testerembyc_600x600.png
 .. template: newsletter.tmpl
