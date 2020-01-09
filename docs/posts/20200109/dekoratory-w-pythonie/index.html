@@ -93,7 +93,7 @@ og: http://ogp.me/ns#
 </div>
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
-        <div>
+    <div>
 <p>Ostatnich kilka artykułów na tym blogu, było związane z ogólnikami dotyczącymi <a class="reference external" href="../../20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/">testów</a> i <a class="reference external" href="../../20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/">zawodu testera</a>. Tym razem wpis typowo techniczny związany z moim ulubionym językiem programowania, czyli Python'em. Język ten ma pewne <em>magiczne</em> metody i elementy nie spotykane w innych językach (lub sposób ich użycia i implementacji jest dużo bardziej złożony). Jednym z takich elementów jest tzw. <strong>dekorator</strong>.</p>
 <!-- more -->
 <div class="section" id="czym-jest-dekorator">
@@ -793,13 +793,9 @@ og: http://ogp.me/ns#
           var create_tooltip = function(elem, text) {
             var tooltip = document.createElement('div'), arrow = document.createElement('div'), inner = document.createElement('div'), new_tooltip = {};
             if (elem.type != 'radio' && elem.type != 'checkbox') {
-              tooltip.className = '_error';
-              arrow.className = '_error-arrow';
-              inner.className = '_error-inner';
-              inner.innerHTML = text;
-              tooltip.appendChild(arrow);
-              tooltip.appendChild(inner);
-              elem.parentNode.appendChild(tooltip);
+              tooltip.className = 'label label-danger';
+              tooltip.innerHTML = text;
+              elem.parentNode.parentNode.insertBefore(tooltip, elem.parentNode);
             } else {
               tooltip.className = '_error-inner _no_arrow';
               tooltip.innerHTML = text;
