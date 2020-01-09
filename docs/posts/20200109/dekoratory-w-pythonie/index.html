@@ -113,46 +113,46 @@ og: http://ogp.me/ns#
 <h2>Funkcja jest obiektem</h2>
 <p>Zanim przejdziemy do sedna, to zapoznajmy się z definicją <a class="reference external" href="https://pl.wikipedia.org/wiki/Obiekt_(programowanie_obiektowe)">obiektu</a>. Mocno streszczając, obiekt to struktura zawierająca dane i metody/funkcje służące do wykonania jakichś operacje na tych danych. Bardzo szybko zauważymy, że ten opis idealnie pasuje do <a class="reference external" href="https://pl.wikipedia.org/wiki/Klasa_(programowanie_obiektowe)">klasy</a>. Obiekt stworzony na podstawie definicji klasy, jest <em>instancją</em> danej klasy.</p>
 <p>Dlaczego więc, w Pythonie mówimy o dekorowaniu funkcji lub metod danej klasy (które też są funkcjami)? Otóż przyczyna jest bardzo prosta: funkcje w Pythonie są obiektami/klasami (nie zdziw się, bo od teraz będę używał tych nazw zamiennie). Jak każdy obiekt w Pythonie, tak i funkcja ma swój typ:</p>
-<pre class="code python"><a name="rest_code_b84e691039b94d64aaa1aa56cec9a726-1"></a><span class="k">def</span> <span class="nf">example_function</span><span class="p">():</span>
-<a name="rest_code_b84e691039b94d64aaa1aa56cec9a726-2"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"Example"</span><span class="p">)</span>
-<a name="rest_code_b84e691039b94d64aaa1aa56cec9a726-3"></a>
-<a name="rest_code_b84e691039b94d64aaa1aa56cec9a726-4"></a><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_df4cd4c641e744feb3e97d248bc455db-1"></a><span class="k">def</span> <span class="nf">example_function</span><span class="p">():</span>
+<a name="rest_code_df4cd4c641e744feb3e97d248bc455db-2"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"Example"</span><span class="p">)</span>
+<a name="rest_code_df4cd4c641e744feb3e97d248bc455db-3"></a>
+<a name="rest_code_df4cd4c641e744feb3e97d248bc455db-4"></a><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; function
 </pre>
 <p>Ponieważ funkcja jest obiektem, możemy ją przechowywać w zmiennej:</p>
-<pre class="code python"><a name="rest_code_d45527e122754c32a4b6567c12dbb8b9-1"></a><span class="k">def</span> <span class="nf">example_function</span><span class="p">():</span>
-<a name="rest_code_d45527e122754c32a4b6567c12dbb8b9-2"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"Example"</span><span class="p">)</span>
-<a name="rest_code_d45527e122754c32a4b6567c12dbb8b9-3"></a>
-<a name="rest_code_d45527e122754c32a4b6567c12dbb8b9-4"></a><span class="n">var</span> <span class="o">=</span> <span class="n">example_function</span>
-<a name="rest_code_d45527e122754c32a4b6567c12dbb8b9-5"></a>
-<a name="rest_code_d45527e122754c32a4b6567c12dbb8b9-6"></a><span class="n">var</span><span class="p">()</span>
+<pre class="code python"><a name="rest_code_0eecca55fcef4e7386c1cb0f00874f02-1"></a><span class="k">def</span> <span class="nf">example_function</span><span class="p">():</span>
+<a name="rest_code_0eecca55fcef4e7386c1cb0f00874f02-2"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"Example"</span><span class="p">)</span>
+<a name="rest_code_0eecca55fcef4e7386c1cb0f00874f02-3"></a>
+<a name="rest_code_0eecca55fcef4e7386c1cb0f00874f02-4"></a><span class="n">var</span> <span class="o">=</span> <span class="n">example_function</span>
+<a name="rest_code_0eecca55fcef4e7386c1cb0f00874f02-5"></a>
+<a name="rest_code_0eecca55fcef4e7386c1cb0f00874f02-6"></a><span class="n">var</span><span class="p">()</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; Example
 </pre>
-<pre class="code python"><a name="rest_code_a5b3cb11a7354e2682fb95ecc1342b8e-1"></a><span class="n">example_function</span><span class="p">()</span>
+<pre class="code python"><a name="rest_code_eba511b164d941a4a282c5e66886d41b-1"></a><span class="n">example_function</span><span class="p">()</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; Example
 </pre>
 <p>Zauważ, że podczas przypisywania funkcji do zmiennej pominąłem nawiasy <code>()</code>. Pominięcie nawiasów powoduje, że do zmiennej <code>var</code> przypisany jest adres w pamięci, gdzie przechowywane jest kod funkcji. Dopiero wywołanie <code>var()</code> powoduje taki sam efekt jak bezpośrednie wywołanie funkcji <code>example_function()</code>.</p>
 <p>Dodatkowo w ciele funkcji, można zdefiniować inną funkcję. Funkcja wewnętrzna nie będzie jednak mogła być wywołana spoza funkcji, w której jest umieszczona:</p>
-<pre class="code python"><a name="rest_code_57bf6c0aba804170b62f34d62dadc45d-1"></a><span class="k">def</span> <span class="nf">external_function</span><span class="p">():</span>
-<a name="rest_code_57bf6c0aba804170b62f34d62dadc45d-2"></a>    <span class="k">def</span> <span class="nf">internal_function</span><span class="p">():</span>
-<a name="rest_code_57bf6c0aba804170b62f34d62dadc45d-3"></a>        <span class="k">print</span><span class="p">(</span><span class="s2">"Internal"</span><span class="p">)</span>
-<a name="rest_code_57bf6c0aba804170b62f34d62dadc45d-4"></a>
-<a name="rest_code_57bf6c0aba804170b62f34d62dadc45d-5"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"External"</span><span class="p">)</span>
-<a name="rest_code_57bf6c0aba804170b62f34d62dadc45d-6"></a>    <span class="n">internal_function</span><span class="p">()</span>
-<a name="rest_code_57bf6c0aba804170b62f34d62dadc45d-7"></a>
-<a name="rest_code_57bf6c0aba804170b62f34d62dadc45d-8"></a><span class="n">external_function</span><span class="p">()</span>
+<pre class="code python"><a name="rest_code_a7b3f9b85b5a46f3b92f8c6f60d16e51-1"></a><span class="k">def</span> <span class="nf">external_function</span><span class="p">():</span>
+<a name="rest_code_a7b3f9b85b5a46f3b92f8c6f60d16e51-2"></a>    <span class="k">def</span> <span class="nf">internal_function</span><span class="p">():</span>
+<a name="rest_code_a7b3f9b85b5a46f3b92f8c6f60d16e51-3"></a>        <span class="k">print</span><span class="p">(</span><span class="s2">"Internal"</span><span class="p">)</span>
+<a name="rest_code_a7b3f9b85b5a46f3b92f8c6f60d16e51-4"></a>
+<a name="rest_code_a7b3f9b85b5a46f3b92f8c6f60d16e51-5"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"External"</span><span class="p">)</span>
+<a name="rest_code_a7b3f9b85b5a46f3b92f8c6f60d16e51-6"></a>    <span class="n">internal_function</span><span class="p">()</span>
+<a name="rest_code_a7b3f9b85b5a46f3b92f8c6f60d16e51-7"></a>
+<a name="rest_code_a7b3f9b85b5a46f3b92f8c6f60d16e51-8"></a><span class="n">external_function</span><span class="p">()</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; External
     Internal
 </pre>
-<pre class="code python"><a name="rest_code_229043fe740a4302b3fc28ff6e1244f8-1"></a><span class="n">internal_function</span><span class="p">()</span>
+<pre class="code python"><a name="rest_code_1fe94c58b3cb49d28462e5682ad8ee5a-1"></a><span class="n">internal_function</span><span class="p">()</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; Traceback (most recent call last):
@@ -168,12 +168,12 @@ og: http://ogp.me/ns#
 <div class="section" id="czy-obiekt-moze-byc-funkcja">
 <h2>Czy obiekt może być funkcją?</h2>
 <p>W Python'ie klasy posiadają pewne <a class="reference external" href="https://docs.python.org/3/reference/datamodel.html#basic-customization">metody magiczne</a>. Jedną z nich jest metoda <code>__call__</code>. W przypadku klasy, funkcja ta umożliwia uruchomienie instancji klasy, tak jak by była funkcją:</p>
-<pre class="code python"><a name="rest_code_19be4bdaf5bd4bbfa49f5f4d96aef2b9-1"></a><span class="k">class</span> <span class="nc">FuncClass</span><span class="p">():</span>
-<a name="rest_code_19be4bdaf5bd4bbfa49f5f4d96aef2b9-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a name="rest_code_19be4bdaf5bd4bbfa49f5f4d96aef2b9-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">var</span> <span class="o">=</span> <span class="p">[]</span>
-<a name="rest_code_19be4bdaf5bd4bbfa49f5f4d96aef2b9-4"></a>
-<a name="rest_code_19be4bdaf5bd4bbfa49f5f4d96aef2b9-5"></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
-<a name="rest_code_19be4bdaf5bd4bbfa49f5f4d96aef2b9-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_d905cebec8b54addbe8ac68ef9f9ccdc-1"></a><span class="k">class</span> <span class="nc">FuncClass</span><span class="p">():</span>
+<a name="rest_code_d905cebec8b54addbe8ac68ef9f9ccdc-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a name="rest_code_d905cebec8b54addbe8ac68ef9f9ccdc-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">var</span> <span class="o">=</span> <span class="p">[]</span>
+<a name="rest_code_d905cebec8b54addbe8ac68ef9f9ccdc-4"></a>
+<a name="rest_code_d905cebec8b54addbe8ac68ef9f9ccdc-5"></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+<a name="rest_code_d905cebec8b54addbe8ac68ef9f9ccdc-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">var</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
 </pre>
 <p>Powyżej widzisz klasę, która ma zaimplementowane 2 <em>metody magiczne</em>:</p>
 <ul class="simple">
@@ -183,28 +183,28 @@ og: http://ogp.me/ns#
 <code>__call__</code>, która przyjmuje jako argument wywołania dowolny <code>element</code> i dodanie go do listy w zmiennej <code>var</code>.</li>
 </ul>
 <p>Powyższa implementacja to nic skomplikowanego. Sprawdźmy zatem jak zachowuje się taka klasa.</p>
-<pre class="code python"><a name="rest_code_da2d9fa5a4d04d48880c8adfac15bf28-1"></a><span class="n">f</span> <span class="o">=</span> <span class="n">FuncClass</span><span class="p">()</span>  <span class="c1"># Utworzenie instancji klasy</span>
-<a name="rest_code_da2d9fa5a4d04d48880c8adfac15bf28-2"></a><span class="n">f</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Wywołujemy bezpośrednio metodę __call__ instancji f</span>
-<a name="rest_code_da2d9fa5a4d04d48880c8adfac15bf28-3"></a><span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">var</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_245bf0cb02d04c15a95573f36dd54d19-1"></a><span class="n">f</span> <span class="o">=</span> <span class="n">FuncClass</span><span class="p">()</span>  <span class="c1"># Utworzenie instancji klasy</span>
+<a name="rest_code_245bf0cb02d04c15a95573f36dd54d19-2"></a><span class="n">f</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Wywołujemy bezpośrednio metodę __call__ instancji f</span>
+<a name="rest_code_245bf0cb02d04c15a95573f36dd54d19-3"></a><span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">var</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; [1]
 </pre>
-<pre class="code python"><a name="rest_code_1feb6ed66d954eb0b89618f2d2ca2205-1"></a><span class="c1"># Tym razem odnosimy się do instancji f z pominięciem metody __call__</span>
-<a name="rest_code_1feb6ed66d954eb0b89618f2d2ca2205-2"></a><span class="c1"># (zostanie ona automatycznie wywołana przez interpreter)</span>
-<a name="rest_code_1feb6ed66d954eb0b89618f2d2ca2205-3"></a>
-<a name="rest_code_1feb6ed66d954eb0b89618f2d2ca2205-4"></a><span class="n">f</span><span class="p">(</span><span class="s2">"Drugi"</span><span class="p">)</span>
-<a name="rest_code_1feb6ed66d954eb0b89618f2d2ca2205-5"></a><span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">var</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_66bfb1c16fd3485cb7ca3925744169c4-1"></a><span class="c1"># Tym razem odnosimy się do instancji f z pominięciem metody __call__</span>
+<a name="rest_code_66bfb1c16fd3485cb7ca3925744169c4-2"></a><span class="c1"># (zostanie ona automatycznie wywołana przez interpreter)</span>
+<a name="rest_code_66bfb1c16fd3485cb7ca3925744169c4-3"></a>
+<a name="rest_code_66bfb1c16fd3485cb7ca3925744169c4-4"></a><span class="n">f</span><span class="p">(</span><span class="s2">"Drugi"</span><span class="p">)</span>
+<a name="rest_code_66bfb1c16fd3485cb7ca3925744169c4-5"></a><span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">var</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; [1, 'Drugi']
 </pre>
 <p>Widać powyżej, że klasa, może zachowywać się jak funkcja. Każdy obiekt w języku Python, może (nie musi) mieć zaimplementowaną metodę <code>__call__</code>. Skoro tak jest, to sprawdźmy czy normalna funkcja też ją ma. Wróćmy więc do naszej bardzo prostej funkcji:</p>
-<pre class="code python"><a name="rest_code_8aedef4982234f13981c771a1ef68517-1"></a><span class="k">def</span> <span class="nf">example_function</span><span class="p">():</span>
-<a name="rest_code_8aedef4982234f13981c771a1ef68517-2"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"Example"</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_f67c6d4318ad41fa98391ed42fd5ce59-1"></a><span class="k">def</span> <span class="nf">example_function</span><span class="p">():</span>
+<a name="rest_code_f67c6d4318ad41fa98391ed42fd5ce59-2"></a>    <span class="k">print</span><span class="p">(</span><span class="s2">"Example"</span><span class="p">)</span>
 </pre>
 <p>Wiemy już, że możemy ją wywołać poprzez <code>example_function()</code> co w wyniku spowoduje wyświetlenie napisu <code>Example</code>. A co metodą <code>__call__</code>? Sprawdźmy:</p>
-<pre class="code python"><a name="rest_code_d69221f4605542859b2db31e41c6c57d-1"></a><span class="n">example_function</span><span class="o">.</span><span class="fm">__call__</span><span class="p">()</span>
+<pre class="code python"><a name="rest_code_2b6441ba17ec45db959301c74e83b355-1"></a><span class="n">example_function</span><span class="o">.</span><span class="fm">__call__</span><span class="p">()</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; Example
@@ -215,32 +215,32 @@ og: http://ogp.me/ns#
 <div class="section" id="pierwszy-dekorator">
 <h2>Pierwszy dekorator</h2>
 <p>Na początku pisałem, że dekorator to klasa, która opakowuje inną klasę dodając do opakowywanej klasy nową funkcjonalność. Skoro już wiemy, że funkcja jest klasą/obiektem to w Python'ie dekoratorem może być zarówno funkcja jak i klasa. Aby sobie nie utrudniać na początku, zacznijmy od implementacji dekoratora w postaci funkcji. Jednak, aby móc zaimplementować dekorator, musimy mieć co udekorować. Rozpatrzmy zatem taką prostą funkcję:</p>
-<pre class="code python"><a name="rest_code_762db093c3e9469c973121d351599182-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
-<a name="rest_code_762db093c3e9469c973121d351599182-2"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_9aa98453ef384b199546cb3fa5ac1aba-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_9aa98453ef384b199546cb3fa5ac1aba-2"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
 </pre>
 <p>Powyższa funkcja ma za zadanie dodać do siebie 2 elementy. Sprawdźmy więc jak działa:</p>
-<pre class="code python"><a name="rest_code_552ee092e4d347509023ec96f2ed2474-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_2610db6bef96410db902f8ecce93b2f4-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; 3
 </pre>
 <p>Wszystko super. Wynik taki jak się spodziewaliśmy. Sprawdźmy zatem inny zestaw argumentów:</p>
-<pre class="code python"><a name="rest_code_674624cdd40c4f86a984848b8910ddd1-1"></a><span class="n">add</span><span class="p">(</span><span class="s2">"1"</span><span class="p">,</span> <span class="s2">"2"</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_279ce001c85f409e85fb58f2145d37c2-1"></a><span class="n">add</span><span class="p">(</span><span class="s2">"1"</span><span class="p">,</span> <span class="s2">"2"</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; 12
 </pre>
 <p>Co? Jak to możliwe, że dostaliśmy <code>12</code>? Zauważ, że jako argumenty podaliśmy tekst z cyframi 1 i 2, a nie liczby 1 i 2. Interpreter Python'a uznał, że zamiast dodawania dwóch liczb, chcemy połączyć dwa ciągi znaków w jeden dłuższy ciąg znaków. Jak naprawić taki, kod nie zmieniając ciała funkcji <code>add</code>?</p>
 <p>Wykorzystamy w tym celu dekorator. Zacznijmy jednak od kilku rzeczy, które pomogą nam zrozumieć jak w swoim wnętrzu działa taki dekorator. Sprawdźmy jak działa poniższy kod:</p>
-<pre class="code python"><a name="rest_code_a0b9c3174f874de4a30701ed7ed6768a-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-<a name="rest_code_a0b9c3174f874de4a30701ed7ed6768a-2"></a>    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"Decorated function name: {func.__name__}"</span><span class="p">)</span>
-<a name="rest_code_a0b9c3174f874de4a30701ed7ed6768a-3"></a>    <span class="k">return</span> <span class="n">func</span>
-<a name="rest_code_a0b9c3174f874de4a30701ed7ed6768a-4"></a>
-<a name="rest_code_a0b9c3174f874de4a30701ed7ed6768a-5"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
-<a name="rest_code_a0b9c3174f874de4a30701ed7ed6768a-6"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
-<a name="rest_code_a0b9c3174f874de4a30701ed7ed6768a-7"></a>
-<a name="rest_code_a0b9c3174f874de4a30701ed7ed6768a-8"></a><span class="n">add</span> <span class="o">=</span> <span class="n">decorator</span><span class="p">(</span><span class="n">add</span><span class="p">)</span>
-<a name="rest_code_a0b9c3174f874de4a30701ed7ed6768a-9"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_70034832389144f8a414974cba1e3d66-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<a name="rest_code_70034832389144f8a414974cba1e3d66-2"></a>    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"Decorated function name: {func.__name__}"</span><span class="p">)</span>
+<a name="rest_code_70034832389144f8a414974cba1e3d66-3"></a>    <span class="k">return</span> <span class="n">func</span>
+<a name="rest_code_70034832389144f8a414974cba1e3d66-4"></a>
+<a name="rest_code_70034832389144f8a414974cba1e3d66-5"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_70034832389144f8a414974cba1e3d66-6"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+<a name="rest_code_70034832389144f8a414974cba1e3d66-7"></a>
+<a name="rest_code_70034832389144f8a414974cba1e3d66-8"></a><span class="n">add</span> <span class="o">=</span> <span class="n">decorator</span><span class="p">(</span><span class="n">add</span><span class="p">)</span>
+<a name="rest_code_70034832389144f8a414974cba1e3d66-9"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; Decorated function name: add
@@ -249,11 +249,11 @@ og: http://ogp.me/ns#
 <p>Implementacji funkcja <code>decorator</code> jako argument przyjmuje ciało innej funkcji. Ma za zadnie wyświetlić jej nazwę oraz po prostu ją zwrócić.</p>
 <p>Następnie wykorzystana została właściwość, o której pisałem powyżej, czyli możliwości przypisania funkcji do zmiennej (w tym przypadku funkcję <code>add</code> przypisujemy do zmiennej o tej samej nazwie, czyli również <code>add</code>). Takie przypisanie powoduje, że zmienna <code>add</code> staje się funkcją, która w pierwszej kolejności wywoła dekorator, którego argumentem będzie rzeczywista funkcja <code>add</code>.</p>
 <p>Niestety taki zapis jest mało czytelny i nie do końca widać (patrząc tylko na definicję funkcji <code>add</code>), że została ona udekorowana. W Python'ie na szczęście istnieje na to prosty sposób:</p>
-<pre class="code python"><a name="rest_code_2077b3ce44c84b409c8f69b83ba6489a-1"></a><span class="nd">@decorator</span>
-<a name="rest_code_2077b3ce44c84b409c8f69b83ba6489a-2"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
-<a name="rest_code_2077b3ce44c84b409c8f69b83ba6489a-3"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
-<a name="rest_code_2077b3ce44c84b409c8f69b83ba6489a-4"></a>
-<a name="rest_code_2077b3ce44c84b409c8f69b83ba6489a-5"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_29243a0b72de40b8b2f9c80b4badf314-1"></a><span class="nd">@decorator</span>
+<a name="rest_code_29243a0b72de40b8b2f9c80b4badf314-2"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_29243a0b72de40b8b2f9c80b4badf314-3"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+<a name="rest_code_29243a0b72de40b8b2f9c80b4badf314-4"></a>
+<a name="rest_code_29243a0b72de40b8b2f9c80b4badf314-5"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; Decorated function name: add
@@ -273,11 +273,11 @@ og: http://ogp.me/ns#
 <div class="section" id="args-i-kwargs">
 <h2>args i kwargs</h2>
 <p>Wiemy już, jak stworzyć prosty (jeszcze nic nie robiący) dekorator. Skoro do środka dekoratora przekazujemy funkcję, to gdzieś powinny być jeszcze widoczne wszystkie argumenty, które do danej funkcji są przekazywane w momencie jej wywołania. Rozważmy poniższą definicję dekoratora (implementację funkcji <code>add</code> pominę, gdyż założyliśmy na początki, że jej nie zmieniamy):</p>
-<pre class="code python"><a name="rest_code_ce8124a296194978a8b8d07fa61fa2cd-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-<a name="rest_code_ce8124a296194978a8b8d07fa61fa2cd-2"></a>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a name="rest_code_ce8124a296194978a8b8d07fa61fa2cd-3"></a>        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"args (type: {type(args)}): {args}"</span><span class="p">)</span>
-<a name="rest_code_ce8124a296194978a8b8d07fa61fa2cd-4"></a>        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"kwargs (type: {type(kwargs)}): {kwargs}"</span><span class="p">)</span>
-<a name="rest_code_ce8124a296194978a8b8d07fa61fa2cd-5"></a>    <span class="k">return</span> <span class="n">wrapper</span>
+<pre class="code python"><a name="rest_code_ece7e7bcad04431fac6e364ffdfbc661-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<a name="rest_code_ece7e7bcad04431fac6e364ffdfbc661-2"></a>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_ece7e7bcad04431fac6e364ffdfbc661-3"></a>        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"args (type: {type(args)}): {args}"</span><span class="p">)</span>
+<a name="rest_code_ece7e7bcad04431fac6e364ffdfbc661-4"></a>        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"kwargs (type: {type(kwargs)}): {kwargs}"</span><span class="p">)</span>
+<a name="rest_code_ece7e7bcad04431fac6e364ffdfbc661-5"></a>    <span class="k">return</span> <span class="n">wrapper</span>
 </pre>
 <p>Do definicji wewnętrznej funkcji <code>wrapper</code> dodałem dwa atrybuty:</p>
 <ul class="simple">
@@ -285,7 +285,7 @@ og: http://ogp.me/ns#
 <li><code>**kwargs</code></li>
 </ul>
 <p>Zobaczmy teraz co się stanie jak wywołamy poniższy kod:</p>
-<pre class="code python"><a name="rest_code_b8d0ac6ede1d4938800821beddae6c07-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_a1ab7b73b5e449338656bd9bc322cbd9-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; args (type: &lt;class 'tuple'&gt;): (1, 2)
@@ -293,7 +293,7 @@ og: http://ogp.me/ns#
 </pre>
 <p>Widzimy, że argumenty przekazane do funkcji tworzą zmienną <code>args</code> o typie <em>touple</em> (<em>krotka</em>), natomiast zmienną <code>kwargs</code> jest typu <em>dict</em> (<em>słownik</em>), ale jest to pusty słownik.</p>
 <p>Co się stanie, jak wywołamy funkcję <code>add</code> w inny sposób:</p>
-<pre class="code python"><a name="rest_code_dbf69eab773f452e98dc63454668a49f-1"></a><span class="n">add</span><span class="p">(</span><span class="n">first</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_2ad63a16affc443eba59904eebfdccab-1"></a><span class="n">add</span><span class="p">(</span><span class="n">first</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; *args (type: &lt;class 'tuple'&gt;): ()
@@ -301,7 +301,7 @@ og: http://ogp.me/ns#
 </pre>
 <p>Widzimy teraz, że <code>args</code> jest puste, natomiast <code>kwargs</code> zostało wypełnione.</p>
 <p>Możemy wywołać funkcję <code>add</code> również jako miks powyższych wywołań:</p>
-<pre class="code python"><a name="rest_code_3caa5b0b47b741c0bea80386e1c9bcf0-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_cf16142b27d644eba61ea141076ada43-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; *args (type: &lt;class 'tuple'&gt;): (1,)
@@ -318,58 +318,58 @@ og: http://ogp.me/ns#
 <p>Możliwość przekazania argumentów do funkcji przy użyciu <code>args</code> i <code>kwargs</code> niesie za sobą pewne implikacje. Najważniejszą implikacją jest konieczność obsłużenia obu przypadków w ciele dekoratora, jeśli chcemy wykonać jakieś operacje na atrybutach przekazywanych do dekorowanej funkcji.</p>
 <p>Wróćmy teraz do napisania dekoratora, który ma za zadanie sprawdzić typ argumentów przekazywanych do funkcji <code>add</code> tak, aby przeprowadziła działanie dodawania dwóch liczb.</p>
 <p>Przyjmijmy najprostsze założenie, że aby funkcja zadziałała poprawnie, argumenty funkcji muszą być typu <em>int</em> lub <em>float</em>. W przypadku jeśli dowolny z argumentów, będzie innym typem, funkcja nie zostanie uruchomiona i zostanie zwrócony wyjątek typu <em>TypeErrror</em>.</p>
-<pre class="code python"><a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-2"></a>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-3"></a>        <span class="c1"># Zmienna określająca czy typy argumentów są poprawne</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-4"></a>        <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-5"></a>        <span class="c1"># Utworzenie kopi listy argumentów</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-6"></a>        <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-7"></a>        <span class="c1"># Rozszerzenie listy argumentów</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-8"></a>        <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-9"></a>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-10"></a>        <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-11"></a>            <span class="c1"># Poniższe wyrażenia zawiera w sobie dwie ciekawe</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-12"></a>            <span class="c1"># konstrukcje:</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-13"></a>            <span class="c1"># 1. tzw. short if sprawdzający czy podany argument jest</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-14"></a>            <span class="c1"># typu int lub float i zwracający odpowiednią wartość</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-15"></a>            <span class="c1"># 2. operator mnożenia z przypisaniem *= powoduje, że gdy</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-16"></a>            <span class="c1"># choć jeden z atrybutów nie będzie odpowiedniego typy</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-17"></a>            <span class="c1"># to zmienna is_correct przybierze wartość False</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-18"></a>            <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-19"></a>                <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="k">else</span> <span class="bp">False</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-20"></a>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-21"></a>        <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-22"></a>            <span class="c1"># Przekazanie argumentów do dekorowanej funkcji,</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-23"></a>            <span class="c1"># która zostaje wywołana, a jej wynik zwrócony</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-24"></a>            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-25"></a>        <span class="k">else</span><span class="p">:</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-26"></a>            <span class="c1"># Zwrócenie wyjątku, gdy choć jeden atrybut przekazany do</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-27"></a>            <span class="c1"># funkcji nie jest typu int lub float</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-28"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"One of the arguments is not int or float"</span><span class="p">)</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-29"></a>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-30"></a>    <span class="k">return</span> <span class="n">wrapper</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-31"></a>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-32"></a><span class="nd">@decorator</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-33"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
-<a name="rest_code_ffefecfdd1444ba2bfcc18ec2b58f926-34"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_6a0e86a242004d7283bbe999bc39583e-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-2"></a>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-3"></a>        <span class="c1"># Zmienna określająca czy typy argumentów są poprawne</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-4"></a>        <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-5"></a>        <span class="c1"># Utworzenie kopi listy argumentów</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-6"></a>        <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-7"></a>        <span class="c1"># Rozszerzenie listy argumentów</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-8"></a>        <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-9"></a>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-10"></a>        <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-11"></a>            <span class="c1"># Poniższe wyrażenia zawiera w sobie dwie ciekawe</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-12"></a>            <span class="c1"># konstrukcje:</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-13"></a>            <span class="c1"># 1. tzw. short if sprawdzający czy podany argument jest</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-14"></a>            <span class="c1"># typu int lub float i zwracający odpowiednią wartość</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-15"></a>            <span class="c1"># 2. operator mnożenia z przypisaniem *= powoduje, że gdy</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-16"></a>            <span class="c1"># choć jeden z atrybutów nie będzie odpowiedniego typy</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-17"></a>            <span class="c1"># to zmienna is_correct przybierze wartość False</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-18"></a>            <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-19"></a>                <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="k">else</span> <span class="bp">False</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-20"></a>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-21"></a>        <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-22"></a>            <span class="c1"># Przekazanie argumentów do dekorowanej funkcji,</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-23"></a>            <span class="c1"># która zostaje wywołana, a jej wynik zwrócony</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-24"></a>            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-25"></a>        <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-26"></a>            <span class="c1"># Zwrócenie wyjątku, gdy choć jeden atrybut przekazany do</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-27"></a>            <span class="c1"># funkcji nie jest typu int lub float</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-28"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"One of the arguments is not int or float"</span><span class="p">)</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-29"></a>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-30"></a>    <span class="k">return</span> <span class="n">wrapper</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-31"></a>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-32"></a><span class="nd">@decorator</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-33"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_6a0e86a242004d7283bbe999bc39583e-34"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
 </pre>
 <p>Mam nadzieję, że powyższy kod jest dla Ciebie zrozumiały (umieściłem odpowiednie komentarze w samym kodzie, aby lepiej wyjaśnić co on robi).</p>
 <p>Jeśli jednak masz problem ze zrozumieniem zapisu <code>is_correct *= True if any(isinstance(arg, t) for t in [int, float]) else False</code> poniżej umieszczam jego ekwiwalent:</p>
-<pre class="code python"><a name="rest_code_b37ab2925ac84a65a5df8fb484fedfa1-1"></a><span class="n">is_correct_helper</span> <span class="o">=</span> <span class="bp">False</span>
-<a name="rest_code_b37ab2925ac84a65a5df8fb484fedfa1-2"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
-<a name="rest_code_b37ab2925ac84a65a5df8fb484fedfa1-3"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
-<a name="rest_code_b37ab2925ac84a65a5df8fb484fedfa1-4"></a>        <span class="n">is_correct_helper</span> <span class="o">=</span> <span class="bp">True</span>
-<a name="rest_code_b37ab2925ac84a65a5df8fb484fedfa1-5"></a><span class="n">is_correct</span> <span class="o">*=</span> <span class="n">is_correct_helper</span>
+<pre class="code python"><a name="rest_code_9cda50a3f4ac4f15b706d392ecae1d6b-1"></a><span class="n">is_correct_helper</span> <span class="o">=</span> <span class="bp">False</span>
+<a name="rest_code_9cda50a3f4ac4f15b706d392ecae1d6b-2"></a><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+<a name="rest_code_9cda50a3f4ac4f15b706d392ecae1d6b-3"></a>    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<a name="rest_code_9cda50a3f4ac4f15b706d392ecae1d6b-4"></a>        <span class="n">is_correct_helper</span> <span class="o">=</span> <span class="bp">True</span>
+<a name="rest_code_9cda50a3f4ac4f15b706d392ecae1d6b-5"></a><span class="n">is_correct</span> <span class="o">*=</span> <span class="n">is_correct_helper</span>
 </pre>
 <p>Zauważ jednak, że ten kawałek kodu wymaga wprowadzenia dodatkowej zmiennej pomocniczej <code>is_correct_helper</code> i nie jest tak zwięzły jak wcześniejszy zapis (wcześniejszy zapis będę używał w późniejszych przykładach).</p>
 <p>Sprawdźmy teraz czy powyższy kod działa poprawnie dla argumentów o poprawnych typach:</p>
-<pre class="code python"><a name="rest_code_fe17ee0eb73241dc8c66bec51b64e070-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_fe1222793c6b4d07b849c16c0f55feb7-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; 3.0
 </pre>
 <p>Wynik jest poprawny. A co jeśli jeden z argumentów będzie ciągiem znaków?</p>
-<pre class="code python"><a name="rest_code_1ac4db6a55264b06bd6fb3b52ea2092f-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"2.0"</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_25715bfb150c48118a455cc9ce8b2162-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"2.0"</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; Traceback (most recent call last):
@@ -387,23 +387,23 @@ og: http://ogp.me/ns#
 <div class="section" id="wraps">
 <h2>wraps</h2>
 <p>Rozważmy teraz inną kwestię, tzn. dokumentację do naszego kodu. Do tej pory w naszym kodzie, nie ma ani jednej linijki opisującej czym nasza dekorowana funkcja się zajmuje. Dodajmy najprostszą możliwą formę dokumentacji czyli pojedynczą linię komentarza pod definicją funkcji (zauważ, że pominąłem dodanie dekoratora):</p>
-<pre class="code python"><a name="rest_code_1bae01e578b24e81994ed4b80c16d939-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
-<a name="rest_code_1bae01e578b24e81994ed4b80c16d939-2"></a>    <span class="sd">"""Add to elements and print the result"""</span>
-<a name="rest_code_1bae01e578b24e81994ed4b80c16d939-3"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_4e66634849f7416d90c8191fd268016a-1"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_4e66634849f7416d90c8191fd268016a-2"></a>    <span class="sd">"""Add to elements and print the result"""</span>
+<a name="rest_code_4e66634849f7416d90c8191fd268016a-3"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
 </pre>
 <p>Spróbujmy teraz wywołać jedną z metod, która wykorzystywana jest przez narzędzia do budowania dokumentacji kodu, np. <a class="reference external" href="http://www.sphinx-doc.org/en/master/">Sphinx</a>.</p>
-<pre class="code python"><a name="rest_code_965603a60a2f4bafac64868aae5ae672-1"></a><span class="k">print</span><span class="p">(</span><span class="n">add</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_c8d5e1fd7244469583b349bc7757d22b-1"></a><span class="k">print</span><span class="p">(</span><span class="n">add</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; Add to elements and print the result
 </pre>
 <p>Widzimy, że poprzez wywołanie jednej z <em>metod magicznych</em> możemy dostać się do naszego opisu funkcji. Sprawdźmy teraz co się stanie jak udekorujemy funkcję naszym dekoratorem:</p>
-<pre class="code python"><a name="rest_code_bbac9ea7c0e1453ba736a8f9a31ab9aa-1"></a><span class="nd">@decorator</span>
-<a name="rest_code_bbac9ea7c0e1453ba736a8f9a31ab9aa-2"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
-<a name="rest_code_bbac9ea7c0e1453ba736a8f9a31ab9aa-3"></a>    <span class="sd">"""Add to elements and print the result"""</span>
-<a name="rest_code_bbac9ea7c0e1453ba736a8f9a31ab9aa-4"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
-<a name="rest_code_bbac9ea7c0e1453ba736a8f9a31ab9aa-5"></a>
-<a name="rest_code_bbac9ea7c0e1453ba736a8f9a31ab9aa-6"></a><span class="k">print</span><span class="p">(</span><span class="n">add</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_b12a9f884b77485b84c8a092d3b8e364-1"></a><span class="nd">@decorator</span>
+<a name="rest_code_b12a9f884b77485b84c8a092d3b8e364-2"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_b12a9f884b77485b84c8a092d3b8e364-3"></a>    <span class="sd">"""Add to elements and print the result"""</span>
+<a name="rest_code_b12a9f884b77485b84c8a092d3b8e364-4"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+<a name="rest_code_b12a9f884b77485b84c8a092d3b8e364-5"></a>
+<a name="rest_code_b12a9f884b77485b84c8a092d3b8e364-6"></a><span class="k">print</span><span class="p">(</span><span class="n">add</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; None
@@ -411,27 +411,27 @@ og: http://ogp.me/ns#
 <p>Dekorator wszystko nam popsuł <img alt="disappointed" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/disappointed.png" style="width: 24px; height: 24px;">.</p>
 <p>Dlaczego tak się dzieje? Otóż <code>add.__doc__</code> pobiera teraz opis nie z funkcji <code>add</code>, a z dekoratora.</p>
 <p>Możemy to rozwiązać bardzo łopatologicznie, ale ponieważ ktoś już o tym pomyślał, to wykorzystamy gotową funkcję. Wchodzi ona w skład bibliotek standardowych i jest częścią pakietu <a class="reference external" href="https://docs.python.org/2/library/functools.html">functools</a>. Zaimportujmy zatem funkcję <code>wraps</code> i jej użyjmy (funkcja <code>add</code> pozostaje bez zmian).</p>
-<pre class="code python"><a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-1"></a><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-2"></a>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-3"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-4"></a>    <span class="nd">@wraps</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-5"></a>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-6"></a>        <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-7"></a>        <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-8"></a>        <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-9"></a>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-10"></a>        <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-11"></a>            <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-12"></a>                <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="k">else</span> <span class="bp">False</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-13"></a>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-14"></a>        <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-15"></a>            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-16"></a>        <span class="k">else</span><span class="p">:</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-17"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"One of the arguments is not int or float"</span><span class="p">)</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-18"></a>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-19"></a>    <span class="k">return</span> <span class="n">wrapper</span>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-20"></a>
-<a name="rest_code_32cf21d5a33a462fa37507a67c0bd068-21"></a><span class="k">print</span><span class="p">(</span><span class="n">add</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-1"></a><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-2"></a>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-3"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-4"></a>    <span class="nd">@wraps</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-5"></a>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-6"></a>        <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-7"></a>        <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-8"></a>        <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-9"></a>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-10"></a>        <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-11"></a>            <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-12"></a>                <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="k">else</span> <span class="bp">False</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-13"></a>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-14"></a>        <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-15"></a>            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-16"></a>        <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-17"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"One of the arguments is not int or float"</span><span class="p">)</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-18"></a>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-19"></a>    <span class="k">return</span> <span class="n">wrapper</span>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-20"></a>
+<a name="rest_code_332c8256f6c5427fb1f3272d4b132a5c-21"></a><span class="k">print</span><span class="p">(</span><span class="n">add</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; Add to elements and print the result
@@ -441,48 +441,48 @@ og: http://ogp.me/ns#
 <div class="section" id="dekorator-z-parametrami">
 <h2>Dekorator z parametrami</h2>
 <p>A co gdybyśmy chcieli np. wymusić, aby dekorator (poza już istniejącą implementacją) sprawdzał, czy oba parametry były tego samego typu? Musielibyśmy być w stanie przekazać do dekoratora jakieś dodatkowy parametr. Skoro wiemy, że dekorator jest funkcją, to być może dało by się do takiego dekoratora przekazać ten parametr jako argument funkcji? Sprawdźmy więc.</p>
-<pre class="code python"><a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">args_type_list</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>  <span class="c1"># Dekorator z argumentem</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-2"></a>    <span class="k">def</span> <span class="nf">inner_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>  <span class="c1"># Wcześniejszy dekorator</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-3"></a>        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-4"></a>            <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-5"></a>            <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-6"></a>            <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-7"></a>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-8"></a>            <span class="c1"># Zmienna pomocnicza użyta podczas sprawdzania typów,</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-9"></a>            <span class="c1"># która przyjmuje przyjmuje listę typów przekazaną do</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-10"></a>            <span class="c1"># dekoratora lub domyślną listę typów</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-11"></a>            <span class="n">types_list</span> <span class="o">=</span> <span class="n">args_type_list</span> <span class="k">if</span> \
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-12"></a>                <span class="nb">isinstance</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-13"></a>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-14"></a>            <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-15"></a>                <span class="c1"># Lista typów zamieniona na zmienną pomocniczą</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-16"></a>                <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-17"></a>                    <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">types_list</span><span class="p">)</span> \
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-18"></a>                    <span class="k">else</span> <span class="bp">False</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-19"></a>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-20"></a>            <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-21"></a>                <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-22"></a>            <span class="k">else</span><span class="p">:</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-23"></a>                <span class="c1"># Drobna modyfikacja</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-24"></a>                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">f</span><span class="s2">"One of the arguments is not one type of: "</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-25"></a>                                <span class="n">f</span><span class="s2">"{args_type_list}"</span><span class="p">)</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-26"></a>        <span class="k">return</span> <span class="n">wrapper</span>
-<a name="rest_code_8d945fad6f9c4c53a4596e5a1c059b02-27"></a>    <span class="k">return</span> <span class="n">inner_decorator</span>
+<pre class="code python"><a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">args_type_list</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>  <span class="c1"># Dekorator z argumentem</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-2"></a>    <span class="k">def</span> <span class="nf">inner_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>  <span class="c1"># Wcześniejszy dekorator</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-3"></a>        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-4"></a>            <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-5"></a>            <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-6"></a>            <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-7"></a>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-8"></a>            <span class="c1"># Zmienna pomocnicza użyta podczas sprawdzania typów,</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-9"></a>            <span class="c1"># która przyjmuje przyjmuje listę typów przekazaną do</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-10"></a>            <span class="c1"># dekoratora lub domyślną listę typów</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-11"></a>            <span class="n">types_list</span> <span class="o">=</span> <span class="n">args_type_list</span> <span class="k">if</span> \
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-12"></a>                <span class="nb">isinstance</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-13"></a>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-14"></a>            <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-15"></a>                <span class="c1"># Lista typów zamieniona na zmienną pomocniczą</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-16"></a>                <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-17"></a>                    <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">types_list</span><span class="p">)</span> \
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-18"></a>                    <span class="k">else</span> <span class="bp">False</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-19"></a>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-20"></a>            <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-21"></a>                <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-22"></a>            <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-23"></a>                <span class="c1"># Drobna modyfikacja</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-24"></a>                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">f</span><span class="s2">"One of the arguments is not one type of: "</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-25"></a>                                <span class="n">f</span><span class="s2">"{args_type_list}"</span><span class="p">)</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-26"></a>        <span class="k">return</span> <span class="n">wrapper</span>
+<a name="rest_code_7c0a2f7b9f13456f9dab1babc08f2177-27"></a>    <span class="k">return</span> <span class="n">inner_decorator</span>
 </pre>
 <p>Wprowadziliśmy tutaj dodatkowy poziom zagnieżdżenia oraz dokonaliśmy drobnej modyfikacji podczas sprawdzenia typów (wszystkie zmiany opatrzone zostały komentarzem w kodzie).</p>
 <p>Sprawdźmy teraz jak udekorować naszą funkcję i jakie wyniki zostaną wyświetlone jak spróbujemy jej użyć.</p>
-<pre class="code python"><a name="rest_code_1f9b8e7a3fc54b46a8c7b0019d878e31-1"></a><span class="nd">@decorator</span><span class="p">([</span><span class="nb">int</span><span class="p">])</span>  <span class="c1"># Wywołanie dekoratora z parametrem</span>
-<a name="rest_code_1f9b8e7a3fc54b46a8c7b0019d878e31-2"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
-<a name="rest_code_1f9b8e7a3fc54b46a8c7b0019d878e31-3"></a>    <span class="sd">"""Add to elements and print the result"""</span>
-<a name="rest_code_1f9b8e7a3fc54b46a8c7b0019d878e31-4"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
-<a name="rest_code_1f9b8e7a3fc54b46a8c7b0019d878e31-5"></a>
-<a name="rest_code_1f9b8e7a3fc54b46a8c7b0019d878e31-6"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_22a05c545f7140cb9ba911c42adfaef5-1"></a><span class="nd">@decorator</span><span class="p">([</span><span class="nb">int</span><span class="p">])</span>  <span class="c1"># Wywołanie dekoratora z parametrem</span>
+<a name="rest_code_22a05c545f7140cb9ba911c42adfaef5-2"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_22a05c545f7140cb9ba911c42adfaef5-3"></a>    <span class="sd">"""Add to elements and print the result"""</span>
+<a name="rest_code_22a05c545f7140cb9ba911c42adfaef5-4"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+<a name="rest_code_22a05c545f7140cb9ba911c42adfaef5-5"></a>
+<a name="rest_code_22a05c545f7140cb9ba911c42adfaef5-6"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; 3
 </pre>
 <p>Nic wielkiego, wszystko jest ok. A jak zmienimy typ jednego z argumentów wywołania funkcji <code>add</code>?</p>
-<pre class="code python"><a name="rest_code_562d1b00f0a346b8abeb6452a1467e4d-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_d38d1bf26ee3437d92cb739e0a58e64e-1"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; Traceback (most recent call last):
@@ -507,39 +507,39 @@ og: http://ogp.me/ns#
 <p>Czy możemy sobie z tym problemem jakoś poradzić?</p>
 <img alt="/images/posts/20200109/this_is_python.jpg" src="../../../images/posts/20200109/this_is_python.jpg"><p>Oczywiście. Co ciekawe, taka modyfikacja wcale nie jest taka trudna do zrobienia. Wystarczy zmienić jedną linijkę kodu w dekoratorze.</p>
 <p>Przeprowadźmy więc wymaganą modyfikację oraz sprawdźmy stary zapis dekoratora wraz z wywołaniem udekorowanej funkcji:</p>
-<pre class="code python"><a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">args_type_list</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-2"></a>    <span class="k">def</span> <span class="nf">inner_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-3"></a>        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-4"></a>            <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-5"></a>            <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-6"></a>            <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-7"></a>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-8"></a>            <span class="n">types_list</span> <span class="o">=</span> <span class="n">args_type_list</span> <span class="k">if</span> \
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-9"></a>                <span class="nb">isinstance</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-10"></a>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-11"></a>            <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-12"></a>                <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-13"></a>                    <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">types_list</span><span class="p">)</span> \
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-14"></a>                    <span class="k">else</span> <span class="bp">False</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-15"></a>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-16"></a>            <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-17"></a>                <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-18"></a>            <span class="k">else</span><span class="p">:</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-19"></a>                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">f</span><span class="s2">"One of the arguments is not one type of: "</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-20"></a>                                <span class="n">f</span><span class="s2">"{args_type_list}"</span><span class="p">)</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-21"></a>        <span class="k">return</span> <span class="n">wrapper</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-22"></a>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-23"></a>    <span class="c1"># Tutaj następuje zmiana tego, co przez dekorator jest zwracane</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-24"></a>    <span class="c1"># w zależności od tego czy przekażemy argumenty do dekoratora czy nie</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-25"></a>    <span class="k">return</span> <span class="n">inner_decorator</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">)</span> <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">)</span> \
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-26"></a>        <span class="k">else</span> <span class="n">inner_decorator</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-27"></a>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-28"></a><span class="nd">@decorator</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-29"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-30"></a>    <span class="sd">"""Add to elements and print the result"""</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-31"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-32"></a>
-<a name="rest_code_dc65f222ea6449b3b5e0cf50f050e123-33"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_db70e9adf347485d8e3f24d632a884e0-1"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">args_type_list</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-2"></a>    <span class="k">def</span> <span class="nf">inner_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-3"></a>        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-4"></a>            <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-5"></a>            <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-6"></a>            <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-7"></a>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-8"></a>            <span class="n">types_list</span> <span class="o">=</span> <span class="n">args_type_list</span> <span class="k">if</span> \
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-9"></a>                <span class="nb">isinstance</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-10"></a>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-11"></a>            <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-12"></a>                <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-13"></a>                    <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">types_list</span><span class="p">)</span> \
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-14"></a>                    <span class="k">else</span> <span class="bp">False</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-15"></a>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-16"></a>            <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-17"></a>                <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-18"></a>            <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-19"></a>                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">f</span><span class="s2">"One of the arguments is not one type of: "</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-20"></a>                                <span class="n">f</span><span class="s2">"{args_type_list}"</span><span class="p">)</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-21"></a>        <span class="k">return</span> <span class="n">wrapper</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-22"></a>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-23"></a>    <span class="c1"># Tutaj następuje zmiana tego, co przez dekorator jest zwracane</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-24"></a>    <span class="c1"># w zależności od tego czy przekażemy argumenty do dekoratora czy nie</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-25"></a>    <span class="k">return</span> <span class="n">inner_decorator</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">)</span> <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">)</span> \
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-26"></a>        <span class="k">else</span> <span class="n">inner_decorator</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-27"></a>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-28"></a><span class="nd">@decorator</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-29"></a><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-30"></a>    <span class="sd">"""Add to elements and print the result"""</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-31"></a>    <span class="k">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">)</span>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-32"></a>
+<a name="rest_code_db70e9adf347485d8e3f24d632a884e0-33"></a><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 </pre>
 <pre class="doctest-block">
 &gt;&gt;&gt; 3.0
@@ -566,35 +566,35 @@ og: http://ogp.me/ns#
 <div class="section" id="partial">
 <h2>partial</h2>
 <p>Po raz kolejny z pomocą przychodzi nam biblioteka <code>functools</code>. Tym razem jednak skorzystamy zarówno z poznanej wcześniej funkcji <code>wraps</code> oraz nowej <a class="reference external" href="https://docs.python.org/3/library/functools.html#functools.partial">partial</a>. Spójrzmy na poniższy kod (ponownie dekorowana funkcja <code>add</code> pozostaje bez zmian).</p>
-<pre class="code python"><a name="rest_code_b0d883611cc44167b580382a9e789fb3-1"></a><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span><span class="p">,</span> <span class="n">partial</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-2"></a>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-3"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">args_type_list</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-4"></a>    <span class="c1"># Poniższy if sprawdza czy argument func jest wywołaniem funkcji</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-5"></a>    <span class="c1"># czy zwykłym argumentem (rozwinięcie tego tematu w tekście poniżej)</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-6"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="nb">callable</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-7"></a>        <span class="k">return</span> <span class="n">partial</span><span class="p">(</span><span class="n">decorator</span><span class="p">,</span> <span class="n">args_type_list</span><span class="o">=</span><span class="n">func</span><span class="p">)</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-8"></a>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-9"></a>    <span class="c1"># Implementacja funkcji 'wrapper' pozostaje bez zmian</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-10"></a>    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-11"></a>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-12"></a>        <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-13"></a>        <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-14"></a>        <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-15"></a>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-16"></a>        <span class="n">types_list</span> <span class="o">=</span> <span class="n">args_type_list</span> <span class="k">if</span> \
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-17"></a>            <span class="nb">isinstance</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-18"></a>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-19"></a>        <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-20"></a>            <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-21"></a>                <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">types_list</span><span class="p">)</span> \
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-22"></a>                <span class="k">else</span> <span class="bp">False</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-23"></a>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-24"></a>        <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-25"></a>            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-26"></a>        <span class="k">else</span><span class="p">:</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-27"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">f</span><span class="s2">"One of the arguments is not one type of: "</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-28"></a>                            <span class="n">f</span><span class="s2">"{args_type_list}"</span><span class="p">)</span>
-<a name="rest_code_b0d883611cc44167b580382a9e789fb3-29"></a>    <span class="k">return</span> <span class="n">wrapper</span>
+<pre class="code python"><a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-1"></a><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span><span class="p">,</span> <span class="n">partial</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-2"></a>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-3"></a><span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">args_type_list</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-4"></a>    <span class="c1"># Poniższy if sprawdza czy argument func jest wywołaniem funkcji</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-5"></a>    <span class="c1"># czy zwykłym argumentem (rozwinięcie tego tematu w tekście poniżej)</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-6"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="nb">callable</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-7"></a>        <span class="k">return</span> <span class="n">partial</span><span class="p">(</span><span class="n">decorator</span><span class="p">,</span> <span class="n">args_type_list</span><span class="o">=</span><span class="n">func</span><span class="p">)</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-8"></a>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-9"></a>    <span class="c1"># Implementacja funkcji 'wrapper' pozostaje bez zmian</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-10"></a>    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-11"></a>    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-12"></a>        <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-13"></a>        <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-14"></a>        <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-15"></a>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-16"></a>        <span class="n">types_list</span> <span class="o">=</span> <span class="n">args_type_list</span> <span class="k">if</span> \
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-17"></a>            <span class="nb">isinstance</span><span class="p">(</span><span class="n">args_type_list</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-18"></a>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-19"></a>        <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-20"></a>            <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-21"></a>                <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">types_list</span><span class="p">)</span> \
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-22"></a>                <span class="k">else</span> <span class="bp">False</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-23"></a>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-24"></a>        <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-25"></a>            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-26"></a>        <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-27"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">f</span><span class="s2">"One of the arguments is not one type of: "</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-28"></a>                            <span class="n">f</span><span class="s2">"{args_type_list}"</span><span class="p">)</span>
+<a name="rest_code_6c2af3d8839940e9abbc86c5955b6862-29"></a>    <span class="k">return</span> <span class="n">wrapper</span>
 </pre>
 <p>Zauważ, że przy użyciu funkcji <code>partial</code> kod uległ uproszczeniu, a funkcjonalność pozostała bez zmian. Dodatkowo dzięki wykorzystaniu dekoratora <code>wraps</code> działa dokumentacja, itp.</p>
 <p>Uzupełnijmy jeszcze jak działa funkcja <code>partial</code>. Jest to funkcja, która jeśli zostanie wywołana, zachowuje się jak funkcja, która została jej przekazana jako argument wywołania. Jej działanie jest bardzo zbliżone do działania dekoratora <code>@wraps</code>. Co ciekawsze, to dekorator ten jest w zasadzie inną formą wywołania funkcji <code>partial</code> (w ramach ćwiczenia polecam przejrzeć we własnym zakresie jak wygląda implementacja funkcji <code>wraps</code>).</p>
@@ -604,44 +604,48 @@ og: http://ogp.me/ns#
 <p>Skoro wcześniej udowodniliśmy, że funkcja jest obiektem oraz że dekorator to funkcja, to może dało by się zmusić obiekt, aby stał się dekoratorem?</p>
 <p>Jak już wcześniej ustaliliśmy <strong>THIS IS PYTHON !!!</strong> więc odpowiedź powinna być oczywista <img alt="wink" class="emoji" src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic/wink.png" style="width: 24px; height: 24px;">.</p>
 <p>Wcześniej pisałem, że jeśli w klasie zaimplementujemy funkcję <code>__call__</code> to obiekt, będzie zachowywał się jak funkcja, a więc możemy wykorzystać ten fakt do stworzenia dekoratora. Sprawdźmy jak wyglądał by nasz dekorator, gdybyśmy zaimplementowali go przy użyciu klasy.</p>
-<pre class="code python"><a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-1"></a><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">update_wrapper</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-2"></a>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-3"></a><span class="k">class</span> <span class="nc">decorator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-5"></a>        <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-6"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_init</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">func</span><span class="p">)</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-7"></a>        <span class="k">else</span><span class="p">:</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-8"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_type_list</span> <span class="o">=</span> <span class="n">func</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-9"></a>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-10"></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-11"></a>        <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-12"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_init</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-13"></a>            <span class="k">return</span> <span class="bp">self</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-14"></a>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-15"></a>        <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-16"></a>        <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-17"></a>        <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-18"></a>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-19"></a>        <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-20"></a>            <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-21"></a>                <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_type_list</span><span class="p">)</span> \
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-22"></a>                <span class="k">else</span> <span class="bp">False</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-23"></a>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-24"></a>        <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-25"></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-26"></a>        <span class="k">else</span><span class="p">:</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-27"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">f</span><span class="s2">"One of the arguments is not one type of: "</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-28"></a>                            <span class="n">f</span><span class="s2">"{self._type_list}"</span><span class="p">)</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-29"></a>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-30"></a>    <span class="k">def</span> <span class="nf">_init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-31"></a>        <span class="sd">"""Fill some internal variables and update wrapper so it will</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-32"></a><span class="sd">        return decorated function properties (like __doc__, etc.)"""</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-33"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_func</span> <span class="o">=</span> <span class="n">func</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-34"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_type_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
-<a name="rest_code_b96ea120ce894addaf1fe57f73baedc7-35"></a>        <span class="n">update_wrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_func</span><span class="p">)</span>
+<pre class="code python"><a name="rest_code_7766ad90883a44448bde7aa59e7370d3-1"></a><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">update_wrapper</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-2"></a>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-3"></a><span class="k">class</span> <span class="nc">decorator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-5"></a>        <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-6"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_init</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">func</span><span class="p">)</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-7"></a>        <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-8"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_type_list</span> <span class="o">=</span> <span class="n">func</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-9"></a>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-10"></a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-11"></a>        <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-12"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_init</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-13"></a>            <span class="k">return</span> <span class="bp">self</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-14"></a>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-15"></a>        <span class="n">is_correct</span> <span class="o">=</span> <span class="bp">True</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-16"></a>        <span class="n">arguments</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-17"></a>        <span class="n">arguments</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-18"></a>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-19"></a>        <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">arguments</span><span class="p">:</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-20"></a>            <span class="n">is_correct</span> <span class="o">*=</span> <span class="bp">True</span> <span class="k">if</span> \
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-21"></a>                <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_type_list</span><span class="p">)</span> \
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-22"></a>                <span class="k">else</span> <span class="bp">False</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-23"></a>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-24"></a>        <span class="k">if</span> <span class="n">is_correct</span><span class="p">:</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-25"></a>            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-26"></a>        <span class="k">else</span><span class="p">:</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-27"></a>            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">f</span><span class="s2">"One of the arguments is not one type of: "</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-28"></a>                            <span class="n">f</span><span class="s2">"{self._type_list}"</span><span class="p">)</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-29"></a>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-30"></a>    <span class="k">def</span> <span class="nf">_init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-31"></a>        <span class="sd">"""Fill some internal variables and update wrapper so it will</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-32"></a><span class="sd">        return decorated function properties (like __doc__, etc.)"""</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-33"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_func</span> <span class="o">=</span> <span class="n">func</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-34"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_type_list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
+<a name="rest_code_7766ad90883a44448bde7aa59e7370d3-35"></a>        <span class="n">update_wrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_func</span><span class="p">)</span>
 </pre>
 <p>Powyższy kod jest odpowiednikiem dekoratora opisane we wcześniejszym punkcie. Na pierwszy rzut oka, taka implementacja wydaje się dużo bardziej zagmatwana, ale umożliwia ona zastosowanie kilku innych ciekawych mechanizmów. Przykładem może być zastosowanie wzorca projektowego podobnego do Singletona (choć popularnie określany jest jako antywzorzec), czyli tzw. Borg'a (to materiał na oddzielny wpis, który już wkrótce będzie dostępny na tym blogu), a więc może działać jak cache lub mieć inne ciekawe właściwości.</p>
 <p>Analizę powyższego kodu oraz sprawdzenie poprawności jego działania zostawię w Twojej gestii.</p>
+</div>
+<div class="section" id="podsumowanie">
+<h2>Podsumowanie</h2>
+<p>Jak więc widzisz, dekoratory to bardzo ciekawa konstrukcja w Pythonie. Umożliwiają bardzo dużo i pomimo, że powyższe przykłady były stosunkowo proste, to miały za zadanie umożliwić Ci zrozumienie mechanizmów ich działania, a nie powodować ataku paniki. Mam nadzieję, że udało mi się choć trochę je odczarować oraz, że zaczniesz ich używać podczas pisania swojego kodu.</p>
 </div>
 </div>
         <form method="POST" action="https://maciejkusz.activehosted.com/proc.php" id="_form_5_" novalidate>

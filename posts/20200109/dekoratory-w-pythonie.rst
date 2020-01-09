@@ -671,3 +671,8 @@ Wcześniej pisałem, że jeśli w klasie zaimplementujemy funkcję :code:`__call
 Powyższy kod jest odpowiednikiem dekoratora opisane we wcześniejszym punkcie. Na pierwszy rzut oka, taka implementacja wydaje się dużo bardziej zagmatwana, ale umożliwia ona zastosowanie kilku innych ciekawych mechanizmów. Przykładem może być zastosowanie wzorca projektowego podobnego do Singletona (choć popularnie określany jest jako antywzorzec), czyli tzw. Borg'a (to materiał na oddzielny wpis, który już wkrótce będzie dostępny na tym blogu), a więc może działać jak cache lub mieć inne ciekawe właściwości.
 
 Analizę powyższego kodu oraz sprawdzenie poprawności jego działania zostawię w Twojej gestii.
+
+Podsumowanie
+------------
+
+Jak więc widzisz, dekoratory to bardzo ciekawa konstrukcja w Pythonie. Umożliwiają bardzo dużo i pomimo, że powyższe przykłady były stosunkowo proste, to miały za zadanie umożliwić Ci zrozumienie mechanizmów ich działania, a nie powodować ataku paniki. Mam nadzieję, że udało mi się choć trochę je odczarować oraz, że zaczniesz ich używać podczas pisania swojego kodu.
