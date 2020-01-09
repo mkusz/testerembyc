@@ -26,7 +26,7 @@ SITE_URL = "https://testerembyc.pl/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://testerembyc.pl/"
 BLOG_EMAIL = "maciej@testerembyc.pl"
-BLOG_DESCRIPTION = "Czyli blog o tym, jak to jest być testerem i nie tylko"  # (translatable)
+BLOG_DESCRIPTION = "Czyli blog o tym, jak to jest być nie tylko testerem"  # (translatable)
 
 # Nikola is multilingual!
 #

@@ -24,6 +24,10 @@ html {
   padding-bottom: 10px;
 }
 
+.section p img {
+  padding-bottom: 0px;
+}
+
 .doctest-block {
   color: white;
   background-color: black;

@@ -36,8 +36,6 @@
     {{ post.text() }}
     </div>
     <aside class="postpromonav">
-        <nav>
-        {{ helper.html_tags(post) }}
         <div id="newsletter_invitation">
             <form method="POST" action="https://maciejkusz.activehosted.com/proc.php" id="_form_5_" novalidate>
               <input type="hidden" name="u" value="5" />
@@ -49,9 +47,11 @@
               <input type="hidden" name="v" value="2" />
               <h3>Zapraszam do newsletter'a</h3>
               <div class="_form-content">
-                <p>Zachęcam Cię do zapisania się do mojego newslettera. Obiecuję, że nie będę Cię spamował,
-                    a tylko czasu do czasu wyślę Ci powiadomienie o nowym artykule lub prześlę krótkiego maila
-                    z ciekawymi informacjami. Poza tym w każdej chwili możesz zrezygnować z subskrypcji.</p>
+                <p>Jeśli powyższy artykuł uznajesz za wartościowy oraz masz ochotę być informowany/a
+                    o nowościach na moim blogu, to zachęcam Cię do zapisania się do mojego newslettera.
+                    Obiecuję, że nie będę Cię spamował, a tylko czasu do czasu wyślę Ci powiadomienie
+                    o nowym artykule lub prześlę krótkiego maila z ciekawymi informacjami.
+                    Poza tym w każdej chwili możesz zrezygnować z subskrypcji.</p>
                 <div class="input-group" id="basic-fullname-group">
                   <span class="input-group-addon" id="basic-fullname">Imię</span>
                   <input type="text" class="form-control" name="fullname" placeholder="Wpisz swoje imię" aria-describedby="basic-fullname">
@@ -387,6 +387,8 @@
 
             </script>
         </div>
+        <nav>
+        {{ helper.html_tags(post) }}
         {{ helper.html_pager(post) }}
         </nav>
     </aside>

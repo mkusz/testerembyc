@@ -1,6 +1,6 @@
 .. title: Dekoratory w Pythonie
 .. slug: dekoratory-w-pythonie
-.. date: 2020-01-02 23:26:38 UTC+01:00
+.. date: 2020-01-09 14:26:38 UTC+01:00
 .. tags: python, funkcje, dekorator
 .. category: python
 .. link: 
@@ -9,7 +9,7 @@
 .. previewimage: /images/posts/testerembyc_600x600.png
 .. template: newsletter.tmpl
 
-Ostatnich kilka artykułów na tym blogu, było związane z ogólnikami dotyczącymi `testów </posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/>`_ i `zawodu testera </posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/>`_. Tym razem wpis typowo techniczny związany z moim ulubionym językiem programowania, czyli Python'em. Język ten ma pewne *magiczne* metody i elementy nie spotykane w innych językach lub sposób ich użycia i implementacja są dużo bardziej złożone. Jednym z takich elementów jest tzw. **dekorator**.
+Ostatnich kilka artykułów na tym blogu, było związane z ogólnikami dotyczącymi `testów </posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/>`_ i `zawodu testera </posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/>`_. Tym razem wpis typowo techniczny związany z moim ulubionym językiem programowania, czyli Python'em. Język ten ma pewne *magiczne* metody i elementy nie spotykane w innych językach (lub sposób ich użycia i implementacji jest dużo bardziej złożony). Jednym z takich elementów jest tzw. **dekorator**.
 
 .. more
 
@@ -18,15 +18,15 @@ Czym jest dekorator?
 
 W skrócie `dekorator <https://pl.wikipedia.org/wiki/Dekorator_(wzorzec_projektowy)>`_ to jeden ze strukturalnych wzorców projektowych. Pozwala on na dynamiczne dodanie nowej funkcji do istniejącej klasy podczas działania programu.
 
-W Pythonie, implementacja dekoratorów dla metod po raz pierwszy została dodana w wersji **2.4** języka, a dokument, który to opisywał to `PEP 318 - Decorators for Functions and Methods <https://www.python.org/dev/peps/pep-0318/>`_ (**PEP** to skrót od `Python Enhancement Proposal's <https://www.python.org/dev/peps/>`_). W Pythonie **3.0** wprowadzono natomiast możliwość tworzenia dekoratorów dla klas, a dokumentem, który to opisywał to `PEP 3129 - Class Decorators <https://www.python.org/dev/peps/pep-3129/>`_.
+W Pythonie, implementacja dekoratorów dla metod po raz pierwszy została dodana w wersji **2.4** języka, a dokument, który to opisywał to `PEP 318 - Decorators for Functions and Methods <https://www.python.org/dev/peps/pep-0318/>`_ (**PEP** to skrót od `Python Enhancement Proposal's <https://www.python.org/dev/peps/>`_). W Pythonie **3.0**, wprowadzono natomiast możliwość tworzenia dekoratorów dla klas (opis w `PEP 3129 - Class Decorators <https://www.python.org/dev/peps/pep-3129/>`_).
 
 Zasada działania dekoratorów polega na **opakowaniu** (tzw. `enkapsulacji <https://pl.wikipedia.org/wiki/Enkapsulacja>`_) oryginalnej klasy, nową klasą, tzw. klasą **dekorującą**.
 
 Na czym polega opakowywanie? Najprościej porównać to do starej rosyjskiej zabawki, `matrioszki <https://pl.wikipedia.org/wiki/Matrioszka>`_.
 
-.. image:: /images/posts/20200102/matrioszka.jpeg
+.. image:: /images/posts/20200109/matrioszka.jpeg
 
-Jeśli nie to polecam zapoznać się z poniższym filmikiem, bo zasada działania idealnie odzwierciedla mechanizm opakowywania (a jeśli znasz tą zabawkę, tzn. że zapewne jesteś co najmniej tak stary jak ja |wink|).
+Jeśli nie wiesz czym jest ta zabawka, to polecam zapoznać się z poniższym filmikiem, bo zasada działania idealnie odzwierciedla mechanizm opakowywania (a jeśli znasz tą zabawkę, tzn. że zapewne jesteś co najmniej tak stary jak ja |wink|).
 
 .. youtube:: lz6Olxb29qA
 
@@ -205,11 +205,11 @@ Wykorzystamy w tym celu dekorator. Zacznijmy jednak od kilku rzeczy, które pomo
 >>> Decorated function name: add
     3
 
-Implementacji funkcja :code:`decorator` jako argument przyjmuje ciało innej funkcji oraz ma za zadnie wyświetlić jej nazwę oraz po prostu ją zwrócić.
+Implementacji funkcja :code:`decorator` jako argument przyjmuje ciało innej funkcji. Ma za zadnie wyświetlić jej nazwę oraz po prostu ją zwrócić.
 
 Następnie wykorzystana została właściwość, o której pisałem powyżej, czyli możliwości przypisania funkcji do zmiennej (w tym przypadku funkcję :code:`add` przypisujemy do zmiennej o tej samej nazwie, czyli również :code:`add`). Takie przypisanie powoduje, że zmienna :code:`add` staje się funkcją, która w pierwszej kolejności wywoła dekorator, którego argumentem będzie rzeczywista funkcja :code:`add`.
 
-Niestety taki zapis jest mało czytelny i nie do końca widać, patrząc tylko na definicję funkcji :code:`add`, że została ona udekorowana. W Python'ie na szczęście istnieje na to prosty sposób:
+Niestety taki zapis jest mało czytelny i nie do końca widać (patrząc tylko na definicję funkcji :code:`add`), że została ona udekorowana. W Python'ie na szczęście istnieje na to prosty sposób:
 
 .. code:: python
 
@@ -252,7 +252,7 @@ Wiemy już, jak stworzyć prosty (jeszcze nic nie robiący) dekorator. Skoro do 
 Do definicji wewnętrznej funkcji :code:`wrapper` dodałem dwa atrybuty:
 
 * :code:`*args`
-* :code:`*kwargs`
+* :code:`**kwargs`
 
 Zobaczmy teraz co się stanie jak wywołamy poniższy kod:
 
@@ -290,13 +290,13 @@ Teraz zarówno :code:`args` jak i :code:`kwargs` zostały wypełnione.
 Domyślasz się już zapewne czym są :code:`args` i :code:`kwargs`, ale dla ścisłości odpowiedzmy sobie na pytanie:
 
 * :code:`*args` - nienazwane argumenty przekazywane do funkcji przyjmujące postać *krotki* ze względu na zachowanie kolejności argumentów
-* :code:`*kwargs` - nazwane argumenty przekazywane do funkcji przyjmujące postać *słownika* ze względu na powiązanie nazwy argumentu (*key*), z jej wartością (*value*).
+* :code:`**kwargs` - nazwane argumenty przekazywane do funkcji przyjmujące postać *słownika* ze względu na powiązanie nazwy argumentu (*key*), z jej wartością (*value*).
 
-Możliwość przekazania argumentów do funkcji przy użyciu :code:`args` i :code:`kwargs` niesie za sobą pewne implikacje. Najważniejszą implikacją jest konieczność obsłużenia obu przypadków w ciele dekoratora, jeśli chcemy w jakiś sposób modyfikować przekazywane do dekorowanej funkcji atrybuty.
+Możliwość przekazania argumentów do funkcji przy użyciu :code:`args` i :code:`kwargs` niesie za sobą pewne implikacje. Najważniejszą implikacją jest konieczność obsłużenia obu przypadków w ciele dekoratora, jeśli chcemy wykonać jakieś operacje na atrybutach przekazywanych do dekorowanej funkcji.
 
 Wróćmy teraz do napisania dekoratora, który ma za zadanie sprawdzić typ argumentów przekazywanych do funkcji :code:`add` tak, aby przeprowadziła działanie dodawania dwóch liczb.
 
-Przyjmijmy najprostsze założenie, że aby funkcja zadziałała poprawnie, argumenty funkcji muszą być typu *int* lub *float*. W przypadku jeśli dowolny z argumentów, będzie inny typem, funkcja nie zostanie uruchomiona i zostanie zwrócony wyjątek typu *TypeErrror*.
+Przyjmijmy najprostsze założenie, że aby funkcja zadziałała poprawnie, argumenty funkcji muszą być typu *int* lub *float*. W przypadku jeśli dowolny z argumentów, będzie innym typem, funkcja nie zostanie uruchomiona i zostanie zwrócony wyjątek typu *TypeErrror*.
 
 .. code:: python
 
@@ -306,7 +306,7 @@ Przyjmijmy najprostsze założenie, że aby funkcja zadziałała poprawnie, argu
             is_correct = True
             # Utworzenie kopi listy argumentów
             arguments = list(args)
-            # Rozszerzenie listy argumenów
+            # Rozszerzenie listy argumentów
             arguments.extend(kwargs.values())
 
             for arg in arguments:
@@ -376,6 +376,72 @@ Zgodnie z podejrzeniem wynikiem działania jest wyjątek typu *TypeError*, a wi�
 
 Widzimy więc, że nasz dekorator działa tak jak tego oczekiwaliśmy, a nasza funkcja dekorowana (:code:`add`) nie została zmodyfikowana.
 
+wraps
+-----
+
+Rozważmy teraz inną kwestię, tzn. dokumentację do naszego kodu. Do tej pory w naszym kodzie, nie ma ani jednej linijki opisującej czym nasza dekorowana funkcja się zajmuje. Dodajmy najprostszą możliwą formę dokumentacji czyli pojedynczą linię komentarza pod definicją funkcji (zauważ, że pominąłem dodanie dekoratora):
+
+.. code:: python
+
+    def add(first, second):
+        """Add to elements and print the result"""
+        print(first + second)
+
+Spróbujmy teraz wywołać jedną z metod, która wykorzystywana jest przez narzędzia do budowania dokumentacji kodu, np. `Sphinx <http://www.sphinx-doc.org/en/master/>`_.
+
+.. code:: python
+
+    print(add.__doc__)
+
+>>> Add to elements and print the result
+
+Widzimy, że poprzez wywołanie jednej z *metod magicznych* możemy dostać się do naszego opisu funkcji. Sprawdźmy teraz co się stanie jak udekorujemy funkcję naszym dekoratorem:
+
+.. code:: python
+
+    @decorator
+    def add(first, second):
+        """Add to elements and print the result"""
+        print(first + second)
+
+    print(add.__doc__)
+
+>>> None
+
+Dekorator wszystko nam popsuł |disappointed|.
+
+Dlaczego tak się dzieje? Otóż :code:`add.__doc__` pobiera teraz opis nie z funkcji :code:`add`, a z dekoratora.
+
+Możemy to rozwiązać bardzo łopatologicznie, ale ponieważ ktoś już o tym pomyślał, to wykorzystamy gotową funkcję. Wchodzi ona w skład bibliotek standardowych i jest częścią pakietu `functools <https://docs.python.org/2/library/functools.html>`_. Zaimportujmy zatem funkcję :code:`wraps` i jej użyjmy (funkcja :code:`add` pozostaje bez zmian).
+
+.. code:: python
+
+    from functools import wraps
+
+    def decorator(func):
+        @wraps
+        def wrapper(*args, **kwargs):
+            is_correct = True
+            arguments = list(args)
+            arguments.extend(kwargs.values())
+
+            for arg in arguments:
+                is_correct *= True if \
+                    any(isinstance(arg, t) for t in [int, float]) else False
+
+            if is_correct:
+                return func(*args, **kwargs)
+            else:
+                raise TypeError("One of the arguments is not int or float")
+
+        return wrapper
+
+    print(add.__doc__)
+
+>>> Add to elements and print the result
+
+Zauważ, że funkcja ta została wykorzystana do udekorowania funkcji wewnętrznej naszego dekoratora i że dokumentacja została poprawnie wyświetlona. Funkcja ta poprawia wyświetlanie również innych wartości, które nadpisywane są przez użycie dekoratora, ale po więcej szczegółów odsyłam do `dokumentacji <https://docs.python.org/3/library/functools.html#functools.wraps>`_.
+
 Dekorator z parametrami
 -----------------------
 
@@ -419,6 +485,7 @@ Sprawdźmy teraz jak udekorować naszą funkcję i jakie wyniki zostaną wyświe
 
     @decorator([int])  # Wywołanie dekoratora z parametrem
     def add(first, second):
+        """Add to elements and print the result"""
         print(first + second)
 
     add(1, 2)
@@ -453,15 +520,16 @@ Niestety jeśli spróbujemy teraz użyć dekoratora bez parametrów czyli zamias
 
 Czy możemy sobie z tym problemem jakoś poradzić?
 
-.. image:: /images/posts/20200102/this_is_python.jpg
+.. image:: /images/posts/20200109/this_is_python.jpg
 
-Co ciekawe, taka modyfikacja wcale nie jest taka trudna do zrobienia. Wystarczy zmienić jedną linijkę kodu w dekoratorze. Przeprowadźmy więc wymaganą modyfikację oraz sprawdźmy stary zapis dekoratora wraz z wywołaniem udekorowanej funkcji:
+Oczywiście. Co ciekawe, taka modyfikacja wcale nie jest taka trudna do zrobienia. Wystarczy zmienić jedną linijkę kodu w dekoratorze.
+
+Przeprowadźmy więc wymaganą modyfikację oraz sprawdźmy stary zapis dekoratora wraz z wywołaniem udekorowanej funkcji:
 
 .. code:: python
 
     def decorator(args_type_list=None):
         def inner_decorator(func):
-            # @wraps(func)
             def wrapper(*args, **kwargs):
                 is_correct = True
                 arguments = list(args)
@@ -489,6 +557,7 @@ Co ciekawe, taka modyfikacja wcale nie jest taka trudna do zrobienia. Wystarczy 
 
     @decorator
     def add(first, second):
+        """Add to elements and print the result"""
         print(first + second)
 
     add(1, 2.0)
@@ -507,9 +576,98 @@ Powyższe zapisy powoduję, że do zmiennej :code:`args_type_list` przypisane s�
 1. :code:`args_type_list` jest adresem dekorowanej funkcji (w naszym przypadku będzie to :code:`add`
 2. :code:`args_type_list` jest argumentem przekazanym do dekoratora (w naszym przypadku będzie to lista typów do przeprowadzenia weryfikacji)
 
-Dlatego też musimy przeprowadzić sprawdzenia czy przekazywany argument jest funkcją czy nie. Do tego służy funkcja :code:`callable()`.
+Dlatego też musimy sprawdzić czy przekazywany argument jest funkcją czy nie. Do tego służy funkcja :code:`callable()`.
 
-@wraps
-------
+A może dało by się to ciut prościej zrobić? Poza tym co z kwestią dokumentacji, itp.
 
+partial
+-------
 
+Po raz kolejny z pomocą przychodzi nam biblioteka :code:`functools`. Tym razem jednak skorzystamy zarówno z poznanej wcześniej funkcji :code:`wraps` oraz nowej `partial <https://docs.python.org/3/library/functools.html#functools.partial>`_. Spójrzmy na poniższy kod (ponownie dekorowana funkcja :code:`add` pozostaje bez zmian).
+
+.. code:: python
+
+    from functools import wraps, partial
+
+    def decorator(func=None, args_type_list=None):
+        # Poniższy if sprawdza czy argument func jest wywołaniem funkcji
+        # czy zwykłym argumentem (rozwinięcie tego tematu w tekście poniżej)
+        if not callable(func):
+            return partial(decorator, args_type_list=func)
+
+        # Implementacja funkcji 'wrapper' pozostaje bez zmian
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            is_correct = True
+            arguments = list(args)
+            arguments.extend(kwargs.values())
+
+            types_list = args_type_list if \
+                isinstance(args_type_list, list) else [int, float]
+
+            for arg in arguments:
+                is_correct *= True if \
+                    any(isinstance(arg, t) for t in types_list) \
+                    else False
+
+            if is_correct:
+                return func(*args, **kwargs)
+            else:
+                raise TypeError(f"One of the arguments is not one type of: "
+                                f"{args_type_list}")
+        return wrapper
+
+Zauważ, że przy użyciu funkcji :code:`partial` kod uległ uproszczeniu, a funkcjonalność pozostała bez zmian. Dodatkowo dzięki wykorzystaniu dekoratora :code:`wraps` działa dokumentacja, itp.
+
+Uzupełnijmy jeszcze jak działa funkcja :code:`partial`. Jest to funkcja, która jeśli zostanie wywołana, zachowuje się jak funkcja, która została jej przekazana jako argument wywołania. Jej działanie jest bardzo zbliżone do działania dekoratora :code:`@wraps`. Co ciekawsze, to dekorator ten jest w zasadzie inną formą wywołania funkcji :code:`partial` (w ramach ćwiczenia polecam przejrzeć we własnym zakresie jak wygląda implementacja funkcji :code:`wraps`).
+
+Klasa jako dekorator
+--------------------
+
+Skoro wcześniej udowodniliśmy, że funkcja jest obiektem oraz że dekorator to funkcja, to może dało by się zmusić obiekt, aby stał się dekoratorem?
+
+Jak już wcześniej ustaliliśmy **THIS IS PYTHON !!!** więc odpowiedź powinna być oczywista |wink|.
+
+Wcześniej pisałem, że jeśli w klasie zaimplementujemy funkcję :code:`__call__` to obiekt, będzie zachowywał się jak funkcja, a więc możemy wykorzystać ten fakt do stworzenia dekoratora. Sprawdźmy jak wyglądał by nasz dekorator, gdybyśmy zaimplementowali go przy użyciu klasy.
+
+.. code:: python
+
+    from functools import update_wrapper
+
+    class decorator(object):
+        def __init__(self, func=None):
+            if callable(func):
+                self._init(func=func)
+            else:
+                self._type_list = func
+
+        def __call__(self, *args, **kwargs):
+            if callable(args[0]):
+                self._init(func=args[0])
+                return self
+
+            is_correct = True
+            arguments = list(args)
+            arguments.extend(kwargs.values())
+
+            for arg in arguments:
+                is_correct *= True if \
+                    any(isinstance(arg, t) for t in self._type_list) \
+                    else False
+
+            if is_correct:
+                return self._func(*args, **kwargs)
+            else:
+                raise TypeError(f"One of the arguments is not one type of: "
+                                f"{self._type_list}")
+
+        def _init(self, func):
+            """Fill some internal variables and update wrapper so it will
+            return decorated function properties (like __doc__, etc.)"""
+            self._func = func
+            self._type_list = [int, float]
+            update_wrapper(self, self._func)
+
+Powyższy kod jest odpowiednikiem dekoratora opisane we wcześniejszym punkcie. Na pierwszy rzut oka, taka implementacja wydaje się dużo bardziej zagmatwana, ale umożliwia ona zastosowanie kilku innych ciekawych mechanizmów. Przykładem może być zastosowanie wzorca projektowego podobnego do Singletona (choć popularnie określany jest jako antywzorzec), czyli tzw. Borg'a (to materiał na oddzielny wpis, który już wkrótce będzie dostępny na tym blogu), a więc może działać jak cache lub mieć inne ciekawe właściwości.
+
+Analizę powyższego kodu oraz sprawdzenie poprawności jego działania zostawię w Twojej gestii.

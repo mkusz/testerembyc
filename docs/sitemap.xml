@@ -7,94 +7,118 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://testerembyc.pl/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/2019/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/2020/</loc>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/archive.html</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/cat_definicja/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/cat_felieton/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/cat_przywitanie/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/cat_python/</loc>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/definicja/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/dekorator/</loc>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/funkcje/</loc>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/istqb/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/natura-testow/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/nauka/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/pierwszy-post/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/python/</loc>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/testy/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/witaj/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/galleries/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/listings/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/dziekuje-za-zapisanie-do-newslettera/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/o-mnie/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/polityka-prywatnosci/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/pages/regulamin/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/posts/20191024/witaj-swiecie/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/</loc>
-  <lastmod>2020-01-02T16:12:00Z</lastmod>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/posts/20200109/dekoratory-w-pythonie/</loc>
+  <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
 </urlset>
