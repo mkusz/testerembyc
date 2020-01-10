@@ -4,11 +4,11 @@
 .. tags: witaj, pierwszy post
 .. category: przywitanie
 .. link: 
-.. description: Pierwszy post na blog'u testerembyc.pl
+.. description: Pierwszy post na blogu testerembyc.pl
 .. type: text
 .. previewimage: /images/posts/testerembyc_600x600.png
 
-*Hello world* tak zaczyna się każda nowa przygoda w świecie IT. W większości tą przygodą jest nauka jakiegoś języka programowania i próba wyświetlenia tego napisu na ekranie użytkownika. W niektórych języka programowania wymaga to kilku linijek kodu, w innych (jak np. w **Python'ie**) aż 1. Nie wierzysz?
+*Hello world* tak zaczyna się każda nowa przygoda w świecie IT. W większości tą przygodą jest nauka jakiegoś języka programowania i próba wyświetlenia tego napisu na ekranie użytkownika. W niektórych języka programowania wymaga to kilku linijek kodu, w innych (jak np. w **Pythonie**) aż 1. Nie wierzysz?
 
 .. more
 
@@ -32,4 +32,4 @@ Jeśli zastanawiasz się kim jestem i dlaczego sądzę, że jestem w stanie Ci w
 
 Mam nadzieję, zę choć trochę zainteresowałem Cię do tego, aby częściej odwiedzać tego blog'a.
 
-Jeśli chcesz być informowany o nowościach na moim blog'u to zapraszam Cię do zapisania się do mojego **newsletter'a** (formularz zapisu znajduje się to prawej stronie). Obiecuję, że nie będę spamował i poza informacjami o nowościach na mojej stronie, w newsletterze znajdziesz dodatkowe, ciekawe informacje ze świata IT oraz testowania oprogramowania.
+Jeśli chcesz być informowany o nowościach na moim blogu to zapraszam Cię do zapisania się do mojego **newslettera** (formularz zapisu znajduje się to prawej stronie). Obiecuję, że nie będę spamował i poza informacjami o nowościach na mojej stronie, w newsletterze znajdziesz dodatkowe, ciekawe informacje ze świata IT oraz testowania oprogramowania.

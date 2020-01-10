@@ -8,7 +8,7 @@
 .. type: text
 .. previewimage: /images/posts/testerembyc_600x600.png
 
-Zachęcony `wątkiem <https://www.facebook.com/groups/TestowanieOprogramowania/permalink/2602961303059765/>`_ z Facebook'owej grupy dotyczącej `testowania oprogramowania <https://www.facebook.com/groups/TestowanieOprogramowania/>`_, w którym mowa o problemach z podjęciem pracy w zawodzie testera oprogramowania, dorzucę swoje 3 grosze do tej rozmowy. Pamiętaj, mój drogi czytelniku, że jestem zupełnie oderwany od **juniorskiej** rzeczywistości, bo mam już te **kilka** lat stażu pracy w tym zawodzie, zachęcam cię jednak do przeczytania poniższego wpisu, szczególnie jeśli jesteś w sytuacji opisanej powyżej.
+Zachęcony `wątkiem <https://www.facebook.com/groups/TestowanieOprogramowania/permalink/2602961303059765/>`_ z Facebookowej grupy dotyczącej `testowania oprogramowania <https://www.facebook.com/groups/TestowanieOprogramowania/>`_, w którym mowa o problemach z podjęciem pracy w zawodzie testera oprogramowania, dorzucę swoje 3 grosze do tej rozmowy. Pamiętaj, mój drogi czytelniku, że jestem zupełnie oderwany od **juniorskiej** rzeczywistości, bo mam już te **kilka** lat stażu pracy w tym zawodzie, zachęcam cię jednak do przeczytania poniższego wpisu, szczególnie jeśli jesteś w sytuacji opisanej powyżej.
 
 .. more
 
@@ -52,12 +52,12 @@ A ileż to jest ofert pracy dla początkujących? Okazuje się, że jest ich jak
 Dlaczego ISTQB to za mało?
 --------------------------
 
-Jeśli jesteś tym 'szczęśliwcem' i pracujesz już w branży IT jako tester, to zdajesz sobie sprawę, że ISTQB to zbiór definicji i podstawy podstaw wiedzy testerskiej. Jeśli dodatkowo miałeś już przyjemność zmiany pracy lub mając kilkuletnie doświadczenie, byłeś na kilku rozmowach kwalifikacyjnych, zapewne zauważyłeś, że nikt z rekruterów nie prosi o okazanie certyfikatu ISTQB. Dlaczego tak jest? Otóż sylabus ISTQB można określić jako poradnik testera, który dodatkowo uwspólnia definicję pewnych pojęć (np. przypadek testowy itp.). Wiedza wyniesiona z sylabusa jest bardzo potrzebna, aby móc swobodnie się porozumiewać. Uczy również pewnych podstaw (np. testowanie na końcach zakresów itp.), ale nic nie mówi na temat praktycznych umiejętności, jakie potencjalny tester posiada. Czy więc warto zdawać egzamin z ISTQB? Należałoby odpowiedzieć 'to zależy'. A zależy to od tego, czy potrzebujesz tego 'papierka', w pracy, czy nie. Okazuje się, że niektóre firmy, aby przystąpić do jakichś przetargów, muszą wykazać, że pracownicy mają pewne certyfikaty.
+Jeśli jesteś tym *szczęśliwcem* i pracujesz już w branży IT jako tester, to zdajesz sobie sprawę, że ISTQB to zbiór definicji i podstawy podstaw wiedzy testerskiej. Jeśli dodatkowo miałeś już przyjemność zmiany pracy lub mając kilkuletnie doświadczenie, byłeś na kilku rozmowach kwalifikacyjnych, zapewne zauważyłeś, że nikt z rekruterów nie prosi o okazanie certyfikatu ISTQB. Dlaczego tak jest? Otóż sylabus ISTQB można określić jako poradnik testera, który dodatkowo uwspólnia definicję pewnych pojęć (np. przypadek testowy itp.). Wiedza wyniesiona z sylabusa jest bardzo potrzebna, aby móc swobodnie się porozumiewać. Uczy również pewnych podstaw (np. testowanie na końcach zakresów itp.), ale nic nie mówi na temat praktycznych umiejętności, jakie potencjalny tester posiada. Czy więc warto zdawać egzamin z ISTQB? Należałoby odpowiedzieć **to zależy**. A zależy to od tego, czy potrzebujesz tego *papierka*, w pracy, czy nie. Okazuje się, że niektóre firmy, aby przystąpić do jakichś przetargów, muszą wykazać, że pracownicy mają pewne certyfikaty.
 
 Jak ja bym podszedł do tematu? Bardzo prosto:
 
 * nauczył się pojęć z `sylabusa <https://sjsi.org/ist-qb/do-pobrania/>`_ oraz starał się go zrozumieć,
-* poszukał `przykładowych pytań egzaminacyjnych <https://sjsi.org/ist-qb/do-pobrania/>`_ i zrozumiał, dlaczego takie, a nie inne odpowiedzi są prawidłowe  (w tym może pomóc `ta grupa na Facebook'u <https://www.facebook.com/groups/194288250951242/>`_,
+* poszukał `przykładowych pytań egzaminacyjnych <https://sjsi.org/ist-qb/do-pobrania/>`_ i zrozumiał, dlaczego takie, a nie inne odpowiedzi są prawidłowe  (w tym może pomóc `ta grupa na Facebooku <https://www.facebook.com/groups/194288250951242/>`_,
 * w CV wpisałbym znajomość sylabusa ISTQB,
 * jeśli pracodawca wymaga certyfikatu w pracy, to zapłaci Ci za egzamin.
 
@@ -72,14 +72,14 @@ Ze względu na to, że duża część nowych projektów pisanych jest z wykorzys
 
 Dodatkowym atutem może okazać się wiedza języka zapytań baz danych, czyli tzw. SQL (Structured Query Language).
 
-Ostatnim elementem, który może być mega atutem to nauka jakiegoś języka programowania (osobiście polecam Python'a na początek), stworzenie prostego projektu oraz umieszczenie go w swoim repozytorium kodu.
+Ostatnim elementem, który może być mega atutem to nauka jakiegoś języka programowania (osobiście polecam Pythona na początek), stworzenie prostego projektu oraz umieszczenie go w swoim repozytorium kodu.
 
-Dodatkowo każdy tester powinien nie bać się powiedzieć 'nie wiem' oraz zadawać pytania, jeśli wie, że czegoś nie wie lub nie rozumie. Również podczas rozmowy kwalifikacyjnej lepiej się przyznać do niewiedzy i prosić o wyjaśnienie niż kombinować na siłę z odpowiedzią.
+Dodatkowo każdy tester powinien nie bać się powiedzieć *nie wiem* oraz zadawać pytania, jeśli wie, że czegoś nie wie lub nie rozumie. Również podczas rozmowy kwalifikacyjnej lepiej się przyznać do niewiedzy i prosić o wyjaśnienie niż kombinować na siłę z odpowiedzią.
 
 Ostatnimi czasy, bardzo polecane są platformy typu crowd testing (np. platforma `test.io <https://test.io/>`_), gdzie można testować aplikacje i przy okazji trochę na tym zarobić. Nie będą to kokosy, ale pokażą Ci, z czym wiąże się praca testera oraz pozwolą Ci na weryfikację Twojej wiedzy i umiejętności.
 
 Na zakończenie
 --------------
 
-Podsumowując ten wpis, chcę dać Ci do zrozumienia, że konkurencja o stanowisko testera dla osób początkujących jest spora i aby przejść pomyślnie rekrutację, należy się wyróżnić na tle konkurencji. Poza wiedzą 'książkową' należy pokazać jakieś praktyczne umiejętności oraz mieć odpowiednie 'nastawienie'. Pamiętaj również, że jeżeli jedynym kryterium, jakim się kierujesz, próbując zdobyć upragnione stanowisko testera, są wysokie zarobki, to może okazać się bardzo szybko, że to jednak nie jest praca dla Ciebie. Pamiętaj również, że nie wszyscy muszą pracować w branży IT oraz to, że każda praca, tak i praca testera oprogramowania, ma swoje jasne i ciemne strony.
+Podsumowując ten wpis, chcę dać Ci do zrozumienia, że konkurencja o stanowisko testera dla osób początkujących jest spora i aby przejść pomyślnie rekrutację, należy się wyróżnić na tle konkurencji. Poza wiedzą książkową należy pokazać jakieś praktyczne umiejętności oraz mieć odpowiednie nastawienie. Pamiętaj również, że jeżeli jedynym kryterium, jakim się kierujesz, próbując zdobyć upragnione stanowisko testera, są wysokie zarobki, to może okazać się bardzo szybko, że to jednak nie jest praca dla Ciebie. Pamiętaj również, że nie wszyscy muszą pracować w branży IT oraz to, że każda praca, tak i praca testera oprogramowania, ma swoje jasne i ciemne strony.
 Jeśli jednak zdecydujesz i upewnisz się, że Twoja ścieżka kariery jako tester oprogramowania, to jest to, co chcesz robić oraz nie boisz się zainwestować swój czas w naukę, to pozostaje mi tylko życzyć Ci powodzenia.

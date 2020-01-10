@@ -9,7 +9,7 @@
 .. previewimage: /images/posts/testerembyc_600x600.png
 .. template: newsletter.tmpl
 
-Ostatnich kilka artykułów na tym blogu, było związane z ogólnikami dotyczącymi `testów </posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/>`_ i `zawodu testera </posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/>`_. Tym razem wpis typowo techniczny związany z moim ulubionym językiem programowania, czyli Python'em. Język ten ma pewne *magiczne* metody i elementy nie spotykane w innych językach (lub sposób ich użycia i implementacji jest dużo bardziej złożony). Jednym z takich elementów jest tzw. **dekorator**.
+Ostatnich kilka artykułów na tym blogu, było związane z ogólnikami dotyczącymi `testów </posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/>`_ i `zawodu testera </posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/>`_. Tym razem wpis typowo techniczny związany z moim ulubionym językiem programowania, czyli Pythonem. Język ten ma pewne *magiczne* metody i elementy nie spotykane w innych językach (lub sposób ich użycia i implementacji jest dużo bardziej złożony). Jednym z takich elementów jest tzw. **dekorator**.
 
 .. more
 
@@ -18,7 +18,7 @@ Czym jest dekorator?
 
 W skrócie `dekorator <https://pl.wikipedia.org/wiki/Dekorator_(wzorzec_projektowy)>`_ to jeden ze strukturalnych wzorców projektowych. Pozwala on na dynamiczne dodanie nowej funkcji do istniejącej klasy podczas działania programu.
 
-W Pythonie, implementacja dekoratorów dla metod po raz pierwszy została dodana w wersji **2.4** języka, a dokument, który to opisywał to `PEP 318 - Decorators for Functions and Methods <https://www.python.org/dev/peps/pep-0318/>`_ (**PEP** to skrót od `Python Enhancement Proposal's <https://www.python.org/dev/peps/>`_). W Pythonie **3.0**, wprowadzono natomiast możliwość tworzenia dekoratorów dla klas (opis w `PEP 3129 - Class Decorators <https://www.python.org/dev/peps/pep-3129/>`_).
+W Pythonie, implementacja dekoratorów dla metod po raz pierwszy została dodana w wersji **2.4** języka, a dokument, który to opisywał to `PEP 318 - Decorators for Functions and Methods <https://www.python.org/dev/peps/pep-0318/>`_ (**PEP** to skrót od `Python Enhancement Proposals <https://www.python.org/dev/peps/>`_). W Pythonie **3.0**, wprowadzono natomiast możliwość tworzenia dekoratorów dla klas (opis w `PEP 3129 - Class Decorators <https://www.python.org/dev/peps/pep-3129/>`_).
 
 Zasada działania dekoratorów polega na **opakowaniu** (tzw. `enkapsulacji <https://pl.wikipedia.org/wiki/Enkapsulacja>`_) oryginalnej klasy, nową klasą, tzw. klasą **dekorującą**.
 
@@ -37,7 +37,7 @@ Zauważ jedną, bardzo istotną rzecz: wszędzie powyżej wspominam, że dekorat
 Funkcja jest obiektem
 ---------------------
 
-Zanim przejdziemy do sedna, to zapoznajmy się z definicją `obiektu <https://pl.wikipedia.org/wiki/Obiekt_(programowanie_obiektowe)>`_. Mocno streszczając, obiekt to struktura zawierająca dane i metody/funkcje służące do wykonania jakichś operacje na tych danych. Bardzo szybko zauważymy, że ten opis idealnie pasuje do `klasy <https://pl.wikipedia.org/wiki/Klasa_(programowanie_obiektowe)>`_. Obiekt stworzony na podstawie definicji klasy, jest *instancją* danej klasy.
+Zanim przejdziemy do sedna, to zapoznajmy się z definicją `obiektu <https://pl.wikipedia.org/wiki/Obiekt_(programowanie_obiektowe)>`_. Mocno streszczając, obiekt to struktura zawierająca dane i metody/funkcje służące do wykonania jakichś operacji na tych danych. Bardzo szybko zauważymy, że ten opis idealnie pasuje do `klasy <https://pl.wikipedia.org/wiki/Klasa_(programowanie_obiektowe)>`_. Obiekt stworzony na podstawie definicji klasy, jest *instancją* danej klasy.
 
 Dlaczego więc, w Pythonie mówimy o dekorowaniu funkcji lub metod danej klasy (które też są funkcjami)? Otóż przyczyna jest bardzo prosta: funkcje w Pythonie są obiektami/klasami (nie zdziw się, bo od teraz będę używał tych nazw zamiennie). Jak każdy obiekt w Pythonie, tak i funkcja ma swój typ:
 
@@ -46,7 +46,7 @@ Dlaczego więc, w Pythonie mówimy o dekorowaniu funkcji lub metod danej klasy (
     def example_function():
         print("Example")
 
-    type(a)
+    type(example_function)
 
 >>> function
 
@@ -98,14 +98,14 @@ Dodatkowo w ciele funkcji, można zdefiniować inną funkcję. Funkcja wewnętrz
         internal_function()
     NameError: name 'internal_function' is not defined
 
-Widzimy, że interpreter Python'a nie zna definicji funkcji :code:`internal_function`.
+Widzimy, że interpreter Pythona nie zna definicji funkcji :code:`internal_function`.
 
 Skoro już wiemy, że funkcja jest obiektem, to ciekawe czy obiekt może być funkcją?
 
 Czy obiekt może być funkcją?
 ----------------------------
 
-W Python'ie klasy posiadają pewne `metody magiczne <https://docs.python.org/3/reference/datamodel.html#basic-customization>`_. Jedną z nich jest metoda :code:`__call__`. W przypadku klasy, funkcja ta umożliwia uruchomienie instancji klasy, tak jak by była funkcją:
+W Pythonie klasy posiadają pewne `metody magiczne <https://docs.python.org/3/reference/datamodel.html#basic-customization>`_. Jedną z nich jest metoda :code:`__call__`. W przypadku klasy, funkcja ta umożliwia uruchomienie instancji klasy, tak jak by była funkcją:
 
 .. code:: python
 
@@ -148,7 +148,7 @@ Widać powyżej, że klasa, może zachowywać się jak funkcja. Każdy obiekt w 
     def example_function():
         print("Example")
 
-Wiemy już, że możemy ją wywołać poprzez :code:`example_function()` co w wyniku spowoduje wyświetlenie napisu :code:`Example`. A co metodą :code:`__call__`? Sprawdźmy:
+Wiemy już, że możemy ją wywołać poprzez :code:`example_function()` co w wyniku spowoduje wyświetlenie napisu :code:`Example`. A co z metodą :code:`__call__`? Sprawdźmy:
 
 .. code:: python
 
@@ -163,7 +163,7 @@ Wróćmy jednak do dekoratorów.
 Pierwszy dekorator
 ------------------
 
-Na początku pisałem, że dekorator to klasa, która opakowuje inną klasę dodając do opakowywanej klasy nową funkcjonalność. Skoro już wiemy, że funkcja jest klasą/obiektem to w Python'ie dekoratorem może być zarówno funkcja jak i klasa. Aby sobie nie utrudniać na początku, zacznijmy od implementacji dekoratora w postaci funkcji. Jednak, aby móc zaimplementować dekorator, musimy mieć co udekorować. Rozpatrzmy zatem taką prostą funkcję:
+Na początku pisałem, że dekorator to klasa, która opakowuje inną klasę dodając do opakowywanej klasy nową funkcjonalność. Skoro już wiemy, że funkcja jest klasą/obiektem to w Pythonie dekoratorem może być zarówno funkcja jak i klasa. Aby sobie nie utrudniać na początku, zacznijmy od implementacji dekoratora w postaci funkcji. Jednak, aby móc zaimplementować dekorator, musimy mieć co udekorować. Rozpatrzmy zatem taką prostą funkcję:
 
 .. code:: python
 
@@ -186,7 +186,7 @@ Wszystko super. Wynik taki jak się spodziewaliśmy. Sprawdźmy zatem inny zesta
 
 >>> 12
 
-Co? Jak to możliwe, że dostaliśmy :code:`12`? Zauważ, że jako argumenty podaliśmy tekst z cyframi 1 i 2, a nie liczby 1 i 2. Interpreter Python'a uznał, że zamiast dodawania dwóch liczb, chcemy połączyć dwa ciągi znaków w jeden dłuższy ciąg znaków. Jak naprawić taki, kod nie zmieniając ciała funkcji :code:`add`?
+Co? Jak to możliwe, że dostaliśmy :code:`12`? Zauważ, że jako argumenty podaliśmy tekst z cyframi 1 i 2, a nie liczby 1 i 2. Interpreter Pythona uznał, że zamiast dodawania dwóch liczb, chcemy połączyć dwa ciągi znaków w jeden dłuższy ciąg znaków. Jak naprawić taki, kod nie zmieniając ciała funkcji :code:`add`?
 
 Wykorzystamy w tym celu dekorator. Zacznijmy jednak od kilku rzeczy, które pomogą nam zrozumieć jak w swoim wnętrzu działa taki dekorator. Sprawdźmy jak działa poniższy kod:
 
@@ -209,7 +209,7 @@ Implementacji funkcja :code:`decorator` jako argument przyjmuje ciało innej fun
 
 Następnie wykorzystana została właściwość, o której pisałem powyżej, czyli możliwości przypisania funkcji do zmiennej (w tym przypadku funkcję :code:`add` przypisujemy do zmiennej o tej samej nazwie, czyli również :code:`add`). Takie przypisanie powoduje, że zmienna :code:`add` staje się funkcją, która w pierwszej kolejności wywoła dekorator, którego argumentem będzie rzeczywista funkcja :code:`add`.
 
-Niestety taki zapis jest mało czytelny i nie do końca widać (patrząc tylko na definicję funkcji :code:`add`), że została ona udekorowana. W Python'ie na szczęście istnieje na to prosty sposób:
+Niestety taki zapis jest mało czytelny i nie do końca widać (patrząc tylko na definicję funkcji :code:`add`), że została ona udekorowana. W Pythonie na szczęście istnieje na to prosty sposób:
 
 .. code:: python
 
@@ -226,11 +226,11 @@ Implementację funkcji :code:`decorator` pozostawiłem bez zmian, natomiast funk
 
 Na końcu funkcja :code:`add` została wywołana z dwoma argumentami w taki sam sposób jak wcześniej.
 
-W obu przypadkach wynikiem działania jest wyświetlenie nazwy funkcji (część za którą odpowiedzialny jest dekorator) oraz wynik dodawania dwóch liczb (za to odpowiedzialna jest funkcja :code:`add`, która nie została w żadne sposób zmodyfikowana).
+W obu przypadkach wynikiem działania jest wyświetlenie nazwy funkcji (część za którą odpowiedzialny jest dekorator) oraz wynik dodawania dwóch liczb (za to odpowiedzialna jest funkcja :code:`add`, która nie została w żaden sposób zmodyfikowana).
 
-Notacji z wykorzystaniem :code:`@decorator`, jest tzw. `syntactic sugar <https://pl.wikipedia.org/wiki/Lukier_składniowy>`_ dla poprzedniego zapisu (:code:`add = decorator(add)`).
+Notacji z wykorzystaniem :code:`@decorator`, jest tzw. `syntactic sugar <https://pl.wikipedia.org/wiki/Lukier_składniowy>`_ dla poprzedniego zapisu :code:`add = decorator(add)`.
 
-Jeśli używasz już Python'a od pewnego czasu, to powyższy zapis nie powinien być dla Ciebie zupełnie obcy. Zapewne spotkałeś się z nim już nie raz, podczas tworzenia swoich własnych klas, gdzie często wykorzystywane są m.in. następujące dekoratory:
+Jeśli używasz już Pythona od pewnego czasu, to powyższy zapis nie powinien być dla Ciebie zupełnie obcy. Zapewne spotkałeś się z nim już nie raz, podczas tworzenia swoich własnych klas, gdzie często wykorzystywane są m.in. następujące dekoratory:
 
 * :code:`@classmethod`
 * :code:`@staticmethod`
@@ -239,7 +239,7 @@ Jeśli używasz już Python'a od pewnego czasu, to powyższy zapis nie powinien 
 args i kwargs
 -------------
 
-Wiemy już, jak stworzyć prosty (jeszcze nic nie robiący) dekorator. Skoro do środka dekoratora przekazujemy funkcję, to gdzieś powinny być jeszcze widoczne wszystkie argumenty, które do danej funkcji są przekazywane w momencie jej wywołania. Rozważmy poniższą definicję dekoratora (implementację funkcji :code:`add` pominę, gdyż założyliśmy na początki, że jej nie zmieniamy):
+Wiemy już, jak stworzyć prosty (jeszcze nic nie robiący) dekorator. Skoro do środka dekoratora przekazujemy funkcję, to gdzieś powinny być jeszcze widoczne wszystkie argumenty, które do danej funkcji są przekazywane w momencie jej wywołania. Rozważmy poniższą definicję dekoratora (implementację funkcji :code:`add` pominę, gdyż założyliśmy na początku, że jej nie zmieniamy):
 
 .. code:: python
 
@@ -347,7 +347,7 @@ Jeśli jednak masz problem ze zrozumieniem zapisu :code:`is_correct *= True if a
             is_correct_helper = True
     is_correct *= is_correct_helper
 
-Zauważ jednak, że ten kawałek kodu wymaga wprowadzenia dodatkowej zmiennej pomocniczej :code:`is_correct_helper` i nie jest tak zwięzły jak wcześniejszy zapis (wcześniejszy zapis będę używał w późniejszych przykładach).
+Zauważ jednak, że ten kawałek kodu wymaga wprowadzenia dodatkowej zmiennej pomocniczej :code:`is_correct_helper` i nie jest tak zwięzły jak wcześniejszy zapis, a którego będę używał w późniejszych przykładach.
 
 Sprawdźmy teraz czy powyższy kod działa poprawnie dla argumentów o poprawnych typach:
 
@@ -668,7 +668,7 @@ Wcześniej pisałem, że jeśli w klasie zaimplementujemy funkcję :code:`__call
             self._type_list = [int, float]
             update_wrapper(self, self._func)
 
-Powyższy kod jest odpowiednikiem dekoratora opisane we wcześniejszym punkcie. Na pierwszy rzut oka, taka implementacja wydaje się dużo bardziej zagmatwana, ale umożliwia ona zastosowanie kilku innych ciekawych mechanizmów. Przykładem może być zastosowanie wzorca projektowego podobnego do Singletona (choć popularnie określany jest jako antywzorzec), czyli tzw. Borg'a (to materiał na oddzielny wpis, który już wkrótce będzie dostępny na tym blogu), a więc może działać jak cache lub mieć inne ciekawe właściwości.
+Powyższy kod jest odpowiednikiem dekoratora opisane we wcześniejszym punkcie. Na pierwszy rzut oka, taka implementacja wydaje się dużo bardziej zagmatwana, ale umożliwia ona zastosowanie kilku innych ciekawych mechanizmów. Przykładem może być zastosowanie wzorca projektowego podobnego do Singletona (choć popularnie określany jest jako antywzorzec), czyli tzw. Borga (to materiał na oddzielny wpis, który już wkrótce będzie dostępny na tym blogu), a więc może działać jak cache lub mieć inne ciekawe właściwości.
 
 Analizę powyższego kodu oraz sprawdzenie poprawności jego działania zostawię w Twojej gestii.
 
