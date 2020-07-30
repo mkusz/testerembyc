@@ -9,6 +9,7 @@
 .. previewimage: /images/posts/testerembyc_600x600.png
 .. template: newsletter.tmpl
 
+
 Ostatnich kilka artykułów na tym blogu, było związane z ogólnikami dotyczącymi `testów </posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/>`_ i `zawodu testera </posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/>`_. Tym razem wpis typowo techniczny związany z moim ulubionym językiem programowania, czyli Pythonem. Język ten ma pewne *magiczne* metody i elementy nie spotykane w innych językach (lub sposób ich użycia i implementacji jest dużo bardziej złożony). Jednym z takich elementów jest tzw. **dekorator**.
 
 .. more
@@ -473,7 +474,7 @@ A co gdybyśmy chcieli np. wymusić, aby dekorator (poza już istniejącą imple
                 else:
                     # Drobna modyfikacja
                     raise TypeError(f"One of the arguments is not one type of: "
-                                    f"{args_type_list}")
+                                    f"{types_list}")
             return wrapper
         return inner_decorator
 
@@ -547,7 +548,7 @@ Przeprowadźmy więc wymaganą modyfikację oraz sprawdźmy stary zapis dekorato
                     return func(*args, **kwargs)
                 else:
                     raise TypeError(f"One of the arguments is not one type of: "
-                                    f"{args_type_list}")
+                                    f"{types_list}")
             return wrapper
 
         # Tutaj następuje zmiana tego, co przez dekorator jest zwracane
@@ -593,7 +594,8 @@ Po raz kolejny z pomocą przychodzi nam biblioteka :code:`functools`. Tym razem 
         # Poniższy if sprawdza czy argument func jest wywołaniem funkcji
         # czy zwykłym argumentem (rozwinięcie tego tematu w tekście poniżej)
         if not callable(func):
-            return partial(decorator, args_type_list=func)
+            return partial(decorator,
+                           args_type_list=args_type_list if func is None else func)
 
         # Implementacja funkcji 'wrapper' pozostaje bez zmian
         @wraps(func)
@@ -614,12 +616,17 @@ Po raz kolejny z pomocą przychodzi nam biblioteka :code:`functools`. Tym razem 
                 return func(*args, **kwargs)
             else:
                 raise TypeError(f"One of the arguments is not one type of: "
-                                f"{args_type_list}")
+                                f"{types_list}")
         return wrapper
 
 Zauważ, że przy użyciu funkcji :code:`partial` kod uległ uproszczeniu, a funkcjonalność pozostała bez zmian. Dodatkowo dzięki wykorzystaniu dekoratora :code:`wraps` działa dokumentacja, itp.
 
-Uzupełnijmy jeszcze jak działa funkcja :code:`partial`. Jest to funkcja, która jeśli zostanie wywołana, zachowuje się jak funkcja, która została jej przekazana jako argument wywołania. Jej działanie jest bardzo zbliżone do działania dekoratora :code:`@wraps`. Co ciekawsze, to dekorator ten jest w zasadzie inną formą wywołania funkcji :code:`partial` (w ramach ćwiczenia polecam przejrzeć we własnym zakresie jak wygląda implementacja funkcji :code:`wraps`).
+Uzupełnijmy jeszcze jak działa funkcja :code:`partial`. Jest to funkcja, która jeśli zostanie wywołana, zachowuje się jak funkcja, która została jej przekazana jako argument wywołania. Dodatkowo, należy zwrócić uwagę na to jakie parametry jej przekazujemy. Zwróć uwagę, że :code:`args_type_list` może przyjąć jedną z 2 wartości:
+
+* :code:`func` - przekazujemy jeśli wywołamy pusty dekorator (:code:`@dekorator`) lub z parametrami jako *args* (:code:`@dekorator([int])`)
+* :code:`args_type_list` - przekazujemy jeśli wywołamy dekorator z parametrami jako *kwargs* (:code:`@dekorator(args_type_list=[int])`)
+
+Działanie funkcji :code:`partial` jest bardzo zbliżone do działania dekoratora :code:`@wraps`. Co ciekawsze, to dekorator ten jest w zasadzie inną formą wywołania funkcji :code:`partial` (w ramach ćwiczenia polecam przejrzeć we własnym zakresie jak wygląda implementacja funkcji :code:`wraps`).
 
 Klasa jako dekorator
 --------------------
