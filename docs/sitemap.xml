@@ -19,11 +19,11 @@
  </url>
  <url>
   <loc>https://testerembyc.pl/archive.html</loc>
-  <lastmod>2020-07-30T12:08:00Z</lastmod>
+  <lastmod>2020-08-13T21:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/</loc>
-  <lastmod>2020-01-09T13:38:00Z</lastmod>
+  <lastmod>2020-08-14T16:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/cat_definicja/</loc>
@@ -54,6 +54,10 @@
   <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
  <url>
+  <loc>https://testerembyc.pl/categories/howto/</loc>
+  <lastmod>2020-08-14T16:55:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://testerembyc.pl/categories/istqb/</loc>
   <lastmod>2020-01-09T13:38:00Z</lastmod>
  </url>
@@ -72,6 +76,10 @@
  <url>
   <loc>https://testerembyc.pl/categories/python/</loc>
   <lastmod>2020-01-09T13:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/rpa/</loc>
+  <lastmod>2020-08-13T21:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/testy/</loc>
@@ -120,5 +128,9 @@
  <url>
   <loc>https://testerembyc.pl/posts/20200109/dekoratory-w-pythonie/</loc>
   <lastmod>2020-01-09T13:38:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/</loc>
+  <lastmod>2020-08-13T21:35:00Z</lastmod>
  </url>
 </urlset>
