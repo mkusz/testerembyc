@@ -86,6 +86,10 @@ h6, .h6 {
   color: #ff0000;
 }
 
+b, strong {
+  color: #ff0000;
+}
+
 img {
   max-width: 100%;
 }
