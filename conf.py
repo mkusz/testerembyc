@@ -1433,7 +1433,7 @@ GLOBAL_CONTEXT = {'blog_sidebar': """
   <img src="/images/me_bw.jpg" />
   <p>Nazywam się <strong>Maciej Kusz</strong> i od 2008 roku zajmuję się testowaniem oprogramowania.
   Na początku były to testy manualne, od 2011 początki testów automatycznych,
-  a od 2013 automatyzacja testów z wykorzystaniem <strong>Pythona</strong>.
+  a od 2013 automatyzacją testów z wykorzystaniem <strong>Pythona</strong>.
   Przez te kilka lat, zdarzyło mi się już być w kilku firmach i w kilku różnych projektach.
   Na stronie <a href="/pages/o-mnie">o mnie</a>, znajdujdziesz ciut więcej informacji na ten temat.</p>
 </div>

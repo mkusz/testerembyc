@@ -7,6 +7,7 @@
 .. description: 
 .. type: text
 .. previewimage: /images/posts/20200831/tester_picture.jpeg
+.. template: newsletter.tmpl
 
 .. image:: /images/posts/20200831/tester_picture.jpeg
     :align: center
