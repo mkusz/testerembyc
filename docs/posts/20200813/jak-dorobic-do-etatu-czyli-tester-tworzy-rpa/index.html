@@ -24,6 +24,7 @@ og: http://ogp.me/ns#
 <link rel="icon" href="../../../images/icons/icon_512x512.png" sizes="512x512">
 <!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Maciej Kusz">
 <link rel="prev" href="../../20200109/dekoratory-w-pythonie/" title="Dekoratory w Pythonie" type="text/html">
+<link rel="next" href="../../20200831/dobry-tester-a-kto-to-taki/" title="Dobry tester? A kto to taki?" type="text/html">
 <meta property="og:site_name" content="testerembyc.pl">
 <meta property="og:title" content="Jak dorobić do etatu, czyli tester tworzy RPA">
 <meta property="og:url" content="https://testerembyc.pl/posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/">
@@ -84,7 +85,7 @@ og: http://ogp.me/ns#
         <div class="metadata blog-post-meta">
             <p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
             <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2020-08-13T20:25:40+02:00" itemprop="datePublished" title="2020-08-13 20:25">2020-08-13 20:25</time></a></p>
-                <p class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa.html">Comments</a>
+                <p class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa.html">Komentarze</a>
 
 
             
@@ -93,15 +94,15 @@ og: http://ogp.me/ns#
         
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<a class="reference external image-reference" href="https://muscat.pl"><img alt="/images/posts/20200813/rpa_picture.jpeg" class="align-center" src="../../../images/posts/20200813/rpa_picture.jpeg"></a>
+<a class="reference external image-reference" href="."><img alt="/images/posts/20200813/rpa_picture.jpeg" class="align-center" src="../../../images/posts/20200813/rpa_picture.jpeg"></a>
 <p>Zapewne zauważyłeś mój drogi czytelniku, że od pewnego czasu nic nie napisałem. Powodów tego stanu rzeczy jest kilka, a o jednym z nich przeczytasz za chwilę. Zanim to zrobisz, zadam Ci kilka pytań:</p>
 <ul class="simple">
-<li>Czy jako tester oprogramowania jesteś w stanie dorobić sobie do etatu?</li>
-<li>Czy takie okazje trafiają się w trakcie pandemii?</li>
-<li>Jak znaleźć okazję?</li>
-<li>Jak podejść do współpracy ze zleceniodawcą pracując na etacie?</li>
-<li>Na co zwrócić uwagę przy omawianiu współpracy?</li>
-<li>Jak wycenić swoją pracę?</li>
+<li><p>Czy jako tester oprogramowania jesteś w stanie dorobić sobie do etatu?</p></li>
+<li><p>Czy takie okazje trafiają się w trakcie pandemii?</p></li>
+<li><p>Jak znaleźć okazję?</p></li>
+<li><p>Jak podejść do współpracy ze zleceniodawcą pracując na etacie?</p></li>
+<li><p>Na co zwrócić uwagę przy omawianiu współpracy?</p></li>
+<li><p>Jak wycenić swoją pracę?</p></li>
 </ul>
 <p>Jeśli choć na jedno pytanie nie znasz odpowiedzi, to zapraszam do poniższego artykułu, w którym postaram się odpowiedzieć na powyższe pytania.</p>
 <!-- more -->
@@ -131,33 +132,24 @@ og: http://ogp.me/ns#
 <p>Jedną z najważniejszych rzeczy, którą ja od samego początku podkreślałem, to fakt, że pracuję na etacie, a więc wszelkie prace związane z tworzeniem skryptu, będą prowadzone po moich normalnych godzinach pracy (przeważnie wieczorami oraz w weekendy). Trzeba o takich rzeczach uprzedzić już na samym początku, ponieważ nie raz w trakcie Twojej pracy dotrzesz do miejsca, które będzie wymagało bądź doprecyzowania jakichś szczegółów, bądź jakiejś interwencji po stronie waszego zleceniodawcy.</p>
 <p>Jednak zanim podpiszesz samą umowę, musisz określić wspólnie z klientem:</p>
 <ul class="simple">
-<li>zakres projektu</li>
-<li>czego potrzebujesz od klienta</li>
-<li>zakres gwarancji</li>
-<li>czas i koszt</li>
+<li><p>zakres projektu</p></li>
+<li><p>czego potrzebujesz od klienta</p></li>
+<li><p>zakres gwarancji</p></li>
+<li><p>czas i koszt</p></li>
 </ul>
 <div class="section" id="zakres-projektu">
 <h3>Zakres projektu</h3>
 <p>To chyba jeden z najtrudniejszych punktów w całej tej "zabawie". Powód tego jest bardzo prozaiczny. W normalnej pracy testera często musisz testować proces, którego nie rozumiesz i musisz się go od kogoś nauczyć. Tu jest bardzo podobnie z drobną różnicą: poza pracą analityka biznesowego musisz też stać się architektem systemu. Musisz więc przemyśleć masę spraw, o których zwykły tester, a czasem również i klient, nie mają pojęcia.  Czasem trafisz na bardzo konkretnego klienta, który będzie wiedział, czego potrzebuje. Czasem jednak będziesz musiał go wspomóc. Pewne rzeczy, musisz przemyśleć przed przystąpieniem do projektu, a pewne zaimplementować dla swojej wygody. Lista najważniejszych elementów, na które należy zwrócić uwagę to:</p>
 <ol class="arabic simple">
-<li>
-<strong>Dokładne ustalenie procesu biznesowego</strong> - pamiętaj, że klient zna swój proces biznesowy i dla niego to, co Ty masz zrobić, może być czymś "trywialnym", ale to, co jest trywialne dla klienta i tylko wymaga dużego nakładu manualnej pracy, dla kogoś, kto to zautomatyzuje już nie koniecznie takie będzie. Pamiętaj, że może pojawić się w procesie masa warunków, dodatkowych danych oraz sam proces może przebiegać różnie, w zależności jakie dane zostaną wprowadzone na samym początku jego przebiegu. Taka automatyzacja to już nie jest prosty skrypt testów, który podąża od punktu A do punktu B i jak wydarzy się coś nieoczekiwanego, to po prostu zgłosi błąd. Tutaj bardzo często w grę wchodzą rzeczywiste pieniądze i jeśli proces zostanie błędnie obsłużony, to może wiązać się ze stratami finansowymi po stronie klienta.</li>
-<li>
-<strong>Z jakimi systemami będziesz współpracował</strong> - proces biznesowy (mocno upraszczając) polega na przepływie i obróbce jakichś danych. Skoro tak, to należałoby określić punkty wejścia i wyjścia z takiego procesu biznesowego. Bardzo często może się okazać, że punktem wejścia i wyjścia z procesu biznesowego będzie ten sam system, ale w trakcie jego procesowania część danych musi zostać "przeniesiona" do drugiego systemu, z którego z kolei jakieś dane należy pobrać. Żeby sobie uzmysłowić, o co chodzi, wyobraźmy sobie proces zakupowy w jednej z platform aukcyjnych (nie będę żadnej faworyzował, więc tym razem bez linków). Mocno upraszczając, klient chce coś kupić. Po znalezieniu produktu oraz opłaceniu zamówienia trafia ono do sprzedawcy, a więc dane przepływają od platformy do sprzedawcy. Sprzedawca wysyła towar i przesyła status realizacji zamówienia do klienta. Tutaj następuje przepływ danych od sprzedawcy do platformy. Cały ten przepływ danych nastąpił w ramach jednego procesu biznesowego, jakim jest zakup towaru (tak wiem, że można go rozbić na mniejsze elementy. ale nie o tą analizę tutaj chodzi). Znów dochodzimy do wniosku, że to, co proste do zrobienia manualnie, nie koniecznie będzie takie proste do automatyzacji.</li>
-<li>
-<strong>Dodatkowe dane</strong> - może się okazać, że proces biznesowy wymaga jakichś dodatkowych danych, które aktualnie są przetrzymywane np. w arkuszach kalkulacyjnych, a więc należy przemyśleć przechowywanie takich danych. Takie dane powinny być łatwe do edycji, a więc należy przewidzieć jakiś format przechowywania, który będzie spójny z punktu widzenia języka, w którym będzie tworzyć narzędzie RPA, ale jednocześnie zrozumiały i łatwy do edycji dla Waszego klienta. Niestety pliki arkusza kalkulacyjnego nie są dobrym formatem do przechowywania danych, gdyż łatwo "zepsuć" taki arkusz, np. poprzez omyłkowe scalenie komórek lub pozostawienie pustych rzędów, co wymaga obsłużenia większej liczny przypadków/wyjątków w kodzie.</li>
-<li>
-<strong>Logowanie zdarzeń</strong> - pamiętaj też o odpowiednim sposobie logowania akcji, które budowane narzędzie wykonuje. Obsługa logowania ułatwi 2 rzeczy: proces tworzenia aplikacji (mniej debugowania kodu) oraz łatwiejszą naprawę błędów pojawiających się u klienta po wdrożeniu "na produkcji".</li>
-<li>
-<strong>Raportowanie wyników</strong> - każdy proces biznesowy w jakimś miejscu się kończy, a więc należy gdzieś przedstawić status działania takiego procesu. Pamiętaj, że nie zawsze proces biznesowy zakończy się sukcesem. Czasem mogą wydarzyć się jakieś nieoczekiwane błędy w samych danych wprowadzonych do procesu, co może skutkować niemożliwością jego zakończenia. Jeżeli jest to proces kluczowy dla funkcjonowania waszego klienta, może się również okazać, że takie dane będą musiały zostać ręcznie przetworzone lub zmodyfikowane i ponownie wprowadzone do tworzonego narzędzia RPA. Dobrą praktyką byłoby więc, poinformowanie klienta, nie tylko o sukcesie, ale również o porażce oraz wskazaniu jej przyczyn, np. poprzez poinformowanie jakie dane nie mogły zostać odczytane lub przetworzone. W ten sposób ułatwicie klientowi sposób postępowania z konkretnym zestawem danych, a więc pomimo porażki zredukujecie czas manualnej ich obsługi.</li>
-<li>
-<strong>Opcje ustawień</strong> - narzędzie RPA, to oprogramowanie i jak prawie każde oprogramowanie może wymagać czasem zmiany jakichś parametrów, np. adresu bazy danych, do której się łączy lub modyfikacji nazwy użytkownika i/lub hasła. Warto, aby takie parametry były łatwo modyfikowalne np. poprzez zmianę zmiennych środowiskowych lub edycję jakich plików konfiguracyjnych.</li>
-<li>
-<strong>Dokumentacja</strong> - jak każdy projekt, tak i narzędzie RPA powinno być dostarczone do klienta z dokumentacją. Zakres oraz formę takiej dokumentacji należy również określić z klientem, gdyż może się okazać, że wytworzenie dokumentacji będzie równie czasochłonne co napisanie kodu. Czasem jako dokumentacją wystarczą odpowiednie komentarze w kodzie i/lub np. pliki README.md, które będą znajdowały się w repozytorium kodu tworzonego narzędzia.</li>
-<li>
-<strong>Testy</strong> - coś co tygryski lubią najbardziej😉. Tutaj sprawa jest bardzo otwarta i jeżeli klient Wam tego nie narzuci, sprawa pozostaje na Twoich barkach. Możesz tworzyć testy jednostkowe, funkcjonalne lub poprzestać na testach integracyjnych opierając się na danych dostarczonych przez klienta. Może to być również miks powyższych lub jeszcze inne podejście, jednak na pewno przyjdzie taki moment, kiedy Wasza aplikacja będzie musiała zacząć działać na danych produkcyjnych. Dojdziecie więc do tzw. testów akceptacyjnych. Jak dojść w miarę bezpiecznie do tego etapu, tak aby nie okazało się, że "nic nie działa", opiszę trochę niżej.</li>
-<li>
-<strong>Inne</strong> - być może okaże się, że poza napisaniem samego narzędzia, będzie należało przeprowadzić jakieś dodatkowe prace uzupełniające w trakcie wdrożenia, np. konfiguracja systemu tak, aby program automatycznie się uruchamiał. Może się również okazać, że poza dostarczeniem kodu programu, klient będzie wymagał np. stworzenia obrazu dockerowego z tworzonym narzędziem lub wytworzenia odpowiednich skryptów w narzędziu CI/CD, którym zarządza klient.</li>
+<li><p><strong>Dokładne ustalenie procesu biznesowego</strong> - pamiętaj, że klient zna swój proces biznesowy i dla niego to, co Ty masz zrobić, może być czymś "trywialnym", ale to, co jest trywialne dla klienta i tylko wymaga dużego nakładu manualnej pracy, dla kogoś, kto to zautomatyzuje już nie koniecznie takie będzie. Pamiętaj, że może pojawić się w procesie masa warunków, dodatkowych danych oraz sam proces może przebiegać różnie, w zależności jakie dane zostaną wprowadzone na samym początku jego przebiegu. Taka automatyzacja to już nie jest prosty skrypt testów, który podąża od punktu A do punktu B i jak wydarzy się coś nieoczekiwanego, to po prostu zgłosi błąd. Tutaj bardzo często w grę wchodzą rzeczywiste pieniądze i jeśli proces zostanie błędnie obsłużony, to może wiązać się ze stratami finansowymi po stronie klienta.</p></li>
+<li><p><strong>Z jakimi systemami będziesz współpracował</strong> - proces biznesowy (mocno upraszczając) polega na przepływie i obróbce jakichś danych. Skoro tak, to należałoby określić punkty wejścia i wyjścia z takiego procesu biznesowego. Bardzo często może się okazać, że punktem wejścia i wyjścia z procesu biznesowego będzie ten sam system, ale w trakcie jego procesowania część danych musi zostać "przeniesiona" do drugiego systemu, z którego z kolei jakieś dane należy pobrać. Żeby sobie uzmysłowić, o co chodzi, wyobraźmy sobie proces zakupowy w jednej z platform aukcyjnych (nie będę żadnej faworyzował, więc tym razem bez linków). Mocno upraszczając, klient chce coś kupić. Po znalezieniu produktu oraz opłaceniu zamówienia trafia ono do sprzedawcy, a więc dane przepływają od platformy do sprzedawcy. Sprzedawca wysyła towar i przesyła status realizacji zamówienia do klienta. Tutaj następuje przepływ danych od sprzedawcy do platformy. Cały ten przepływ danych nastąpił w ramach jednego procesu biznesowego, jakim jest zakup towaru (tak wiem, że można go rozbić na mniejsze elementy. ale nie o tą analizę tutaj chodzi). Znów dochodzimy do wniosku, że to, co proste do zrobienia manualnie, nie koniecznie będzie takie proste do automatyzacji.</p></li>
+<li><p><strong>Dodatkowe dane</strong> - może się okazać, że proces biznesowy wymaga jakichś dodatkowych danych, które aktualnie są przetrzymywane np. w arkuszach kalkulacyjnych, a więc należy przemyśleć przechowywanie takich danych. Takie dane powinny być łatwe do edycji, a więc należy przewidzieć jakiś format przechowywania, który będzie spójny z punktu widzenia języka, w którym będzie tworzyć narzędzie RPA, ale jednocześnie zrozumiały i łatwy do edycji dla Waszego klienta. Niestety pliki arkusza kalkulacyjnego nie są dobrym formatem do przechowywania danych, gdyż łatwo "zepsuć" taki arkusz, np. poprzez omyłkowe scalenie komórek lub pozostawienie pustych rzędów, co wymaga obsłużenia większej liczny przypadków/wyjątków w kodzie.</p></li>
+<li><p><strong>Logowanie zdarzeń</strong> - pamiętaj też o odpowiednim sposobie logowania akcji, które budowane narzędzie wykonuje. Obsługa logowania ułatwi 2 rzeczy: proces tworzenia aplikacji (mniej debugowania kodu) oraz łatwiejszą naprawę błędów pojawiających się u klienta po wdrożeniu "na produkcji".</p></li>
+<li><p><strong>Raportowanie wyników</strong> - każdy proces biznesowy w jakimś miejscu się kończy, a więc należy gdzieś przedstawić status działania takiego procesu. Pamiętaj, że nie zawsze proces biznesowy zakończy się sukcesem. Czasem mogą wydarzyć się jakieś nieoczekiwane błędy w samych danych wprowadzonych do procesu, co może skutkować niemożliwością jego zakończenia. Jeżeli jest to proces kluczowy dla funkcjonowania waszego klienta, może się również okazać, że takie dane będą musiały zostać ręcznie przetworzone lub zmodyfikowane i ponownie wprowadzone do tworzonego narzędzia RPA. Dobrą praktyką byłoby więc, poinformowanie klienta, nie tylko o sukcesie, ale również o porażce oraz wskazaniu jej przyczyn, np. poprzez poinformowanie jakie dane nie mogły zostać odczytane lub przetworzone. W ten sposób ułatwicie klientowi sposób postępowania z konkretnym zestawem danych, a więc pomimo porażki zredukujecie czas manualnej ich obsługi.</p></li>
+<li><p><strong>Opcje ustawień</strong> - narzędzie RPA, to oprogramowanie i jak prawie każde oprogramowanie może wymagać czasem zmiany jakichś parametrów, np. adresu bazy danych, do której się łączy lub modyfikacji nazwy użytkownika i/lub hasła. Warto, aby takie parametry były łatwo modyfikowalne np. poprzez zmianę zmiennych środowiskowych lub edycję jakich plików konfiguracyjnych.</p></li>
+<li><p><strong>Dokumentacja</strong> - jak każdy projekt, tak i narzędzie RPA powinno być dostarczone do klienta z dokumentacją. Zakres oraz formę takiej dokumentacji należy również określić z klientem, gdyż może się okazać, że wytworzenie dokumentacji będzie równie czasochłonne co napisanie kodu. Czasem jako dokumentacją wystarczą odpowiednie komentarze w kodzie i/lub np. pliki README.md, które będą znajdowały się w repozytorium kodu tworzonego narzędzia.</p></li>
+<li><p><strong>Testy</strong> - coś co tygryski lubią najbardziej😉. Tutaj sprawa jest bardzo otwarta i jeżeli klient Wam tego nie narzuci, sprawa pozostaje na Twoich barkach. Możesz tworzyć testy jednostkowe, funkcjonalne lub poprzestać na testach integracyjnych opierając się na danych dostarczonych przez klienta. Może to być również miks powyższych lub jeszcze inne podejście, jednak na pewno przyjdzie taki moment, kiedy Wasza aplikacja będzie musiała zacząć działać na danych produkcyjnych. Dojdziecie więc do tzw. testów akceptacyjnych. Jak dojść w miarę bezpiecznie do tego etapu, tak aby nie okazało się, że "nic nie działa", opiszę trochę niżej.</p></li>
+<li><p><strong>Inne</strong> - być może okaże się, że poza napisaniem samego narzędzia, będzie należało przeprowadzić jakieś dodatkowe prace uzupełniające w trakcie wdrożenia, np. konfiguracja systemu tak, aby program automatycznie się uruchamiał. Może się również okazać, że poza dostarczeniem kodu programu, klient będzie wymagał np. stworzenia obrazu dockerowego z tworzonym narzędziem lub wytworzenia odpowiednich skryptów w narzędziu CI/CD, którym zarządza klient.</p></li>
 </ol>
 <p>Jak więc widzisz ilość elementów, które należy uwzględnić w samym zakresie projektu, zdecydowanie wykracza poza prostą analizę procesu biznesowego, dla którego tworzone jest narzędzie RPA.</p>
 <p>Pamiętaj również, że klient może zażądać od Ciebie podpisania umowy <a class="reference external" href="https://pl.wikipedia.org/wiki/Umowa_poufno%C5%9Bci">NDA</a>, czyli tzw. umowy poufności. Nie bój się takiej umowy. Klient stara się tylko obronić swoje interesy, abyś intencjonalnie nie udostępnił komuś niepowołanemu procesów biznesowych lub innych danych stanowiących własność intelektualną klienta, a które bardzo często stanowią o przewadze konkurencyjnej. Pamiętaj również, że jeśli masz wątpliwości co do treści takiej umowy, warto po prostu zasięgnąć porady prawnika. Pamiętaj jednak, że nie przewidzenie któregoś z powyższych elementów może doprowadzić do sytuacji, że poświęcisz na projekt dodatkowe godziny, za które nikt Ci nie zapłacić, bo z własnej winy lub niewiedzy nie przewidziałeś ich w kosztorysie.</p>
@@ -166,24 +158,15 @@ og: http://ogp.me/ns#
 <h3>Czego potrzebujesz od klienta?</h3>
 <p>Odpowiedź na to pytanie nie jest oczywista i bardzo mocno zależy od tego, jaki jest zakres projektu. Przejdźmy więc bardzo szybko po punktach z zakresu projektu i zastanówmy się, co może nam dostarczyć klient:</p>
 <ol class="arabic simple">
-<li>
-<strong>Proces biznesowy</strong> - tu sprawa jest jasna, czyli potrzebujemy jakiejś formy opisu tego procesu. Forma jest w zasadzie dowolna, ale nie wymagajcie od klienta tworzenia skomplikowanych dokumentów, jeśli do tej pory ich nie wytworzył, bo możecie trafić na ścianę nie do przejścia. Pamiętaj, że wytworzenie takiej dokumentacji może wymagać dużego nakładu czasu po stronie klienta, a skoro potrzebuje on narzędzia RPA, to bardzo często potrzebuje właśnie tego czasu zaoszczędzić. Jeśli jest taka możliwość, poproś o inną formę, która jest mniej czasochłonna, np. nagranie filmów wraz z komentarzem dotyczącym całego procesu. Jeśli coś będzie niejasne, poproś później o doprecyzowanie.</li>
-<li>
-<strong>Inne systemy</strong> - skoro mówimy o jakichś systemach (lub aplikacjach) to na pewno będziemy potrzebowali do nich jakichś danych dostępowych. Najczęściej będzie to jakiś login i hasło. Ideałem byłoby, gdyby w początkowej fazie klient dysponował jakimś środowiskiem testowym. Dostęp do takiego środowiska ułatwi Ci proces tworzenia narzędzia, gdyż zarówno Ty, jak i klient będziecie spokojniejsi, że nic nie popsujesz. Dodatkowo będziesz miał możliwość samemu odtworzyć manualnie proces biznesowy, który tworzone narzędzie będzie automatyzować.</li>
-<li>
-<strong>Dodatkowe dane</strong> - po otrzymaniu dokumentacji z punktu 1, po prostu zorientujesz się, czy takie dane są potrzebne, czy nie. Również w późniejszych etapach może się okazać, że potrzebujesz jakichś dodatkowych danych, o których istnieniu w początkowym etapie nie zdawałeś sobie sprawy. Nie wahaj się i po prostu o nie zapytaj.</li>
-<li>
-<strong>Logowanie zdarzeń</strong> - ustalenie formatu logowanie zdarzeń w większości wypadków będzie zależało od Ciebie. Warto jednak z klientem się w tej kwestii po prostu dogadać, gdyż w razie późniejszych problemów, to klient będzie musiał Ci te logi jakoś dostarczyć.</li>
-<li>
-<strong>Raportowanie wyników</strong> - podobnie jak w punkcie 4, warto ustalić z klientem: gdzie, w jakiej formie oraz jakie dane taki raport powinien zawierać.</li>
-<li>
-<strong>Opcje ustawień</strong> - część z tych opcji może wynikać ze wszystkich wcześniejszych punktów, część może wynikać z Twoich potrzeb (np. będzie włączać dodatkowe elementy przydatne podczas debugowania lub testowania rozwiązania), a część może wynikać z jakich potrzeb Twojego klienta (np. jakieś opóźnienie w procesowaniu lub cykliczne uruchamianie narzędzia).</li>
-<li>
-<strong>Dokumentacja</strong> - podobnie jak w punkcie 4, warto ustalić format i zakres dokumentacji.</li>
-<li>
-<strong>Testy</strong> - i znów warto ustalić z klientem, czy testy akceptacyjne będą wystarczające, czy wymagane jest coś więcej.</li>
-<li>
-<strong>Inne</strong> - no i po raz ostatni warto spytać się, czy będzie coś jeszcze potrzebne.</li>
+<li><p><strong>Proces biznesowy</strong> - tu sprawa jest jasna, czyli potrzebujemy jakiejś formy opisu tego procesu. Forma jest w zasadzie dowolna, ale nie wymagajcie od klienta tworzenia skomplikowanych dokumentów, jeśli do tej pory ich nie wytworzył, bo możecie trafić na ścianę nie do przejścia. Pamiętaj, że wytworzenie takiej dokumentacji może wymagać dużego nakładu czasu po stronie klienta, a skoro potrzebuje on narzędzia RPA, to bardzo często potrzebuje właśnie tego czasu zaoszczędzić. Jeśli jest taka możliwość, poproś o inną formę, która jest mniej czasochłonna, np. nagranie filmów wraz z komentarzem dotyczącym całego procesu. Jeśli coś będzie niejasne, poproś później o doprecyzowanie.</p></li>
+<li><p><strong>Inne systemy</strong> - skoro mówimy o jakichś systemach (lub aplikacjach) to na pewno będziemy potrzebowali do nich jakichś danych dostępowych. Najczęściej będzie to jakiś login i hasło. Ideałem byłoby, gdyby w początkowej fazie klient dysponował jakimś środowiskiem testowym. Dostęp do takiego środowiska ułatwi Ci proces tworzenia narzędzia, gdyż zarówno Ty, jak i klient będziecie spokojniejsi, że nic nie popsujesz. Dodatkowo będziesz miał możliwość samemu odtworzyć manualnie proces biznesowy, który tworzone narzędzie będzie automatyzować.</p></li>
+<li><p><strong>Dodatkowe dane</strong> - po otrzymaniu dokumentacji z punktu 1, po prostu zorientujesz się, czy takie dane są potrzebne, czy nie. Również w późniejszych etapach może się okazać, że potrzebujesz jakichś dodatkowych danych, o których istnieniu w początkowym etapie nie zdawałeś sobie sprawy. Nie wahaj się i po prostu o nie zapytaj.</p></li>
+<li><p><strong>Logowanie zdarzeń</strong> - ustalenie formatu logowanie zdarzeń w większości wypadków będzie zależało od Ciebie. Warto jednak z klientem się w tej kwestii po prostu dogadać, gdyż w razie późniejszych problemów, to klient będzie musiał Ci te logi jakoś dostarczyć.</p></li>
+<li><p><strong>Raportowanie wyników</strong> - podobnie jak w punkcie 4, warto ustalić z klientem: gdzie, w jakiej formie oraz jakie dane taki raport powinien zawierać.</p></li>
+<li><p><strong>Opcje ustawień</strong> - część z tych opcji może wynikać ze wszystkich wcześniejszych punktów, część może wynikać z Twoich potrzeb (np. będzie włączać dodatkowe elementy przydatne podczas debugowania lub testowania rozwiązania), a część może wynikać z jakich potrzeb Twojego klienta (np. jakieś opóźnienie w procesowaniu lub cykliczne uruchamianie narzędzia).</p></li>
+<li><p><strong>Dokumentacja</strong> - podobnie jak w punkcie 4, warto ustalić format i zakres dokumentacji.</p></li>
+<li><p><strong>Testy</strong> - i znów warto ustalić z klientem, czy testy akceptacyjne będą wystarczające, czy wymagane jest coś więcej.</p></li>
+<li><p><strong>Inne</strong> - no i po raz ostatni warto spytać się, czy będzie coś jeszcze potrzebne.</p></li>
 </ol>
 <p>Pamiętaj, że skoro klient nawiązał z Tobą współpracę, to znaczy, że zależy mu na tym narzędziu oraz na czasie, który dzięki niemu zaoszczędzi (pieniądze przy okazji również). Będzie się więc starał oraz dopingował Cię, aby narzędzie powstało jak najszybciej, a więc dostarczy Ci wszystkich potrzebnych Ci informacji. Pamiętaj również, że u klienta też pracują normalni ludzie, którzy mają swoje prywatne życie i problemy i jeśli są jakieś opóźnienia, to grzecznie przypomnijcie, że o coś pytaliście. Nie róbcie afery tam, gdzie jej nie ma. Każdy może o czymś zapomnieć i jeśli Ty będziesz do swojego klienta podchodził rozsądnie, to i on podjedzie do Ciebie podobnie.</p>
 </div>
@@ -197,10 +180,10 @@ og: http://ogp.me/ns#
 <p>Nie podam Ci tutaj żadnej złotej formuły. Czas potrzebny na wytworzenie każdego z elementów wchodzących w zakres projektu może być mocno zróżnicowany. Zależeć on będzie zarówno od samego stopnia skomplikowania, jak i również od Waszych umiejętności. Pamiętaj jednak, że większości mamy mocną tendencję do błędnego szacowania czasu potrzebnego na wykonanie danego zadania i przeważnie go zaniżamy. Wynika to bardzo często z błędnego zakresu projektu, bo ktoś nam czegoś nie powiedział lub o coś zapomnieliśmy zapytać oraz zbytniej wiary w nasze własne umiejętności. Pamiętaj również o uwzględnieniu buforu bezpieczeństwa na jakieś nieprzewidziane zdarzenia, np. choroba lub błędne oszacowanie zakresu pracy. Taki bufor powinien stanowić minimum 20% ogólnego czasu, a jeszcze lepiej, jeśli to będzie nawet 50%, gdy nie masz pewności co do kluczowych elementów zakresu projektu. Jeśli jest to Twój pierwszy projekt takiego typu to taki bufor możne nawet rozszerzyć do 100%, a i tak jest duża szansa, że okaże się on zbyt mały.</p>
 <p>Jak już uda Ci się oszacować potrzebny czas to jedyne co pozostaje to określenie wysokości stawki za Twoją roboczo godzinę oraz przedstawienie tego wyliczenia swojemu klientowi. Jak określić stawkę za roboczo godzinę? Można pójść kilkoma drogami:</p>
 <ul class="simple">
-<li>przyjąć wysokość stawki, jaką masz na etacie,</li>
-<li>przyjąć wysokość stawki programisty języka, w jakim będziecie tworzyć narzędzie,</li>
-<li>przyjąć dowolną stawkę, która zadowoliłaby Was, gdybyście pracowali na swoim,</li>
-<li>dowolny inny sposób.</li>
+<li><p>przyjąć wysokość stawki, jaką masz na etacie,</p></li>
+<li><p>przyjąć wysokość stawki programisty języka, w jakim będziecie tworzyć narzędzie,</p></li>
+<li><p>przyjąć dowolną stawkę, która zadowoliłaby Was, gdybyście pracowali na swoim,</p></li>
+<li><p>dowolny inny sposób.</p></li>
 </ul>
 <p>Co się wydarzy po przedstawieniu wyceny projektu klientowi, to już różnie bywa. Może się okazać, że klient przyjmie tę kwotę bez jakiejkolwiek rozmowy, co będzie znaczyło, że miał dużo większy budżet, a Ty będziesz się zastanawiał czy nie warto było powiedzieć więcej. Może się również okazać, że zacznie się targować. W tym 2 przypadku to od Ciebie będzie zależało, czy po dalszych pertraktacjach zgodzisz się na proponowaną cenę (nigdy nie gódź się na 1 proponowaną kwotę, chyba że Cię zadowala), czy też podziękujesz i odmówisz wykonania projektu.</p>
 </div>
@@ -221,11 +204,11 @@ og: http://ogp.me/ns#
 <h3>Jak więc podejść do tematu?</h3>
 <p>"Dziel i rządź". Podziel pracę na mniejsze i częściowo od siebie niezależne obiekty/klasy:</p>
 <ul class="simple">
-<li>do interakcji z systemem, z którego będziesz pobierał dane,</li>
-<li>do interakcji z systemem, do którego dane będziesz dostarczał,</li>
-<li>struktura danych (będzie wykorzystywany przez oba obiekty powyżej),</li>
-<li>odpowiadający za logowanie zdarzeń,</li>
-<li>odpowiadający za odczyt konfiguracji i/lub dodatkowych danych.</li>
+<li><p>do interakcji z systemem, z którego będziesz pobierał dane,</p></li>
+<li><p>do interakcji z systemem, do którego dane będziesz dostarczał,</p></li>
+<li><p>struktura danych (będzie wykorzystywany przez oba obiekty powyżej),</p></li>
+<li><p>odpowiadający za logowanie zdarzeń,</p></li>
+<li><p>odpowiadający za odczyt konfiguracji i/lub dodatkowych danych.</p></li>
 </ul>
 <p>Podchodząc do tego w ten sposób, jesteś w stanie pracować nad pewnymi jego elementami niezależnie od innych i chwilowe trudności w dostępie do np. środowiska testowego, lub oczekiwanie na doprecyzowanie jakichś kwestii ze strony klienta, nie będą tak wpływały na opóźnienie projektu. Pamiętaj również, że klient jest żywo zainteresowany postępem prac, więc jeśli jesteś w stanie zaprezentować mu jakaś część narzędzia, zrób to. Pamiętaj, aby klientowi powiedzieć, co mniej więcej zobaczy i czego może brakować. Takie podejście, poza uspokojeniem klienta, może również wpłynąć na wczesne wykrycie błędów lub nieścisłości w samym procesie. Często może się okazać, że Twoje rozumienie automatyzowanego procesu biznesowego było błędne lub pojawią się jakieś dodatkowe warunki, które dla klienta były oczywiste, a o których nie wspomniał w trakcie spisywania wymagań (dlatego bufor czasu przy wycenie projektu jest tak ważny). Co jednak zrobić, jeśli okaże się, że bardzo mocno pewne rzeczy ulegają zmianie względem pierwotnego zakresu projektu?</p>
 </div>
@@ -241,8 +224,8 @@ og: http://ogp.me/ns#
 <h3>Gwarancja</h3>
 <p>Oczywiście po testach akceptacyjnych i wdrożeniu aplikacji u klienta, następuje okres gwarancyjny. Warto szybko odpowiadać na zgłoszenia, ponieważ:</p>
 <ul class="simple">
-<li>po 1 jesteście do tego zobligowani zapisami w umowie,</li>
-<li>po 2 warto z takim klientem dobrze żyć, bo być może w przyszłości będziecie mogli jeszcze w innych kwestiach mu pomóc, a co za tym idzie dodatkowo zarobić (jak to mawiał pewien klasyk: "zadowolony klient, który kupuje, to zadowolony klient, który kupuje).</li>
+<li><p>po 1 jesteście do tego zobligowani zapisami w umowie,</p></li>
+<li><p>po 2 warto z takim klientem dobrze żyć, bo być może w przyszłości będziecie mogli jeszcze w innych kwestiach mu pomóc, a co za tym idzie dodatkowo zarobić (jak to mawiał pewien klasyk: "zadowolony klient, który kupuje, to zadowolony klient, który kupuje).</p></li>
 </ul>
 <p>Pamiętaj również, że jeśli wyrobisz sobie dobrą markę, to może się okazać, że zadowolony klient przy okazji luźnej rozmowy z innym przedsiębiorcą poleci Was, bo był zadowolony z efektu pracy i współpracy z Wami. Dzięki temu szukanie okazji przestanie być problemem.</p>
 </div>
@@ -604,6 +587,9 @@ og: http://ogp.me/ns#
 <li class="previous">
                 <a href="../../20200109/dekoratory-w-pythonie/" rel="prev" title="Dekoratory w Pythonie">Poprzedni post</a>
             </li>
+            <li class="next">
+                <a href="../../20200831/dobry-tester-a-kto-to-taki/" rel="next" title="Dobry tester? A kto to taki?">Następny post</a>
+            </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Komentarze</h2>
                         <div id="disqus_thread"></div>
         <script>
@@ -644,11 +630,11 @@ og: http://ogp.me/ns#
 
 <div class="sidebar-module sidebar-module-inset">
   <h3>O mnie</h3>
-  <p>Nazywam się <strong>Maciej Kusz</strong> i od 2008 roku zajmuję się testowaniem oprogramowania.
+  <img src="../../../images/me_bw.jpg"><p>Nazywam się <strong>Maciej Kusz</strong> i od 2008 roku zajmuję się testowaniem oprogramowania.
   Na początku były to testy manualne, od 2011 początki testów automatycznych,
-  a od 2013 automatyzacja testów z wykorzystaniem <strong>Python'a</strong>.
+  a od 2013 automatyzacja testów z wykorzystaniem <strong>Pythona</strong>.
   Przez te kilka lat, zdarzyło mi się już być w kilku firmach i w kilku różnych projektach.
-  Na stronę <a href="../../../pages/o-mnie">o mnie</a>, znajdujdziesz ciut więcej informacji na ten temat.</p>
+  Na stronie <a href="../../../pages/o-mnie">o mnie</a>, znajdujdziesz ciut więcej informacji na ten temat.</p>
 </div>
 <div class="sidebar-module sidebar-module-inset">
 
@@ -980,7 +966,7 @@ window._load_script = function(url, callback) {
       _load_script('https://maciejkusz.activehosted.com/proc.php?' + serialized + '&jsonp=true');
     }
     return false;
-  };
+  };aw
   addEvent(form_to_submit, 'submit', form_submit);
 })();
 

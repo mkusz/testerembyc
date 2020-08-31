@@ -11,7 +11,7 @@
 
 .. image:: /images/posts/20200813/rpa_picture.jpeg
     :align: center
-    :target: https://muscat.pl
+    :target: /posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/
 
 Zapewne zauważyłeś mój drogi czytelniku, że od pewnego czasu nic nie napisałem. Powodów tego stanu rzeczy jest kilka, a o jednym z nich przeczytasz za chwilę. Zanim to zrobisz, zadam Ci kilka pytań:
 
