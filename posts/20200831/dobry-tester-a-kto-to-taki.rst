@@ -6,7 +6,7 @@
 .. link: 
 .. description: 
 .. type: text
-.. previewimage: /images/posts/20200831/tester_preview.jpeg
+.. previewimage: /images/posts/20200831/tester_picture.jpeg
 
 .. image:: /images/posts/20200831/tester_picture.jpeg
     :align: center
