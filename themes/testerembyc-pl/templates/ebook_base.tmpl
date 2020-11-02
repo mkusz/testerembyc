@@ -1,0 +1,151 @@
+{#  -*- coding: utf-8 -*- #}
+{% import 'base_helper.tmpl' as base with context %}
+{{ set_locale(lang) }}
+{{ base.html_headstart() }}
+{% block extra_head %}
+{#  Leave this block alone. #}
+{% endblock %}
+{{ template_hooks['extra_head']() }}
+
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">{{ messages("Skip to main content") }}</a>
+
+<!-- Menubar -->
+
+<div class="blog-masthead">
+    <div class="container"><!-- This keeps the margins nice -->
+        <div class="blog-header">
+            <h1 class="blog-title">
+                <a href="{{ abs_link(_link("root", None, lang)) }}">
+                {% if logo_url %}
+                    <img src="{{ logo_url }}" alt="{{ blog_title }}" id="logo">
+                {% endif %}
+                {% if show_blog_title %}
+                    <span id="blog-title">{{ blog_title }}</span>
+                {% endif %}
+                </a>
+            </h1>
+            <!-- <p class="lead blog-description">{{ blog_description }}</p> # Oryginal one-->
+            <p class="lead blog-description">Czyli blog o tym, jak to jest być nie tylko <span>testerem</span></p>
+            {{ template_hooks['page_header']() }}
+        </div>
+         <nav class="blog-nav" role="navigation">
+            {{ base.html_navigation_links() }}
+            {{ template_hooks['menu']() }}
+
+                {% block belowtitle %}
+                {% if translations|length > 1 %}
+                    {{ base.html_translations() }}
+                {% endif %}
+                {% endblock %}
+                {% if show_sourcelink %}
+                    {% block sourcelink %}{% endblock %}
+                {% endif %}
+                {{ template_hooks['menu_alt']() }}
+            </ul>
+        </nav>
+        <!-- START Bootstrap-Cookie-Alert -->
+        <div class="alert text-center cookiealert" role="alert">
+            <p><b>Lubisz ciasteczka?</b> &#x1F36A;</p>
+            <p>Używam ich, aby dostarczyć Ci lepszych treści. Chcesz wiedzieć więcej?
+                <a href="/pages/polityka-prywatnosci/" target="_blank">Kliknij tu.</a></p>
+            <p><button type="button" class="btn btn-danger btn-sm acceptcookies">Lubię i akceptuję ciasteczka</button></p>
+        </div>
+        <!-- END Bootstrap-Cookie-Alert -->
+        <div class="body-content">
+
+            <!--Body content-->
+            <div class="row">
+                <div class="col blog-main">
+                    {% block content %}{% endblock %}
+                </div>
+            <!--End of body content-->
+            </div>
+        </div>
+        <footer class="blog-footer" id="footer">
+            {{ content_footer }}
+            {{ template_hooks['page_footer']() }}
+        </footer>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+/*
+ * Bootstrap Cookie Alert by Wruczek
+ * https://github.com/Wruczek/Bootstrap-Cookie-Alert
+ * Released under MIT license
+ */
+(function () {
+    "use strict";
+
+    var cookieAlert = document.querySelector(".cookiealert");
+    var acceptCookies = document.querySelector(".acceptcookies");
+
+    if (!cookieAlert) {
+       return;
+    }
+
+    {#cookieAlert.offsetHeight; // Force browser to trigger reflow (https://stackoverflow.com/a/39451131)#}
+
+    // Show the alert if we cant find the "acceptCookies" cookie
+    if (!getCookie("acceptCookies")) {
+        cookieAlert.classList.add("show");
+    } else {
+        cookieAlert.classList.remove("show")
+    }
+
+    // When clicking on the agree button, create a 1 year
+    // cookie to remember user's choice and close the banner
+    acceptCookies.addEventListener("click", function () {
+        setCookie("acceptCookies", true, 365);
+        cookieAlert.classList.remove("show");
+    });
+
+    // Cookie functions from w3schools
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+})();
+</script>
+
+{{ base.late_load_js() }}
+    <!-- fancy dates -->
+    <script>
+    moment.locale("{{ momentjs_locales[lang] }}");
+    fancydates({{ date_fanciness }}, {{ js_date_format }});
+    </script>
+    <!-- end fancy dates -->
+    {% block extra_js %}{% endblock %}
+    <script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script>
+{{ body_end }}
+{{ template_hooks['body_end']() }}
+</body>
+</html>

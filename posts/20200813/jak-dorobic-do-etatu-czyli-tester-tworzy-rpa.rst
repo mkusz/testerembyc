@@ -4,7 +4,7 @@
 .. tags: rpa, howto
 .. category: felieton
 .. link: 
-.. description: 
+.. description: Czy jest RPA oraz po co się je tworzy? Czy tester może tworzyć narzędzia RPA? Czy tworząc narzędzia RPA można dorobić do etatowej pracy testera?
 .. type: text
 .. previewimage: /images/posts/20200813/rpa_preview.jpeg
 .. template: newsletter.tmpl
@@ -26,7 +26,7 @@ Jeśli choć na jedno pytanie nie znasz odpowiedzi, to zapraszam do poniższego 
 
 .. more
 
-Uprzedzając pytania, artykuł nie jest w żaden sposób sponsorowany, a jest po prostu swoistego rodzaju case-study tego, co już zostało zrobione oraz pewnego rodzaju formalizacją wniosków ze współpracy, do których i mi będzie łatwiej wrócić w przyszłości. Dodatkowo na końcu znajdziesz małą niespodziankę, którą przygotowaliśmy wspólnie z firmą `Muscat Eyewear <https://muscat.pl>`_, z którą miałem okazję współpracować i która zainspirowała mnie do napisania tego artykułu.
+Uprzedzając pytania, artykuł nie jest w żaden sposób sponsorowany, a jest po prostu swoistego rodzaju case-study tego, co już zostało zrobione oraz pewnego rodzaju formalizacją wniosków ze współpracy, do których i mi będzie łatwiej wrócić w przyszłości. Firmą z którą miałem okazję współpracować i która zainspirowała mnie do napisania tego artykułu, jest firma `Muscat Eyewear <https://muscat.pl>`_
 
 .. image:: /images/posts/20200813/muscat.png
     :align: center
@@ -201,13 +201,3 @@ Podsumowanie
 W powyższym artykule nie poruszyłem w ogóle szczegółów dotyczących tego, jakich bibliotek użyłem podczas implementacji tworzonego narzędzia RPA. Jest to celowy zabieg, ponieważ każdy ma swoje preferencje i nie do każdego zadania, wybrane przeze mnie biblioteki będą się nadawały. Jeśli jednak jesteś tym zainteresowany, to proszę, daj znać, a postaram się zaspokoić Twoją ciekawość.
 
 Mam jednak nadzieję, że tak bardzo przekrojowy opis, który bardziej skupia się na podejściu do problemu oraz ewentualnych pułapkach będzie dla Ciebie przydatny. Wiele z elementów, które omówiłem powyżej, sprawdzi się również przy rozpoczynaniu wszelkich testerskich projektów, z którymi na co dzień masz styczność w swojej zawodowej pracy. Szczególnie jeśli dostaniesz zadanie rozpoczęcia automatycznego testowania jakiegoś projektu.
-
-Niespodzianka
--------------
-
-Jak wspomniałem na początku artykułu, wspólnie z firmą `Muscat Eyewear <https://muscat.pl>`_ przygotowaliśmy niespodziankę. Każdego czytelnika mojego bloga, który zapisze się do mojego newslettera (formularz poniżej), otrzyma w mailu **kod zniżkowy na 50 zł na zakup dowolnych okularów korekcyjnych lub przeciwsłonecznych**. Kod jest ważny do *końca września* więc macie jeszcze chwilę, aby również uzyskać dofinansowanie zakupu okularów korekcyjnych u Waszego pracodawcy.
-
-.. image:: /images/posts/20200813/muscat.png
-    :align: center
-    :width: 320
-    :target: https://muscat.pl

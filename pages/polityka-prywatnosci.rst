@@ -18,7 +18,7 @@ Jeżeli podstawowe informacje okażą się dla Ciebie niewystarczające, poniże
 I. Podstawowe informacje
 ========================
 
-1. Administratorem danych osobowych na stronie testerembyc.pl_ jestem ja, czyli: Maciej Kusz. Możesz się ze mną skontaktować w każdej chwili z wykorzystaniem adresu e-mail: maciej@testerembyc.pl.
+1. Administratorem danych osobowych na stronie testerembyc.pl_ jestem firma: **Red Bug Maciej Kusz**, której ja, czyli Maciej Kusz, jestem właścicielem. Możesz się ze mną skontaktować w każdej chwili z wykorzystaniem adresu e-mail: maciej@testerembyc.pl.
 
 2. Pamiętaj, że podanie danych osobowych, a także zgoda na ich przetwarzanie są całkowicie dobrowolne. Wszelkie przekazane mi dane osobowe są przetwarzane wyłącznie w zakresie i w celu, na jaki wyraziłeś zgodę.
 
@@ -35,7 +35,16 @@ I. Podstawowe informacje
 II. Administrator
 =================
 
-Administratorem danych osobowych strony internetowej testerembyc.pl_, czyli podmiotem odpowiedzialnym za zapewnienie bezpieczeństwa Twoim danym osobowm jest: Maciej Kusz (e-mail: maciej@testerembyc.pl).
+Administratorem danych osobowych strony internetowej testerembyc.pl_, czyli podmiotem odpowiedzialnym za zapewnienie bezpieczeństwa Twoim danym osobowym jest: Maciej Kusz (e-mail: maciej@testerembyc.pl).
+
+**Red Bug Maciej Kusz**
+ul. Stefana Okrzei 15
+42-506 Będzin
+NIP: 6262639019
+REGON: 387150076
+e-mail: maciej@testerembyc.pl
+
+Działalność wpisana do `CEIDG <https://prod.ceidg.gov.pl/CEIDG/CEIDG.Public.UI/Search.aspx>`_.
 
 III. Twoje uprawnienia
 ======================
@@ -118,4 +127,4 @@ Wykorzystuję również cookies podmiotów zewnętrznych:
 VIII. Zmiana polityki prywatności i plików cookies
 ==================================================
 
-Zastrzegam sobie prawo do wprowadzania zmian w polityce prywatności. Zmiany będą wprowadzane jeśli będzie wymagać tego obowiązujące prawo lub ulegną zmianie warunki technologiczne funkcjonowania mojej strony internetowej. Aktualny tekst polityki prywatności oraz wersje archiwalne zawsze będą znajdować się na mojej stronie internetowej.
+Zastrzegam sobie prawo do wprowadzania zmian w polityce prywatności. Zmiany będą wprowadzane jeśli będzie wymagać tego obowiązujące prawo lub ulegną zmianie warunki technologiczne funkcjonowania mojej strony internetowej. Aktualny tekst polityki prywatności oraz `wersje archiwalne <https://github.com/mkusz/testerembyc/blob/master/pages/polityka-prywatnosci.rst>`_ zawsze będą znajdować się na mojej stronie internetowej.
