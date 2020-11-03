@@ -63,7 +63,6 @@ a:hover {
 p {
   text-align: justify;
   text-justify: inter-word;
-  margin: 10px 10px 10px 10px;
 }
 
 /*! SOURCE: http://getbootstrap.com/examples/blog/blog.css !*/
@@ -86,7 +85,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin: 10px 10px 10px 10px;
+  margin-top: 0;
   font-family: 'LatoLatinWebMedium', sans-serif;
   font-weight: normal;
   color: #ff0000;
@@ -210,6 +209,7 @@ a.blog-nav-item:hover span {
 .blog-nav .active {
   color: #fff;
 }
+
 .blog-nav .active:after {
   position: absolute;
   bottom: 0;
@@ -258,6 +258,11 @@ a.blog-nav-item:hover span {
 .blog-main {
   font-size: 18px;
   line-height: 1.5;
+}
+
+.p-summary p,
+.entry-content p {
+  margin: 10px 10px 10px 10px;
 }
 
 /* Sidebar modules for boxing content */
