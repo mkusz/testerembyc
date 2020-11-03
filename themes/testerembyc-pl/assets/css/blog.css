@@ -260,11 +260,6 @@ a.blog-nav-item:hover span {
   line-height: 1.5;
 }
 
-.p-summary p,
-.entry-content p {
-  margin: 10px 10px 10px 10px;
-}
-
 /* Sidebar modules for boxing content */
 .sidebar-module {
   padding: 15px;

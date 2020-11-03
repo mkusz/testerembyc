@@ -13,6 +13,8 @@
 
 .. image:: /images/page_lm/jak_zaczac_automatyzowac.jpg
 
+.. class:: col-md-6
+
 Jak zacząć automatyzować testy?
 ===============================
 
