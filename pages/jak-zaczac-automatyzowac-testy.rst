@@ -4,7 +4,7 @@
 .. tags: 
 .. category: 
 .. link: 
-.. description: Czyli mini poradnik opisujący początek tego procesu.
+.. description: Czyli mini poradnik dla każdego testera.
 .. type: text
 .. previewimage: /images/page_lm/jak_zaczac_automatyzowac_preview.jpg
 .. template: ebook.tmpl
