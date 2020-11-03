@@ -1,11 +1,12 @@
 .. title: Jak zacząć automatyzować testy?
 .. slug: jak-zaczac-automatyzowac-testy
-.. date: 2020-10-27 01:54:08 UTC+01:00
+.. date: 2020-11-03 00:54:08 UTC+01:00
 .. tags: 
 .. category: 
 .. link: 
 .. description: Mini e-book dotyczący początków procesu automatyzacji testów. E-book omawia również wiele aspektów wartych rozważenia przed rozpoczęciem automatyzacji testów.
 .. type: text
+.. previewimage: /images/page_lm/jak_zaczac_automatyzowac_preview.jpg
 .. template: ebook.tmpl
 
 .. class:: col-md-6
