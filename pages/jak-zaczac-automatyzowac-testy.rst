@@ -4,7 +4,7 @@
 .. tags: 
 .. category: 
 .. link: 
-.. description: Czyli mini poradnik dotyczący początków procesu automatyzacji testów.
+.. description: Czyli mini poradnik opisujący początek tego procesu.
 .. type: text
 .. previewimage: /images/page_lm/jak_zaczac_automatyzowac_preview.jpg
 .. template: ebook.tmpl
