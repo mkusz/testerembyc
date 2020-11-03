@@ -1430,7 +1430,7 @@ GLOBAL_CONTEXT = {'blog_sidebar': """
 
 <div class="sidebar-module sidebar-module-inset">
   <h3>Darmowy poradnik</h3>
-  <img src="/images/page_lm/jak_zaczac_automatyzowac_small.jpg" />
+  <a href="/pages/jak-zaczac-automatyzowac-testy/"><img src="/images/page_lm/jak_zaczac_automatyzowac_small.jpg" /></a>
   <p><strong>Jak zacząć automatyzować testy?</strong></p>
   <p>Poznaj 12 pytań, które pomogą Ci rozpocząć proces automatyzacji testów.
   W zupełnym oderwaniu od języka programowania, frameworków do testów oraz technologi
@@ -1443,7 +1443,7 @@ GLOBAL_CONTEXT = {'blog_sidebar': """
 
 <div class="sidebar-module sidebar-module-inset">
   <h3>O mnie</h3>
-  <img src="/images/me_bw_small.jpg" />
+  <a href="/pages/o-mnie/"><img src="/images/me_bw_small.jpg" /></a>
   <p>Nazywam się <strong>Maciej Kusz</strong> i od 2008 roku zajmuję się testowaniem oprogramowania.
   Na początku były to testy manualne, od 2011 początki testów automatycznych,
   a od 2013 automatyzacją testów z wykorzystaniem <strong>Pythona</strong>.
