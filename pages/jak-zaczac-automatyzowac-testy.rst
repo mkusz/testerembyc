@@ -4,7 +4,7 @@
 .. tags: 
 .. category: 
 .. link: 
-.. description: Mini e-book dotyczący początków procesu automatyzacji testów. E-book omawia również wiele aspektów wartych rozważenia przed rozpoczęciem automatyzacji testów.
+.. description: Czyli mini poradnik dotyczący początków procesu automatyzacji testów.
 .. type: text
 .. previewimage: /images/page_lm/jak_zaczac_automatyzowac_preview.jpg
 .. template: ebook.tmpl
