@@ -63,6 +63,7 @@ a:hover {
 p {
   text-align: justify;
   text-justify: inter-word;
+  margin: 10px 10px 10px 10px;
 }
 
 /*! SOURCE: http://getbootstrap.com/examples/blog/blog.css !*/
@@ -85,7 +86,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: 0;
+  margin: 10px 10px 10px 10px;
   font-family: 'LatoLatinWebMedium', sans-serif;
   font-weight: normal;
   color: #ff0000;
@@ -141,7 +142,6 @@ article img, article object {
     width: 970px;
   }
 }
-
 /*
  * Masthead for nav
  */
