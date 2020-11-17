@@ -92,13 +92,3 @@ Podsumowanie
 ------------
 
 Pomimo że powyższy artykuł nie dostarcza Ci bardzo konkretnej wiedzy, a zapewne spodziewałeś się znaleźć tu złoty przepis na sukces, to nie taki był cel tego artykułu. Chciałem Ci uświadomić, że nikt nie da Ci wskazówek, które się na pewno sprawdzą. To, co zadziała u jednej osoby, u innej może prowadzić do porażki. Jest bardzo wiele elementów, które każdy z nas odbiera inaczej. Nie ma jednej drogi, bo idąc tą samą ścieżką, jeden będzie biegł, a drugi będzie się potykał o każdy kamień i wystający korzeń. Jeśli ktoś mówi Ci, np. że ukończenie tego, a tego kursu da Ci gwarancje zatrudnienia, to najdelikatniej mówiąc, mija się z prawdą. Kurs może Ci to ułatwić i/lub nauczyć pewnych rzeczy. Reszta zależy od Ciebie, okoliczności oraz odrobiny szczęścia. Cały artykuł miał za zadanie otworzyć Ci oczy na ciut inne, szersze spojrzenie na same testy oraz skłonić do refleksji na temat Twojej kariery w testowaniu. Jeśli choć trochę mi się to udało i wyciągniesz jakieś konstruktywne wnioski, które pomogą Ci w rozwoju Twojej kariery, to będę się bardzo cieszył. Pamiętaj też, że im więcej umiesz, tym lepiej poradzisz sobie z wieloma aspektami w testowaniu i nie tylko. Spowoduje to również wzrost Twojej wartości na rynku pracy, a więc będziesz mógł negocjować wyższe zarobki.
-
-Niespodzianka
--------------
-
-Przypominam, że wspólnie z firmą `Muscat Eyewear <https://muscat.pl>`_ przygotowaliśmy niespodziankę. Każdego czytelnika mojego bloga, który zapisze się do mojego newslettera (formularz poniżej), otrzyma w mailu **kod zniżkowy na 50 zł na zakup dowolnych okularów korekcyjnych lub przeciwsłonecznych**. Kod jest ważny do *końca września* więc macie jeszcze chwilę, aby również uzyskać dofinansowanie zakupu okularów korekcyjnych u Waszego pracodawcy.
-
-.. image:: /images/posts/20200813/muscat.png
-    :align: center
-    :width: 320
-    :target: https://muscat.pl
