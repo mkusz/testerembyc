@@ -41,7 +41,7 @@ natsort==7.0.1
 nbconvert==5.6.1
 nbformat==4.4.0
 Nikola==8.1.1
-notebook==6.0.1
+notebook==6.1.5
 pandocfilters==1.4.2
 parso==0.5.1
 pathtools==0.1.2
