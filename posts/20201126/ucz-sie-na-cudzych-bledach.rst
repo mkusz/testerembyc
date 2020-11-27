@@ -6,7 +6,7 @@
 .. link: 
 .. description: Historia z życia, a nauka zdalna i kursy online
 .. type: text
-.. previewimage: /images/20201126/wrong_sum.jpg
+.. previewimage: /images/posts/20201126/wrong_sum.jpg
 .. template: newsletter.tmpl
 
 .. image:: /images/posts/20201126/wrong_sum.jpg
