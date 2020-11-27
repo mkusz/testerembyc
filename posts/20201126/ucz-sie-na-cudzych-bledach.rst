@@ -36,11 +36,11 @@ Dlaczego więc napisałem, że należy uczyć się na cudzych błędach? Dlatego
 Czy darmowa wiedza faktycznie jest darmowa?
 ===========================================
 
-Czy darmowa wiedza jest wg mnie zła? Absolutnie nie, ale samodzielne szukanie wartościowych materiałów jest trudne i bardzo czasochłonne. Ponieważ "czas to pieniądz" to zadaj sam sobie i odpowiedz na pytanie: *czy stać mnie na poświęcenie tego czasu na wyszukanie tych wszystkich informacji*? Jeśli nie wiesz jak sobie na nie odpowiedzieć, to proponuję drobny eksperyment:
+Czy darmowa wiedza jest wg mnie zła? Absolutnie nie, ale samodzielne szukanie wartościowych materiałów jest trudne i bardzo czasochłonne. Ponieważ *czas to pieniądz* to zadaj sam sobie i odpowiedz na pytanie: *czy stać mnie na poświęcenie tego czasu na wyszukanie tych wszystkich informacji*? Jeśli nie wiesz jak sobie na nie odpowiedzieć, to proponuję drobny eksperyment:
 
 1. Zadaj sobie jakiś konkretny problem do wyszukania w internecie (coś bardziej skomplikowanego, np. jeśli interesujecie się tzw. zieloną energią (poszukajcie porównania wydajności paneli monokrystalicznych z polikrystalicznymi w Polsce).
-2. Zmierz, ile czasu potrzebujesz, na wyszukanie sensownych materiałów (nie tylko ogólników, które są dostępne na każdej stronie i przenoszone z jednej na drugą, na zasadzie kopij/wklej, ale realne porównanie obu technologi przy takiej samej powierzchni dachy). Podczas szukania, uwzględnijcie czas potrzebny na przeczytanie materiałów, a końcowy wynik zaokrąglijcie do 30 minut.
-3. Przelicz, ile kosztuje wasza godzina pracy. Jak pracujecie na etacie, to podzielcie swoją średnio miesięczną wypłatę przez 168 (tyle średnio godzin miesięcznie pracujemy).
+2. Zmierz, ile czasu potrzebujesz, na wyszukanie sensownych materiałów (nie tylko ogólników, które są dostępne na każdej stronie i przenoszone z jednej na drugą, na zasadzie kopij/wklej, ale realne porównanie obu technologi przy takiej samej powierzchni dachu). Podczas szukania, uwzględnijcie czas potrzebny na przeczytanie materiałów, a końcowy wynik zaokrąglijcie do 30 minut.
+3. Przelicz, ile kosztuje Twoja godzina pracy. Jak pracujesz na etacie, to podzielcie swoją średnio-miesięczną wypłatę przez 168 (tyle średnio godzin miesięcznie pracujemy).
 4. Teraz pomnóż wartości z punktów 2 i 3.
 
 Ile Ci wyszło? Więcej niż 100 zł? Jeśli tak to zastanówcie się, ile różnych aspektów poruszanych jest w ramach dowolnego szkolenia. Czy po takim eksperymencie zapłacenie 500 zł, a nawet 1000 zł za materiał omawiający całościowo jakieś zagadnienie nie wydaje Ci się teraz kwotą bardziej sensowną, a w niektórych przypadkach nawet podejrzanie niską?
@@ -48,4 +48,4 @@ Ile Ci wyszło? Więcej niż 100 zł? Jeśli tak to zastanówcie się, ile róż
 Na zakończenie
 ==============
 
-Mam nadzieję, że po tym artykule spojrzysz ciut przychylniejszym okiem na twórców płatnych kursów. Stworzenie ogólnie dobrej jakości materiałów wymaga nakładu pracy, a co za tym idzie poświęcenia sporej ilości czasu. Doceń twórców zarówno darmowych, jak i płatnych materiałów.
+Mam nadzieję, że po tym artykule spojrzysz ciut przychylniejszym okiem na twórców płatnych kursów. Stworzenie dobrej jakości materiałów wymaga nakładu pracy, a co za tym idzie poświęcenia sporej ilości czasu. Doceń twórców zarówno darmowych, jak i płatnych materiałów.
