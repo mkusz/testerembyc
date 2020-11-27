@@ -4,7 +4,7 @@
 .. tags: testy, istqb, nauka
 .. category: felieton
 .. link: 
-.. description: 
+.. description: Cechy dobrego testera, które nie oddają pełnego obrazu tego co jest faktycznie potrzebne, żeby stać się dobrym testerem.
 .. type: text
 .. previewimage: /images/posts/20200831/tester_picture.jpeg
 .. template: newsletter.tmpl
