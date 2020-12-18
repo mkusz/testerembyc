@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html prefix="
-og: http://ogp.me/ns#
-" lang="pl">
+<html lang="pl" prefix="og: http://ogp.me/ns#">
 <head>
-<meta name="theme-color" content="#FF0000">
+<meta content="#FF0000" name="theme-color">
 <meta charset="utf-8">
-<meta name="description" content="Czyli blog o tym, jak to jest być nie tylko testerem">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Czyli blog o tym, jak to jest być nie tylko testerem" name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
 <title>testerembyc.pl | testerembyc.pl</title>
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="assets/css/rst.css" rel="stylesheet" type="text/css">
@@ -16,244 +14,227 @@ og: http://ogp.me/ns#
 <link href="assets/css/latolatinfonts.css" rel="stylesheet" type="text/css">
 <link href="assets/css/blog.css" rel="stylesheet" type="text/css">
 <link href="assets/css/fa.css" rel="stylesheet" type="text/css">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
-<link rel="canonical" href="https://testerembyc.pl/">
-<link rel="icon" href="images/icons/icon_16x16.png" sizes="16x16">
-<link rel="icon" href="images/icons/icon_32x32.png" sizes="32x32">
-<link rel="icon" href="images/icons/icon_64x64.png" sizes="64x64">
-<link rel="icon" href="images/icons/icon_128x128.png" sizes="128x128">
-<link rel="icon" href="images/icons/icon_256x256.png" sizes="256x256">
-<link rel="icon" href="images/icons/icon_512x512.png" sizes="512x512">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/20201126/ucz-sie-na-cudzych-bledach/" type="text/html">
+<link href="rss.xml" rel="alternate" title="RSS" type="application/rss+xml">
+<link href="https://testerembyc.pl/" rel="canonical">
+<link href="images/icons/icon_16x16.png" rel="icon" sizes="16x16">
+<link href="images/icons/icon_32x32.png" rel="icon" sizes="32x32">
+<link href="images/icons/icon_64x64.png" rel="icon" sizes="64x64">
+<link href="images/icons/icon_128x128.png" rel="icon" sizes="128x128">
+<link href="images/icons/icon_256x256.png" rel="icon" sizes="256x256">
+<link href="images/icons/icon_512x512.png" rel="icon" sizes="512x512"><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+<link href="posts/20201218/najmniejszy-framework-do-testow-w-pythonie/" rel="prefetch" type="text/html">
 </head>
 <body>
-<a href="#content" class="sr-only sr-only-focusable">Przejdź do treści</a>
-
-<!-- Menubar -->
-
+<a class="sr-only sr-only-focusable" href="#content">Przejdź do treści</a> <!-- Menubar -->
 <div class="blog-masthead">
-    <div class="container">
-<!-- This keeps the margins nice -->
-        <div class="blog-header">
-            <h1 class="blog-title">
-                <a href="https://testerembyc.pl/">
-                    <img src="images/testerembyc_logo.svg" alt="testerembyc.pl" id="logo"><span id="blog-title">testerembyc.pl</span>
-                </a>
-            </h1>
-            <!-- <p class="lead blog-description">Czyli blog o tym, jak to jest być nie tylko testerem</p> # Oryginal one-->
-            <p class="lead blog-description">Czyli blog o tym, jak to jest być nie tylko <span>testerem</span></p>
-            
-        </div>
-         <nav class="blog-nav" role="navigation"><a href="." class="blog-nav-item active"><img src="images/icons/icon.svg" height="16" width="16" title="Strona główna"><span>Strona główna</span> <span class="sr-only">(aktywne)</span></a>
-            <a href="archive.html" class="blog-nav-item"><i class="fas fa-archive" title="Archiwum"></i><span>Archiwum</span></a>
-            <a href="categories/" class="blog-nav-item"><i class="fas fa-tags" title="Tagi i kategorie"></i><span>Tagi i kategorie</span></a>
-            <a href="pages/o-mnie/" class="blog-nav-item"><i class="fas fa-user" title="O mnie"></i><span>O mnie</span></a>
-            <a href="rss.xml" class="blog-nav-item"><i class="fas fa-rss" title="RSS"></i><span>RSS</span></a>
-
-            
-
-                
-            
-        </nav><!-- START Bootstrap-Cookie-Alert --><div class="alert text-center cookiealert" role="alert">
-            <p><b>Lubisz ciasteczka?</b> 🍪</p>
-            <p>Używam ich, aby dostarczyć Ci lepszych treści. Chcesz wiedzieć więcej?
-                <a href="pages/polityka-prywatnosci/" target="_blank">Kliknij tu.</a></p>
-            <p><button type="button" class="btn btn-danger btn-sm acceptcookies">Lubię i akceptuję ciasteczka</button></p>
-        </div>
-        <!-- END Bootstrap-Cookie-Alert -->
-        <div class="body-content">
-
-            <!--Body content-->
-            <div class="row">
-                <div class="col-sm-9 blog-main">
-<div class="postindex">
-    <article class="blog-post h-entry post-text"><header><h2 class="p-name entry-title blog-post-title"><a href="posts/20201126/ucz-sie-na-cudzych-bledach/" class="u-url">Ucz się na cudzych błędach</a></h2>
-        <div class="metadata blog-post-meta">
-            <p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
-            <p class="dateline"><a href="posts/20201126/ucz-sie-na-cudzych-bledach/" rel="bookmark"><time class="published dt-published" datetime="2020-11-26T00:30:00+01:00" title="2020-11-26 00:30">2020-11-26 00:30</time></a></p>
-                <p class="commentline">            <a href="posts/20201126/ucz-sie-na-cudzych-bledach/#disqus_thread" data-disqus-identifier="cache/posts/20201126/ucz-sie-na-cudzych-bledach.html">Komentarze</a>
-
-
-        </p>
+<div class="container"><!-- This keeps the margins nice -->
+<div class="blog-header">
+<h1 class="blog-title"><a href="https://testerembyc.pl/"><img alt="testerembyc.pl" id="logo" src="images/testerembyc_logo.svg"><span id="blog-title">testerembyc.pl</span></a></h1>
+<!-- <p class="lead blog-description">Czyli blog o tym, jak to jest być nie tylko testerem</p> # Oryginal one-->
+<p class="lead blog-description">Czyli blog o tym, jak to jest być nie tylko <span>testerem</span></p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<a class="reference external image-reference" href="posts/20201126/ucz-sie-na-cudzych-bledach/"><img alt="/images/posts/20201126/wrong_sum.jpg" class="align-center" src="images/posts/20201126/wrong_sum.jpg"></a>
+<nav class="blog-nav" role="navigation"><a class="blog-nav-item active" href="."><img height="16" src="images/icons/icon.svg" title="Strona główna" width="16"><span>Strona&nbsp;główna</span> <span class="sr-only">(aktywne)</span></a> <a class="blog-nav-item" href="archive.html"><i class="fas fa-archive" title="Archiwum"></i><span>Archiwum</span></a> <a class="blog-nav-item" href="categories/"><i class="fas fa-tags" title="Tagi i kategorie"></i><span>Tagi&nbsp;i&nbsp;kategorie</span></a> <a class="blog-nav-item" href="pages/o-mnie/"><i class="fas fa-user" title="O mnie"></i><span>O&nbsp;mnie</span></a> <a class="blog-nav-item" href="rss.xml"><i class="fas fa-rss" title="RSS"></i><span>RSS</span></a></nav>
+<!-- START Bootstrap-Cookie-Alert -->
+<div class="alert text-center cookiealert" role="alert">
+<p><b>Lubisz ciasteczka?</b> 🍪</p>
+<p>Używam ich, aby dostarczyć Ci lepszych treści. Chcesz wiedzieć więcej? <a href="pages/polityka-prywatnosci/" target="_blank">Kliknij tu.</a></p>
+<p><button class="btn btn-danger btn-sm acceptcookies" type="button">Lubię i akceptuję ciasteczka</button></p>
+</div>
+<!-- END Bootstrap-Cookie-Alert -->
+<div class="body-content"><!--Body content-->
+<div class="row">
+<div class="col-sm-9 blog-main">
+<div class="postindex">
+<article class="blog-post h-entry post-text">
+<header>
+<h2 class="p-name entry-title blog-post-title"><a class="u-url" href="posts/20201218/najmniejszy-framework-do-testow-w-pythonie/">Najmniejszy framework do testów w Pythonie</a></h2>
+<div class="metadata blog-post-meta">
+<p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
+<p class="dateline"><a href="posts/20201218/najmniejszy-framework-do-testow-w-pythonie/" rel="bookmark"><time class="published dt-published" datetime="2020-12-18T15:12:26+01:00" title="2020-12-18 15:12">2020-12-18 15:12</time></a></p>
+<p class="commentline"><a data-disqus-identifier="cache/posts/20201218/najmniejszy-framework-do-testow-w-pythonie.html" href="posts/20201218/najmniejszy-framework-do-testow-w-pythonie/#disqus_thread">Komentarze</a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div>
+<div class="figure align-center"><a class="reference external image-reference" href="posts/20201218/najmniejszy-framework-do-testow-w-pythonie/"><img alt="/images/posts/20201218/bobcat.jpg" src="images/posts/20201218/bobcat.jpg"></a>
+<p class="caption">Zdjęcie zaczerpnięte z portalu <a class="reference external" href="https://www.pexels.com/">Pexels</a></p>
+</div>
+<p>Jeśli interesujesz się choć trochę programowaniem, to zapewne trafiłeś kiedyś na artykuły porównujące ile linii kodu potrzebnych jest do stworzenia uwielbianego <em>hello world</em> w różnych językach programowania. Sam zresztą pokazywałem, w pierwszym wpisie na tym blogu ile linii kodu potrzebne jest w Pythonie, aby wyświetlić proste <a class="reference external" href="posts/20191024/witaj-swiecie/">witaj świecie</a>. A co by się stało, gdybyśmy w tych rozważaniach poszli ciut dalej i zastanowili się, ile potrzebnych jest linii kodu, aby stworzyć działający framework do testów?</p>
+<p class="more"><a href="posts/20201218/najmniejszy-framework-do-testow-w-pythonie/">Czytaj więcej…</a></p>
+</div>
+</div>
+</article>
+<article class="blog-post h-entry post-text">
+<header>
+<h2 class="p-name entry-title blog-post-title"><a class="u-url" href="posts/20201126/ucz-sie-na-cudzych-bledach/">Ucz się na cudzych błędach</a></h2>
+<div class="metadata blog-post-meta">
+<p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
+<p class="dateline"><a href="posts/20201126/ucz-sie-na-cudzych-bledach/" rel="bookmark"><time class="published dt-published" datetime="2020-11-26T00:30:00+01:00" title="2020-11-26 00:30">2020-11-26 00:30</time></a></p>
+<p class="commentline"><a data-disqus-identifier="cache/posts/20201126/ucz-sie-na-cudzych-bledach.html" href="posts/20201126/ucz-sie-na-cudzych-bledach/#disqus_thread">Komentarze</a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div><a class="reference external image-reference" href="posts/20201126/ucz-sie-na-cudzych-bledach/"><img alt="/images/posts/20201126/wrong_sum.jpg" class="align-center" src="images/posts/20201126/wrong_sum.jpg"></a>
 <p>Prowodyrem tego wpisu jest mój młodszy syn, a cała historia wydarzyła się jednego z jesiennych wieczorów. Jeśli więc jesteś ciekaw co też <em>młody</em> przeskrobał i jaki to związek ma z nauką czegokolwiek, to zapraszam do dalszej lektury.</p>
 <p class="more"><a href="posts/20201126/ucz-sie-na-cudzych-bledach/">Czytaj więcej…</a></p>
 </div>
-    </div>
-    </article><article class="blog-post h-entry post-text"><header><h2 class="p-name entry-title blog-post-title"><a href="posts/20200831/dobry-tester-a-kto-to-taki/" class="u-url">Dobry tester? A kto to taki?</a></h2>
-        <div class="metadata blog-post-meta">
-            <p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
-            <p class="dateline"><a href="posts/20200831/dobry-tester-a-kto-to-taki/" rel="bookmark"><time class="published dt-published" datetime="2020-08-30T23:00:00+02:00" title="2020-08-30 23:00">2020-08-30 23:00</time></a></p>
-                <p class="commentline">            <a href="posts/20200831/dobry-tester-a-kto-to-taki/#disqus_thread" data-disqus-identifier="cache/posts/20200831/dobry-tester-a-kto-to-taki.html">Komentarze</a>
-
-
-        </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<a class="reference external image-reference" href="posts/20200831/dobry-tester-a-kto-to-taki/"><img alt="/images/posts/20200831/tester_picture.jpeg" class="align-center" src="images/posts/20200831/tester_picture.jpeg"></a>
+</article>
+<article class="blog-post h-entry post-text">
+<header>
+<h2 class="p-name entry-title blog-post-title"><a class="u-url" href="posts/20200831/dobry-tester-a-kto-to-taki/">Dobry tester? A kto to taki?</a></h2>
+<div class="metadata blog-post-meta">
+<p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
+<p class="dateline"><a href="posts/20200831/dobry-tester-a-kto-to-taki/" rel="bookmark"><time class="published dt-published" datetime="2020-08-30T23:00:00+02:00" title="2020-08-30 23:00">2020-08-30 23:00</time></a></p>
+<p class="commentline"><a data-disqus-identifier="cache/posts/20200831/dobry-tester-a-kto-to-taki.html" href="posts/20200831/dobry-tester-a-kto-to-taki/#disqus_thread">Komentarze</a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div><a class="reference external image-reference" href="posts/20200831/dobry-tester-a-kto-to-taki/"><img alt="/images/posts/20200831/tester_picture.jpeg" class="align-center" src="images/posts/20200831/tester_picture.jpeg"></a>
 <p>Czy zastanawiałeś się kiedyś, co to znaczy być tzw. <strong>dobrym testerem</strong>? Zapewne każdy ma jakieś wyobrażenie na ten temat i podziwia kogoś, kogo uznaje za taką osobę. Jeśli jesteś ciekaw jakie ja mam na to spojrzenie, to zapraszam do lektury.</p>
 <p class="more"><a href="posts/20200831/dobry-tester-a-kto-to-taki/">Czytaj więcej…</a></p>
 </div>
-    </div>
-    </article><article class="blog-post h-entry post-text"><header><h2 class="p-name entry-title blog-post-title"><a href="posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/" class="u-url">Jak dorobić do etatu, czyli tester tworzy RPA</a></h2>
-        <div class="metadata blog-post-meta">
-            <p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
-            <p class="dateline"><a href="posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/" rel="bookmark"><time class="published dt-published" datetime="2020-08-13T20:25:40+02:00" title="2020-08-13 20:25">2020-08-13 20:25</time></a></p>
-                <p class="commentline">            <a href="posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/#disqus_thread" data-disqus-identifier="cache/posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa.html">Komentarze</a>
-
-
-        </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<a class="reference external image-reference" href="posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/"><img alt="/images/posts/20200813/rpa_picture.jpeg" class="align-center" src="images/posts/20200813/rpa_picture.jpeg"></a>
+</article>
+<article class="blog-post h-entry post-text">
+<header>
+<h2 class="p-name entry-title blog-post-title"><a class="u-url" href="posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/">Jak dorobić do etatu, czyli tester tworzy RPA</a></h2>
+<div class="metadata blog-post-meta">
+<p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
+<p class="dateline"><a href="posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/" rel="bookmark"><time class="published dt-published" datetime="2020-08-13T20:25:40+02:00" title="2020-08-13 20:25">2020-08-13 20:25</time></a></p>
+<p class="commentline"><a data-disqus-identifier="cache/posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa.html" href="posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/#disqus_thread">Komentarze</a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div><a class="reference external image-reference" href="posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/"><img alt="/images/posts/20200813/rpa_picture.jpeg" class="align-center" src="images/posts/20200813/rpa_picture.jpeg"></a>
 <p>Zapewne zauważyłeś mój drogi czytelniku, że od pewnego czasu nic nie napisałem. Powodów tego stanu rzeczy jest kilka, a o jednym z nich przeczytasz za chwilę. Zanim to zrobisz, zadam Ci kilka pytań:</p>
 <ul class="simple">
-<li><p>Czy jako tester oprogramowania jesteś w stanie dorobić sobie do etatu?</p></li>
-<li><p>Czy takie okazje trafiają się w trakcie pandemii?</p></li>
-<li><p>Jak znaleźć okazję?</p></li>
-<li><p>Jak podejść do współpracy ze zleceniodawcą pracując na etacie?</p></li>
-<li><p>Na co zwrócić uwagę przy omawianiu współpracy?</p></li>
-<li><p>Jak wycenić swoją pracę?</p></li>
+<li>
+<p>Czy jako tester oprogramowania jesteś w stanie dorobić sobie do etatu?</p>
+</li>
+<li>
+<p>Czy takie okazje trafiają się w trakcie pandemii?</p>
+</li>
+<li>
+<p>Jak znaleźć okazję?</p>
+</li>
+<li>
+<p>Jak podejść do współpracy ze zleceniodawcą pracując na etacie?</p>
+</li>
+<li>
+<p>Na co zwrócić uwagę przy omawianiu współpracy?</p>
+</li>
+<li>
+<p>Jak wycenić swoją pracę?</p>
+</li>
 </ul>
 <p>Jeśli choć na jedno pytanie nie znasz odpowiedzi, to zapraszam do poniższego artykułu, w którym postaram się odpowiedzieć na powyższe pytania.</p>
 <p class="more"><a href="posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/">Czytaj więcej…</a></p>
 </div>
-    </div>
-    </article><article class="blog-post h-entry post-text"><header><h2 class="p-name entry-title blog-post-title"><a href="posts/20200109/dekoratory-w-pythonie/" class="u-url">Dekoratory w Pythonie</a></h2>
-        <div class="metadata blog-post-meta">
-            <p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
-            <p class="dateline"><a href="posts/20200109/dekoratory-w-pythonie/" rel="bookmark"><time class="published dt-published" datetime="2020-01-09T14:26:38+01:00" title="2020-01-09 14:26">2020-01-09 14:26</time></a></p>
-                <p class="commentline">            <a href="posts/20200109/dekoratory-w-pythonie/#disqus_thread" data-disqus-identifier="cache/posts/20200109/dekoratory-w-pythonie.html">Komentarze</a>
-
-
-        </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <div>
+</article>
+<article class="blog-post h-entry post-text">
+<header>
+<h2 class="p-name entry-title blog-post-title"><a class="u-url" href="posts/20200109/dekoratory-w-pythonie/">Dekoratory w Pythonie</a></h2>
+<div class="metadata blog-post-meta">
+<p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
+<p class="dateline"><a href="posts/20200109/dekoratory-w-pythonie/" rel="bookmark"><time class="published dt-published" datetime="2020-01-09T14:26:38+01:00" title="2020-01-09 14:26">2020-01-09 14:26</time></a></p>
+<p class="commentline"><a data-disqus-identifier="cache/posts/20200109/dekoratory-w-pythonie.html" href="posts/20200109/dekoratory-w-pythonie/#disqus_thread">Komentarze</a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div>
 <p>Ostatnich kilka artykułów na tym blogu, było związane z ogólnikami dotyczącymi <a class="reference external" href="posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/">testów</a> i <a class="reference external" href="posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/">zawodu testera</a>. Tym razem wpis typowo techniczny związany z moim ulubionym językiem programowania, czyli Pythonem. Język ten ma pewne <em>magiczne</em> metody i elementy nie spotykane w innych językach (lub sposób ich użycia i implementacji jest dużo bardziej złożony). Jednym z takich elementów jest tzw. <strong>dekorator</strong>.</p>
 <p class="more"><a href="posts/20200109/dekoratory-w-pythonie/">Czytaj więcej…</a></p>
 </div>
-    </div>
-    </article><article class="blog-post h-entry post-text"><header><h2 class="p-name entry-title blog-post-title"><a href="posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/" class="u-url">Dlaczego nie będziesz testerem i co możesz z tym fantem zrobić jeśli bardzo chcesz?</a></h2>
-        <div class="metadata blog-post-meta">
-            <p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
-            <p class="dateline"><a href="posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/" rel="bookmark"><time class="published dt-published" datetime="2019-11-14T23:30:00+01:00" title="2019-11-14 23:30">2019-11-14 23:30</time></a></p>
-                <p class="commentline">            <a href="posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/#disqus_thread" data-disqus-identifier="cache/posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz.html">Komentarze</a>
-
-
-        </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <div>
+</article>
+<article class="blog-post h-entry post-text">
+<header>
+<h2 class="p-name entry-title blog-post-title"><a class="u-url" href="posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/">Dlaczego nie będziesz testerem i co możesz z tym fantem zrobić jeśli bardzo chcesz?</a></h2>
+<div class="metadata blog-post-meta">
+<p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
+<p class="dateline"><a href="posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/" rel="bookmark"><time class="published dt-published" datetime="2019-11-14T23:30:00+01:00" title="2019-11-14 23:30">2019-11-14 23:30</time></a></p>
+<p class="commentline"><a data-disqus-identifier="cache/posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz.html" href="posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/#disqus_thread">Komentarze</a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div>
 <p>Zachęcony <a class="reference external" href="https://www.facebook.com/groups/TestowanieOprogramowania/permalink/2602961303059765/">wątkiem</a> z Facebookowej grupy dotyczącej <a class="reference external" href="https://www.facebook.com/groups/TestowanieOprogramowania/">testowania oprogramowania</a>, w którym mowa o problemach z podjęciem pracy w zawodzie testera oprogramowania, dorzucę swoje 3 grosze do tej rozmowy. Pamiętaj, mój drogi czytelniku, że jestem zupełnie oderwany od <strong>juniorskiej</strong> rzeczywistości, bo mam już te <strong>kilka</strong> lat stażu pracy w tym zawodzie, zachęcam cię jednak do przeczytania poniższego wpisu, szczególnie jeśli jesteś w sytuacji opisanej powyżej.</p>
 <p class="more"><a href="posts/20191114/dlaczego-nie-bedziesz-testerem-i-co-mozesz-z-tym-fantem-zrobic-jesli-bardzo-chcesz/">Czytaj więcej…</a></p>
 </div>
-    </div>
-    </article><article class="blog-post h-entry post-text"><header><h2 class="p-name entry-title blog-post-title"><a href="posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/" class="u-url">Cała prawda o testach oprogramowania i czym one są</a></h2>
-        <div class="metadata blog-post-meta">
-            <p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
-            <p class="dateline"><a href="posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/" rel="bookmark"><time class="published dt-published" datetime="2019-10-29T22:00:00+01:00" title="2019-10-29 22:00">2019-10-29 22:00</time></a></p>
-                <p class="commentline">            <a href="posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/#disqus_thread" data-disqus-identifier="cache/posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa.html">Komentarze</a>
-
-
-        </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <div>
+</article>
+<article class="blog-post h-entry post-text">
+<header>
+<h2 class="p-name entry-title blog-post-title"><a class="u-url" href="posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/">Cała prawda o testach oprogramowania i czym one są</a></h2>
+<div class="metadata blog-post-meta">
+<p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
+<p class="dateline"><a href="posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/" rel="bookmark"><time class="published dt-published" datetime="2019-10-29T22:00:00+01:00" title="2019-10-29 22:00">2019-10-29 22:00</time></a></p>
+<p class="commentline"><a data-disqus-identifier="cache/posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa.html" href="posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/#disqus_thread">Komentarze</a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div>
 <p>Tytuł szumny i jeśli zwrócił Twoją uwagę, to bardzo się cieszę, bo pewnie tak jak ja swego czasu nie znalazłeś odpowiedzi na pytanie, czym są testy oprogramowania? Zapewne przeglądając Wikipedię i inne szanowane źródła wiedzy dla testerów, widziałeś mój czytelniku, definicję dotyczącą testowania oprogramowania. Mówi ona m.in. że testowanie oprogramowania jest jednym z procesów zapewnienia jakości wytwarzanego oprogramowania, który ma na celu jego weryfikację (sprawdzenie zgodności ze specyfikacją) oraz walidację (sprawdzenie zgodności z oczekiwaniami użytkownika). Super definicja tylko, że nie mówi nic na temat tego, czym są testy? Dlaczego to takie ważne i co wiedza o tym może nam dać?</p>
 <p class="more"><a href="posts/20191029/cala-prawda-o-testach-oprogramowania-i-czym-one-sa/">Czytaj więcej…</a></p>
 </div>
-    </div>
-    </article><article class="blog-post h-entry post-text"><header><h2 class="p-name entry-title blog-post-title"><a href="posts/20191024/witaj-swiecie/" class="u-url">Witaj świecie</a></h2>
-        <div class="metadata blog-post-meta">
-            <p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
-            <p class="dateline"><a href="posts/20191024/witaj-swiecie/" rel="bookmark"><time class="published dt-published" datetime="2019-10-24T15:00:00+02:00" title="2019-10-24 15:00">2019-10-24 15:00</time></a></p>
-                <p class="commentline">            <a href="posts/20191024/witaj-swiecie/#disqus_thread" data-disqus-identifier="cache/posts/20191024/witaj-swiecie.html">Komentarze</a>
-
-
-        </p>
 </div>
-    </header><div class="p-summary entry-summary">
-    <div>
+</article>
+<article class="blog-post h-entry post-text">
+<header>
+<h2 class="p-name entry-title blog-post-title"><a class="u-url" href="posts/20191024/witaj-swiecie/">Witaj świecie</a></h2>
+<div class="metadata blog-post-meta">
+<p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
+<p class="dateline"><a href="posts/20191024/witaj-swiecie/" rel="bookmark"><time class="published dt-published" datetime="2019-10-24T15:00:00+02:00" title="2019-10-24 15:00">2019-10-24 15:00</time></a></p>
+<p class="commentline"><a data-disqus-identifier="cache/posts/20191024/witaj-swiecie.html" href="posts/20191024/witaj-swiecie/#disqus_thread">Komentarze</a></p>
+</div>
+</header>
+<div class="p-summary entry-summary">
+<div>
 <p><em>Hello world</em> tak zaczyna się każda nowa przygoda w świecie IT. W większości tą przygodą jest nauka jakiegoś języka programowania i próba wyświetlenia tego napisu na ekranie użytkownika. W niektórych języka programowania wymaga to kilku linijek kodu, w innych (jak np. w <strong>Pythonie</strong>) aż 1. Nie wierzysz?</p>
 <p class="more"><a href="posts/20191024/witaj-swiecie/">Czytaj więcej…</a></p>
 </div>
-    </div>
-    </article>
 </div>
-
-               <script>var disqus_shortname="testerembyc";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</article>
 </div>
-                <div class="col-sm-3 blog-sidebar">
-                    
-
+<script>
+var disqus_shortname="testerembyc";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());
+</script></div>
+<div class="col-sm-3 blog-sidebar">
 <div class="sidebar-module sidebar-module-inset">
-  <form method="get" action="https://www.google.com/search" role="search">
-    <input type="hidden" name="cx" value="013548426528546093847:kxj9yxvrzlu"><input type="hidden" name="ie" value="utf-8"><input type="hidden" name="hl" value="pl"><div class="input-group">
-      <input type="text" class="form-control" name="q" placeholder="Szukaj" aria-describedby="basic-search"><div class="input-group-btn">
-        <button type="submit" class="btn btn-danger">
-          <span class="glyphicon glyphicon-search" id="basic-search"></span> 
-        </button>
-      </div>
-    </div>
-    <input type="hidden" name="sitesearch" value="testerembyc">
-</form>
+<form action="https://www.google.com/search" method="get" role="search"><input name="cx" type="hidden" value="013548426528546093847:kxj9yxvrzlu"><input name="ie" type="hidden" value="utf-8"><input name="hl" type="hidden" value="pl">
+<div class="input-group"><input aria-describedby="basic-search" class="form-control" name="q" placeholder="Szukaj" type="text">
+<div class="input-group-btn"><button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-search" id="basic-search"></span></button></div>
 </div>
-
-<div class="sidebar-module sidebar-module-inset">
-  <h3>Darmowy poradnik</h3>
-  <a href="pages/jak-zaczac-automatyzowac-testy/"><img src="images/page_lm/jak_zaczac_automatyzowac_small.jpg"></a>
-  <p><strong>Jak zacząć automatyzować testy?</strong></p>
-  <p>Poznaj 12 pytań, które pomogą Ci rozpocząć proces automatyzacji testów.
-  W zupełnym oderwaniu od języka programowania, frameworków do testów oraz technologi
-  w jakiej napisana została aplikacja, którą będziesz testować.
-  Całość opisana prostym i zrozumiałym językiem.</p>
-  <p style="text-align: center">
-    <a class="_submit btn btn-danger" href="pages/jak-zaczac-automatyzowac-testy/">Pobieram poradnik</a>
-  </p>
-</div>
-
-<div class="sidebar-module sidebar-module-inset">
-  <h3>O mnie</h3>
-  <a href="pages/o-mnie/"><img src="images/me_bw_small.jpg"></a>
-  <p>Nazywam się <strong>Maciej Kusz</strong> i od 2008 roku zajmuję się testowaniem oprogramowania.
-  Na początku były to testy manualne, od 2011 początki testów automatycznych,
-  a od 2013 automatyzacją testów z wykorzystaniem <strong>Pythona</strong>.
-  Przez te kilka lat, zdarzyło mi się już być w kilku firmach i w kilku różnych projektach.
-  Na stronie <a href="pages/o-mnie/">o mnie</a>, znajdujdziesz ciut więcej informacji na ten temat.</p>
+<input name="sitesearch" type="hidden" value="testerembyc"></form>
 </div>
 <div class="sidebar-module sidebar-module-inset">
-
-<form method="POST" action="https://maciejkusz.activehosted.com/proc.php" id="_form_3_" novalidate>
-  <input type="hidden" name="u" value="3"><input type="hidden" name="f" value="3"><input type="hidden" name="s"><input type="hidden" name="c" value="0"><input type="hidden" name="m" value="0"><input type="hidden" name="act" value="sub"><input type="hidden" name="v" value="2"><h3>Newsletter</h3>
-  <div class="_form-content">
-    <p>Chcesz być powiadamiany o nowościach na tej stronie oraz innych moich projektach?</p>
-    <p>Jeśli tak, to zapisz się poniżej do newsletter'a.</p>
-    <div class="input-group" id="basic-fullname-group">
-      <span class="input-group-addon" id="basic-fullname">Imię</span>
-      <input type="text" class="form-control" name="fullname" placeholder="Wpisz swoje imię" aria-describedby="basic-fullname">
+<h3>Darmowy poradnik</h3>
+<a href="pages/jak-zaczac-automatyzowac-testy/"><img src="images/page_lm/jak_zaczac_automatyzowac_small.jpg"></a>
+<p><strong>Jak zacząć automatyzować testy?</strong></p>
+<p>Poznaj 12 pytań, które pomogą Ci rozpocząć proces automatyzacji testów. W zupełnym oderwaniu od języka programowania, frameworków do testów oraz technologi w jakiej napisana została aplikacja, którą będziesz testować. Całość opisana prostym i zrozumiałym językiem.</p>
+<p style="text-align: center"><a class="_submit btn btn-danger" href="pages/jak-zaczac-automatyzowac-testy/">Pobieram poradnik</a></p>
 </div>
-    <div class="input-group" id="basic-lastname-group">
-      <span class="input-group-addon" id="basic-lastname">Nazwisko</span>
-      <input type="text" class="form-control" name="lastname" placeholder="Wpisz swoje nazwisko" aria-describedby="basic-fullname">
+<div class="sidebar-module sidebar-module-inset">
+<h3>O mnie</h3>
+<a href="pages/o-mnie/"><img src="images/me_bw_small.jpg"></a>
+<p>Nazywam się <strong>Maciej Kusz</strong> i od 2008 roku zajmuję się testowaniem oprogramowania. Na początku były to testy manualne, od 2011 początki testów automatycznych, a od 2013 automatyzacją testów z wykorzystaniem <strong>Pythona</strong>. Przez te kilka lat, zdarzyło mi się już być w kilku firmach i w kilku różnych projektach. Na stronie <a href="pages/o-mnie/">o mnie</a>, znajdujdziesz ciut więcej informacji na ten temat.</p>
 </div>
-    <div class="input-group" id="basic-email-group">
-      <span class="input-group-addon" id="basic-email">E-mail</span>
-      <input type="text" class="form-control" name="email" placeholder="Wpisz swój e-mail" aria-describedby="basic-email" required>
+<div class="sidebar-module sidebar-module-inset">
+<form action="https://maciejkusz.activehosted.com/proc.php" id="_form_3_" method="post" name="_form_3_" novalidate=""><input name="u" type="hidden" value="3"><input name="f" type="hidden" value="3"><input name="s" type="hidden"><input name="c" type="hidden" value="0"><input name="m" type="hidden" value="0"><input name="act" type="hidden" value="sub"><input name="v" type="hidden" value="2">
+<h3>Newsletter</h3>
+<div class="_form-content">
+<p>Chcesz być powiadamiany o nowościach na tej stronie oraz innych moich projektach?</p>
+<p>Jeśli tak, to zapisz się poniżej do newsletter'a.</p>
+<div class="input-group" id="basic-fullname-group"><span class="input-group-addon" id="basic-fullname">Imię</span> <input aria-describedby="basic-fullname" class="form-control" name="fullname" placeholder="Wpisz swoje imię" type="text"></div>
+<div class="input-group" id="basic-lastname-group"><span class="input-group-addon" id="basic-lastname">Nazwisko</span> <input aria-describedby="basic-fullname" class="form-control" name="lastname" placeholder="Wpisz swoje nazwisko" type="text"></div>
+<div class="input-group" id="basic-email-group"><span class="input-group-addon" id="basic-email">E-mail</span> <input aria-describedby="basic-email" class="form-control" name="email" placeholder="Wpisz swój e-mail" required="" type="text"></div>
+<button class="_submit btn btn-danger" id="_form_3_submit" style="margin-left: auto; margin-right: auto; display: block;" type="submit">Zapisz się</button>
+<div class="_clear-element"></div>
 </div>
-    <button id="_form_3_submit" class="_submit btn btn-danger" style="margin-left: auto; margin-right: auto; display: block;" type="submit">Zapisz się</button>
-    
-    <div class="_clear-element">
-    </div>
-  </div>
-  <div class="_form-thank-you" style="display:none;">
-  </div>
-  <p style="font-size: 10px; margin-top: 5px;">Wszystkie podane przez Ciebie dane, będą przetwarzane zgodnie z <a href="pages/polityka-prywatnosci">polityką prywatności</a>.</p>
+<div class="_form-thank-you" style="display:none;"></div>
+<p style="font-size: 10px; margin-top: 5px;">Wszystkie podane przez Ciebie dane, będą przetwarzane zgodnie z <a href="pages/polityka-prywatnosci">polityką prywatności</a>.</p>
 </form>
 <script type="text/javascript">
 window.cfields = [];
@@ -561,41 +542,26 @@ window._load_script = function(url, callback) {
   addEvent(form_to_submit, 'submit', form_submit);
 })();
 
-</script>
-</div>
+</script></div>
 <div class="sidebar-module sidebar-module-inset">
-  <h3>Linki</h3>
-  <ol class="list-unstyled">
+<h3>Linki</h3>
+<ol class="list-unstyled">
 <li><a href="pages/polityka-prywatnosci/">Polityka prywatności</a></li>
-    <li><a href="pages/regulamin/">Regulamin</a></li>
-  </ol>
+<li><a href="pages/regulamin/">Regulamin</a></li>
+</ol>
 <ol class="list-unstyled icons">
-<li><a target="_bland" class="far fa-envelope" href="mailto:maciej@testerembyc.pl"></a></li>
-    <li><a target="_blank" class="fab fa-facebook-f" href="https://www.facebook.com/testerembyc/"></a></li>
-    <li><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/testerembyc.pl/"></a></li>
-    <li><a target="_blank" class="fab fa-linkedin-in" href="https://www.linkedin.com/in/maciej-kusz/"></a></li>
-  </ol>
+<li><a class="far fa-envelope" href="mailto:maciej@testerembyc.pl" target="_bland"></a></li>
+<li><a class="fab fa-facebook-f" href="https://www.facebook.com/testerembyc/" target="_blank"></a></li>
+<li><a class="fab fa-instagram" href="https://www.instagram.com/testerembyc.pl/" target="_blank"></a></li>
+<li><a class="fab fa-linkedin-in" href="https://www.linkedin.com/in/maciej-kusz/" target="_blank"></a></li>
+</ol>
 </div>
-
-                </div>
-            <!--End of body content-->
-            </div>
-        </div>
-        <footer class="blog-footer" id="footer">
-            
-© 2020 <span style="font-weight: bold; color: #ffffff;">Maciej Kusz</span> 
-w oparciu o silnik <a href="https://getnikola.com/" rel="nofollow" target="_blank">
-<img style="max-height: 20px; max-width: 50px" src="images/nikola_logo.svg"></a> 
-z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_blank">
-<img style="max-height: 15px; max-width: 80px;" src="images/githubpages_logo.svg"></a> 
-
-            
-        </footer>
 </div>
-
+<!--End of body content--></div>
 </div>
-
-
+<footer class="blog-footer" id="footer">© 2020 <span style="font-weight: bold; color: #ffffff;">Maciej Kusz</span> w oparciu o silnik <a href="https://getnikola.com/" rel="nofollow" target="_blank"><img src="images/nikola_logo.svg" style="max-height: 20px; max-width: 50px"></a> z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_blank"><img src="images/githubpages_logo.svg" style="max-height: 15px; max-width: 80px;"></a></footer>
+</div>
+</div>
 <script type="text/javascript">
 /*
  * Bootstrap Cookie Alert by Wruczek
@@ -651,21 +617,37 @@ z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_bla
         return "";
     }
 })();
-</script><script src="assets/js/jquery.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/baguetteBox.min.js"></script><script src="assets/js/moment-with-locales.min.js"></script><script src="assets/js/fancydates.min.js"></script><!-- fancy dates --><script>
+</script>
+<script src="assets/js/jquery.min.js">
+</script>
+<script src="assets/js/bootstrap.min.js">
+</script>
+<script src="assets/js/baguetteBox.min.js">
+</script>
+<script src="assets/js/moment-with-locales.min.js">
+</script>
+<script src="assets/js/fancydates.min.js">
+</script><!-- fancy dates -->
+<script>
     moment.locale("pl");
     fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates --><script>
+</script><!-- end fancy dates -->
+<script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
         captions: function(element) {
             return element.getElementsByTagName('img')[0].alt;
     }});
-    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-143859058-1"></script><script>
+</script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143859058-1">
+</script>
+<script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'UA-143859058-1');
-</script><!-- Load Facebook SDK for JavaScript --><div id="fb-root"></div>
+</script><!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -680,9 +662,9 @@ z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_bla
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script><!-- Your customer chat code --><div class="fb-customerchat" attribution="setup_tool" page_id="391052181505294" theme_color="#337ab7" logged_in_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)" logged_out_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)">
-</div>
-
+}(document, 'script', 'facebook-jssdk'));
+</script><!-- Your customer chat code -->
+<div attribution="setup_tool" class="fb-customerchat" logged_in_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)" logged_out_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)" page_id="391052181505294" theme_color="#337ab7"></div>
 <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -695,9 +677,6 @@ z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_bla
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '444619046317574');
   fbq('track', 'PageView');
-</script><noscript><img height="1" width="1" style="display:none" alt="Facebook Pixel" src="https://www.facebook.com/tr?id=444619046317574&amp;ev=PageView&amp;noscript=1"></noscript>
-<!-- End Facebook Pixel Code -->
-
-
+</script><noscript><img alt="Facebook Pixel" height="1" src="https://www.facebook.com/tr?id=444619046317574&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"></noscript> <!-- End Facebook Pixel Code -->
 </body>
 </html>

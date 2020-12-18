@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="pl" prefix="og: http://ogp.me/ns#">
+<head>
+<meta content="#FF0000" name="theme-color">
+<meta charset="utf-8">
+<meta content="Potęga Pythona w 16 linijkach kodu" name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Najmniejszy framework do testów w Pythonie | testerembyc.pl</title>
+<link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/theme.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/latolatinfonts.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/blog.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/fa.css" rel="stylesheet" type="text/css">
+<link href="../../../rss.xml" rel="alternate" title="RSS" type="application/rss+xml">
+<link href="https://testerembyc.pl/posts/20201218/najmniejszy-framework-do-testow-w-pythonie/" rel="canonical">
+<link href="../../../images/icons/icon_16x16.png" rel="icon" sizes="16x16">
+<link href="../../../images/icons/icon_32x32.png" rel="icon" sizes="32x32">
+<link href="../../../images/icons/icon_64x64.png" rel="icon" sizes="64x64">
+<link href="../../../images/icons/icon_128x128.png" rel="icon" sizes="128x128">
+<link href="../../../images/icons/icon_256x256.png" rel="icon" sizes="256x256">
+<link href="../../../images/icons/icon_512x512.png" rel="icon" sizes="512x512"><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]-->
+<meta content="Potęga Pythona w 16 linijkach kodu" itemprop="description" name="description">
+<meta content="Maciej Kusz" name="author">
+<link href="../../20201126/ucz-sie-na-cudzych-bledach/" rel="prev" title="Ucz się na cudzych błędach" type="text/html">
+<meta content="testerembyc.pl" property="og:site_name">
+<meta content="Najmniejszy framework do testów w Pythonie" property="og:title">
+<meta content="https://testerembyc.pl/posts/20201218/najmniejszy-framework-do-testow-w-pythonie/" property="og:url">
+<meta content="Potęga Pythona w 16 linijkach kodu" property="og:description">
+<meta content="https://testerembyc.pl/images/posts/20201218/bobcat.jpg" property="og:image">
+<meta content="article" property="og:type">
+<meta content="2020-12-18T15:12:26+01:00" property="article:published_time">
+<meta content="code16challenge" property="article:tag">
+<meta content="python" property="article:tag">
+<meta content="requests" property="article:tag">
+<meta content="unittest" property="article:tag">
+<meta content="summary" name="twitter:card">
+<meta content="@website" name="twitter:site">
+<meta content="@username" name="twitter:creator">
+</head>
+<body>
+<a class="sr-only sr-only-focusable" href="#content">Przejdź do treści</a> <!-- Menubar -->
+<div class="blog-masthead">
+<div class="container"><!-- This keeps the margins nice -->
+<div class="blog-header">
+<h1 class="blog-title"><a href="https://testerembyc.pl/"><img alt="testerembyc.pl" id="logo" src="../../../images/testerembyc_logo.svg"><span id="blog-title">testerembyc.pl</span></a></h1>
+<!-- <p class="lead blog-description">Czyli blog o tym, jak to jest być nie tylko testerem</p> # Oryginal one-->
+<p class="lead blog-description">Czyli blog o tym, jak to jest być nie tylko <span>testerem</span></p>
+</div>
+<nav class="blog-nav" role="navigation"><a class="blog-nav-item" href="../../../"><img height="16" src="../../../images/icons/icon.svg" title="Strona główna" width="16"><span>Strona&nbsp;główna</span></a> <a class="blog-nav-item" href="../../../archive.html"><i class="fas fa-archive" title="Archiwum"></i><span>Archiwum</span></a> <a class="blog-nav-item" href="../../../categories/"><i class="fas fa-tags" title="Tagi i kategorie"></i><span>Tagi&nbsp;i&nbsp;kategorie</span></a> <a class="blog-nav-item" href="../../../pages/o-mnie/"><i class="fas fa-user" title="O mnie"></i><span>O&nbsp;mnie</span></a> <a class="blog-nav-item" href="../../../rss.xml"><i class="fas fa-rss" title="RSS"></i><span>RSS</span></a></nav>
+<!-- START Bootstrap-Cookie-Alert -->
+<div class="alert text-center cookiealert" role="alert">
+<p><b>Lubisz ciasteczka?</b> 🍪</p>
+<p>Używam ich, aby dostarczyć Ci lepszych treści. Chcesz wiedzieć więcej? <a href="../../../pages/polityka-prywatnosci/" target="_blank">Kliknij tu.</a></p>
+<p><button class="btn btn-danger btn-sm acceptcookies" type="button">Lubię i akceptuję ciasteczka</button></p>
+</div>
+<!-- END Bootstrap-Cookie-Alert -->
+<div class="body-content"><!--Body content-->
+<div class="row">
+<div class="col-sm-9 blog-main">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h2 class="p-name entry-title blog-post-title" itemprop="headline name"><a class="u-url" href=".">Najmniejszy framework do testów w Pythonie</a></h2>
+<div class="metadata blog-post-meta">
+<p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
+<p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2020-12-18T15:12:26+01:00" itemprop="datePublished" title="2020-12-18 15:12">2020-12-18 15:12</time></a></p>
+<p class="commentline"><a data-disqus-identifier="cache/posts/20201218/najmniejszy-framework-do-testow-w-pythonie.html" href="#disqus_thread">Komentarze</a></p>
+<meta content="Potęga Pythona w 16 linijkach kodu" itemprop="description" name="description">
+<p></p></div>
+</header>
+<div class="e-content entry-content" itemprop="articleBody text">
+<div>
+<div class="figure align-center"><a class="reference external image-reference" href="."><img alt="/images/posts/20201218/bobcat.jpg" src="../../../images/posts/20201218/bobcat.jpg"></a>
+<p class="caption">Zdjęcie zaczerpnięte z portalu <a class="reference external" href="https://www.pexels.com/">Pexels</a></p>
+</div>
+<p>Jeśli interesujesz się choć trochę programowaniem, to zapewne trafiłeś kiedyś na artykuły porównujące ile linii kodu potrzebnych jest do stworzenia uwielbianego <em>hello world</em> w różnych językach programowania. Sam zresztą pokazywałem, w pierwszym wpisie na tym blogu ile linii kodu potrzebne jest w Pythonie, aby wyświetlić proste <a class="reference external" href="../../20191024/witaj-swiecie/">witaj świecie</a>. A co by się stało, gdybyśmy w tych rozważaniach poszli ciut dalej i zastanowili się, ile potrzebnych jest linii kodu, aby stworzyć działający framework do testów?</p>
+<!-- more -->
+<div class="section" id="ale-skad-w-ogole-ten-pomysl">
+<h2>Ale skąd w ogóle ten pomysł?<a class="headerlink" href="#ale-skad-w-ogole-ten-pomysl" title="Permalink to this heading">¶</a></h2>
+<p>Historia tego pomysłu sięga początków tegorocznej pandemii i sławnego <a class="reference external" href="https://www.siepomaga.pl/hot16challenge">#hot16challenge</a> oraz pomysłu o jakim opowiedział mi wtedy <strong>Bartosz Kita</strong> z bloga <a class="reference external" href="https://testerprogramuje.pl/">Tester Programuje</a>. Sam pomysł był prosty i do tej pory mocno żałuję, że pomimo gotowego kodu, nie znalazłem czasu na nagranie krótkiego filmu, gdzie bym o tym opowiedział (wybacz Bartek, bo pomysł był przedni). Ale o co chodzi? Najlepiej niech sam autor o tym opowie:</p>
+<div class="youtube-video"><iframe allow="encrypted-media" allowfullscreen frameborder="0" height="315" src="https://www.youtube-nocookie.com/embed/jLV1VaneJWs?rel=0&amp;wmode=transparent" width="560"></iframe></div>
+<p>Wiem, że akcja już dawno przestała być modna, ale skoro kod powstał, a wiele osób prosiło mnie o ciut bardziej techniczne wpisy, to pobawmy się wspólnie troszkę Pythonem i pokażę Ci jego siłę. Jak zapewne domyślasz się po treści powyższego filmu, spróbuję pokazać Ci, że w <strong>16 linijkach kodu</strong> da się stworzyć działający <strong>framework do testów</strong>.</p>
+<p>Zanim jednak to zrobię, miej na uwadze, że zostanie tu złamane kilka reguł formatowania kodu Pythona, które są opisane w dokumencie <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP-8 - Style Guide for Python Code</a>. Bez tych drobnych, celowych <em>wypaczeń</em>, nie udało mi się upakować kodu w tak małej ilości linijek.</p>
+</div>
+<div class="section" id="zalozenia">
+<h2>Założenia<a class="headerlink" href="#zalozenia" title="Permalink to this heading">¶</a></h2>
+<p>Aby cała powyższa zabawa w ogóle nam się udała, musimy przyjąć pewne założenia i mieć świadomość, że stworzony framework będzie miał dosyć ograniczoną funkcjonalność (choć bardzo łatwo będzie można ją rozszerzyć). Założenia jakie przyjąłem, prezentują się następująco:</p>
+<ul class="simple">
+<li>
+<p>zajmiemy się testami REST API - wysyłając zapytanie do REST API, w odpowiedzi zawsze otrzymamy <a class="reference external" href="https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml">kod statusu odpowiedzi</a>, a tworzony framework będzie sprawdzał właśnie ten kod,</p>
+</li>
+<li>
+<p>dane testowe będą przechowywane poza kodem Pythona - takie podejście pomoże nam zaoszczędzić kilka linijek kodu, ale również umożliwi tworzenie kolejnych testów tylko poprzez edycję zewnętrznego pliku oraz nie będzie wymagało znajomości Pythona,</p>
+</li>
+<li>
+<p>framework powinien wygenerować jakąś formę raportu - co to za testy, po których uruchomieniu nie dostaniemy jakiegoś raportu?</p>
+</li>
+</ul>
+<p>Założenia są proste ale na pierwszy rzut oka wydaje się to praktycznie niemożliwe. A gdzieś napisałem, że tworzony kod będzie prosty i że to zadanie będzie łatwe do wykonania?</p>
+</div>
+<div class="section" id="co-bedziemy-testowac">
+<h2>Co będziemy testować?<a class="headerlink" href="#co-bedziemy-testowac" title="Permalink to this heading">¶</a></h2>
+<p>Skoro już wiemy, że chcemy testować jakieś REST API, to przydało by się nam takie. Po adresem <a class="reference external" href="https://reqres.in/">https://reqres.in/</a> znajduje się przykładowe i dosyć proste API. Pomimo swoich ograniczeń na nasze potrzeby jest w zupełności wystarczające.</p>
+</div>
+<div class="section" id="potrzebne-biblioteki">
+<h2>Potrzebne biblioteki<a class="headerlink" href="#potrzebne-biblioteki" title="Permalink to this heading">¶</a></h2>
+<p>Skoro znamy już założenia zastanówmy się z czego możemy skorzystać, aby maksymalnie ograniczyć potrzebną ilość linii kodu.</p>
+<div class="section" id="request">
+<h3>request<a class="headerlink" href="#request" title="Permalink to this heading">¶</a></h3>
+<p>Najpopularniejszą i najbardziej rozbudowaną biblioteką do wysyłania zapytań do REST API jest biblioteka <a class="reference external" href="https://requests.readthedocs.io/en/master/">requests</a>. Biblioteka wymaga instalacji, gdyż nie jest częścią biblioteki standardowej i możemy to zrobić wydając następującą komendę:</p>
+<pre class="code bash"><a id="rest_code_5affc05501744a1c8308f0530fcaeafd-1" name="rest_code_5affc05501744a1c8308f0530fcaeafd-1"></a>python -m pip install requests
+</pre></div>
+<div class="section" id="unittest">
+<h3>unittest<a class="headerlink" href="#unittest" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference external" href="https://docs.python.org/3/library/unittest.html">Unittest</a> to wbudowany w bibliotekę standardową framework do przeprowadzania testów, a więc nie wymaga dodatkowej instalacji. W naszym kodzie posłuży nam jako podstawa budowanego frameworka.</p>
+</div>
+<div class="section" id="xmlrunner">
+<h3>xmlrunner<a class="headerlink" href="#xmlrunner" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference external" href="https://unittest-xml-reporting.readthedocs.io/en/latest/">Xmlrunner</a> jest tzw. runnerem dla frameworka <em>unittest</em>, który umożliwia generowanie raportów w formacie XML, zgodnym ze <a class="reference external" href="https://github.com/windyroad/JUnit-Schema">schematem JUnit</a>. Format ten akceptowany jest przez większość narzędzi CI/CD, a więc budowany framework można bardzo prosto z takimi narzędziami zintegrować oraz przeglądać raport z przeprowadzonych testów. W celu instalacji biblioteki, należy wydać następującą komendę:</p>
+<pre class="code bash"><a id="rest_code_7a815a5a8fd44b71a137dcda7d7b0989-1" name="rest_code_7a815a5a8fd44b71a137dcda7d7b0989-1"></a>pip install unittest-xml-reporting
+</pre></div>
+<div class="section" id="json">
+<h3>json<a class="headerlink" href="#json" title="Permalink to this heading">¶</a></h3>
+<p>Standardowa biblioteka Pythona, a więc nie wymaga instalacji. Biblioteka ta umożliwia obsługę danych w formacie <a class="reference external" href="https://www.json.org/json-en.html">JSON</a> i posłuży do odczytu danych testowych z zewnętrznego pliku.</p>
+</div>
+</div>
+<div class="section" id="kodujemy">
+<h2>Kodujemy<a class="headerlink" href="#kodujemy" title="Permalink to this heading">¶</a></h2>
+<p>Skoro mamy już wszystkie potrzebne elementy tej całej układanki to zacznijmy w końcu pisać ten kod. Na początek stwórzmy sobie 2 pliki: <code>tests.py</code> i <code>tests.json</code>. Jak już będziemy je mieli to przejdźmy do pliku <cite>tests.py</cite>.</p>
+<div class="section" id="import">
+<h3>import<a class="headerlink" href="#import" title="Permalink to this heading">¶</a></h3>
+<p>Każdy szanujący się programista Pythona, postępuje zgodnie z regułami i na początku pliku importuje wszystkie biblioteki. Dobry obyczaj mówi, że import każdej biblioteki powinie znajdować się w oddzielnej linijce, jednakże, ze względu na ograniczone miejsce, w naszym kodzie wszystkie importy zostaną wykonane w jednej linii:</p>
+<pre class="code python"><a id="rest_code_2fb0535555244d248d41f4fab35fb57f-1" name="rest_code_2fb0535555244d248d41f4fab35fb57f-1"></a><span class="kn">import</span> <span class="nn">unittest</span><span class="o">,</span> <span class="nn">xmlrunner</span><span class="o">,</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">requests</span>
+</pre>
+<p>Kolejność importów jest dowolna (choć i tutaj są pewne reguły, które warto stosować).</p>
+</div>
+<div class="section" id="pierwszy-test">
+<h3>Pierwszy test<a class="headerlink" href="#pierwszy-test" title="Permalink to this heading">¶</a></h3>
+<p>Wiemy, że chcemy sprawdzać status odpowiedzi na wysłane żądanie, a więc zacznijmy od czegoś prostego: wyślemy proste żądanie typu GET na url <a class="reference external" href="https://reqres.in/api/users">https://reqres.in/api/users</a> i sprawdzimy kod statusu odpowiedzi.</p>
+<pre class="code python"><a id="rest_code_2da2ef7d46b449d6b90c24daa0e5d9e7-1" name="rest_code_2da2ef7d46b449d6b90c24daa0e5d9e7-1"></a><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"https://reqres.in/api/users"</span><span class="p">)</span>
+<a id="rest_code_2da2ef7d46b449d6b90c24daa0e5d9e7-2" name="rest_code_2da2ef7d46b449d6b90c24daa0e5d9e7-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+</pre>
+<pre class="code python doctest">&gt;&gt;&gt; 200
+</pre>
+<p>Super. Wiemy, że endpoint działa a kod <code>200</code> mówi nam, że wszystko przebiegło bez problemów (<code>200</code> oznacza <code>OK</code>).</p>
+<p>No ale gdzie tu test? No faktycznie nie ma go. Więc przeróbmy troszeczkę ten kod.</p>
+<pre class="code python"><a id="rest_code_2b318534e55a43b1afa35789a413e82e-1" name="rest_code_2b318534e55a43b1afa35789a413e82e-1"></a><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"https://reqres.in/api/users"</span><span class="p">)</span>
+<a id="rest_code_2b318534e55a43b1afa35789a413e82e-2" name="rest_code_2b318534e55a43b1afa35789a413e82e-2"></a><span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
+</pre>
+<p>Po uruchomieniu tego kodu nic się nie wyświetli, gdyż wszystko jest w porządku. W ramach samdzielnego ćwiczenia sprawdź co się stanie jak podmienisz <code>200</code> na <code>202</code>.</p>
+<p>Czy to już koniec? Na razie mamy 4 linie kodu (po importach zostawiamy jedną linię przerwy) a mamy do dyspozycji ich aż 16. No więc co dalej?</p>
+</div>
+<div class="section" id="test-w-unittest">
+<h3>Test w unittest<a class="headerlink" href="#test-w-unittest" title="Permalink to this heading">¶</a></h3>
+<p>Przeróbmy teraz kod tak, aby wykorzystać dobrodziejstwa unittest.</p>
+<pre class="code python"><a id="rest_code_1504d3be21254abf9a08ee5e2efd791e-1" name="rest_code_1504d3be21254abf9a08ee5e2efd791e-1"></a><span class="k">class</span> <span class="nc">Tests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<a id="rest_code_1504d3be21254abf9a08ee5e2efd791e-2" name="rest_code_1504d3be21254abf9a08ee5e2efd791e-2"></a>    <span class="k">def</span> <span class="nf">test_get_all_users</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="rest_code_1504d3be21254abf9a08ee5e2efd791e-3" name="rest_code_1504d3be21254abf9a08ee5e2efd791e-3"></a>        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"https://reqres.in/api/users"</span><span class="p">)</span>
+<a id="rest_code_1504d3be21254abf9a08ee5e2efd791e-4" name="rest_code_1504d3be21254abf9a08ee5e2efd791e-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+</pre>
+<p>Odpowiedzmy sobie, co tu się wydarzyło:</p>
+<ul class="simple">
+<li>
+<p>stworzyliśmy klasę testową <code>Tests</code>, która dziedziczy po <code>unittest.TestCase</code></p>
+</li>
+<li>
+<p>przenieśliśmy nasz test do metody <code>test_get_all_employment</code> (w unittest, wszystkie metody testowe, muszą zaczynać się od słowa <em>test</em>)</p>
+</li>
+<li>
+<p>podmieniliśmy <code>assert</code> na <code>assertEqual</code></p>
+</li>
+</ul>
+<p>Niestety przy próbie uruchomienia, nic się nie wydarzy.</p>
+<p>Naprawmy to poprzez dodanie poniższego kodu na końcu pliku oraz go uruchommy:</p>
+<pre class="code python"><a id="rest_code_38ae1655ee164367aa1836d1082d8a8e-1" name="rest_code_38ae1655ee164367aa1836d1082d8a8e-1"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<a id="rest_code_38ae1655ee164367aa1836d1082d8a8e-2" name="rest_code_38ae1655ee164367aa1836d1082d8a8e-2"></a>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre>
+<pre class="code python doctest">&gt;&gt;&gt; .
+----------------------------------------------------------------------
+Ran 1 test in 0.281s
+OK
+</pre>
+<p>Wygląda to już zdecydowanie lepiej, ale to nie koniec naszej zabawy. Zajmijmy się teraz przechowywaniem danych testowych w pliku.</p>
+</div>
+<div class="section" id="tests-json">
+<h3>tests.json<a class="headerlink" href="#tests-json" title="Permalink to this heading">¶</a></h3>
+<p>Zanim jednak dojdziemy do samego pliku, zmieńmy jeszcze jedną rzecz w naszym kodzie, tak abyś lepiej zrozumiał dlaczego pewne rzeczy działają. Zauważ, że w naszym kodzie, do tej pory używaliśmy <code>requests.get</code>. Czy da się to jakoś sparametryzować? Jak to mawiają <cite>ciekawość to pierwszy stopień do piekła</cite> to poszukajmy do niego drzwi. Jeśli do edycji kodu, używasz PyCharma to klikając w <code>get</code> z przytrzymanym klawiszem <code>CTRL</code> przejdziesz to implementacji metody <code>requests.get</code>. I cóż tam widzimy (pominąłem komentarze)?</p>
+<pre class="code python"><a id="rest_code_02a25205f818473c80e6b4b2a338c193-1" name="rest_code_02a25205f818473c80e6b4b2a338c193-1"></a><span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<a id="rest_code_02a25205f818473c80e6b4b2a338c193-2" name="rest_code_02a25205f818473c80e6b4b2a338c193-2"></a>    <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">'allow_redirects'</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<a id="rest_code_02a25205f818473c80e6b4b2a338c193-3" name="rest_code_02a25205f818473c80e6b4b2a338c193-3"></a>    <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s1">'get'</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre>
+<p>Pomijając pobieranie domyślnych wartości dla parametru <code>allow_redirects</code> widzimy, że tak naprawdę metoda <code>requests.get</code> to wywołanie metody <code>requests.requst</code> z odpowiednimi parametrami, gdzie pierwszy parametr określa nam metodę wysyłki żądania (listę wszystkich parametrów można znaleźć w <a class="reference external" href="https://requests.readthedocs.io/en/master/api/">dokumentacji</a>).</p>
+<p>No więc skoro samo biblioteka <code>requests</code> tak robi, to dlaczego nie możemy my tak postąpić? Nasz kod po zmianach będzie wyglądał tak:</p>
+<pre class="code python"><a id="rest_code_63a6dc7bc1d145bfb033006de0909a2a-1" name="rest_code_63a6dc7bc1d145bfb033006de0909a2a-1"></a><span class="kn">import</span> <span class="nn">unittest</span><span class="o">,</span> <span class="nn">xmlrunner</span><span class="o">,</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">requests</span>
+<a id="rest_code_63a6dc7bc1d145bfb033006de0909a2a-2" name="rest_code_63a6dc7bc1d145bfb033006de0909a2a-2"></a>
+<a id="rest_code_63a6dc7bc1d145bfb033006de0909a2a-3" name="rest_code_63a6dc7bc1d145bfb033006de0909a2a-3"></a><span class="k">class</span> <span class="nc">Tests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<a id="rest_code_63a6dc7bc1d145bfb033006de0909a2a-4" name="rest_code_63a6dc7bc1d145bfb033006de0909a2a-4"></a>    <span class="k">def</span> <span class="nf">test_get_all_users</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="rest_code_63a6dc7bc1d145bfb033006de0909a2a-5" name="rest_code_63a6dc7bc1d145bfb033006de0909a2a-5"></a>        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+<a id="rest_code_63a6dc7bc1d145bfb033006de0909a2a-6" name="rest_code_63a6dc7bc1d145bfb033006de0909a2a-6"></a>            <span class="n">method</span><span class="o">=</span><span class="s1">'GET'</span><span class="p">,</span>
+<a id="rest_code_63a6dc7bc1d145bfb033006de0909a2a-7" name="rest_code_63a6dc7bc1d145bfb033006de0909a2a-7"></a>            <span class="n">url</span><span class="o">=</span><span class="s2">"https://reqres.in/api/users"</span>
+<a id="rest_code_63a6dc7bc1d145bfb033006de0909a2a-8" name="rest_code_63a6dc7bc1d145bfb033006de0909a2a-8"></a>        <span class="p">)</span>
+<a id="rest_code_63a6dc7bc1d145bfb033006de0909a2a-9" name="rest_code_63a6dc7bc1d145bfb033006de0909a2a-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<a id="rest_code_63a6dc7bc1d145bfb033006de0909a2a-10" name="rest_code_63a6dc7bc1d145bfb033006de0909a2a-10"></a>
+<a id="rest_code_63a6dc7bc1d145bfb033006de0909a2a-11" name="rest_code_63a6dc7bc1d145bfb033006de0909a2a-11"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<a id="rest_code_63a6dc7bc1d145bfb033006de0909a2a-12" name="rest_code_63a6dc7bc1d145bfb033006de0909a2a-12"></a>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre>
+<p>Zauważ, że podałem wprost nazwy parametrów przekazywanych do <code>requests.request</code>.</p>
+<p>Przejdźmy zatem do przeniesienia danych testowych do pliku <code>tests.json</code>. W pliku musimy przechować tak na prawdę 3 informacje dla pojedynczego testu (a dokładniej to 4, ale o tym będę mówił troskę dalej):</p>
+<ul class="simple">
+<li>
+<p>metoda do wysyłki żądania</p>
+</li>
+<li>
+<p>url endpointu, na który wysyłamy żądanie</p>
+</li>
+<li>
+<p>spodziewany kod statusu odpowiedzi</p>
+</li>
+</ul>
+<p>Zawartość pliku <code>tests.json</code> prezentuje się tak:</p>
+<pre class="code json"><a id="rest_code_ccd253f04bf74fdb84c724084876dea6-1" name="rest_code_ccd253f04bf74fdb84c724084876dea6-1"></a><span class="p">{</span>
+<a id="rest_code_ccd253f04bf74fdb84c724084876dea6-2" name="rest_code_ccd253f04bf74fdb84c724084876dea6-2"></a>  <span class="nt">"request"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_ccd253f04bf74fdb84c724084876dea6-3" name="rest_code_ccd253f04bf74fdb84c724084876dea6-3"></a>    <span class="nt">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+<a id="rest_code_ccd253f04bf74fdb84c724084876dea6-4" name="rest_code_ccd253f04bf74fdb84c724084876dea6-4"></a>    <span class="nt">"url"</span><span class="p">:</span> <span class="s2">"https://reqres.in/api/users"</span>
+<a id="rest_code_ccd253f04bf74fdb84c724084876dea6-5" name="rest_code_ccd253f04bf74fdb84c724084876dea6-5"></a>  <span class="p">},</span>
+<a id="rest_code_ccd253f04bf74fdb84c724084876dea6-6" name="rest_code_ccd253f04bf74fdb84c724084876dea6-6"></a>  <span class="nt">"assert"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_ccd253f04bf74fdb84c724084876dea6-7" name="rest_code_ccd253f04bf74fdb84c724084876dea6-7"></a>    <span class="nt">"statusCode"</span><span class="p">:</span> <span class="mi">200</span>
+<a id="rest_code_ccd253f04bf74fdb84c724084876dea6-8" name="rest_code_ccd253f04bf74fdb84c724084876dea6-8"></a>  <span class="p">}</span>
+<a id="rest_code_ccd253f04bf74fdb84c724084876dea6-9" name="rest_code_ccd253f04bf74fdb84c724084876dea6-9"></a><span class="p">}</span>
+</pre>
+<p>Przeróbmy teraz nasz kod, tak aby skorzystał z tych danych:</p>
+<pre class="code python"><a id="rest_code_c060454e949446c7bf20f69cb49cec96-1" name="rest_code_c060454e949446c7bf20f69cb49cec96-1"></a><span class="kn">import</span> <span class="nn">unittest</span><span class="o">,</span> <span class="nn">xmlrunner</span><span class="o">,</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">requests</span>
+<a id="rest_code_c060454e949446c7bf20f69cb49cec96-2" name="rest_code_c060454e949446c7bf20f69cb49cec96-2"></a>
+<a id="rest_code_c060454e949446c7bf20f69cb49cec96-3" name="rest_code_c060454e949446c7bf20f69cb49cec96-3"></a><span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'tests.json'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">))</span>
+<a id="rest_code_c060454e949446c7bf20f69cb49cec96-4" name="rest_code_c060454e949446c7bf20f69cb49cec96-4"></a>
+<a id="rest_code_c060454e949446c7bf20f69cb49cec96-5" name="rest_code_c060454e949446c7bf20f69cb49cec96-5"></a><span class="k">class</span> <span class="nc">Tests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<a id="rest_code_c060454e949446c7bf20f69cb49cec96-6" name="rest_code_c060454e949446c7bf20f69cb49cec96-6"></a>    <span class="k">def</span> <span class="nf">test_get_all_users</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="rest_code_c060454e949446c7bf20f69cb49cec96-7" name="rest_code_c060454e949446c7bf20f69cb49cec96-7"></a>        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+<a id="rest_code_c060454e949446c7bf20f69cb49cec96-8" name="rest_code_c060454e949446c7bf20f69cb49cec96-8"></a>            <span class="n">method</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">'request'</span><span class="p">][</span><span class="s1">'method'</span><span class="p">],</span>
+<a id="rest_code_c060454e949446c7bf20f69cb49cec96-9" name="rest_code_c060454e949446c7bf20f69cb49cec96-9"></a>            <span class="n">url</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">'request'</span><span class="p">][</span><span class="s1">'url'</span><span class="p">],</span>
+<a id="rest_code_c060454e949446c7bf20f69cb49cec96-10" name="rest_code_c060454e949446c7bf20f69cb49cec96-10"></a>        <span class="p">)</span>
+<a id="rest_code_c060454e949446c7bf20f69cb49cec96-11" name="rest_code_c060454e949446c7bf20f69cb49cec96-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">'assert'</span><span class="p">][</span><span class="s1">'statusCode'</span><span class="p">])</span>
+<a id="rest_code_c060454e949446c7bf20f69cb49cec96-12" name="rest_code_c060454e949446c7bf20f69cb49cec96-12"></a>
+<a id="rest_code_c060454e949446c7bf20f69cb49cec96-13" name="rest_code_c060454e949446c7bf20f69cb49cec96-13"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<a id="rest_code_c060454e949446c7bf20f69cb49cec96-14" name="rest_code_c060454e949446c7bf20f69cb49cec96-14"></a>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre>
+<p>Co tu się zmieniło? Do zmiennej <code>data</code> wczytaliśmy zawartość pliku <code>tests.json</code> oraz podmieniliśmy wszystkie wartości testu na te odczytane z pliku. Zauważ, że dane pobrane z pliku i umieszczone w zmiennej <code>data</code> tworzą słownik.</p>
+<p>Zanim przejdziemy dalej, popatrz na wartości wstawiane do argumentów wywołania metody <cite>:code:requests.request</cite>. Nie zauważasz tam pewnej prawidłowości?</p>
+<p>Podpowiem: porównaj nazwę argumentu, do którego wstawiane są dane, z nazwą klucza z jakiego te dane są pobierane.</p>
+<p>Może da się to jakoś wykorzystać na naszą korzyść i zaoszczędzić ciut miejsca w kodzie? Przecież w tym momencie mamy już 14 linii kodu, a nie mamy jeszcze ani, większej ilości testów, ani raportów.</p>
+</div>
+<div class="section" id="rozpakowywanie-slownika">
+<h3>Rozpakowywanie słownika<a class="headerlink" href="#rozpakowywanie-slownika" title="Permalink to this heading">¶</a></h3>
+<p>Jeśli czytałeś mój artykuł dotyczący <a class="reference external" href="../../20200109/dekoratory-w-pythonie/">dekoratorów w Pythonie</a> to wspominam w nim o 2 sposobach przekazywania argumentów do funkcji: przez <a class="reference external" href="../../20200109/dekoratory-w-pythonie/index.html#args-i-kwargs">args i kwargs</a> (jeśli nie wiesz o co chodzi to zanim przejdziesz dalej, polecam się z tym zapoznać). W naszym kodzie, przekazanie argumentów do metody <code>requests.request</code> wykonaliśmy właśnie przy użyciu <code>kwargs</code>, a więc defakto jako słownik, gdzie kluczem jest nazwa argumentu, a wartością danego klucza, wartość argumentu. Mówię o tym kawałku kodu:</p>
+<pre class="code python"><a id="rest_code_39fd5160847749f6938310b29f1d2f27-1" name="rest_code_39fd5160847749f6938310b29f1d2f27-1"></a><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+<a id="rest_code_39fd5160847749f6938310b29f1d2f27-2" name="rest_code_39fd5160847749f6938310b29f1d2f27-2"></a>    <span class="n">method</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">'request'</span><span class="p">][</span><span class="s1">'method'</span><span class="p">],</span>
+<a id="rest_code_39fd5160847749f6938310b29f1d2f27-3" name="rest_code_39fd5160847749f6938310b29f1d2f27-3"></a>    <span class="n">url</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">'request'</span><span class="p">][</span><span class="s1">'url'</span><span class="p">],</span>
+<a id="rest_code_39fd5160847749f6938310b29f1d2f27-4" name="rest_code_39fd5160847749f6938310b29f1d2f27-4"></a><span class="p">)</span>
+</pre>
+<p>W Pythonie istnieje mechanizm tzw. <cite>rozpakowywania słownika</cite>, który można wykorzystać do przekazania wartości do wywoływanej metody. Przyjrzyj się poniższemu zapisowi:</p>
+<pre class="code python"><a id="rest_code_814c0d82d2bc4a9fb9d6490ac4e25eb3-1" name="rest_code_814c0d82d2bc4a9fb9d6490ac4e25eb3-1"></a><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">[</span><span class="s1">'request'</span><span class="p">])</span>
+</pre>
+<p>Zauważ proszę, że wykorzystałem w nim zapis <code>**</code> przed nazwą zmiennej, która jest słownikiem. Jak to działa? Zmienna <code>data['request']</code> przechowuje słownik z 2 kluczami: <code>method</code> i <code>url</code>. Zapis <code>**</code> powoduje <em>rozpakowanie</em> słownika, a więc w przypadku wywołania metody, powoduje przypisanie konkretnym argumentów, wartości z odpowiadających ich nazwom kluczy ze słownika. Dlatego też, oba powyższe zapisy są ze sobą równoważne. Jak więc teraz prezentuje się nasz kod?</p>
+<pre class="code python"><a id="rest_code_da1906d50dbe4d84818e7d10b78aac70-1" name="rest_code_da1906d50dbe4d84818e7d10b78aac70-1"></a><span class="kn">import</span> <span class="nn">unittest</span><span class="o">,</span> <span class="nn">xmlrunner</span><span class="o">,</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">requests</span>
+<a id="rest_code_da1906d50dbe4d84818e7d10b78aac70-2" name="rest_code_da1906d50dbe4d84818e7d10b78aac70-2"></a>
+<a id="rest_code_da1906d50dbe4d84818e7d10b78aac70-3" name="rest_code_da1906d50dbe4d84818e7d10b78aac70-3"></a><span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'tests.json'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">))</span>
+<a id="rest_code_da1906d50dbe4d84818e7d10b78aac70-4" name="rest_code_da1906d50dbe4d84818e7d10b78aac70-4"></a>
+<a id="rest_code_da1906d50dbe4d84818e7d10b78aac70-5" name="rest_code_da1906d50dbe4d84818e7d10b78aac70-5"></a><span class="k">class</span> <span class="nc">Tests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<a id="rest_code_da1906d50dbe4d84818e7d10b78aac70-6" name="rest_code_da1906d50dbe4d84818e7d10b78aac70-6"></a>    <span class="k">def</span> <span class="nf">test_get_all_users</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="rest_code_da1906d50dbe4d84818e7d10b78aac70-7" name="rest_code_da1906d50dbe4d84818e7d10b78aac70-7"></a>        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">[</span><span class="s1">'request'</span><span class="p">])</span>
+<a id="rest_code_da1906d50dbe4d84818e7d10b78aac70-8" name="rest_code_da1906d50dbe4d84818e7d10b78aac70-8"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">'assert'</span><span class="p">][</span><span class="s1">'statusCode'</span><span class="p">])</span>
+<a id="rest_code_da1906d50dbe4d84818e7d10b78aac70-9" name="rest_code_da1906d50dbe4d84818e7d10b78aac70-9"></a>
+<a id="rest_code_da1906d50dbe4d84818e7d10b78aac70-10" name="rest_code_da1906d50dbe4d84818e7d10b78aac70-10"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<a id="rest_code_da1906d50dbe4d84818e7d10b78aac70-11" name="rest_code_da1906d50dbe4d84818e7d10b78aac70-11"></a>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre>
+<p>Zauważ, że z 14 linii kodu, zredukowaliśmy zapis do 11 linii. Można tutaj jeszcze jedną rzecz uprościć, a mianowicie pozbyć się zmiennej pomocniczej <code>response</code> i nasz kod będzie się prezentował w następujący sposób:</p>
+<pre class="code python"><a id="rest_code_ceb68409d3f946d881a614e3c80d20cf-1" name="rest_code_ceb68409d3f946d881a614e3c80d20cf-1"></a><span class="kn">import</span> <span class="nn">unittest</span><span class="o">,</span> <span class="nn">xmlrunner</span><span class="o">,</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">requests</span>
+<a id="rest_code_ceb68409d3f946d881a614e3c80d20cf-2" name="rest_code_ceb68409d3f946d881a614e3c80d20cf-2"></a>
+<a id="rest_code_ceb68409d3f946d881a614e3c80d20cf-3" name="rest_code_ceb68409d3f946d881a614e3c80d20cf-3"></a><span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'tests.json'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">))</span>
+<a id="rest_code_ceb68409d3f946d881a614e3c80d20cf-4" name="rest_code_ceb68409d3f946d881a614e3c80d20cf-4"></a>
+<a id="rest_code_ceb68409d3f946d881a614e3c80d20cf-5" name="rest_code_ceb68409d3f946d881a614e3c80d20cf-5"></a><span class="k">class</span> <span class="nc">Tests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<a id="rest_code_ceb68409d3f946d881a614e3c80d20cf-6" name="rest_code_ceb68409d3f946d881a614e3c80d20cf-6"></a>    <span class="k">def</span> <span class="nf">test_get_all_users</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="rest_code_ceb68409d3f946d881a614e3c80d20cf-7" name="rest_code_ceb68409d3f946d881a614e3c80d20cf-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">[</span><span class="s1">'request'</span><span class="p">])</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">'assert'</span><span class="p">][</span><span class="s1">'statusCode'</span><span class="p">])</span>
+<a id="rest_code_ceb68409d3f946d881a614e3c80d20cf-8" name="rest_code_ceb68409d3f946d881a614e3c80d20cf-8"></a>
+<a id="rest_code_ceb68409d3f946d881a614e3c80d20cf-9" name="rest_code_ceb68409d3f946d881a614e3c80d20cf-9"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<a id="rest_code_ceb68409d3f946d881a614e3c80d20cf-10" name="rest_code_ceb68409d3f946d881a614e3c80d20cf-10"></a>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre>
+<p>Zeszliśmy tym samym do 10 linii kodu. Na co wykorzystamy pozostałe 6 linii?</p>
+</div>
+<div class="section" id="generator-testow-z-danych-testowych">
+<h3>Generator testów z danych testowych<a class="headerlink" href="#generator-testow-z-danych-testowych" title="Permalink to this heading">¶</a></h3>
+<p>Dochodzimy do najfajniejszej części tego wpisu, czyli jeszcze większej <em>magii</em> niż zapis z <code>**</code>. Przeróbmy teraz nasz kod tak, aby metoda z testem nie była zdefiniowana bezpośrednio w klasie testów, ale umieszczona w niej w sposób dynamiczny. Zerknij na poniższy kod:</p>
+<pre class="code python"><a id="rest_code_620abc5af72b45308127cdaaab11245e-1" name="rest_code_620abc5af72b45308127cdaaab11245e-1"></a><span class="kn">import</span> <span class="nn">unittest</span><span class="o">,</span> <span class="nn">xmlrunner</span><span class="o">,</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">requests</span>
+<a id="rest_code_620abc5af72b45308127cdaaab11245e-2" name="rest_code_620abc5af72b45308127cdaaab11245e-2"></a>
+<a id="rest_code_620abc5af72b45308127cdaaab11245e-3" name="rest_code_620abc5af72b45308127cdaaab11245e-3"></a><span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'tests.json'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">))</span>
+<a id="rest_code_620abc5af72b45308127cdaaab11245e-4" name="rest_code_620abc5af72b45308127cdaaab11245e-4"></a>
+<a id="rest_code_620abc5af72b45308127cdaaab11245e-5" name="rest_code_620abc5af72b45308127cdaaab11245e-5"></a><span class="k">class</span> <span class="nc">Tests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<a id="rest_code_620abc5af72b45308127cdaaab11245e-6" name="rest_code_620abc5af72b45308127cdaaab11245e-6"></a>    <span class="k">pass</span>
+<a id="rest_code_620abc5af72b45308127cdaaab11245e-7" name="rest_code_620abc5af72b45308127cdaaab11245e-7"></a>
+<a id="rest_code_620abc5af72b45308127cdaaab11245e-8" name="rest_code_620abc5af72b45308127cdaaab11245e-8"></a><span class="k">def</span> <span class="nf">abstract_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="rest_code_620abc5af72b45308127cdaaab11245e-9" name="rest_code_620abc5af72b45308127cdaaab11245e-9"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">[</span><span class="s1">'request'</span><span class="p">])</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">'assert'</span><span class="p">][</span><span class="s1">'statusCode'</span><span class="p">])</span>
+<a id="rest_code_620abc5af72b45308127cdaaab11245e-10" name="rest_code_620abc5af72b45308127cdaaab11245e-10"></a>
+<a id="rest_code_620abc5af72b45308127cdaaab11245e-11" name="rest_code_620abc5af72b45308127cdaaab11245e-11"></a><span class="nb">setattr</span><span class="p">(</span><span class="n">Tests</span><span class="p">,</span> <span class="s1">'test_get_all_users'</span><span class="p">,</span> <span class="n">abstract_test</span><span class="p">)</span>
+<a id="rest_code_620abc5af72b45308127cdaaab11245e-12" name="rest_code_620abc5af72b45308127cdaaab11245e-12"></a>
+<a id="rest_code_620abc5af72b45308127cdaaab11245e-13" name="rest_code_620abc5af72b45308127cdaaab11245e-13"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<a id="rest_code_620abc5af72b45308127cdaaab11245e-14" name="rest_code_620abc5af72b45308127cdaaab11245e-14"></a>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre>
+<p>Tak na prawdę w dalszym ciągu pod względem funkcjonalnym oraz końcowego wynika, powyższy kod jest tym samym co poprzedni, gdzie metoda <code>test_get_all_users</code> był zdefiniowa wewnątrz klasy <code>Tests</code>.</p>
+<p>Jak to działa?</p>
+<ol class="arabic simple">
+<li>
+<p>Klasa <code>Tests</code> w kodzie została zaimplementowana tak, że nic poza dziedziczeniem po klasie <code>unittest.TestCase</code> nie robi nic poza tym. Jest po prostu pustą definicją.</p>
+</li>
+<li>
+<p>Metoda służąca do wysyłania żądania do endpointu, znajdują się teraz poza ciałem klasy oraz została nazwana <code>abstract_test</code>. Sam sposób wysyłania żądania się nie zmienił.</p>
+</li>
+<li>
+<p>Następnie wywołujemy metodę <a class="reference external" href="https://docs.python.org/3/library/functions.html#setattr">setattr</a>, która jest metodą wbudowaną w język Python. Pozwala ona na wstawienie do obiektu, nowego atrybutu oraz przypisania mu wartości (o tym również wspominałem w artykule dotyczącym dekoratorów w sekcji <a class="reference external" href="../../20200109/dekoratory-w-pythonie/index.html#funkcja-jest-obiektem">funkcja jest obiektem</a>. Zauważ, że jej wywołanie przyjęło 3 argumenty:</p>
+</li>
+</ol>
+<ul class="simple">
+<li>
+<p>obiekt do którego wstawiamy - u nas jest to klasa <code>Tests</code>,</p>
+</li>
+<li>
+<p>nazwę atrybutu pod jakim będzie znajdowała się wstawiona wartość - u nas jest to <code>test_get_all_users</code>,</p>
+</li>
+<li>
+<p>wartość jaka będzie przypisana do atrybutu - nas jest to adres w pamięci metody <code>abstract_test</code> (widać to po braku <code>()</code> na końcu).</p>
+</li>
+</ul>
+<p>Jeśli wywołamy powyższy kod to w dalszym ciągu otrzymujemy taki sam wynik.</p>
+<p>No dobra. Umiemy już dynamicznie wstawić metodę z testem do obiektu, ale to jeszcze nie do końca jest generator. Żeby nasz kod umiał coś więcej musimy dokonać jeszcze małych przeróbek w obu naszych plikach.</p>
+<p>Zacznijmy od pliku <code>tests.json</code>:</p>
+<pre class="code json"><a id="rest_code_b1207f5e3ee845ada8dd99c17601653c-1" name="rest_code_b1207f5e3ee845ada8dd99c17601653c-1"></a><span class="p">{</span>
+<a id="rest_code_b1207f5e3ee845ada8dd99c17601653c-2" name="rest_code_b1207f5e3ee845ada8dd99c17601653c-2"></a>  <span class="nt">"test_get_all_users"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_b1207f5e3ee845ada8dd99c17601653c-3" name="rest_code_b1207f5e3ee845ada8dd99c17601653c-3"></a>    <span class="nt">"request"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_b1207f5e3ee845ada8dd99c17601653c-4" name="rest_code_b1207f5e3ee845ada8dd99c17601653c-4"></a>      <span class="nt">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+<a id="rest_code_b1207f5e3ee845ada8dd99c17601653c-5" name="rest_code_b1207f5e3ee845ada8dd99c17601653c-5"></a>      <span class="nt">"url"</span><span class="p">:</span> <span class="s2">"https://reqres.in/api/users"</span>
+<a id="rest_code_b1207f5e3ee845ada8dd99c17601653c-6" name="rest_code_b1207f5e3ee845ada8dd99c17601653c-6"></a>    <span class="p">},</span>
+<a id="rest_code_b1207f5e3ee845ada8dd99c17601653c-7" name="rest_code_b1207f5e3ee845ada8dd99c17601653c-7"></a>    <span class="nt">"assert"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_b1207f5e3ee845ada8dd99c17601653c-8" name="rest_code_b1207f5e3ee845ada8dd99c17601653c-8"></a>      <span class="nt">"statusCode"</span><span class="p">:</span> <span class="mi">200</span>
+<a id="rest_code_b1207f5e3ee845ada8dd99c17601653c-9" name="rest_code_b1207f5e3ee845ada8dd99c17601653c-9"></a>    <span class="p">}</span>
+<a id="rest_code_b1207f5e3ee845ada8dd99c17601653c-10" name="rest_code_b1207f5e3ee845ada8dd99c17601653c-10"></a>  <span class="p">}</span>
+<a id="rest_code_b1207f5e3ee845ada8dd99c17601653c-11" name="rest_code_b1207f5e3ee845ada8dd99c17601653c-11"></a><span class="p">}</span>
+</pre>
+<p>Tu zmiany są niewielkie, bo tak na prawdę, <em>nazwaliśmy</em> tylko już istniejące dane jako <code>test_get_all_users</code>.</p>
+<p>Teraz kolej na plik <code>main.py</code>:</p>
+<pre class="code python"><a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-1" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-1"></a><span class="kn">import</span> <span class="nn">unittest</span><span class="o">,</span> <span class="nn">xmlrunner</span><span class="o">,</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">requests</span>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-2" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-2"></a>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-3" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-3"></a><span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'tests.json'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">))</span>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-4" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-4"></a>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-5" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-5"></a><span class="k">class</span> <span class="nc">Tests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-6" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-6"></a>    <span class="k">pass</span>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-7" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-7"></a>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-8" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-8"></a><span class="k">def</span> <span class="nf">add_test</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-9" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-9"></a>    <span class="k">def</span> <span class="nf">abstract_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-10" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s1">'request'</span><span class="p">])</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s1">'assert'</span><span class="p">][</span><span class="s1">'statusCode'</span><span class="p">])</span>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-11" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-11"></a>    <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">abstract_test</span><span class="p">)</span>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-12" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-12"></a>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-13" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-13"></a><span class="k">for</span> <span class="n">test_name</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-14" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-14"></a>    <span class="n">add_test</span><span class="p">(</span><span class="n">Tests</span><span class="p">,</span> <span class="n">test_name</span><span class="p">)</span>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-15" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-15"></a>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-16" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-16"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<a id="rest_code_4cb368aaf7c044b9b5563376735f6a3c-17" name="rest_code_4cb368aaf7c044b9b5563376735f6a3c-17"></a>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre>
+<p>Co zmieniliśmy?</p>
+<ol class="arabic simple">
+<li>
+<p>Metoda <code>abstract_test</code> oraz wywołanie metody <code>setattr</code> ukryte zostało w metodzie <code>add_test</code>. Zauważ, że metoda ta przyjmuje 2 atrybuty:</p>
+</li>
+</ol>
+<ul class="simple">
+<li>
+<p><code>cls</code> - to klasa do której będziemy dodawać test,</p>
+</li>
+<li>
+<p><code>name</code> - to nazwa testu jaki będziemy dodawać.</p>
+</li>
+</ul>
+<ol class="arabic simple" start="2">
+<li>
+<p>W metodzie <code>abstract_test</code> zmienił się sposób dotarcia do danych testowych w słowniku przechowywanym w zmiennej <code>data</code>. Doszedł tam po prostu dodatkowy poziom zagnieżdżenia wynikający ze zmiany struktury danych w pliku <code>tests.json</code>. Zauważ również, że zmienna <code>name</code> nie jest argumentem wywołania metody <code>abstract_test</code>, a metody nadrzędnej, czyli <code>add_test</code>. Jak to możliwe, że to działa? Otóż zmienna <code>name</code> staje się dla metody <code>add_test</code> zmienną globalną, ze względu na jej zagnieżdżenie wewnątrz metody <code>add_test</code>.</p>
+</li>
+<li>
+<p>Wywołanie <code>settatr</code> korzysta teraz ze zmienne <code>name</code>, a nie bezpośredniej nazwy.</p>
+</li>
+<li>
+<p>Dodaliśmy pętlę <code>for</code> iterującą po kluczach słownika ze zmiennej <code>data</code>. Te klucze to tak na prawdę nazwy testów z pliku <cite>tests.json</cite> (w tym momencie mamy tylko jeden klucz o wartości <code>test_get_all_users</code>).</p>
+</li>
+</ol>
+<p>Czy to wszystko?</p>
+<p>Mamy 3 problemy:</p>
+<p>1. Mamy tylko 1 test. 3. Brakuje nam jeszcze raportów. 3. Mamy 17 linii kodu (o 1 za dużo).</p>
+</div>
+<div class="section" id="wiecej-testow">
+<h3>Więcej testów<a class="headerlink" href="#wiecej-testow" title="Permalink to this heading">¶</a></h3>
+<p>Skoro tyle się napracowaliśmy to dorzućmy więcej testów. Jak możesz się domyślić, aby dopisać nowe testy, wystarczy odpowiednie dane umieścić w pliku <code>tests.json</code>. Poniżej przykładowy zestaw testów:</p>
+<pre class="code json"><a id="rest_code_92994f6683c94a9ca39061c655d8e480-1" name="rest_code_92994f6683c94a9ca39061c655d8e480-1"></a><span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-2" name="rest_code_92994f6683c94a9ca39061c655d8e480-2"></a>  <span class="nt">"test_get_all_users"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-3" name="rest_code_92994f6683c94a9ca39061c655d8e480-3"></a>    <span class="nt">"request"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-4" name="rest_code_92994f6683c94a9ca39061c655d8e480-4"></a>      <span class="nt">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-5" name="rest_code_92994f6683c94a9ca39061c655d8e480-5"></a>      <span class="nt">"url"</span><span class="p">:</span> <span class="s2">"https://reqres.in/api/users"</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-6" name="rest_code_92994f6683c94a9ca39061c655d8e480-6"></a>    <span class="p">},</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-7" name="rest_code_92994f6683c94a9ca39061c655d8e480-7"></a>    <span class="nt">"assert"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-8" name="rest_code_92994f6683c94a9ca39061c655d8e480-8"></a>      <span class="nt">"statusCode"</span><span class="p">:</span> <span class="mi">200</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-9" name="rest_code_92994f6683c94a9ca39061c655d8e480-9"></a>    <span class="p">}</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-10" name="rest_code_92994f6683c94a9ca39061c655d8e480-10"></a>  <span class="p">},</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-11" name="rest_code_92994f6683c94a9ca39061c655d8e480-11"></a>  <span class="nt">"test_get_users_id_2"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-12" name="rest_code_92994f6683c94a9ca39061c655d8e480-12"></a>    <span class="nt">"request"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-13" name="rest_code_92994f6683c94a9ca39061c655d8e480-13"></a>      <span class="nt">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-14" name="rest_code_92994f6683c94a9ca39061c655d8e480-14"></a>      <span class="nt">"url"</span><span class="p">:</span> <span class="s2">"https://reqres.in/api/users/2"</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-15" name="rest_code_92994f6683c94a9ca39061c655d8e480-15"></a>    <span class="p">},</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-16" name="rest_code_92994f6683c94a9ca39061c655d8e480-16"></a>    <span class="nt">"assert"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-17" name="rest_code_92994f6683c94a9ca39061c655d8e480-17"></a>      <span class="nt">"statusCode"</span><span class="p">:</span> <span class="mi">200</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-18" name="rest_code_92994f6683c94a9ca39061c655d8e480-18"></a>    <span class="p">}</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-19" name="rest_code_92994f6683c94a9ca39061c655d8e480-19"></a>  <span class="p">},</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-20" name="rest_code_92994f6683c94a9ca39061c655d8e480-20"></a>  <span class="nt">"test_get_non_existing_user"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-21" name="rest_code_92994f6683c94a9ca39061c655d8e480-21"></a>    <span class="nt">"request"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-22" name="rest_code_92994f6683c94a9ca39061c655d8e480-22"></a>      <span class="nt">"method"</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-23" name="rest_code_92994f6683c94a9ca39061c655d8e480-23"></a>      <span class="nt">"url"</span><span class="p">:</span> <span class="s2">"https://reqres.in/api/users/23"</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-24" name="rest_code_92994f6683c94a9ca39061c655d8e480-24"></a>    <span class="p">},</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-25" name="rest_code_92994f6683c94a9ca39061c655d8e480-25"></a>    <span class="nt">"assert"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-26" name="rest_code_92994f6683c94a9ca39061c655d8e480-26"></a>      <span class="nt">"statusCode"</span><span class="p">:</span> <span class="mi">404</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-27" name="rest_code_92994f6683c94a9ca39061c655d8e480-27"></a>    <span class="p">}</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-28" name="rest_code_92994f6683c94a9ca39061c655d8e480-28"></a>  <span class="p">},</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-29" name="rest_code_92994f6683c94a9ca39061c655d8e480-29"></a>  <span class="nt">"test_create_new_user"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-30" name="rest_code_92994f6683c94a9ca39061c655d8e480-30"></a>    <span class="nt">"request"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-31" name="rest_code_92994f6683c94a9ca39061c655d8e480-31"></a>      <span class="nt">"method"</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-32" name="rest_code_92994f6683c94a9ca39061c655d8e480-32"></a>      <span class="nt">"url"</span><span class="p">:</span> <span class="s2">"https://reqres.in/api/users"</span><span class="p">,</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-33" name="rest_code_92994f6683c94a9ca39061c655d8e480-33"></a>      <span class="nt">"json"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-34" name="rest_code_92994f6683c94a9ca39061c655d8e480-34"></a>        <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"testerembyc"</span><span class="p">,</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-35" name="rest_code_92994f6683c94a9ca39061c655d8e480-35"></a>        <span class="nt">"jon"</span><span class="p">:</span> <span class="s2">"tester"</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-36" name="rest_code_92994f6683c94a9ca39061c655d8e480-36"></a>      <span class="p">}</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-37" name="rest_code_92994f6683c94a9ca39061c655d8e480-37"></a>    <span class="p">},</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-38" name="rest_code_92994f6683c94a9ca39061c655d8e480-38"></a>    <span class="nt">"assert"</span><span class="p">:</span> <span class="p">{</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-39" name="rest_code_92994f6683c94a9ca39061c655d8e480-39"></a>      <span class="nt">"statusCode"</span><span class="p">:</span> <span class="mi">201</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-40" name="rest_code_92994f6683c94a9ca39061c655d8e480-40"></a>    <span class="p">}</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-41" name="rest_code_92994f6683c94a9ca39061c655d8e480-41"></a>  <span class="p">}</span>
+<a id="rest_code_92994f6683c94a9ca39061c655d8e480-42" name="rest_code_92994f6683c94a9ca39061c655d8e480-42"></a><span class="p">}</span>
+</pre></div>
+<div class="section" id="raporty-i-16-linii-kodu">
+<h3>Raporty i 16 linii kodu<a class="headerlink" href="#raporty-i-16-linii-kodu" title="Permalink to this heading">¶</a></h3>
+<p>To zadanie to w zasadzie już tylko drobna formalność. Spójrz na poniższy kod:</p>
+<pre class="code python"><a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-1" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-1"></a><span class="kn">import</span> <span class="nn">unittest</span><span class="o">,</span> <span class="nn">xmlrunner</span><span class="o">,</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">requests</span>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-2" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-2"></a>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-3" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-3"></a><span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">'tests.json'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">))</span>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-4" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-4"></a>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-5" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-5"></a><span class="k">class</span> <span class="nc">Tests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span> <span class="k">pass</span>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-6" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-6"></a>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-7" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-7"></a><span class="k">def</span> <span class="nf">add_test</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-8" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-8"></a>    <span class="k">def</span> <span class="nf">abstract_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-9" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s1">'request'</span><span class="p">])</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="s1">'assert'</span><span class="p">][</span><span class="s1">'statusCode'</span><span class="p">])</span>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-10" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-10"></a>    <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">abstract_test</span><span class="p">)</span>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-11" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-11"></a>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-12" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-12"></a><span class="k">for</span> <span class="n">test_name</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-13" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-13"></a>    <span class="n">add_test</span><span class="p">(</span><span class="n">Tests</span><span class="p">,</span> <span class="n">test_name</span><span class="p">)</span>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-14" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-14"></a>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-15" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-15"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<a id="rest_code_3a8525193ea04083b0c226d7d3b1cb13-16" name="rest_code_3a8525193ea04083b0c226d7d3b1cb13-16"></a>    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">testRunner</span><span class="o">=</span><span class="n">xmlrunner</span><span class="o">.</span><span class="n">XMLTestRunner</span><span class="p">())</span>
+</pre>
+<p>Co się zmieniło:</p>
+<ol class="arabic simple">
+<li>
+<p>Implementacja klasy <code>Tests</code> mieści się w jednej linii (tak wiem znów naginam dobre zasady formatowania kodu).</p>
+</li>
+<li>
+<p>W wywołaniu metody <code>unittest.main</code> jako argument <code>testRunner</code> podałem do tej pory nie wykorzystywany <code>xmlrunner</code>. Dzięki temu po uruchomieniu testów w konsoli zobaczymy poniższy tekst:</p>
+</li>
+</ol>
+<pre class="code bash"><a id="rest_code_14c471b754824f9f8f62b60300840a9c-1" name="rest_code_14c471b754824f9f8f62b60300840a9c-1"></a>Running tests...
+<a id="rest_code_14c471b754824f9f8f62b60300840a9c-2" name="rest_code_14c471b754824f9f8f62b60300840a9c-2"></a>----------------------------------------------------------------------
+<a id="rest_code_14c471b754824f9f8f62b60300840a9c-3" name="rest_code_14c471b754824f9f8f62b60300840a9c-3"></a>....
+<a id="rest_code_14c471b754824f9f8f62b60300840a9c-4" name="rest_code_14c471b754824f9f8f62b60300840a9c-4"></a>----------------------------------------------------------------------
+<a id="rest_code_14c471b754824f9f8f62b60300840a9c-5" name="rest_code_14c471b754824f9f8f62b60300840a9c-5"></a>Ran <span class="m">4</span> tests in <span class="m">0</span>.609s
+<a id="rest_code_14c471b754824f9f8f62b60300840a9c-6" name="rest_code_14c471b754824f9f8f62b60300840a9c-6"></a>
+<a id="rest_code_14c471b754824f9f8f62b60300840a9c-7" name="rest_code_14c471b754824f9f8f62b60300840a9c-7"></a>OK
+<a id="rest_code_14c471b754824f9f8f62b60300840a9c-8" name="rest_code_14c471b754824f9f8f62b60300840a9c-8"></a>
+<a id="rest_code_14c471b754824f9f8f62b60300840a9c-9" name="rest_code_14c471b754824f9f8f62b60300840a9c-9"></a>Generating XML reports...
+</pre>
+<p>Dodatkowo w katalogu z naszymi plikami, pojawi się plik o rozszerzeniu <code>.xml</code>, który jest naszym <em>raportem</em> z przeprowadzonych testów.</p>
+</div>
+</div>
+<div class="section" id="podsumowanie">
+<h2>Podsumowanie<a class="headerlink" href="#podsumowanie" title="Permalink to this heading">¶</a></h2>
+<p>Zmieściliśmy się w 16 linijkach kodu?</p>
+<p>Chyba nam się udało, choć nagięliśmy przy okazji kilka reguł dotyczących formatowania kodu w Pythonie, ale udało nam się zachować względną czytelność i dosyć sporą funkcjonalność.</p>
+<p>Mam nadzieję, że ten wpis pokaz Ci jak potężnym narzędziem potrafi być Python.</p>
+<p>Czy da się coś więcej z tego kodu wykrzesać?</p>
+<p>Oczywiście, że tak, ale wtedy nie zmieścimy się w 16 linijkach kodu. Jako ćwiczenie dla Ciebie mogę podpowiedzieć, że przy niewielkim nakładzie pracy, można dodać dodatkowe sprawdzenia, np. czy dane, które otrzymujemy w odpowiedzi na wysłane żądanie, są danymi jakich się spodziewamy. Jak to zrobić, to już zostawiam Tobie jako dalsze ćwiczenie swoich szarych komórek (ten kod dla mnie był takim właśnie ćwiczeniem).</p>
+<p>PS. Cały powyższy kod znajdziesz również w poniższym <a class="reference external" href="https://github.com/mkusz/the_smallest_rest_api_testing_framework">repozytorium w GitHubie</a>.</p>
+</div>
+</div>
+<div class="col-md-6"><img src="../../../images/page_lm/jak_zaczac_automatyzowac.jpg"></div>
+<div class="col-md-6">
+<form action="https://maciejkusz.activehosted.com/proc.php" id="_form_5_" method="post" name="_form_5_" novalidate=""><input name="u" type="hidden" value="5"><input name="f" type="hidden" value="5"><input name="s" type="hidden"><input name="c" type="hidden" value="0"><input name="m" type="hidden" value="0"><input name="act" type="hidden" value="sub"><input name="v" type="hidden" value="2">
+<h3>Zapraszam do newslettera<a class="headerlink" href="#_form_5_" title="Permalink to this heading">¶</a></h3>
+<div class="_form-content">
+<p>Jeśli powyższy artykuł uznajesz za wartościowy oraz masz ochotę być informowany o nowościach na moim blogu, to zachęcam Cię do zapisania się do mojego newslettera. Obiecuję, że nie będę Cię spamował, a tylko czasu do czasu wyślę Ci powiadomienie o nowym artykule lub prześlę krótkiego maila z ciekawymi informacjami.<br>
+<strong>BONUS:</strong> Dodatkowo otrzymasz mój mini poradnik: <em>Jak zacząć automatyzować testy? Czyli 12 pytań i odpowiedzi, które w tym pomogą</em></p>
+<div class="input-group" id="basic-fullname-group"><span class="input-group-addon" id="basic-fullname">Imię</span> <input aria-describedby="basic-fullname" class="form-control" name="fullname" placeholder="Wpisz swoje imię" type="text"></div>
+<div class="input-group" id="basic-lastname-group"><span class="input-group-addon" id="basic-lastname">Nazwisko</span> <input aria-describedby="basic-fullname" class="form-control" name="lastname" placeholder="Wpisz swoje nazwisko" type="text"></div>
+<div class="input-group" id="basic-email-group"><span class="input-group-addon" id="basic-email">E-mail</span> <input aria-describedby="basic-email" class="form-control" name="email" placeholder="Wpisz swój e-mail" required="" type="text"></div>
+<button class="_submit btn btn-danger" id="_form_5_submit" style="margin-left: auto; margin-right: auto; display: block;" type="submit">Zapisz się</button>
+<div class="_clear-element"></div>
+</div>
+<div class="_form-thank-you" style="display:none;"></div>
+<p style="font-size: 10px; margin-top: 5px;">Wszystkie podane przez Ciebie dane, będą przetwarzane zgodnie z <a href="../../../pages/polityka-prywatnosci">polityką prywatności</a>.</p>
+</form>
+<script type="text/javascript">
+        window.cfields = [];
+        window._show_thank_you = function(id, message, trackcmp_url) {
+          var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
+          form.querySelector('._form-content').style.display = 'none';
+          thank_you.innerHTML = message;
+          thank_you.style.display = 'block';
+          if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+            // Site tracking URL to use after inline form submission.
+            _load_script(trackcmp_url);
+          }
+          if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+        };
+        window._show_error = function(id, message, html) {
+          var form = document.getElementById('_form_' + id + '_'), err = document.createElement('div'), button = form.querySelector('button'), old_error = form.querySelector('._form_error');
+          if (old_error) old_error.parentNode.removeChild(old_error);
+          err.innerHTML = message;
+          err.className = '_error-inner _form_error _no_arrow';
+          var wrapper = document.createElement('div');
+          wrapper.className = '_form-inner';
+          wrapper.appendChild(err);
+          button.parentNode.insertBefore(wrapper, button);
+          document.querySelector('[id^="_form"][id$="_submit"]').disabled = false;
+          if (html) {
+            var div = document.createElement('div');
+            div.className = '_error-html';
+            div.innerHTML = html;
+            err.appendChild(div);
+          }
+        };
+        window._load_script = function(url, callback) {
+            var head = document.querySelector('head'), script = document.createElement('script'), r = false;
+            script.type = 'text/javascript';
+            script.charset = 'utf-8';
+            script.src = url;
+            if (callback) {
+              script.onload = script.onreadystatechange = function() {
+              if (!r && (!this.readyState || this.readyState == 'complete')) {
+                r = true;
+                callback();
+                }
+              };
+            }
+            head.appendChild(script);
+        };
+        (function() {
+          if (window.location.search.search("excludeform") !== -1) return false;
+          var getCookie = function(name) {
+            var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)'));
+            return match ? match[2] : null;
+          }
+          var setCookie = function(name, value) {
+            var now = new Date();
+            var time = now.getTime();
+            var expireTime = time + 1000 * 60 * 60 * 24 * 365;
+            now.setTime(expireTime);
+            document.cookie = name + '=' + value + '; expires=' + now + ';path=/';
+          }
+              var addEvent = function(element, event, func) {
+            if (element.addEventListener) {
+              element.addEventListener(event, func);
+            } else {
+              var oldFunc = element['on' + event];
+              element['on' + event] = function() {
+                oldFunc.apply(this, arguments);
+                func.apply(this, arguments);
+              };
+            }
+          }
+          var _removed = false;
+          var form_to_submit = document.getElementById('_form_5_');
+          var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
+
+          var getUrlParam = function(name) {
+            var regexStr = '[\?&]' + name + '=([^&#]*)';
+            var results = new RegExp(regexStr, 'i').exec(window.location.href);
+            return results != undefined ? decodeURIComponent(results[1]) : false;
+          };
+
+          for (var i = 0; i < allInputs.length; i++) {
+            var regexStr = "field\\[(\\d+)\\]";
+            var results = new RegExp(regexStr).exec(allInputs[i].name);
+            if (results != undefined) {
+              allInputs[i].dataset.name = window.cfields[results[1]];
+            } else {
+              allInputs[i].dataset.name = allInputs[i].name;
+            }
+            var fieldVal = getUrlParam(allInputs[i].dataset.name);
+
+            if (fieldVal) {
+                    if (allInputs[i].dataset.autofill === "false") {
+                        continue;
+                    }
+              if (allInputs[i].type == "radio" || allInputs[i].type == "checkbox") {
+                if (allInputs[i].value == fieldVal) {
+                  allInputs[i].checked = true;
+                }
+              } else {
+                allInputs[i].value = fieldVal;
+              }
+            }
+          }
+
+          var remove_tooltips = function() {
+            for (var i = 0; i < tooltips.length; i++) {
+              tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
+            }
+              tooltips = [];
+          };
+          var remove_tooltip = function(elem) {
+            for (var i = 0; i < tooltips.length; i++) {
+              if (tooltips[i].elem === elem) {
+                tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
+                tooltips.splice(i, 1);
+                return;
+              }
+            }
+          };
+          var create_tooltip = function(elem, text) {
+            var tooltip = document.createElement('div'), arrow = document.createElement('div'), inner = document.createElement('div'), new_tooltip = {};
+            if (elem.type != 'radio' && elem.type != 'checkbox') {
+              tooltip.className = 'label label-danger';
+              tooltip.innerHTML = text;
+              elem.parentNode.parentNode.insertBefore(tooltip, elem.parentNode);
+            } else {
+              tooltip.className = '_error-inner _no_arrow';
+              tooltip.innerHTML = text;
+              elem.parentNode.insertBefore(tooltip, elem);
+              new_tooltip.no_arrow = true;
+            }
+            new_tooltip.tip = tooltip;
+            new_tooltip.elem = elem;
+            tooltips.push(new_tooltip);
+            return new_tooltip;
+          };
+          var resize_tooltip = function(tooltip) {
+            var rect = tooltip.elem.getBoundingClientRect();
+            var doc = document.documentElement, scrollPosition = rect.top - ((window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0));
+            if (scrollPosition < 40) {
+              tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _below';
+            } else {
+              tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _above';
+            }
+          };
+          var resize_tooltips = function() {
+            if (_removed) return;
+            for (var i = 0; i < tooltips.length; i++) {
+              if (!tooltips[i].no_arrow) resize_tooltip(tooltips[i]);
+            }
+          };
+          var validate_field = function(elem, remove) {
+            var tooltip = null, value = elem.value, no_error = true;
+            remove ? remove_tooltip(elem) : false;
+            if (elem.type != 'checkbox') elem.className = elem.className.replace(/ ?_has_error ?/g, '');
+            if (elem.getAttribute('required') !== null) {
+              if (elem.type == 'radio' || (elem.type == 'checkbox' && /any/.test(elem.className))) {
+                var elems = form_to_submit.elements[elem.name];
+                if (!(elems instanceof NodeList || elems instanceof HTMLCollection) || elems.length <= 1) {
+                  no_error = elem.checked;
+                }
+                else {
+                  no_error = false;
+                  for (var i = 0; i < elems.length; i++) {
+                    if (elems[i].checked) no_error = true;
+                  }
+                }
+                if (!no_error) {
+                  tooltip = create_tooltip(elem, "Wybierz opcję.");
+                }
+              } else if (elem.type =='checkbox') {
+                var elems = form_to_submit.elements[elem.name], found = false, err = [];
+                no_error = true;
+                for (var i = 0; i < elems.length; i++) {
+                  if (elems[i].getAttribute('required') === null) continue;
+                  if (!found && elems[i] !== elem) return true;
+                  found = true;
+                  elems[i].className = elems[i].className.replace(/ ?_has_error ?/g, '');
+                  if (!elems[i].checked) {
+                    no_error = false;
+                    elems[i].className = elems[i].className + ' _has_error';
+                    err.push("Zaznaczenie %s jest wymagane".replace("%s", elems[i].value));
+                  }
+                }
+                if (!no_error) {
+                  tooltip = create_tooltip(elem, err.join('<br/>'));
+                }
+              } else if (elem.tagName == 'SELECT') {
+                var selected = true;
+                if (elem.multiple) {
+                  selected = false;
+                  for (var i = 0; i < elem.options.length; i++) {
+                    if (elem.options[i].selected) {
+                      selected = true;
+                      break;
+                    }
+                  }
+                } else {
+                  for (var i = 0; i < elem.options.length; i++) {
+                    if (elem.options[i].selected && !elem.options[i].value) {
+                      selected = false;
+                    }
+                  }
+                }
+                if (!selected) {
+                  elem.className = elem.className + ' _has_error';
+                  no_error = false;
+                  tooltip = create_tooltip(elem, "Wybierz opcję.");
+                }
+              } else if (value === undefined || value === null || value === '') {
+                elem.className = elem.className + ' _has_error';
+                no_error = false;
+                tooltip = create_tooltip(elem, "To pole jest wymagane.");
+              }
+            }
+            if (no_error && elem.name == 'email') {
+              if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) {
+                elem.className = elem.className + ' _has_error';
+                no_error = false;
+                tooltip = create_tooltip(elem, "Wpisz poprawny adres e-mail.");
+              }
+            }
+            if (no_error && /date_field/.test(elem.className)) {
+              if (!value.match(/^\d\d\d\d-\d\d-\d\d$/)) {
+                elem.className = elem.className + ' _has_error';
+                no_error = false;
+                tooltip = create_tooltip(elem, "Wpisz poprawną datę.");
+              }
+            }
+            tooltip ? resize_tooltip(tooltip) : false;
+            return no_error;
+          };
+          var needs_validate = function(el) {
+            return el.name == 'email' || el.getAttribute('required') !== null;
+          };
+          var validate_form = function(e) {
+            var err = form_to_submit.querySelector('._form_error'), no_error = true;
+            if (!submitted) {
+              submitted = true;
+              for (var i = 0, len = allInputs.length; i < len; i++) {
+                var input = allInputs[i];
+                if (needs_validate(input)) {
+                  if (input.type == 'text') {
+                    addEvent(input, 'blur', function() {
+                      this.value = this.value.trim();
+                      validate_field(this, true);
+                    });
+                    addEvent(input, 'input', function() {
+                      validate_field(this, true);
+                    });
+                  } else if (input.type == 'radio' || input.type == 'checkbox') {
+                    (function(el) {
+                      var radios = form_to_submit.elements[el.name];
+                      for (var i = 0; i < radios.length; i++) {
+                        addEvent(radios[i], 'click', function() {
+                          validate_field(el, true);
+                        });
+                      }
+                    })(input);
+                  } else if (input.tagName == 'SELECT') {
+                    addEvent(input, 'change', function() {
+                      validate_field(this, true);
+                    });
+                  } else if (input.type == 'textarea'){
+                    addEvent(input, 'input', function() {
+                      validate_field(this, true);
+                    });
+                  }
+                }
+              }
+            }
+            remove_tooltips();
+            for (var i = 0, len = allInputs.length; i < len; i++) {
+              var elem = allInputs[i];
+              if (needs_validate(elem)) {
+                if (elem.tagName.toLowerCase() !== "select") {
+                  elem.value = elem.value.trim();
+                }
+                validate_field(elem) ? true : no_error = false;
+              }
+            }
+            if (!no_error && e) {
+              e.preventDefault();
+            }
+            resize_tooltips();
+            return no_error;
+          };
+          addEvent(window, 'resize', resize_tooltips);
+          addEvent(window, 'scroll', resize_tooltips);
+          window._old_serialize = null;
+          if (typeof serialize !== 'undefined') window._old_serialize = window.serialize;
+          _load_script("//d3rxaij56vjege.cloudfront.net/form-serialize/0.3/serialize.min.js", function() {
+            window._form_serialize = window.serialize;
+            if (window._old_serialize) window.serialize = window._old_serialize;
+          });
+          var form_submit = function(e) {
+            e.preventDefault();
+            if (validate_form()) {
+              // use this trick to get the submit button & disable it using plain javascript
+              document.querySelector('#_form_5_submit').disabled = true;
+                    var serialized = _form_serialize(document.getElementById('_form_5_'));
+              var err = form_to_submit.querySelector('._form_error');
+              err ? err.parentNode.removeChild(err) : false;
+              _load_script('https://maciejkusz.activehosted.com/proc.php?' + serialized + '&jsonp=true');
+            }
+            return false;
+          };
+          addEvent(form_to_submit, 'submit', form_submit);
+        })();
+
+</script></div>
+</div>
+<aside class="postpromonav">
+<nav>
+<ul class="tags" itemprop="keywords">
+<li><a class="tag p-category" href="../../../categories/code16challenge/" rel="tag">code16challenge</a></li>
+<li><a class="tag p-category" href="../../../categories/python/" rel="tag">python</a></li>
+<li><a class="tag p-category" href="../../../categories/requests/" rel="tag">requests</a></li>
+<li><a class="tag p-category" href="../../../categories/unittest/" rel="tag">unittest</a></li>
+</ul>
+<ul class="pager hidden-print">
+<li class="previous"><a href="../../20201126/ucz-sie-na-cudzych-bledach/" rel="prev" title="Ucz się na cudzych błędach">Poprzedni post</a></li>
+</ul>
+</nav>
+</aside>
+<section class="comments hidden-print">
+<h2>Komentarze</h2>
+<div id="disqus_thread"></div>
+<script>
+        var disqus_shortname ="testerembyc",
+            disqus_url="https://testerembyc.pl/posts/20201218/najmniejszy-framework-do-testow-w-pythonie/",
+        disqus_title="Najmniejszy framework do test\u00f3w w Pythonie",
+        disqus_identifier="cache/posts/20201218/najmniejszy-framework-do-testow-w-pythonie.html",
+        disqus_config = function () {
+            this.language = "pl";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> <a class="dsq-brlink" href="https://disqus.com" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a></section>
+</article>
+<script>
+var disqus_shortname="testerembyc";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());
+</script></div>
+<div class="col-sm-3 blog-sidebar">
+<div class="sidebar-module sidebar-module-inset">
+<form action="https://www.google.com/search" method="get" role="search"><input name="cx" type="hidden" value="013548426528546093847:kxj9yxvrzlu"><input name="ie" type="hidden" value="utf-8"><input name="hl" type="hidden" value="pl">
+<div class="input-group"><input aria-describedby="basic-search" class="form-control" name="q" placeholder="Szukaj" type="text">
+<div class="input-group-btn"><button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-search" id="basic-search"></span></button></div>
+</div>
+<input name="sitesearch" type="hidden" value="testerembyc"></form>
+</div>
+<div class="sidebar-module sidebar-module-inset">
+<h3>Darmowy poradnik</h3>
+<a href="../../../pages/jak-zaczac-automatyzowac-testy/"><img src="../../../images/page_lm/jak_zaczac_automatyzowac_small.jpg"></a>
+<p><strong>Jak zacząć automatyzować testy?</strong></p>
+<p>Poznaj 12 pytań, które pomogą Ci rozpocząć proces automatyzacji testów. W zupełnym oderwaniu od języka programowania, frameworków do testów oraz technologi w jakiej napisana została aplikacja, którą będziesz testować. Całość opisana prostym i zrozumiałym językiem.</p>
+<p style="text-align: center"><a class="_submit btn btn-danger" href="../../../pages/jak-zaczac-automatyzowac-testy/">Pobieram poradnik</a></p>
+</div>
+<div class="sidebar-module sidebar-module-inset">
+<h3>O mnie</h3>
+<a href="../../../pages/o-mnie/"><img src="../../../images/me_bw_small.jpg"></a>
+<p>Nazywam się <strong>Maciej Kusz</strong> i od 2008 roku zajmuję się testowaniem oprogramowania. Na początku były to testy manualne, od 2011 początki testów automatycznych, a od 2013 automatyzacją testów z wykorzystaniem <strong>Pythona</strong>. Przez te kilka lat, zdarzyło mi się już być w kilku firmach i w kilku różnych projektach. Na stronie <a href="../../../pages/o-mnie/">o mnie</a>, znajdujdziesz ciut więcej informacji na ten temat.</p>
+</div>
+<div class="sidebar-module sidebar-module-inset">
+<form action="https://maciejkusz.activehosted.com/proc.php" id="_form_3_" method="post" name="_form_3_" novalidate=""><input name="u" type="hidden" value="3"><input name="f" type="hidden" value="3"><input name="s" type="hidden"><input name="c" type="hidden" value="0"><input name="m" type="hidden" value="0"><input name="act" type="hidden" value="sub"><input name="v" type="hidden" value="2">
+<h3>Newsletter</h3>
+<div class="_form-content">
+<p>Chcesz być powiadamiany o nowościach na tej stronie oraz innych moich projektach?</p>
+<p>Jeśli tak, to zapisz się poniżej do newsletter'a.</p>
+<div class="input-group" id="basic-fullname-group"><span class="input-group-addon" id="basic-fullname">Imię</span> <input aria-describedby="basic-fullname" class="form-control" name="fullname" placeholder="Wpisz swoje imię" type="text"></div>
+<div class="input-group" id="basic-lastname-group"><span class="input-group-addon" id="basic-lastname">Nazwisko</span> <input aria-describedby="basic-fullname" class="form-control" name="lastname" placeholder="Wpisz swoje nazwisko" type="text"></div>
+<div class="input-group" id="basic-email-group"><span class="input-group-addon" id="basic-email">E-mail</span> <input aria-describedby="basic-email" class="form-control" name="email" placeholder="Wpisz swój e-mail" required="" type="text"></div>
+<button class="_submit btn btn-danger" id="_form_3_submit" style="margin-left: auto; margin-right: auto; display: block;" type="submit">Zapisz się</button>
+<div class="_clear-element"></div>
+</div>
+<div class="_form-thank-you" style="display:none;"></div>
+<p style="font-size: 10px; margin-top: 5px;">Wszystkie podane przez Ciebie dane, będą przetwarzane zgodnie z <a href="../../../pages/polityka-prywatnosci">polityką prywatności</a>.</p>
+</form>
+<script type="text/javascript">
+window.cfields = [];
+window._show_thank_you = function(id, message, trackcmp_url) {
+  var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
+  form.querySelector('._form-content').style.display = 'none';
+  thank_you.innerHTML = message;
+  thank_you.style.display = 'block';
+  if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+    // Site tracking URL to use after inline form submission.
+    _load_script(trackcmp_url);
+  }
+  if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+};
+window._show_error = function(id, message, html) {
+  var form = document.getElementById('_form_' + id + '_'), err = document.createElement('div'), button = form.querySelector('button'), old_error = form.querySelector('._form_error');
+  if (old_error) old_error.parentNode.removeChild(old_error);
+  err.innerHTML = message;
+  err.className = '_error-inner _form_error _no_arrow';
+  var wrapper = document.createElement('div');
+  wrapper.className = '_form-inner';
+  wrapper.appendChild(err);
+  button.parentNode.insertBefore(wrapper, button);
+  document.querySelector('[id^="_form"][id$="_submit"]').disabled = false;
+  if (html) {
+    var div = document.createElement('div');
+    div.className = '_error-html';
+    div.innerHTML = html;
+    err.appendChild(div);
+  }
+};
+window._load_script = function(url, callback) {
+    var head = document.querySelector('head'), script = document.createElement('script'), r = false;
+    script.type = 'text/javascript';
+    script.charset = 'utf-8';
+    script.src = url;
+    if (callback) {
+      script.onload = script.onreadystatechange = function() {
+      if (!r && (!this.readyState || this.readyState == 'complete')) {
+        r = true;
+        callback();
+        }
+      };
+    }
+    head.appendChild(script);
+};
+(function() {
+  if (window.location.search.search("excludeform") !== -1) return false;
+  var getCookie = function(name) {
+    var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+  }
+  var setCookie = function(name, value) {
+    var now = new Date();
+    var time = now.getTime();
+    var expireTime = time + 1000 * 60 * 60 * 24 * 365;
+    now.setTime(expireTime);
+    document.cookie = name + '=' + value + '; expires=' + now + ';path=/';
+  }
+      var addEvent = function(element, event, func) {
+    if (element.addEventListener) {
+      element.addEventListener(event, func);
+    } else {
+      var oldFunc = element['on' + event];
+      element['on' + event] = function() {
+        oldFunc.apply(this, arguments);
+        func.apply(this, arguments);
+      };
+    }
+  }
+  var _removed = false;
+  var form_to_submit = document.getElementById('_form_3_');
+  var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
+
+  var getUrlParam = function(name) {
+    var regexStr = '[\?&]' + name + '=([^&#]*)';
+    var results = new RegExp(regexStr, 'i').exec(window.location.href);
+    return results != undefined ? decodeURIComponent(results[1]) : false;
+  };
+
+  for (var i = 0; i < allInputs.length; i++) {
+    var regexStr = "field\[(\d+)\]";
+    var results = new RegExp(regexStr).exec(allInputs[i].name);
+    if (results != undefined) {
+      allInputs[i].dataset.name = window.cfields[results[1]];
+    } else {
+      allInputs[i].dataset.name = allInputs[i].name;
+    }
+    var fieldVal = getUrlParam(allInputs[i].dataset.name);
+
+    if (fieldVal) {
+      if (allInputs[i].type == "radio" || allInputs[i].type == "checkbox") {
+        if (allInputs[i].value == fieldVal) {
+          allInputs[i].checked = true;
+        }
+      } else {
+        allInputs[i].value = fieldVal;
+      }
+    }
+  }
+
+  var remove_tooltips = function() {
+    for (var i = 0; i < tooltips.length; i++) {
+      tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
+    }
+      tooltips = [];
+  };
+  var remove_tooltip = function(elem) {
+    for (var i = 0; i < tooltips.length; i++) {
+      if (tooltips[i].elem === elem) {
+        tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
+        tooltips.splice(i, 1);
+        return;
+      }
+    }
+  };
+  var create_tooltip = function(elem, text) {
+    var tooltip = document.createElement('label'), arrow = document.createElement('div'), inner = document.createElement('div'), new_tooltip = {};
+    if (elem.type != 'radio' && elem.type != 'checkbox') {
+      tooltip.className = 'label label-danger';
+      tooltip.innerHTML = text;
+      elem.parentNode.parentNode.insertBefore(tooltip, elem.parentNode);
+    } else {
+      tooltip.className = '_error-inner _no_arrow';
+      tooltip.innerHTML = text;
+      elem.parentNode.insertBefore(tooltip, elem);
+      new_tooltip.no_arrow = true;
+    }
+    new_tooltip.tip = tooltip;
+    new_tooltip.elem = elem;
+    tooltips.push(new_tooltip);
+    return new_tooltip;
+  };
+  var resize_tooltip = function(tooltip) {
+    var rect = tooltip.elem.getBoundingClientRect();
+    var doc = document.documentElement, scrollPosition = rect.top - ((window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0));
+    if (scrollPosition < 40) {
+      tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _below';
+    } else {
+      tooltip.tip.className = tooltip.tip.className.replace(/ ?(_above|_below) ?/g, '') + ' _above';
+    }
+  };
+  var resize_tooltips = function() {
+    if (_removed) return;
+    for (var i = 0; i < tooltips.length; i++) {
+      if (!tooltips[i].no_arrow) resize_tooltip(tooltips[i]);
+    }
+  };
+  var validate_field = function(elem, remove) {
+    var tooltip = null, value = elem.value, no_error = true;
+    remove ? remove_tooltip(elem) : false;
+    if (elem.type != 'checkbox') elem.className = elem.className.replace(/ ?_has_error ?/g, '');
+    if (elem.getAttribute('required') !== null) {
+      if (elem.type == 'radio' || (elem.type == 'checkbox' && /any/.test(elem.className))) {
+        var elems = form_to_submit.elements[elem.name];
+        if (!(elems instanceof NodeList || elems instanceof HTMLCollection) || elems.length <= 1) {
+          no_error = elem.checked;
+        }
+        else {
+          no_error = false;
+          for (var i = 0; i < elems.length; i++) {
+            if (elems[i].checked) no_error = true;
+          }
+        }
+        if (!no_error) {
+          tooltip = create_tooltip(elem, "Wybierz opcję.");
+        }
+      } else if (elem.type =='checkbox') {
+        var elems = form_to_submit.elements[elem.name], found = false, err = [];
+        no_error = true;
+        for (var i = 0; i < elems.length; i++) {
+          if (elems[i].getAttribute('required') === null) continue;
+          if (!found && elems[i] !== elem) return true;
+          found = true;
+          elems[i].className = elems[i].className.replace(/ ?_has_error ?/g, '');
+          if (!elems[i].checked) {
+            no_error = false;
+            elems[i].className = elems[i].className + ' _has_error';
+            err.push("Zaznaczenie %s jest wymagane".replace("%s", elems[i].value));
+          }
+        }
+        if (!no_error) {
+          tooltip = create_tooltip(elem, err.join('<br/>'));
+        }
+      } else if (elem.tagName == 'SELECT') {
+        var selected = true;
+        if (elem.multiple) {
+          selected = false;
+          for (var i = 0; i < elem.options.length; i++) {
+            if (elem.options[i].selected) {
+              selected = true;
+              break;
+            }
+          }
+        } else {
+          for (var i = 0; i < elem.options.length; i++) {
+            if (elem.options[i].selected && !elem.options[i].value) {
+              selected = false;
+            }
+          }
+        }
+        if (!selected) {
+          elem.className = elem.className + ' _has_error';
+          no_error = false;
+          tooltip = create_tooltip(elem, "Wybierz opcję.");
+        }
+      } else if (value === undefined || value === null || value === '') {
+        elem.className = elem.className + ' _has_error';
+        no_error = false;
+        tooltip = create_tooltip(elem, "To pole jest wymagane.");
+      }
+    }
+    if (no_error && elem.name == 'email') {
+      if (!value.match(/^[\+_a-z0-9-'&=]+(\.[\+_a-z0-9-']+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i)) {
+        elem.className = elem.className + ' _has_error';
+        no_error = false;
+        tooltip = create_tooltip(elem, "Wpisz poprawny adres e-mail.");
+      }
+    }
+    if (no_error && /date_field/.test(elem.className)) {
+      if (!value.match(/^\d\d\d\d-\d\d-\d\d$/)) {
+        elem.className = elem.className + ' _has_error';
+        no_error = false;
+        tooltip = create_tooltip(elem, "Wpisz poprawną datę.");
+      }
+    }
+    tooltip ? resize_tooltip(tooltip) : false;
+    return no_error;
+  };
+  var needs_validate = function(el) {
+    return el.name == 'email' || el.getAttribute('required') !== null;
+  };
+  var validate_form = function(e) {
+    var err = form_to_submit.querySelector('._form_error'), no_error = true;
+    if (!submitted) {
+      submitted = true;
+      for (var i = 0, len = allInputs.length; i < len; i++) {
+        var input = allInputs[i];
+        if (needs_validate(input)) {
+          if (input.type == 'text') {
+            addEvent(input, 'blur', function() {
+              this.value = this.value.trim();
+              validate_field(this, true);
+            });
+            addEvent(input, 'input', function() {
+              validate_field(this, true);
+            });
+          } else if (input.type == 'radio' || input.type == 'checkbox') {
+            (function(el) {
+              var radios = form_to_submit.elements[el.name];
+              for (var i = 0; i < radios.length; i++) {
+                addEvent(radios[i], 'click', function() {
+                  validate_field(el, true);
+                });
+              }
+            })(input);
+          } else if (input.tagName == 'SELECT') {
+            addEvent(input, 'change', function() {
+              validate_field(this, true);
+            });
+          } else if (input.type == 'textarea'){
+            addEvent(input, 'input', function() {
+              validate_field(this, true);
+            });
+          }
+        }
+      }
+    }
+    remove_tooltips();
+    for (var i = 0, len = allInputs.length; i < len; i++) {
+      var elem = allInputs[i];
+      if (needs_validate(elem)) {
+        if (elem.tagName.toLowerCase() !== "select") {
+          elem.value = elem.value.trim();
+        }
+        validate_field(elem) ? true : no_error = false;
+      }
+    }
+    if (!no_error && e) {
+      e.preventDefault();
+    }
+    resize_tooltips();
+    return no_error;
+  };
+  addEvent(window, 'resize', resize_tooltips);
+  addEvent(window, 'scroll', resize_tooltips);
+  window._old_serialize = null;
+  if (typeof serialize !== 'undefined') window._old_serialize = window.serialize;
+  _load_script("//d3rxaij56vjege.cloudfront.net/form-serialize/0.3/serialize.min.js", function() {
+    window._form_serialize = window.serialize;
+    if (window._old_serialize) window.serialize = window._old_serialize;
+  });
+  var form_submit = function(e) {
+    e.preventDefault();
+    if (validate_form()) {
+      // use this trick to get the submit button & disable it using plain javascript
+      document.querySelector('#_form_3_submit').disabled = true;
+            var serialized = _form_serialize(document.getElementById('_form_3_'));
+      var err = form_to_submit.querySelector('._form_error');
+      err ? err.parentNode.removeChild(err) : false;
+      _load_script('https://maciejkusz.activehosted.com/proc.php?' + serialized + '&jsonp=true');
+    }
+    return false;
+  };aw
+  addEvent(form_to_submit, 'submit', form_submit);
+})();
+
+</script></div>
+<div class="sidebar-module sidebar-module-inset">
+<h3>Linki</h3>
+<ol class="list-unstyled">
+<li><a href="../../../pages/polityka-prywatnosci/">Polityka prywatności</a></li>
+<li><a href="../../../pages/regulamin/">Regulamin</a></li>
+</ol>
+<ol class="list-unstyled icons">
+<li><a class="far fa-envelope" href="mailto:maciej@testerembyc.pl" target="_bland"></a></li>
+<li><a class="fab fa-facebook-f" href="https://www.facebook.com/testerembyc/" target="_blank"></a></li>
+<li><a class="fab fa-instagram" href="https://www.instagram.com/testerembyc.pl/" target="_blank"></a></li>
+<li><a class="fab fa-linkedin-in" href="https://www.linkedin.com/in/maciej-kusz/" target="_blank"></a></li>
+</ol>
+</div>
+</div>
+<!--End of body content--></div>
+</div>
+<footer class="blog-footer" id="footer">© 2020 <span style="font-weight: bold; color: #ffffff;">Maciej Kusz</span> w oparciu o silnik <a href="https://getnikola.com/" rel="nofollow" target="_blank"><img src="../../../images/nikola_logo.svg" style="max-height: 20px; max-width: 50px"></a> z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_blank"><img src="../../../images/githubpages_logo.svg" style="max-height: 15px; max-width: 80px;"></a></footer>
+</div>
+</div>
+<script type="text/javascript">
+/*
+ * Bootstrap Cookie Alert by Wruczek
+ * https://github.com/Wruczek/Bootstrap-Cookie-Alert
+ * Released under MIT license
+ */
+(function () {
+    "use strict";
+
+    var cookieAlert = document.querySelector(".cookiealert");
+    var acceptCookies = document.querySelector(".acceptcookies");
+
+    if (!cookieAlert) {
+       return;
+    }
+
+
+    // Show the alert if we cant find the "acceptCookies" cookie
+    if (!getCookie("acceptCookies")) {
+        cookieAlert.classList.add("show");
+    } else {
+        cookieAlert.classList.remove("show")
+    }
+
+    // When clicking on the agree button, create a 1 year
+    // cookie to remember user's choice and close the banner
+    acceptCookies.addEventListener("click", function () {
+        setCookie("acceptCookies", true, 365);
+        cookieAlert.classList.remove("show");
+    });
+
+    // Cookie functions from w3schools
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+})();
+</script>
+<script src="../../../assets/js/jquery.min.js">
+</script>
+<script src="../../../assets/js/bootstrap.min.js">
+</script>
+<script src="../../../assets/js/baguetteBox.min.js">
+</script>
+<script src="../../../assets/js/moment-with-locales.min.js">
+</script>
+<script src="../../../assets/js/fancydates.min.js">
+</script><!-- fancy dates -->
+<script>
+    moment.locale("pl");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+</script><!-- end fancy dates -->
+<script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+</script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143859058-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-143859058-1');
+</script><!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v3.3'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script><!-- Your customer chat code -->
+<div attribution="setup_tool" class="fb-customerchat" logged_in_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)" logged_out_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)" page_id="391052181505294" theme_color="#337ab7"></div>
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '444619046317574');
+  fbq('track', 'PageView');
+</script><noscript><img alt="Facebook Pixel" height="1" src="https://www.facebook.com/tr?id=444619046317574&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"></noscript> <!-- End Facebook Pixel Code -->
+</body>
+</html>

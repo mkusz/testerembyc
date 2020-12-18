@@ -7,86 +7,98 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://testerembyc.pl/categories/cat_definicja.xml</loc>
-  <lastmod>2020-08-30T21:12:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/cat_felieton.xml</loc>
-  <lastmod>2020-11-25T23:41:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/cat_przywitanie.xml</loc>
-  <lastmod>2020-08-30T21:12:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/cat_python.xml</loc>
-  <lastmod>2020-08-30T21:12:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://testerembyc.pl/categories/code16challenge.xml</loc>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/definicja.xml</loc>
-  <lastmod>2020-08-30T21:12:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/dekorator.xml</loc>
-  <lastmod>2020-08-30T21:12:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/funkcje.xml</loc>
-  <lastmod>2020-08-30T21:12:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/howto.xml</loc>
-  <lastmod>2020-10-27T12:54:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/istqb.xml</loc>
-  <lastmod>2020-11-25T23:41:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/kursy.xml</loc>
-  <lastmod>2020-11-26T23:16:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/natura-testow.xml</loc>
-  <lastmod>2020-08-30T21:12:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/nauka.xml</loc>
-  <lastmod>2020-11-26T23:16:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/pierwszy-post.xml</loc>
-  <lastmod>2020-08-30T21:12:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/python.xml</loc>
-  <lastmod>2020-08-30T21:12:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://testerembyc.pl/categories/requests.xml</loc>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/rpa.xml</loc>
-  <lastmod>2020-10-27T12:54:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/testy.xml</loc>
-  <lastmod>2020-11-25T23:41:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://testerembyc.pl/categories/unittest.xml</loc>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/witaj.xml</loc>
-  <lastmod>2020-08-30T21:12:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/categories/zycie.xml</loc>
-  <lastmod>2020-11-26T23:16:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/galleries/rss.xml</loc>
-  <lastmod>2020-11-03T10:54:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/rss.xml</loc>
-  <lastmod>2020-11-26T23:16:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://testerembyc.pl/sitemap.xml</loc>
-  <lastmod>2020-11-26T23:16:00Z</lastmod>
+  <lastmod>2020-12-18T15:10:00Z</lastmod>
  </sitemap>
 </sitemapindex>

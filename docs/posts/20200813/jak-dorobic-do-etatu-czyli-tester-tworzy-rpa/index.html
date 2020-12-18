@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html prefix="
-og: http://ogp.me/ns#
-" lang="pl">
+<html lang="pl" prefix="og: http://ogp.me/ns#">
 <head>
-<meta name="theme-color" content="#FF0000">
+<meta content="#FF0000" name="theme-color">
 <meta charset="utf-8">
-<meta name="description" content="Czy jest RPA oraz po co się je tworzy? Czy tester może tworzyć narzędzia RPA? Czy tworząc narzędzia RPA można dorobić do etatowej pracy testera?">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="Czy jest RPA oraz po co się je tworzy? Czy tester może tworzyć narzędzia RPA? Czy tworząc narzędzia RPA można dorobić do etatowej pracy testera?" name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport">
 <title>Jak dorobić do etatu, czyli tester tworzy RPA | testerembyc.pl</title>
 <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="../../../assets/css/rst.css" rel="stylesheet" type="text/css">
@@ -16,262 +14,299 @@ og: http://ogp.me/ns#
 <link href="../../../assets/css/latolatinfonts.css" rel="stylesheet" type="text/css">
 <link href="../../../assets/css/blog.css" rel="stylesheet" type="text/css">
 <link href="../../../assets/css/fa.css" rel="stylesheet" type="text/css">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
-<link rel="canonical" href="https://testerembyc.pl/posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/">
-<link rel="icon" href="../../../images/icons/icon_16x16.png" sizes="16x16">
-<link rel="icon" href="../../../images/icons/icon_32x32.png" sizes="32x32">
-<link rel="icon" href="../../../images/icons/icon_64x64.png" sizes="64x64">
-<link rel="icon" href="../../../images/icons/icon_128x128.png" sizes="128x128">
-<link rel="icon" href="../../../images/icons/icon_256x256.png" sizes="256x256">
-<link rel="icon" href="../../../images/icons/icon_512x512.png" sizes="512x512">
-<!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="description" itemprop="description" content="Czy jest RPA oraz po co się je tworzy? Czy tester może tworzyć narzędzia RPA? Czy tworząc narzędzia RPA można dorobić do etatowej pracy testera?">
-<meta name="author" content="Maciej Kusz">
-<link rel="prev" href="../../20200109/dekoratory-w-pythonie/" title="Dekoratory w Pythonie" type="text/html">
-<link rel="next" href="../../20200831/dobry-tester-a-kto-to-taki/" title="Dobry tester? A kto to taki?" type="text/html">
-<meta property="og:site_name" content="testerembyc.pl">
-<meta property="og:title" content="Jak dorobić do etatu, czyli tester tworzy RPA">
-<meta property="og:url" content="https://testerembyc.pl/posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/">
-<meta property="og:description" content="Czy jest RPA oraz po co się je tworzy? Czy tester może tworzyć narzędzia RPA? Czy tworząc narzędzia RPA można dorobić do etatowej pracy testera?">
-<meta property="og:image" content="https://testerembyc.pl/images/posts/20200813/rpa_preview.jpeg">
-<meta property="og:type" content="article">
-<meta property="article:published_time" content="2020-08-13T20:25:40+02:00">
-<meta property="article:tag" content="howto">
-<meta property="article:tag" content="rpa">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@website">
-<meta name="twitter:creator" content="@username">
+<link href="../../../rss.xml" rel="alternate" title="RSS" type="application/rss+xml">
+<link href="https://testerembyc.pl/posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/" rel="canonical">
+<link href="../../../images/icons/icon_16x16.png" rel="icon" sizes="16x16">
+<link href="../../../images/icons/icon_32x32.png" rel="icon" sizes="32x32">
+<link href="../../../images/icons/icon_64x64.png" rel="icon" sizes="64x64">
+<link href="../../../images/icons/icon_128x128.png" rel="icon" sizes="128x128">
+<link href="../../../images/icons/icon_256x256.png" rel="icon" sizes="256x256">
+<link href="../../../images/icons/icon_512x512.png" rel="icon" sizes="512x512"><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]-->
+<meta content="Czy jest RPA oraz po co się je tworzy? Czy tester może tworzyć narzędzia RPA? Czy tworząc narzędzia RPA można dorobić do etatowej pracy testera?" itemprop="description" name="description">
+<meta content="Maciej Kusz" name="author">
+<link href="../../20200109/dekoratory-w-pythonie/" rel="prev" title="Dekoratory w Pythonie" type="text/html">
+<link href="../../20200831/dobry-tester-a-kto-to-taki/" rel="next" title="Dobry tester? A kto to taki?" type="text/html">
+<meta content="testerembyc.pl" property="og:site_name">
+<meta content="Jak dorobić do etatu, czyli tester tworzy RPA" property="og:title">
+<meta content="https://testerembyc.pl/posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/" property="og:url">
+<meta content="Czy jest RPA oraz po co się je tworzy? Czy tester może tworzyć narzędzia RPA? Czy tworząc narzędzia RPA można dorobić do etatowej pracy testera?" property="og:description">
+<meta content="https://testerembyc.pl/images/posts/20200813/rpa_preview.jpeg" property="og:image">
+<meta content="article" property="og:type">
+<meta content="2020-08-13T20:25:40+02:00" property="article:published_time">
+<meta content="howto" property="article:tag">
+<meta content="rpa" property="article:tag">
+<meta content="summary" name="twitter:card">
+<meta content="@website" name="twitter:site">
+<meta content="@username" name="twitter:creator">
 </head>
 <body>
-<a href="#content" class="sr-only sr-only-focusable">Przejdź do treści</a>
-
-<!-- Menubar -->
-
+<a class="sr-only sr-only-focusable" href="#content">Przejdź do treści</a> <!-- Menubar -->
 <div class="blog-masthead">
-    <div class="container">
-<!-- This keeps the margins nice -->
-        <div class="blog-header">
-            <h1 class="blog-title">
-                <a href="https://testerembyc.pl/">
-                    <img src="../../../images/testerembyc_logo.svg" alt="testerembyc.pl" id="logo"><span id="blog-title">testerembyc.pl</span>
-                </a>
-            </h1>
-            <!-- <p class="lead blog-description">Czyli blog o tym, jak to jest być nie tylko testerem</p> # Oryginal one-->
-            <p class="lead blog-description">Czyli blog o tym, jak to jest być nie tylko <span>testerem</span></p>
-            
-        </div>
-         <nav class="blog-nav" role="navigation"><a href="../../../" class="blog-nav-item"><img src="../../../images/icons/icon.svg" height="16" width="16" title="Strona główna"><span>Strona główna</span></a>
-            <a href="../../../archive.html" class="blog-nav-item"><i class="fas fa-archive" title="Archiwum"></i><span>Archiwum</span></a>
-            <a href="../../../categories/" class="blog-nav-item"><i class="fas fa-tags" title="Tagi i kategorie"></i><span>Tagi i kategorie</span></a>
-            <a href="../../../pages/o-mnie/" class="blog-nav-item"><i class="fas fa-user" title="O mnie"></i><span>O mnie</span></a>
-            <a href="../../../rss.xml" class="blog-nav-item"><i class="fas fa-rss" title="RSS"></i><span>RSS</span></a>
-
-            
-
-                
-            
-        </nav><!-- START Bootstrap-Cookie-Alert --><div class="alert text-center cookiealert" role="alert">
-            <p><b>Lubisz ciasteczka?</b> 🍪</p>
-            <p>Używam ich, aby dostarczyć Ci lepszych treści. Chcesz wiedzieć więcej?
-                <a href="../../../pages/polityka-prywatnosci/" target="_blank">Kliknij tu.</a></p>
-            <p><button type="button" class="btn btn-danger btn-sm acceptcookies">Lubię i akceptuję ciasteczka</button></p>
-        </div>
-        <!-- END Bootstrap-Cookie-Alert -->
-        <div class="body-content">
-
-            <!--Body content-->
-            <div class="row">
-                <div class="col-sm-9 blog-main">
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h2 class="p-name entry-title blog-post-title" itemprop="headline name"><a href="." class="u-url">Jak dorobić do etatu, czyli tester tworzy RPA</a></h2>
-
-        <div class="metadata blog-post-meta">
-            <p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
-            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2020-08-13T20:25:40+02:00" itemprop="datePublished" title="2020-08-13 20:25">2020-08-13 20:25</time></a></p>
-                <p class="commentline">            <a href="#disqus_thread" data-disqus-identifier="cache/posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa.html">Komentarze</a>
-
-
-            
-                <meta name="description" itemprop="description" content="Czy jest RPA oraz po co się je tworzy? Czy tester może tworzyć narzędzia RPA? Czy tworząc narzędzia RPA można dorobić do etatowej pracy testera?"></p>
+<div class="container"><!-- This keeps the margins nice -->
+<div class="blog-header">
+<h1 class="blog-title"><a href="https://testerembyc.pl/"><img alt="testerembyc.pl" id="logo" src="../../../images/testerembyc_logo.svg"><span id="blog-title">testerembyc.pl</span></a></h1>
+<!-- <p class="lead blog-description">Czyli blog o tym, jak to jest być nie tylko testerem</p> # Oryginal one-->
+<p class="lead blog-description">Czyli blog o tym, jak to jest być nie tylko <span>testerem</span></p>
 </div>
-        
-    </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<a class="reference external image-reference" href="."><img alt="/images/posts/20200813/rpa_picture.jpeg" class="align-center" src="../../../images/posts/20200813/rpa_picture.jpeg"></a>
+<nav class="blog-nav" role="navigation"><a class="blog-nav-item" href="../../../"><img height="16" src="../../../images/icons/icon.svg" title="Strona główna" width="16"><span>Strona&nbsp;główna</span></a> <a class="blog-nav-item" href="../../../archive.html"><i class="fas fa-archive" title="Archiwum"></i><span>Archiwum</span></a> <a class="blog-nav-item" href="../../../categories/"><i class="fas fa-tags" title="Tagi i kategorie"></i><span>Tagi&nbsp;i&nbsp;kategorie</span></a> <a class="blog-nav-item" href="../../../pages/o-mnie/"><i class="fas fa-user" title="O mnie"></i><span>O&nbsp;mnie</span></a> <a class="blog-nav-item" href="../../../rss.xml"><i class="fas fa-rss" title="RSS"></i><span>RSS</span></a></nav>
+<!-- START Bootstrap-Cookie-Alert -->
+<div class="alert text-center cookiealert" role="alert">
+<p><b>Lubisz ciasteczka?</b> 🍪</p>
+<p>Używam ich, aby dostarczyć Ci lepszych treści. Chcesz wiedzieć więcej? <a href="../../../pages/polityka-prywatnosci/" target="_blank">Kliknij tu.</a></p>
+<p><button class="btn btn-danger btn-sm acceptcookies" type="button">Lubię i akceptuję ciasteczka</button></p>
+</div>
+<!-- END Bootstrap-Cookie-Alert -->
+<div class="body-content"><!--Body content-->
+<div class="row">
+<div class="col-sm-9 blog-main">
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
+<header>
+<h2 class="p-name entry-title blog-post-title" itemprop="headline name"><a class="u-url" href=".">Jak dorobić do etatu, czyli tester tworzy RPA</a></h2>
+<div class="metadata blog-post-meta">
+<p class="byline author vcard"><span class="byline-name fn">Maciej Kusz</span></p>
+<p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2020-08-13T20:25:40+02:00" itemprop="datePublished" title="2020-08-13 20:25">2020-08-13 20:25</time></a></p>
+<p class="commentline"><a data-disqus-identifier="cache/posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa.html" href="#disqus_thread">Komentarze</a></p>
+<meta content="Czy jest RPA oraz po co się je tworzy? Czy tester może tworzyć narzędzia RPA? Czy tworząc narzędzia RPA można dorobić do etatowej pracy testera?" itemprop="description" name="description">
+<p></p></div>
+</header>
+<div class="e-content entry-content" itemprop="articleBody text">
+<div><a class="reference external image-reference" href="."><img alt="/images/posts/20200813/rpa_picture.jpeg" class="align-center" src="../../../images/posts/20200813/rpa_picture.jpeg"></a>
 <p>Zapewne zauważyłeś mój drogi czytelniku, że od pewnego czasu nic nie napisałem. Powodów tego stanu rzeczy jest kilka, a o jednym z nich przeczytasz za chwilę. Zanim to zrobisz, zadam Ci kilka pytań:</p>
 <ul class="simple">
-<li><p>Czy jako tester oprogramowania jesteś w stanie dorobić sobie do etatu?</p></li>
-<li><p>Czy takie okazje trafiają się w trakcie pandemii?</p></li>
-<li><p>Jak znaleźć okazję?</p></li>
-<li><p>Jak podejść do współpracy ze zleceniodawcą pracując na etacie?</p></li>
-<li><p>Na co zwrócić uwagę przy omawianiu współpracy?</p></li>
-<li><p>Jak wycenić swoją pracę?</p></li>
+<li>
+<p>Czy jako tester oprogramowania jesteś w stanie dorobić sobie do etatu?</p>
+</li>
+<li>
+<p>Czy takie okazje trafiają się w trakcie pandemii?</p>
+</li>
+<li>
+<p>Jak znaleźć okazję?</p>
+</li>
+<li>
+<p>Jak podejść do współpracy ze zleceniodawcą pracując na etacie?</p>
+</li>
+<li>
+<p>Na co zwrócić uwagę przy omawianiu współpracy?</p>
+</li>
+<li>
+<p>Jak wycenić swoją pracę?</p>
+</li>
 </ul>
 <p>Jeśli choć na jedno pytanie nie znasz odpowiedzi, to zapraszam do poniższego artykułu, w którym postaram się odpowiedzieć na powyższe pytania.</p>
 <!-- more -->
 <p>Uprzedzając pytania, artykuł nie jest w żaden sposób sponsorowany, a jest po prostu swoistego rodzaju case-study tego, co już zostało zrobione oraz pewnego rodzaju formalizacją wniosków ze współpracy, do których i mi będzie łatwiej wrócić w przyszłości. Firmą z którą miałem okazję współpracować i która zainspirowała mnie do napisania tego artykułu, jest firma <a class="reference external" href="https://muscat.pl">Muscat Eyewear</a></p>
 <a class="reference external image-reference" href="https://muscat.pl"><img alt="/images/posts/20200813/muscat.png" class="align-center" src="../../../images/posts/20200813/muscat.png" style="width: 320px;"></a>
 <div class="section" id="czy-jako-tester-oprogramowania-jestes-w-stanie-dorobic-sobie-do-etatu">
-<h2>Czy jako tester oprogramowania jesteś w stanie dorobić sobie do etatu?</h2>
+<h2>Czy jako tester oprogramowania jesteś w stanie dorobić sobie do etatu?<a class="headerlink" href="#czy-jako-tester-oprogramowania-jestes-w-stanie-dorobic-sobie-do-etatu" title="Permalink to this heading">¶</a></h2>
 <p>Na to pytanie zapewne znasz odpowiedź i zapewne jest ona twierdząca. I z mojej strony mogą tylko potwierdzić. Nic odkrywczego. Opisany poniżej sposób wydaje się jednak najbardziej naturalnym sposobem, szczególnie dla testerów automatyzujących. Zadaję sobie sprawę, że nie koniecznie jest to droga dla wszystkich i jednocześnie chciałbym Was przestrzec przed porywaniem się z motyką na słońce. Dlaczego? O tym za moment.</p>
 </div>
 <div class="section" id="czy-takie-okazje-trafiaja-sie-w-czasach-kryzysu-pandemii">
-<h2>Czy takie okazje trafiają się w czasach kryzysu/pandemii?</h2>
+<h2>Czy takie okazje trafiają się w czasach kryzysu/pandemii?<a class="headerlink" href="#czy-takie-okazje-trafiaja-sie-w-czasach-kryzysu-pandemii" title="Permalink to this heading">¶</a></h2>
 <p>Skoro zadaję takie pytanie, to zapewne domyślasz się odpowiedzi, a więc tylko potwierdzę Twoje domysły i odpowiem: <strong>tak</strong>. Zdziwilibyście się ile firm, pomimo kryzysu stawia na rozwój i inwestuję w projekty, które w krótszej lub dłuższej perspektywie albo przyniosą oszczędności, albo pozwolą na szybszy rozwój.</p>
 </div>
 <div class="section" id="jak-znalezc-okazje">
-<h2>Jak znaleźć okazję?</h2>
+<h2>Jak znaleźć okazję?<a class="headerlink" href="#jak-znalezc-okazje" title="Permalink to this heading">¶</a></h2>
 <p>Tu nie ma jednoznacznej odpowiedzi, ale ostatnio odnoszę wrażenie, że bardzo wiele tego typu akcji przenosi się do mediów społecznościowych. Dlaczego tak się dzieje? Ponieważ bardzo łatwo tam zaistnieć oraz nasza sieć kontaktów przeważnie jest tam dosyć spora. Dzięki temu łatwo jest kogoś przywołać do jakiejś dyskusji. W moim przypadku dokładnie tak to wyglądało i odbyło się trochę przypadkiem. Całość historii rozpoczęła się na Facebooku na grupie <a class="reference external" href="https://www.facebook.com/groups/sysopspolska/">SysOps/DevOps Polska</a>, gdzie CTO w firmie <a class="reference external" href="https://muscat.pl">Muscat Eyewear</a> umieścił temat dotyczący "poszukiwania osoby, która byłaby w stanie napisać skrypt automatyzujący pewne operacje" (niemal dosłowny cytat z dyskusji). Pomimo że jestem członkiem tej grupy, temat jakoś umknął mojej uwadze. Do dyskusji przywołał mnie kolega będący DevOpsem w firmie, w której kilka lat wcześniej pracowałem (chyba dobrze jest utrzymywać jednak dobre kontakty z ludźmi z innych działów w firmie). Cała reszta dogadywania się to miks rozmów telefonicznych, wideokonferencji oraz wymiana maili. O co w ogóle chodziło z tym skryptem?</p>
 </div>
 <div class="section" id="rpa-czyli-zrobotyzowana-automatyzacja-procesow">
-<h2>RPA, czyli Zrobotyzowana Automatyzacja Procesów</h2>
+<h2>RPA, czyli Zrobotyzowana Automatyzacja Procesów<a class="headerlink" href="#rpa-czyli-zrobotyzowana-automatyzacja-procesow" title="Permalink to this heading">¶</a></h2>
 <p>Skrypt, który miał zostać napisany, miał za zadanie wspomagać pewien proces biznesowy, a więc defakto chodziło o stworzenie <em>"szytego na miarę"</em> narzędzia typu RPA (Robotic Process Automation), czyli Zrobotyzowanej Automatyzacji Procesów. <a class="reference external" href="https://pl.wikipedia.org/wiki/Zrobotyzowana_Automatyzacja_Proces%C3%B3w">Wikipedia</a> opisuje to jako technologię automatyzacji powtarzalnych procesów biznesowych w oparciu o programy komputerowych, które symulują pracę człowieka. Jeśli jesteś testerem (lub chcesz nim zostać) to czy nie widzisz tu pewnej analogi do testów automatycznych? Przecież dokładnie to one robią, tzn. testy automatyczne symulują manualne operacje wykonywane przez testerów oprogramowania. Dlatego powyżej napisałem, że ten sposób dorobienia do etatu wydaje się najbardziej naturalnym dla testerów automatyzujących, ponieważ to właśnie ta grupa w większości ma wymagany zestaw umiejętności, aby tego typu narzędzia budować. Fakt, poza prostym pisaniem testów, wymagana jest pewna wiedza z zakresu pisania oprogramowania, ale tego typu rzeczy, każdy szanujący się senior powinien być w stanie zrobić bez większego problemu.</p>
 <p>Niestety nie mogę Wam podać wszystkich szczegółów dotyczących tego do czego ten skrypt służy (tak jest już wdrożony produkcyjnie), ale to co poniżej przeczytacie, pozwoli Wam na wyrobienie sobie ogólnego obrazu.</p>
 <p>W ogłoszeniu na Facebooku było napisane, że skrypt ma za zadanie przenosić pewne dane pomiędzy 2 systemami, z których jeden posiada API, a do drugiego można się dostać jedynie przez stronę www. Co prawda w ogłoszeniu była sugestia dotycząca używania JavaScriptu i dowolnego framework wykorzystywanego do testowania www, ale chyba w pierwszej prywatnej rozmowie, okazało się, że technologia nie ma znaczenia i równie dobrze może to być Python. Zanim jednak dojdziemy do szczegółów bardziej technicznych, omówmy jeszcze jeden istotny temat, czyli</p>
 </div>
 <div class="section" id="jak-podejsc-do-wspolpracy-pracujac-na-etacie">
-<h2>Jak podejść do współpracy, pracując na etacie?</h2>
+<h2>Jak podejść do współpracy, pracując na etacie?<a class="headerlink" href="#jak-podejsc-do-wspolpracy-pracujac-na-etacie" title="Permalink to this heading">¶</a></h2>
 <p>Zdecydowanie najwygodniejszą formą dla zleceniodawcy byłaby umowa w oparciu o model tzw. <em>B2B</em>, czyli gdybyś prowadził działalność gospodarczą, jednak to nie jedyna możliwa forma współpracy (dlaczego to już zupełnie oddzielny temat). W moim przypadku stanęło na spisaniu zwykłej umowy o dzieło. Pamiętaj jednak, że w każdej umowie o współpracę znajdą się pewne zapisy, które nakładają na Ciebie, jako wykonawcy pewne obowiązki oraz ewentualne kary. Dlatego pisałem, żebyś nie porywał się z motyką na słońce, ponieważ może Cię to słono kosztować. Przeczytaj taką umowę kilka razy i jeśli cokolwiek wydaje Ci się nie jasne, skonsultujcie to z prawnikiem (takie porady nie są drogie, a mogą Cię ustrzec przed późniejszymi problemami). Prześledź też wypisany zakres prac oraz zakres Waszej odpowiedzialności, gwarancji itp. Jeśli uważacie, że coś jest nie tak, albo wychodzi poza wcześniej ustalony zakres, nie obawiajcie się prosić o zmianę (pamiętajcie, aby to sensownie uzasadnić) oraz w razie rozszerzenia zakresu obowiązków renegocjujcie wysokość wynagrodzenia. Obie strony tego układu, czyli Ty jako zleceniobiorca oraz Twój zleceniodawca musicie być zadowoleni. Jeśli, któraś ze stron poczuje się "wykorzystana" może to prowadzić do frustracji i niepotrzebnych przepychanek, co przeważnie kończy się źle. Pamiętaj również, że po drugiej stronie też są tylko ludzie i nie zakładaj nigdy z góry, że ktoś umyślnie działa na Twoją niekorzyść.</p>
 <p>Jedną z najważniejszych rzeczy, którą ja od samego początku podkreślałem, to fakt, że pracuję na etacie, a więc wszelkie prace związane z tworzeniem skryptu, będą prowadzone po moich normalnych godzinach pracy (przeważnie wieczorami oraz w weekendy). Trzeba o takich rzeczach uprzedzić już na samym początku, ponieważ nie raz w trakcie Twojej pracy dotrzesz do miejsca, które będzie wymagało bądź doprecyzowania jakichś szczegółów, bądź jakiejś interwencji po stronie waszego zleceniodawcy.</p>
 <p>Jednak zanim podpiszesz samą umowę, musisz określić wspólnie z klientem:</p>
 <ul class="simple">
-<li><p>zakres projektu</p></li>
-<li><p>czego potrzebujesz od klienta</p></li>
-<li><p>zakres gwarancji</p></li>
-<li><p>czas i koszt</p></li>
+<li>
+<p>zakres projektu</p>
+</li>
+<li>
+<p>czego potrzebujesz od klienta</p>
+</li>
+<li>
+<p>zakres gwarancji</p>
+</li>
+<li>
+<p>czas i koszt</p>
+</li>
 </ul>
 <div class="section" id="zakres-projektu">
-<h3>Zakres projektu</h3>
-<p>To chyba jeden z najtrudniejszych punktów w całej tej "zabawie". Powód tego jest bardzo prozaiczny. W normalnej pracy testera często musisz testować proces, którego nie rozumiesz i musisz się go od kogoś nauczyć. Tu jest bardzo podobnie z drobną różnicą: poza pracą analityka biznesowego musisz też stać się architektem systemu. Musisz więc przemyśleć masę spraw, o których zwykły tester, a czasem również i klient, nie mają pojęcia.  Czasem trafisz na bardzo konkretnego klienta, który będzie wiedział, czego potrzebuje. Czasem jednak będziesz musiał go wspomóc. Pewne rzeczy, musisz przemyśleć przed przystąpieniem do projektu, a pewne zaimplementować dla swojej wygody. Lista najważniejszych elementów, na które należy zwrócić uwagę to:</p>
+<h3>Zakres projektu<a class="headerlink" href="#zakres-projektu" title="Permalink to this heading">¶</a></h3>
+<p>To chyba jeden z najtrudniejszych punktów w całej tej "zabawie". Powód tego jest bardzo prozaiczny. W normalnej pracy testera często musisz testować proces, którego nie rozumiesz i musisz się go od kogoś nauczyć. Tu jest bardzo podobnie z drobną różnicą: poza pracą analityka biznesowego musisz też stać się architektem systemu. Musisz więc przemyśleć masę spraw, o których zwykły tester, a czasem również i klient, nie mają pojęcia.&nbsp; Czasem trafisz na bardzo konkretnego klienta, który będzie wiedział, czego potrzebuje. Czasem jednak będziesz musiał go wspomóc. Pewne rzeczy, musisz przemyśleć przed przystąpieniem do projektu, a pewne zaimplementować dla swojej wygody. Lista najważniejszych elementów, na które należy zwrócić uwagę to:</p>
 <ol class="arabic simple">
-<li><p><strong>Dokładne ustalenie procesu biznesowego</strong> - pamiętaj, że klient zna swój proces biznesowy i dla niego to, co Ty masz zrobić, może być czymś "trywialnym", ale to, co jest trywialne dla klienta i tylko wymaga dużego nakładu manualnej pracy, dla kogoś, kto to zautomatyzuje już nie koniecznie takie będzie. Pamiętaj, że może pojawić się w procesie masa warunków, dodatkowych danych oraz sam proces może przebiegać różnie, w zależności jakie dane zostaną wprowadzone na samym początku jego przebiegu. Taka automatyzacja to już nie jest prosty skrypt testów, który podąża od punktu A do punktu B i jak wydarzy się coś nieoczekiwanego, to po prostu zgłosi błąd. Tutaj bardzo często w grę wchodzą rzeczywiste pieniądze i jeśli proces zostanie błędnie obsłużony, to może wiązać się ze stratami finansowymi po stronie klienta.</p></li>
-<li><p><strong>Z jakimi systemami będziesz współpracował</strong> - proces biznesowy (mocno upraszczając) polega na przepływie i obróbce jakichś danych. Skoro tak, to należałoby określić punkty wejścia i wyjścia z takiego procesu biznesowego. Bardzo często może się okazać, że punktem wejścia i wyjścia z procesu biznesowego będzie ten sam system, ale w trakcie jego procesowania część danych musi zostać "przeniesiona" do drugiego systemu, z którego z kolei jakieś dane należy pobrać. Żeby sobie uzmysłowić, o co chodzi, wyobraźmy sobie proces zakupowy w jednej z platform aukcyjnych (nie będę żadnej faworyzował, więc tym razem bez linków). Mocno upraszczając, klient chce coś kupić. Po znalezieniu produktu oraz opłaceniu zamówienia trafia ono do sprzedawcy, a więc dane przepływają od platformy do sprzedawcy. Sprzedawca wysyła towar i przesyła status realizacji zamówienia do klienta. Tutaj następuje przepływ danych od sprzedawcy do platformy. Cały ten przepływ danych nastąpił w ramach jednego procesu biznesowego, jakim jest zakup towaru (tak wiem, że można go rozbić na mniejsze elementy. ale nie o tą analizę tutaj chodzi). Znów dochodzimy do wniosku, że to, co proste do zrobienia manualnie, nie koniecznie będzie takie proste do automatyzacji.</p></li>
-<li><p><strong>Dodatkowe dane</strong> - może się okazać, że proces biznesowy wymaga jakichś dodatkowych danych, które aktualnie są przetrzymywane np. w arkuszach kalkulacyjnych, a więc należy przemyśleć przechowywanie takich danych. Takie dane powinny być łatwe do edycji, a więc należy przewidzieć jakiś format przechowywania, który będzie spójny z punktu widzenia języka, w którym będzie tworzyć narzędzie RPA, ale jednocześnie zrozumiały i łatwy do edycji dla Waszego klienta. Niestety pliki arkusza kalkulacyjnego nie są dobrym formatem do przechowywania danych, gdyż łatwo "zepsuć" taki arkusz, np. poprzez omyłkowe scalenie komórek lub pozostawienie pustych rzędów, co wymaga obsłużenia większej liczny przypadków/wyjątków w kodzie.</p></li>
-<li><p><strong>Logowanie zdarzeń</strong> - pamiętaj też o odpowiednim sposobie logowania akcji, które budowane narzędzie wykonuje. Obsługa logowania ułatwi 2 rzeczy: proces tworzenia aplikacji (mniej debugowania kodu) oraz łatwiejszą naprawę błędów pojawiających się u klienta po wdrożeniu "na produkcji".</p></li>
-<li><p><strong>Raportowanie wyników</strong> - każdy proces biznesowy w jakimś miejscu się kończy, a więc należy gdzieś przedstawić status działania takiego procesu. Pamiętaj, że nie zawsze proces biznesowy zakończy się sukcesem. Czasem mogą wydarzyć się jakieś nieoczekiwane błędy w samych danych wprowadzonych do procesu, co może skutkować niemożliwością jego zakończenia. Jeżeli jest to proces kluczowy dla funkcjonowania waszego klienta, może się również okazać, że takie dane będą musiały zostać ręcznie przetworzone lub zmodyfikowane i ponownie wprowadzone do tworzonego narzędzia RPA. Dobrą praktyką byłoby więc, poinformowanie klienta, nie tylko o sukcesie, ale również o porażce oraz wskazaniu jej przyczyn, np. poprzez poinformowanie jakie dane nie mogły zostać odczytane lub przetworzone. W ten sposób ułatwicie klientowi sposób postępowania z konkretnym zestawem danych, a więc pomimo porażki zredukujecie czas manualnej ich obsługi.</p></li>
-<li><p><strong>Opcje ustawień</strong> - narzędzie RPA, to oprogramowanie i jak prawie każde oprogramowanie może wymagać czasem zmiany jakichś parametrów, np. adresu bazy danych, do której się łączy lub modyfikacji nazwy użytkownika i/lub hasła. Warto, aby takie parametry były łatwo modyfikowalne np. poprzez zmianę zmiennych środowiskowych lub edycję jakich plików konfiguracyjnych.</p></li>
-<li><p><strong>Dokumentacja</strong> - jak każdy projekt, tak i narzędzie RPA powinno być dostarczone do klienta z dokumentacją. Zakres oraz formę takiej dokumentacji należy również określić z klientem, gdyż może się okazać, że wytworzenie dokumentacji będzie równie czasochłonne co napisanie kodu. Czasem jako dokumentacją wystarczą odpowiednie komentarze w kodzie i/lub np. pliki README.md, które będą znajdowały się w repozytorium kodu tworzonego narzędzia.</p></li>
-<li><p><strong>Testy</strong> - coś co tygryski lubią najbardziej😉. Tutaj sprawa jest bardzo otwarta i jeżeli klient Wam tego nie narzuci, sprawa pozostaje na Twoich barkach. Możesz tworzyć testy jednostkowe, funkcjonalne lub poprzestać na testach integracyjnych opierając się na danych dostarczonych przez klienta. Może to być również miks powyższych lub jeszcze inne podejście, jednak na pewno przyjdzie taki moment, kiedy Wasza aplikacja będzie musiała zacząć działać na danych produkcyjnych. Dojdziecie więc do tzw. testów akceptacyjnych. Jak dojść w miarę bezpiecznie do tego etapu, tak aby nie okazało się, że "nic nie działa", opiszę trochę niżej.</p></li>
-<li><p><strong>Inne</strong> - być może okaże się, że poza napisaniem samego narzędzia, będzie należało przeprowadzić jakieś dodatkowe prace uzupełniające w trakcie wdrożenia, np. konfiguracja systemu tak, aby program automatycznie się uruchamiał. Może się również okazać, że poza dostarczeniem kodu programu, klient będzie wymagał np. stworzenia obrazu dockerowego z tworzonym narzędziem lub wytworzenia odpowiednich skryptów w narzędziu CI/CD, którym zarządza klient.</p></li>
+<li>
+<p><strong>Dokładne ustalenie procesu biznesowego</strong> - pamiętaj, że klient zna swój proces biznesowy i dla niego to, co Ty masz zrobić, może być czymś "trywialnym", ale to, co jest trywialne dla klienta i tylko wymaga dużego nakładu manualnej pracy, dla kogoś, kto to zautomatyzuje już nie koniecznie takie będzie. Pamiętaj, że może pojawić się w procesie masa warunków, dodatkowych danych oraz sam proces może przebiegać różnie, w zależności jakie dane zostaną wprowadzone na samym początku jego przebiegu. Taka automatyzacja to już nie jest prosty skrypt testów, który podąża od punktu A do punktu B i jak wydarzy się coś nieoczekiwanego, to po prostu zgłosi błąd. Tutaj bardzo często w grę wchodzą rzeczywiste pieniądze i jeśli proces zostanie błędnie obsłużony, to może wiązać się ze stratami finansowymi po stronie klienta.</p>
+</li>
+<li>
+<p><strong>Z jakimi systemami będziesz współpracował</strong> - proces biznesowy (mocno upraszczając) polega na przepływie i obróbce jakichś danych. Skoro tak, to należałoby określić punkty wejścia i wyjścia z takiego procesu biznesowego. Bardzo często może się okazać, że punktem wejścia i wyjścia z procesu biznesowego będzie ten sam system, ale w trakcie jego procesowania część danych musi zostać "przeniesiona" do drugiego systemu, z którego z kolei jakieś dane należy pobrać. Żeby sobie uzmysłowić, o co chodzi, wyobraźmy sobie proces zakupowy w jednej z platform aukcyjnych (nie będę żadnej faworyzował, więc tym razem bez linków). Mocno upraszczając, klient chce coś kupić. Po znalezieniu produktu oraz opłaceniu zamówienia trafia ono do sprzedawcy, a więc dane przepływają od platformy do sprzedawcy. Sprzedawca wysyła towar i przesyła status realizacji zamówienia do klienta. Tutaj następuje przepływ danych od sprzedawcy do platformy. Cały ten przepływ danych nastąpił w ramach jednego procesu biznesowego, jakim jest zakup towaru (tak wiem, że można go rozbić na mniejsze elementy. ale nie o tą analizę tutaj chodzi). Znów dochodzimy do wniosku, że to, co proste do zrobienia manualnie, nie koniecznie będzie takie proste do automatyzacji.</p>
+</li>
+<li>
+<p><strong>Dodatkowe dane</strong> - może się okazać, że proces biznesowy wymaga jakichś dodatkowych danych, które aktualnie są przetrzymywane np. w arkuszach kalkulacyjnych, a więc należy przemyśleć przechowywanie takich danych. Takie dane powinny być łatwe do edycji, a więc należy przewidzieć jakiś format przechowywania, który będzie spójny z punktu widzenia języka, w którym będzie tworzyć narzędzie RPA, ale jednocześnie zrozumiały i łatwy do edycji dla Waszego klienta. Niestety pliki arkusza kalkulacyjnego nie są dobrym formatem do przechowywania danych, gdyż łatwo "zepsuć" taki arkusz, np. poprzez omyłkowe scalenie komórek lub pozostawienie pustych rzędów, co wymaga obsłużenia większej liczny przypadków/wyjątków w kodzie.</p>
+</li>
+<li>
+<p><strong>Logowanie zdarzeń</strong> - pamiętaj też o odpowiednim sposobie logowania akcji, które budowane narzędzie wykonuje. Obsługa logowania ułatwi 2 rzeczy: proces tworzenia aplikacji (mniej debugowania kodu) oraz łatwiejszą naprawę błędów pojawiających się u klienta po wdrożeniu "na produkcji".</p>
+</li>
+<li>
+<p><strong>Raportowanie wyników</strong> - każdy proces biznesowy w jakimś miejscu się kończy, a więc należy gdzieś przedstawić status działania takiego procesu. Pamiętaj, że nie zawsze proces biznesowy zakończy się sukcesem. Czasem mogą wydarzyć się jakieś nieoczekiwane błędy w samych danych wprowadzonych do procesu, co może skutkować niemożliwością jego zakończenia. Jeżeli jest to proces kluczowy dla funkcjonowania waszego klienta, może się również okazać, że takie dane będą musiały zostać ręcznie przetworzone lub zmodyfikowane i ponownie wprowadzone do tworzonego narzędzia RPA. Dobrą praktyką byłoby więc, poinformowanie klienta, nie tylko o sukcesie, ale również o porażce oraz wskazaniu jej przyczyn, np. poprzez poinformowanie jakie dane nie mogły zostać odczytane lub przetworzone. W ten sposób ułatwicie klientowi sposób postępowania z konkretnym zestawem danych, a więc pomimo porażki zredukujecie czas manualnej ich obsługi.</p>
+</li>
+<li>
+<p><strong>Opcje ustawień</strong> - narzędzie RPA, to oprogramowanie i jak prawie każde oprogramowanie może wymagać czasem zmiany jakichś parametrów, np. adresu bazy danych, do której się łączy lub modyfikacji nazwy użytkownika i/lub hasła. Warto, aby takie parametry były łatwo modyfikowalne np. poprzez zmianę zmiennych środowiskowych lub edycję jakich plików konfiguracyjnych.</p>
+</li>
+<li>
+<p><strong>Dokumentacja</strong> - jak każdy projekt, tak i narzędzie RPA powinno być dostarczone do klienta z dokumentacją. Zakres oraz formę takiej dokumentacji należy również określić z klientem, gdyż może się okazać, że wytworzenie dokumentacji będzie równie czasochłonne co napisanie kodu. Czasem jako dokumentacją wystarczą odpowiednie komentarze w kodzie i/lub np. pliki README.md, które będą znajdowały się w repozytorium kodu tworzonego narzędzia.</p>
+</li>
+<li>
+<p><strong>Testy</strong> - coś co tygryski lubią najbardziej😉. Tutaj sprawa jest bardzo otwarta i jeżeli klient Wam tego nie narzuci, sprawa pozostaje na Twoich barkach. Możesz tworzyć testy jednostkowe, funkcjonalne lub poprzestać na testach integracyjnych opierając się na danych dostarczonych przez klienta. Może to być również miks powyższych lub jeszcze inne podejście, jednak na pewno przyjdzie taki moment, kiedy Wasza aplikacja będzie musiała zacząć działać na danych produkcyjnych. Dojdziecie więc do tzw. testów akceptacyjnych. Jak dojść w miarę bezpiecznie do tego etapu, tak aby nie okazało się, że "nic nie działa", opiszę trochę niżej.</p>
+</li>
+<li>
+<p><strong>Inne</strong> - być może okaże się, że poza napisaniem samego narzędzia, będzie należało przeprowadzić jakieś dodatkowe prace uzupełniające w trakcie wdrożenia, np. konfiguracja systemu tak, aby program automatycznie się uruchamiał. Może się również okazać, że poza dostarczeniem kodu programu, klient będzie wymagał np. stworzenia obrazu dockerowego z tworzonym narzędziem lub wytworzenia odpowiednich skryptów w narzędziu CI/CD, którym zarządza klient.</p>
+</li>
 </ol>
 <p>Jak więc widzisz ilość elementów, które należy uwzględnić w samym zakresie projektu, zdecydowanie wykracza poza prostą analizę procesu biznesowego, dla którego tworzone jest narzędzie RPA.</p>
 <p>Pamiętaj również, że klient może zażądać od Ciebie podpisania umowy <a class="reference external" href="https://pl.wikipedia.org/wiki/Umowa_poufno%C5%9Bci">NDA</a>, czyli tzw. umowy poufności. Nie bój się takiej umowy. Klient stara się tylko obronić swoje interesy, abyś intencjonalnie nie udostępnił komuś niepowołanemu procesów biznesowych lub innych danych stanowiących własność intelektualną klienta, a które bardzo często stanowią o przewadze konkurencyjnej. Pamiętaj również, że jeśli masz wątpliwości co do treści takiej umowy, warto po prostu zasięgnąć porady prawnika. Pamiętaj jednak, że nie przewidzenie któregoś z powyższych elementów może doprowadzić do sytuacji, że poświęcisz na projekt dodatkowe godziny, za które nikt Ci nie zapłacić, bo z własnej winy lub niewiedzy nie przewidziałeś ich w kosztorysie.</p>
 </div>
 <div class="section" id="czego-potrzebujesz-od-klienta">
-<h3>Czego potrzebujesz od klienta?</h3>
+<h3>Czego potrzebujesz od klienta?<a class="headerlink" href="#czego-potrzebujesz-od-klienta" title="Permalink to this heading">¶</a></h3>
 <p>Odpowiedź na to pytanie nie jest oczywista i bardzo mocno zależy od tego, jaki jest zakres projektu. Przejdźmy więc bardzo szybko po punktach z zakresu projektu i zastanówmy się, co może nam dostarczyć klient:</p>
 <ol class="arabic simple">
-<li><p><strong>Proces biznesowy</strong> - tu sprawa jest jasna, czyli potrzebujemy jakiejś formy opisu tego procesu. Forma jest w zasadzie dowolna, ale nie wymagajcie od klienta tworzenia skomplikowanych dokumentów, jeśli do tej pory ich nie wytworzył, bo możecie trafić na ścianę nie do przejścia. Pamiętaj, że wytworzenie takiej dokumentacji może wymagać dużego nakładu czasu po stronie klienta, a skoro potrzebuje on narzędzia RPA, to bardzo często potrzebuje właśnie tego czasu zaoszczędzić. Jeśli jest taka możliwość, poproś o inną formę, która jest mniej czasochłonna, np. nagranie filmów wraz z komentarzem dotyczącym całego procesu. Jeśli coś będzie niejasne, poproś później o doprecyzowanie.</p></li>
-<li><p><strong>Inne systemy</strong> - skoro mówimy o jakichś systemach (lub aplikacjach) to na pewno będziemy potrzebowali do nich jakichś danych dostępowych. Najczęściej będzie to jakiś login i hasło. Ideałem byłoby, gdyby w początkowej fazie klient dysponował jakimś środowiskiem testowym. Dostęp do takiego środowiska ułatwi Ci proces tworzenia narzędzia, gdyż zarówno Ty, jak i klient będziecie spokojniejsi, że nic nie popsujesz. Dodatkowo będziesz miał możliwość samemu odtworzyć manualnie proces biznesowy, który tworzone narzędzie będzie automatyzować.</p></li>
-<li><p><strong>Dodatkowe dane</strong> - po otrzymaniu dokumentacji z punktu 1, po prostu zorientujesz się, czy takie dane są potrzebne, czy nie. Również w późniejszych etapach może się okazać, że potrzebujesz jakichś dodatkowych danych, o których istnieniu w początkowym etapie nie zdawałeś sobie sprawy. Nie wahaj się i po prostu o nie zapytaj.</p></li>
-<li><p><strong>Logowanie zdarzeń</strong> - ustalenie formatu logowanie zdarzeń w większości wypadków będzie zależało od Ciebie. Warto jednak z klientem się w tej kwestii po prostu dogadać, gdyż w razie późniejszych problemów, to klient będzie musiał Ci te logi jakoś dostarczyć.</p></li>
-<li><p><strong>Raportowanie wyników</strong> - podobnie jak w punkcie 4, warto ustalić z klientem: gdzie, w jakiej formie oraz jakie dane taki raport powinien zawierać.</p></li>
-<li><p><strong>Opcje ustawień</strong> - część z tych opcji może wynikać ze wszystkich wcześniejszych punktów, część może wynikać z Twoich potrzeb (np. będzie włączać dodatkowe elementy przydatne podczas debugowania lub testowania rozwiązania), a część może wynikać z jakich potrzeb Twojego klienta (np. jakieś opóźnienie w procesowaniu lub cykliczne uruchamianie narzędzia).</p></li>
-<li><p><strong>Dokumentacja</strong> - podobnie jak w punkcie 4, warto ustalić format i zakres dokumentacji.</p></li>
-<li><p><strong>Testy</strong> - i znów warto ustalić z klientem, czy testy akceptacyjne będą wystarczające, czy wymagane jest coś więcej.</p></li>
-<li><p><strong>Inne</strong> - no i po raz ostatni warto spytać się, czy będzie coś jeszcze potrzebne.</p></li>
+<li>
+<p><strong>Proces biznesowy</strong> - tu sprawa jest jasna, czyli potrzebujemy jakiejś formy opisu tego procesu. Forma jest w zasadzie dowolna, ale nie wymagajcie od klienta tworzenia skomplikowanych dokumentów, jeśli do tej pory ich nie wytworzył, bo możecie trafić na ścianę nie do przejścia. Pamiętaj, że wytworzenie takiej dokumentacji może wymagać dużego nakładu czasu po stronie klienta, a skoro potrzebuje on narzędzia RPA, to bardzo często potrzebuje właśnie tego czasu zaoszczędzić. Jeśli jest taka możliwość, poproś o inną formę, która jest mniej czasochłonna, np. nagranie filmów wraz z komentarzem dotyczącym całego procesu. Jeśli coś będzie niejasne, poproś później o doprecyzowanie.</p>
+</li>
+<li>
+<p><strong>Inne systemy</strong> - skoro mówimy o jakichś systemach (lub aplikacjach) to na pewno będziemy potrzebowali do nich jakichś danych dostępowych. Najczęściej będzie to jakiś login i hasło. Ideałem byłoby, gdyby w początkowej fazie klient dysponował jakimś środowiskiem testowym. Dostęp do takiego środowiska ułatwi Ci proces tworzenia narzędzia, gdyż zarówno Ty, jak i klient będziecie spokojniejsi, że nic nie popsujesz. Dodatkowo będziesz miał możliwość samemu odtworzyć manualnie proces biznesowy, który tworzone narzędzie będzie automatyzować.</p>
+</li>
+<li>
+<p><strong>Dodatkowe dane</strong> - po otrzymaniu dokumentacji z punktu 1, po prostu zorientujesz się, czy takie dane są potrzebne, czy nie. Również w późniejszych etapach może się okazać, że potrzebujesz jakichś dodatkowych danych, o których istnieniu w początkowym etapie nie zdawałeś sobie sprawy. Nie wahaj się i po prostu o nie zapytaj.</p>
+</li>
+<li>
+<p><strong>Logowanie zdarzeń</strong> - ustalenie formatu logowanie zdarzeń w większości wypadków będzie zależało od Ciebie. Warto jednak z klientem się w tej kwestii po prostu dogadać, gdyż w razie późniejszych problemów, to klient będzie musiał Ci te logi jakoś dostarczyć.</p>
+</li>
+<li>
+<p><strong>Raportowanie wyników</strong> - podobnie jak w punkcie 4, warto ustalić z klientem: gdzie, w jakiej formie oraz jakie dane taki raport powinien zawierać.</p>
+</li>
+<li>
+<p><strong>Opcje ustawień</strong> - część z tych opcji może wynikać ze wszystkich wcześniejszych punktów, część może wynikać z Twoich potrzeb (np. będzie włączać dodatkowe elementy przydatne podczas debugowania lub testowania rozwiązania), a część może wynikać z jakich potrzeb Twojego klienta (np. jakieś opóźnienie w procesowaniu lub cykliczne uruchamianie narzędzia).</p>
+</li>
+<li>
+<p><strong>Dokumentacja</strong> - podobnie jak w punkcie 4, warto ustalić format i zakres dokumentacji.</p>
+</li>
+<li>
+<p><strong>Testy</strong> - i znów warto ustalić z klientem, czy testy akceptacyjne będą wystarczające, czy wymagane jest coś więcej.</p>
+</li>
+<li>
+<p><strong>Inne</strong> - no i po raz ostatni warto spytać się, czy będzie coś jeszcze potrzebne.</p>
+</li>
 </ol>
 <p>Pamiętaj, że skoro klient nawiązał z Tobą współpracę, to znaczy, że zależy mu na tym narzędziu oraz na czasie, który dzięki niemu zaoszczędzi (pieniądze przy okazji również). Będzie się więc starał oraz dopingował Cię, aby narzędzie powstało jak najszybciej, a więc dostarczy Ci wszystkich potrzebnych Ci informacji. Pamiętaj również, że u klienta też pracują normalni ludzie, którzy mają swoje prywatne życie i problemy i jeśli są jakieś opóźnienia, to grzecznie przypomnijcie, że o coś pytaliście. Nie róbcie afery tam, gdzie jej nie ma. Każdy może o czymś zapomnieć i jeśli Ty będziesz do swojego klienta podchodził rozsądnie, to i on podjedzie do Ciebie podobnie.</p>
 </div>
 <div class="section" id="zakres-gwarancji">
-<h3>Zakres gwarancji</h3>
+<h3>Zakres gwarancji<a class="headerlink" href="#zakres-gwarancji" title="Permalink to this heading">¶</a></h3>
 <p>Tutaj sprawa wydaje się w miarę oczywista. Jako wykonawca, będziesz zobowiązany do naprawy błędów w oprogramowaniu. Może się również okazać, że klient przewidzi jakieś kary za nie dotrzymanie terminów lub będziesz musiał w pewnych przypadkach dojechać do klienta. Warto pewne rzeczy przewidzieć i dobrze zastanowić się co wchodzi w zakres gwarancji.</p>
 </div>
 <div class="section" id="czas-i-koszt">
-<h3>Czas i koszt</h3>
+<h3>Czas i koszt<a class="headerlink" href="#czas-i-koszt" title="Permalink to this heading">¶</a></h3>
 <p>Znając zakres projektu, możesz przystąpić do oszacowania czasu potrzebnego do wykonania poszczególnych elementów oraz całościowego kosztu.</p>
 <p>Nie podam Ci tutaj żadnej złotej formuły. Czas potrzebny na wytworzenie każdego z elementów wchodzących w zakres projektu może być mocno zróżnicowany. Zależeć on będzie zarówno od samego stopnia skomplikowania, jak i również od Waszych umiejętności. Pamiętaj jednak, że większości mamy mocną tendencję do błędnego szacowania czasu potrzebnego na wykonanie danego zadania i przeważnie go zaniżamy. Wynika to bardzo często z błędnego zakresu projektu, bo ktoś nam czegoś nie powiedział lub o coś zapomnieliśmy zapytać oraz zbytniej wiary w nasze własne umiejętności. Pamiętaj również o uwzględnieniu buforu bezpieczeństwa na jakieś nieprzewidziane zdarzenia, np. choroba lub błędne oszacowanie zakresu pracy. Taki bufor powinien stanowić minimum 20% ogólnego czasu, a jeszcze lepiej, jeśli to będzie nawet 50%, gdy nie masz pewności co do kluczowych elementów zakresu projektu. Jeśli jest to Twój pierwszy projekt takiego typu to taki bufor możne nawet rozszerzyć do 100%, a i tak jest duża szansa, że okaże się on zbyt mały.</p>
 <p>Jak już uda Ci się oszacować potrzebny czas to jedyne co pozostaje to określenie wysokości stawki za Twoją roboczo godzinę oraz przedstawienie tego wyliczenia swojemu klientowi. Jak określić stawkę za roboczo godzinę? Można pójść kilkoma drogami:</p>
 <ul class="simple">
-<li><p>przyjąć wysokość stawki, jaką masz na etacie,</p></li>
-<li><p>przyjąć wysokość stawki programisty języka, w jakim będziecie tworzyć narzędzie,</p></li>
-<li><p>przyjąć dowolną stawkę, która zadowoliłaby Was, gdybyście pracowali na swoim,</p></li>
-<li><p>dowolny inny sposób.</p></li>
+<li>
+<p>przyjąć wysokość stawki, jaką masz na etacie,</p>
+</li>
+<li>
+<p>przyjąć wysokość stawki programisty języka, w jakim będziecie tworzyć narzędzie,</p>
+</li>
+<li>
+<p>przyjąć dowolną stawkę, która zadowoliłaby Was, gdybyście pracowali na swoim,</p>
+</li>
+<li>
+<p>dowolny inny sposób.</p>
+</li>
 </ul>
 <p>Co się wydarzy po przedstawieniu wyceny projektu klientowi, to już różnie bywa. Może się okazać, że klient przyjmie tę kwotę bez jakiejkolwiek rozmowy, co będzie znaczyło, że miał dużo większy budżet, a Ty będziesz się zastanawiał czy nie warto było powiedzieć więcej. Może się również okazać, że zacznie się targować. W tym 2 przypadku to od Ciebie będzie zależało, czy po dalszych pertraktacjach zgodzisz się na proponowaną cenę (nigdy nie gódź się na 1 proponowaną kwotę, chyba że Cię zadowala), czy też podziękujesz i odmówisz wykonania projektu.</p>
 </div>
 <div class="section" id="zanim-podpiszesz-umowe">
-<h3>Zanim podpiszesz umowę</h3>
+<h3>Zanim podpiszesz umowę<a class="headerlink" href="#zanim-podpiszesz-umowe" title="Permalink to this heading">¶</a></h3>
 <p>Jak już masz powyższe rzeczy ustalone z klientem, weź jeszcze raz głęboki oddech i przeczytaj wszystko jeszcze raz. Sprawdź dobrze, czy czegoś nie pominąłeś, czegoś nie brakuje lub jakieś zapisy nie powinny zostać skorygowane, lub zmienione. Jeśli masz wątpliwości, to tak jak już wspominałem wcześniej, skonsultuj się z prawnikiem. Nie pomoże on w kwestiach technicznych i wycenie, ale może zwrócić uwagę na rzeczy, o których Ty zupełnie nie pomyślałeś, a co może uchronić Cię przez dużymi kosztami w przyszłości.</p>
 <p>Pamiętaj również o najważniejszej rzeczy. Znając powyższe aspekty i wymagania klienta, powinieneś już mieć w głowie choćby nakreślony ogólny zarys, jak projekt będzie wyglądał, jakich bibliotek będziesz używał i czy w ogóle jesteś w stanie wykonać pewne elementy.</p>
 </div>
 <div class="section" id="podpisalem-umowe-i-co-dalej">
-<h3>Podpisałem umowę i co dalej?</h3>
+<h3>Podpisałem umowę i co dalej?<a class="headerlink" href="#podpisalem-umowe-i-co-dalej" title="Permalink to this heading">¶</a></h3>
 <p>Jak to, co dalej? <strong>Do roboty!</strong></p>
 </div>
 <div class="section" id="od-czego-zaczac">
-<h3>Od czego zacząć?</h3>
+<h3>Od czego zacząć?<a class="headerlink" href="#od-czego-zaczac" title="Permalink to this heading">¶</a></h3>
 <p>Tak jak napisałem powyżej, przed podpisaniem umowy, powinieneś mieć już w głowie ogólny zarys oraz listę bibliotek, których użyjesz podczas tworzenia narzędzia RPA dla Twojego klienta. Fakt posiadania wizji to jedno, a życie to drugie. Może się okazać, że np. nie masz dostępu do środowiska testowego i bez ingerencji w środowisko produkcyjne, możesz tylko pobierać z niego jakieś dane. Mogą wystąpić jakieś inne trudności.</p>
 </div>
 <div class="section" id="jak-wiec-podejsc-do-tematu">
-<h3>Jak więc podejść do tematu?</h3>
+<h3>Jak więc podejść do tematu?<a class="headerlink" href="#jak-wiec-podejsc-do-tematu" title="Permalink to this heading">¶</a></h3>
 <p>"Dziel i rządź". Podziel pracę na mniejsze i częściowo od siebie niezależne obiekty/klasy:</p>
 <ul class="simple">
-<li><p>do interakcji z systemem, z którego będziesz pobierał dane,</p></li>
-<li><p>do interakcji z systemem, do którego dane będziesz dostarczał,</p></li>
-<li><p>struktura danych (będzie wykorzystywany przez oba obiekty powyżej),</p></li>
-<li><p>odpowiadający za logowanie zdarzeń,</p></li>
-<li><p>odpowiadający za odczyt konfiguracji i/lub dodatkowych danych.</p></li>
+<li>
+<p>do interakcji z systemem, z którego będziesz pobierał dane,</p>
+</li>
+<li>
+<p>do interakcji z systemem, do którego dane będziesz dostarczał,</p>
+</li>
+<li>
+<p>struktura danych (będzie wykorzystywany przez oba obiekty powyżej),</p>
+</li>
+<li>
+<p>odpowiadający za logowanie zdarzeń,</p>
+</li>
+<li>
+<p>odpowiadający za odczyt konfiguracji i/lub dodatkowych danych.</p>
+</li>
 </ul>
 <p>Podchodząc do tego w ten sposób, jesteś w stanie pracować nad pewnymi jego elementami niezależnie od innych i chwilowe trudności w dostępie do np. środowiska testowego, lub oczekiwanie na doprecyzowanie jakichś kwestii ze strony klienta, nie będą tak wpływały na opóźnienie projektu. Pamiętaj również, że klient jest żywo zainteresowany postępem prac, więc jeśli jesteś w stanie zaprezentować mu jakaś część narzędzia, zrób to. Pamiętaj, aby klientowi powiedzieć, co mniej więcej zobaczy i czego może brakować. Takie podejście, poza uspokojeniem klienta, może również wpłynąć na wczesne wykrycie błędów lub nieścisłości w samym procesie. Często może się okazać, że Twoje rozumienie automatyzowanego procesu biznesowego było błędne lub pojawią się jakieś dodatkowe warunki, które dla klienta były oczywiste, a o których nie wspomniał w trakcie spisywania wymagań (dlatego bufor czasu przy wycenie projektu jest tak ważny). Co jednak zrobić, jeśli okaże się, że bardzo mocno pewne rzeczy ulegają zmianie względem pierwotnego zakresu projektu?</p>
 </div>
 <div class="section" id="zmiana-zakresu-projektu">
-<h3>Zmiana zakresu projektu</h3>
+<h3>Zmiana zakresu projektu<a class="headerlink" href="#zmiana-zakresu-projektu" title="Permalink to this heading">¶</a></h3>
 <p>Nie bój się głośno na ten temat powiedzieć i zakomunikować, że takie zmiany wpłyną na czas implementacji rozwiązania oraz wiążą się z wykonaniem dodatkowych prac, które nie zostały uwzględnione w umowie i jej wycenie. Poproś o aneks do umowy i uzgodnij z klientem, ile za tą dodatkową pracę powinien zapłacić. Być może klient wycofa się z tych zmian lub ograniczy ich zakres.</p>
 </div>
 <div class="section" id="testy-akceptacyjne">
-<h3>Testy akceptacyjne</h3>
+<h3>Testy akceptacyjne<a class="headerlink" href="#testy-akceptacyjne" title="Permalink to this heading">¶</a></h3>
 <p>Udostępnianie tworzonego narzędzia na prezentacjach lub do testów w trakcie jego pisania, poza powyżej opisanymi aspektami, ułatwi również bardzo mocno kwestie odbioru tego narzędzia przez klienta. Dzieje się tak, dlatego że klient nie będzie zaskoczony tym, jak narzędzie wygląda i działa oraz będzie ono już dawno sprawdzone, a większość błędów będzie już naprawiona. Nie znaczy to, że w momencie obioru, narzędzie będzie wolne od błędów. Na pewno znajdą się jakieś przypadki danych, których ani Ty, ani klient nie przewidział i jeśli się pojawią, będziesz musiał coś poprawić. Nie wpłynie to jednak na sam proces odbioru aplikacji. W ten sposób można w zasadzie pominąć lub raczej rozciągnąć proces testów akceptacyjnych na prawie cały czas rozwijania narzędzia.</p>
 </div>
 <div class="section" id="gwarancja">
-<h3>Gwarancja</h3>
+<h3>Gwarancja<a class="headerlink" href="#gwarancja" title="Permalink to this heading">¶</a></h3>
 <p>Oczywiście po testach akceptacyjnych i wdrożeniu aplikacji u klienta, następuje okres gwarancyjny. Warto szybko odpowiadać na zgłoszenia, ponieważ:</p>
 <ul class="simple">
-<li><p>po 1 jesteście do tego zobligowani zapisami w umowie,</p></li>
-<li><p>po 2 warto z takim klientem dobrze żyć, bo być może w przyszłości będziecie mogli jeszcze w innych kwestiach mu pomóc, a co za tym idzie dodatkowo zarobić (jak to mawiał pewien klasyk: "zadowolony klient, który kupuje, to zadowolony klient, który kupuje).</p></li>
+<li>
+<p>po 1 jesteście do tego zobligowani zapisami w umowie,</p>
+</li>
+<li>
+<p>po 2 warto z takim klientem dobrze żyć, bo być może w przyszłości będziecie mogli jeszcze w innych kwestiach mu pomóc, a co za tym idzie dodatkowo zarobić (jak to mawiał pewien klasyk: "zadowolony klient, który kupuje, to zadowolony klient, który kupuje).</p>
+</li>
 </ul>
 <p>Pamiętaj również, że jeśli wyrobisz sobie dobrą markę, to może się okazać, że zadowolony klient przy okazji luźnej rozmowy z innym przedsiębiorcą poleci Was, bo był zadowolony z efektu pracy i współpracy z Wami. Dzięki temu szukanie okazji przestanie być problemem.</p>
 </div>
 </div>
 <div class="section" id="podsumowanie">
-<h2>Podsumowanie</h2>
+<h2>Podsumowanie<a class="headerlink" href="#podsumowanie" title="Permalink to this heading">¶</a></h2>
 <p>W powyższym artykule nie poruszyłem w ogóle szczegółów dotyczących tego, jakich bibliotek użyłem podczas implementacji tworzonego narzędzia RPA. Jest to celowy zabieg, ponieważ każdy ma swoje preferencje i nie do każdego zadania, wybrane przeze mnie biblioteki będą się nadawały. Jeśli jednak jesteś tym zainteresowany, to proszę, daj znać, a postaram się zaspokoić Twoją ciekawość.</p>
 <p>Mam jednak nadzieję, że tak bardzo przekrojowy opis, który bardziej skupia się na podejściu do problemu oraz ewentualnych pułapkach będzie dla Ciebie przydatny. Wiele z elementów, które omówiłem powyżej, sprawdzi się również przy rozpoczynaniu wszelkich testerskich projektów, z którymi na co dzień masz styczność w swojej zawodowej pracy. Szczególnie jeśli dostaniesz zadanie rozpoczęcia automatycznego testowania jakiegoś projektu.</p>
 </div>
 </div>
-        <div class="col-md-6">
-            <img src="../../../images/page_lm/jak_zaczac_automatyzowac.jpg">
+<div class="col-md-6"><img src="../../../images/page_lm/jak_zaczac_automatyzowac.jpg"></div>
+<div class="col-md-6">
+<form action="https://maciejkusz.activehosted.com/proc.php" id="_form_5_" method="post" name="_form_5_" novalidate=""><input name="u" type="hidden" value="5"><input name="f" type="hidden" value="5"><input name="s" type="hidden"><input name="c" type="hidden" value="0"><input name="m" type="hidden" value="0"><input name="act" type="hidden" value="sub"><input name="v" type="hidden" value="2">
+<h3>Zapraszam do newslettera<a class="headerlink" href="#_form_5_" title="Permalink to this heading">¶</a></h3>
+<div class="_form-content">
+<p>Jeśli powyższy artykuł uznajesz za wartościowy oraz masz ochotę być informowany o nowościach na moim blogu, to zachęcam Cię do zapisania się do mojego newslettera. Obiecuję, że nie będę Cię spamował, a tylko czasu do czasu wyślę Ci powiadomienie o nowym artykule lub prześlę krótkiego maila z ciekawymi informacjami.<br>
+<strong>BONUS:</strong> Dodatkowo otrzymasz mój mini poradnik: <em>Jak zacząć automatyzować testy? Czyli 12 pytań i odpowiedzi, które w tym pomogą</em></p>
+<div class="input-group" id="basic-fullname-group"><span class="input-group-addon" id="basic-fullname">Imię</span> <input aria-describedby="basic-fullname" class="form-control" name="fullname" placeholder="Wpisz swoje imię" type="text"></div>
+<div class="input-group" id="basic-lastname-group"><span class="input-group-addon" id="basic-lastname">Nazwisko</span> <input aria-describedby="basic-fullname" class="form-control" name="lastname" placeholder="Wpisz swoje nazwisko" type="text"></div>
+<div class="input-group" id="basic-email-group"><span class="input-group-addon" id="basic-email">E-mail</span> <input aria-describedby="basic-email" class="form-control" name="email" placeholder="Wpisz swój e-mail" required="" type="text"></div>
+<button class="_submit btn btn-danger" id="_form_5_submit" style="margin-left: auto; margin-right: auto; display: block;" type="submit">Zapisz się</button>
+<div class="_clear-element"></div>
 </div>
-        <div class="col-md-6">
-        <form method="POST" action="https://maciejkusz.activehosted.com/proc.php" id="_form_5_" novalidate>
-          <input type="hidden" name="u" value="5"><input type="hidden" name="f" value="5"><input type="hidden" name="s"><input type="hidden" name="c" value="0"><input type="hidden" name="m" value="0"><input type="hidden" name="act" value="sub"><input type="hidden" name="v" value="2"><h3>Zapraszam do newslettera</h3>
-          <div class="_form-content">
-            <p>Jeśli powyższy artykuł uznajesz za wartościowy oraz masz ochotę być informowany
-                o nowościach na moim blogu, to zachęcam Cię do zapisania się do mojego newslettera.
-                Obiecuję, że nie będę Cię spamował, a tylko czasu do czasu wyślę Ci powiadomienie
-                o nowym artykule lub prześlę krótkiego maila z ciekawymi informacjami.<br><strong>BONUS:</strong>
-                Dodatkowo otrzymasz mój mini poradnik:
-                <em>Jak zacząć automatyzować testy? Czyli 12 pytań i odpowiedzi, które w tym pomogą</em>
-            </p>
-            <div class="input-group" id="basic-fullname-group">
-              <span class="input-group-addon" id="basic-fullname">Imię</span>
-              <input type="text" class="form-control" name="fullname" placeholder="Wpisz swoje imię" aria-describedby="basic-fullname">
-</div>
-            <div class="input-group" id="basic-lastname-group">
-              <span class="input-group-addon" id="basic-lastname">Nazwisko</span>
-              <input type="text" class="form-control" name="lastname" placeholder="Wpisz swoje nazwisko" aria-describedby="basic-fullname">
-</div>
-            <div class="input-group" id="basic-email-group">
-              <span class="input-group-addon" id="basic-email">E-mail</span>
-              <input type="text" class="form-control" name="email" placeholder="Wpisz swój e-mail" aria-describedby="basic-email" required>
-</div>
-            <button id="_form_5_submit" class="_submit btn btn-danger" style="margin-left: auto; margin-right: auto; display: block;" type="submit">Zapisz się</button>
-            <div class="_clear-element">
-            </div>
-          </div>
-          <div class="_form-thank-you" style="display:none;">
-          </div>
-          <p style="font-size: 10px; margin-top: 5px;">Wszystkie podane przez Ciebie dane, będą przetwarzane zgodnie z <a href="../../../pages/polityka-prywatnosci">polityką prywatności</a>.</p>
-        </form>
-        <script type="text/javascript">
+<div class="_form-thank-you" style="display:none;"></div>
+<p style="font-size: 10px; margin-top: 5px;">Wszystkie podane przez Ciebie dane, będą przetwarzane zgodnie z <a href="../../../pages/polityka-prywatnosci">polityką prywatności</a>.</p>
+</form>
+<script type="text/javascript">
         window.cfields = [];
         window._show_thank_you = function(id, message, trackcmp_url) {
           var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
@@ -580,23 +615,24 @@ og: http://ogp.me/ns#
           addEvent(form_to_submit, 'submit', form_submit);
         })();
 
-        </script>
+</script></div>
 </div>
-    </div>
-    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<aside class="postpromonav">
+<nav>
+<ul class="tags" itemprop="keywords">
 <li><a class="tag p-category" href="../../../categories/howto/" rel="tag">howto</a></li>
-            <li><a class="tag p-category" href="../../../categories/rpa/" rel="tag">rpa</a></li>
-        </ul>
+<li><a class="tag p-category" href="../../../categories/rpa/" rel="tag">rpa</a></li>
+</ul>
 <ul class="pager hidden-print">
-<li class="previous">
-                <a href="../../20200109/dekoratory-w-pythonie/" rel="prev" title="Dekoratory w Pythonie">Poprzedni post</a>
-            </li>
-            <li class="next">
-                <a href="../../20200831/dobry-tester-a-kto-to-taki/" rel="next" title="Dobry tester? A kto to taki?">Następny post</a>
-            </li>
-        </ul></nav></aside><section class="comments hidden-print"><h2>Komentarze</h2>
-                        <div id="disqus_thread"></div>
-        <script>
+<li class="previous"><a href="../../20200109/dekoratory-w-pythonie/" rel="prev" title="Dekoratory w Pythonie">Poprzedni post</a></li>
+<li class="next"><a href="../../20200831/dobry-tester-a-kto-to-taki/" rel="next" title="Dobry tester? A kto to taki?">Następny post</a></li>
+</ul>
+</nav>
+</aside>
+<section class="comments hidden-print">
+<h2>Komentarze</h2>
+<div id="disqus_thread"></div>
+<script>
         var disqus_shortname ="testerembyc",
             disqus_url="https://testerembyc.pl/posts/20200813/jak-dorobic-do-etatu-czyli-tester-tworzy-rpa/",
         disqus_title="Jak dorobi\u0107 do etatu, czyli tester tworzy RPA",
@@ -609,78 +645,45 @@ og: http://ogp.me/ns#
             dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
-</noscript>
-    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
-
-
-        </section></article><script>var disqus_shortname="testerembyc";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
-</div>
-                <div class="col-sm-3 blog-sidebar">
-                    
-
+</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> <a class="dsq-brlink" href="https://disqus.com" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a></section>
+</article>
+<script>
+var disqus_shortname="testerembyc";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());
+</script></div>
+<div class="col-sm-3 blog-sidebar">
 <div class="sidebar-module sidebar-module-inset">
-  <form method="get" action="https://www.google.com/search" role="search">
-    <input type="hidden" name="cx" value="013548426528546093847:kxj9yxvrzlu"><input type="hidden" name="ie" value="utf-8"><input type="hidden" name="hl" value="pl"><div class="input-group">
-      <input type="text" class="form-control" name="q" placeholder="Szukaj" aria-describedby="basic-search"><div class="input-group-btn">
-        <button type="submit" class="btn btn-danger">
-          <span class="glyphicon glyphicon-search" id="basic-search"></span> 
-        </button>
-      </div>
-    </div>
-    <input type="hidden" name="sitesearch" value="testerembyc">
-</form>
+<form action="https://www.google.com/search" method="get" role="search"><input name="cx" type="hidden" value="013548426528546093847:kxj9yxvrzlu"><input name="ie" type="hidden" value="utf-8"><input name="hl" type="hidden" value="pl">
+<div class="input-group"><input aria-describedby="basic-search" class="form-control" name="q" placeholder="Szukaj" type="text">
+<div class="input-group-btn"><button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-search" id="basic-search"></span></button></div>
 </div>
-
-<div class="sidebar-module sidebar-module-inset">
-  <h3>Darmowy poradnik</h3>
-  <a href="../../../pages/jak-zaczac-automatyzowac-testy/"><img src="../../../images/page_lm/jak_zaczac_automatyzowac_small.jpg"></a>
-  <p><strong>Jak zacząć automatyzować testy?</strong></p>
-  <p>Poznaj 12 pytań, które pomogą Ci rozpocząć proces automatyzacji testów.
-  W zupełnym oderwaniu od języka programowania, frameworków do testów oraz technologi
-  w jakiej napisana została aplikacja, którą będziesz testować.
-  Całość opisana prostym i zrozumiałym językiem.</p>
-  <p style="text-align: center">
-    <a class="_submit btn btn-danger" href="../../../pages/jak-zaczac-automatyzowac-testy/">Pobieram poradnik</a>
-  </p>
-</div>
-
-<div class="sidebar-module sidebar-module-inset">
-  <h3>O mnie</h3>
-  <a href="../../../pages/o-mnie/"><img src="../../../images/me_bw_small.jpg"></a>
-  <p>Nazywam się <strong>Maciej Kusz</strong> i od 2008 roku zajmuję się testowaniem oprogramowania.
-  Na początku były to testy manualne, od 2011 początki testów automatycznych,
-  a od 2013 automatyzacją testów z wykorzystaniem <strong>Pythona</strong>.
-  Przez te kilka lat, zdarzyło mi się już być w kilku firmach i w kilku różnych projektach.
-  Na stronie <a href="../../../pages/o-mnie/">o mnie</a>, znajdujdziesz ciut więcej informacji na ten temat.</p>
+<input name="sitesearch" type="hidden" value="testerembyc"></form>
 </div>
 <div class="sidebar-module sidebar-module-inset">
-
-<form method="POST" action="https://maciejkusz.activehosted.com/proc.php" id="_form_3_" novalidate>
-  <input type="hidden" name="u" value="3"><input type="hidden" name="f" value="3"><input type="hidden" name="s"><input type="hidden" name="c" value="0"><input type="hidden" name="m" value="0"><input type="hidden" name="act" value="sub"><input type="hidden" name="v" value="2"><h3>Newsletter</h3>
-  <div class="_form-content">
-    <p>Chcesz być powiadamiany o nowościach na tej stronie oraz innych moich projektach?</p>
-    <p>Jeśli tak, to zapisz się poniżej do newsletter'a.</p>
-    <div class="input-group" id="basic-fullname-group">
-      <span class="input-group-addon" id="basic-fullname">Imię</span>
-      <input type="text" class="form-control" name="fullname" placeholder="Wpisz swoje imię" aria-describedby="basic-fullname">
+<h3>Darmowy poradnik</h3>
+<a href="../../../pages/jak-zaczac-automatyzowac-testy/"><img src="../../../images/page_lm/jak_zaczac_automatyzowac_small.jpg"></a>
+<p><strong>Jak zacząć automatyzować testy?</strong></p>
+<p>Poznaj 12 pytań, które pomogą Ci rozpocząć proces automatyzacji testów. W zupełnym oderwaniu od języka programowania, frameworków do testów oraz technologi w jakiej napisana została aplikacja, którą będziesz testować. Całość opisana prostym i zrozumiałym językiem.</p>
+<p style="text-align: center"><a class="_submit btn btn-danger" href="../../../pages/jak-zaczac-automatyzowac-testy/">Pobieram poradnik</a></p>
 </div>
-    <div class="input-group" id="basic-lastname-group">
-      <span class="input-group-addon" id="basic-lastname">Nazwisko</span>
-      <input type="text" class="form-control" name="lastname" placeholder="Wpisz swoje nazwisko" aria-describedby="basic-fullname">
+<div class="sidebar-module sidebar-module-inset">
+<h3>O mnie</h3>
+<a href="../../../pages/o-mnie/"><img src="../../../images/me_bw_small.jpg"></a>
+<p>Nazywam się <strong>Maciej Kusz</strong> i od 2008 roku zajmuję się testowaniem oprogramowania. Na początku były to testy manualne, od 2011 początki testów automatycznych, a od 2013 automatyzacją testów z wykorzystaniem <strong>Pythona</strong>. Przez te kilka lat, zdarzyło mi się już być w kilku firmach i w kilku różnych projektach. Na stronie <a href="../../../pages/o-mnie/">o mnie</a>, znajdujdziesz ciut więcej informacji na ten temat.</p>
 </div>
-    <div class="input-group" id="basic-email-group">
-      <span class="input-group-addon" id="basic-email">E-mail</span>
-      <input type="text" class="form-control" name="email" placeholder="Wpisz swój e-mail" aria-describedby="basic-email" required>
+<div class="sidebar-module sidebar-module-inset">
+<form action="https://maciejkusz.activehosted.com/proc.php" id="_form_3_" method="post" name="_form_3_" novalidate=""><input name="u" type="hidden" value="3"><input name="f" type="hidden" value="3"><input name="s" type="hidden"><input name="c" type="hidden" value="0"><input name="m" type="hidden" value="0"><input name="act" type="hidden" value="sub"><input name="v" type="hidden" value="2">
+<h3>Newsletter</h3>
+<div class="_form-content">
+<p>Chcesz być powiadamiany o nowościach na tej stronie oraz innych moich projektach?</p>
+<p>Jeśli tak, to zapisz się poniżej do newsletter'a.</p>
+<div class="input-group" id="basic-fullname-group"><span class="input-group-addon" id="basic-fullname">Imię</span> <input aria-describedby="basic-fullname" class="form-control" name="fullname" placeholder="Wpisz swoje imię" type="text"></div>
+<div class="input-group" id="basic-lastname-group"><span class="input-group-addon" id="basic-lastname">Nazwisko</span> <input aria-describedby="basic-fullname" class="form-control" name="lastname" placeholder="Wpisz swoje nazwisko" type="text"></div>
+<div class="input-group" id="basic-email-group"><span class="input-group-addon" id="basic-email">E-mail</span> <input aria-describedby="basic-email" class="form-control" name="email" placeholder="Wpisz swój e-mail" required="" type="text"></div>
+<button class="_submit btn btn-danger" id="_form_3_submit" style="margin-left: auto; margin-right: auto; display: block;" type="submit">Zapisz się</button>
+<div class="_clear-element"></div>
 </div>
-    <button id="_form_3_submit" class="_submit btn btn-danger" style="margin-left: auto; margin-right: auto; display: block;" type="submit">Zapisz się</button>
-    
-    <div class="_clear-element">
-    </div>
-  </div>
-  <div class="_form-thank-you" style="display:none;">
-  </div>
-  <p style="font-size: 10px; margin-top: 5px;">Wszystkie podane przez Ciebie dane, będą przetwarzane zgodnie z <a href="../../../pages/polityka-prywatnosci">polityką prywatności</a>.</p>
+<div class="_form-thank-you" style="display:none;"></div>
+<p style="font-size: 10px; margin-top: 5px;">Wszystkie podane przez Ciebie dane, będą przetwarzane zgodnie z <a href="../../../pages/polityka-prywatnosci">polityką prywatności</a>.</p>
 </form>
 <script type="text/javascript">
 window.cfields = [];
@@ -988,41 +991,26 @@ window._load_script = function(url, callback) {
   addEvent(form_to_submit, 'submit', form_submit);
 })();
 
-</script>
-</div>
+</script></div>
 <div class="sidebar-module sidebar-module-inset">
-  <h3>Linki</h3>
-  <ol class="list-unstyled">
+<h3>Linki</h3>
+<ol class="list-unstyled">
 <li><a href="../../../pages/polityka-prywatnosci/">Polityka prywatności</a></li>
-    <li><a href="../../../pages/regulamin/">Regulamin</a></li>
-  </ol>
+<li><a href="../../../pages/regulamin/">Regulamin</a></li>
+</ol>
 <ol class="list-unstyled icons">
-<li><a target="_bland" class="far fa-envelope" href="mailto:maciej@testerembyc.pl"></a></li>
-    <li><a target="_blank" class="fab fa-facebook-f" href="https://www.facebook.com/testerembyc/"></a></li>
-    <li><a target="_blank" class="fab fa-instagram" href="https://www.instagram.com/testerembyc.pl/"></a></li>
-    <li><a target="_blank" class="fab fa-linkedin-in" href="https://www.linkedin.com/in/maciej-kusz/"></a></li>
-  </ol>
+<li><a class="far fa-envelope" href="mailto:maciej@testerembyc.pl" target="_bland"></a></li>
+<li><a class="fab fa-facebook-f" href="https://www.facebook.com/testerembyc/" target="_blank"></a></li>
+<li><a class="fab fa-instagram" href="https://www.instagram.com/testerembyc.pl/" target="_blank"></a></li>
+<li><a class="fab fa-linkedin-in" href="https://www.linkedin.com/in/maciej-kusz/" target="_blank"></a></li>
+</ol>
 </div>
-
-                </div>
-            <!--End of body content-->
-            </div>
-        </div>
-        <footer class="blog-footer" id="footer">
-            
-© 2020 <span style="font-weight: bold; color: #ffffff;">Maciej Kusz</span> 
-w oparciu o silnik <a href="https://getnikola.com/" rel="nofollow" target="_blank">
-<img style="max-height: 20px; max-width: 50px" src="../../../images/nikola_logo.svg"></a> 
-z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_blank">
-<img style="max-height: 15px; max-width: 80px;" src="../../../images/githubpages_logo.svg"></a> 
-
-            
-        </footer>
 </div>
-
+<!--End of body content--></div>
 </div>
-
-
+<footer class="blog-footer" id="footer">© 2020 <span style="font-weight: bold; color: #ffffff;">Maciej Kusz</span> w oparciu o silnik <a href="https://getnikola.com/" rel="nofollow" target="_blank"><img src="../../../images/nikola_logo.svg" style="max-height: 20px; max-width: 50px"></a> z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_blank"><img src="../../../images/githubpages_logo.svg" style="max-height: 15px; max-width: 80px;"></a></footer>
+</div>
+</div>
 <script type="text/javascript">
 /*
  * Bootstrap Cookie Alert by Wruczek
@@ -1078,21 +1066,37 @@ z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_bla
         return "";
     }
 })();
-</script><script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/bootstrap.min.js"></script><script src="../../../assets/js/baguetteBox.min.js"></script><script src="../../../assets/js/moment-with-locales.min.js"></script><script src="../../../assets/js/fancydates.min.js"></script><!-- fancy dates --><script>
+</script>
+<script src="../../../assets/js/jquery.min.js">
+</script>
+<script src="../../../assets/js/bootstrap.min.js">
+</script>
+<script src="../../../assets/js/baguetteBox.min.js">
+</script>
+<script src="../../../assets/js/moment-with-locales.min.js">
+</script>
+<script src="../../../assets/js/fancydates.min.js">
+</script><!-- fancy dates -->
+<script>
     moment.locale("pl");
     fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates --><script>
+</script><!-- end fancy dates -->
+<script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
         captions: function(element) {
             return element.getElementsByTagName('img')[0].alt;
     }});
-    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-143859058-1"></script><script>
+</script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143859058-1">
+</script>
+<script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'UA-143859058-1');
-</script><!-- Load Facebook SDK for JavaScript --><div id="fb-root"></div>
+</script><!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -1107,9 +1111,9 @@ z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_bla
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script><!-- Your customer chat code --><div class="fb-customerchat" attribution="setup_tool" page_id="391052181505294" theme_color="#337ab7" logged_in_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)" logged_out_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)">
-</div>
-
+}(document, 'script', 'facebook-jssdk'));
+</script><!-- Your customer chat code -->
+<div attribution="setup_tool" class="fb-customerchat" logged_in_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)" logged_out_greeting="Witaj! Jeśli chcesz dowiedzieć się czegoś więcej, to zapraszam do rozmowy ;)" page_id="391052181505294" theme_color="#337ab7"></div>
 <!-- Facebook Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -1122,9 +1126,6 @@ z wykorzystaniem <a href="https://pages.github.com/" rel="nofollow" target="_bla
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '444619046317574');
   fbq('track', 'PageView');
-</script><noscript><img height="1" width="1" style="display:none" alt="Facebook Pixel" src="https://www.facebook.com/tr?id=444619046317574&amp;ev=PageView&amp;noscript=1"></noscript>
-<!-- End Facebook Pixel Code -->
-
-
+</script><noscript><img alt="Facebook Pixel" height="1" src="https://www.facebook.com/tr?id=444619046317574&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"></noscript> <!-- End Facebook Pixel Code -->
 </body>
 </html>
