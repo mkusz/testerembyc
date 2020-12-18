@@ -16,7 +16,7 @@
     Zdjęcie zaczerpnięte z portalu `Pexels <https://www.pexels.com/>`_
 
 
-Jeśli interesujesz się choć trochę programowaniem, to zapewne trafiłeś kiedyś na artykuły porównujące, ile linii kodu potrzebnych jest do stworzenia uwielbianego *hello world* w różnych językach programowania. Sam zresztą pokazywałem, w pierwszym wpisie na tym blogu ile linii kodu potrzebne jest w Pythonie, aby wyświetlić proste 'witaj świecie </posts/20191024/witaj-swiecie/>'_. A co by się stało, gdybyśmy w tych rozważaniach poszli ciut dalej i zastanowili się, ile potrzebnych jest linii kodu, aby stworzyć działający framework do testów?
+Jeśli interesujesz się choć trochę programowaniem, to zapewne trafiłeś kiedyś na artykuły porównujące, ile linii kodu potrzebnych jest do stworzenia uwielbianego *hello world* w różnych językach programowania. Sam zresztą pokazywałem, w pierwszym wpisie na tym blogu ile linii kodu potrzebne jest w Pythonie, aby wyświetlić proste `witaj świecie </posts/20191024/witaj-swiecie/>`_. A co by się stało, gdybyśmy w tych rozważaniach poszli ciut dalej i zastanowili się, ile potrzebnych jest linii kodu, aby stworzyć działający framework do testów?
 
 .. more
 
