@@ -16,14 +16,14 @@
     Zdjęcie zaczerpnięte z portalu `Pexels <https://www.pexels.com/>`_
 
 
-Jeśli interesujesz się choć trochę programowaniem, to zapewne trafiłeś kiedyś na artykuły porównujące ile linii kodu potrzebnych jest do stworzenia uwielbianego *hello world* w różnych językach programowania. Sam zresztą pokazywałem, w pierwszym wpisie na tym blogu ile linii kodu potrzebne jest w Pythonie, aby wyświetlić proste `witaj świecie </posts/20191024/witaj-swiecie/>`_. A co by się stało, gdybyśmy w tych rozważaniach poszli ciut dalej i zastanowili się, ile potrzebnych jest linii kodu, aby stworzyć działający framework do testów?
+Jeśli interesujesz się choć trochę programowaniem, to zapewne trafiłeś kiedyś na artykuły porównujące, ile linii kodu potrzebnych jest do stworzenia uwielbianego *hello world* w różnych językach programowania. Sam zresztą pokazywałem, w pierwszym wpisie na tym blogu ile linii kodu potrzebne jest w Pythonie, aby wyświetlić proste 'witaj świecie posts/20191024/witaj-swiecie/>'_. A co by się stało, gdybyśmy w tych rozważaniach poszli ciut dalej i zastanowili się, ile potrzebnych jest linii kodu, aby stworzyć działający framework do testów?
 
 .. more
 
 Ale skąd w ogóle ten pomysł?
 ============================
 
-Historia tego pomysłu sięga początków tegorocznej pandemii i sławnego `#hot16challenge <https://www.siepomaga.pl/hot16challenge>`_ oraz pomysłu o jakim opowiedział mi wtedy **Bartosz Kita** z bloga `Tester Programuje <https://testerprogramuje.pl/>`_. Sam pomysł był prosty i do tej pory mocno żałuję, że pomimo gotowego kodu, nie znalazłem czasu na nagranie krótkiego filmu, gdzie bym o tym opowiedział (wybacz Bartek, bo pomysł był przedni). Ale o co chodzi? Najlepiej niech sam autor o tym opowie:
+Historia tego pomysłu sięga początków tegorocznej pandemii i sławnego `#hot16challenge <https://www.siepomaga.pl/hot16challenge>`_ oraz pomysłu, o jakim opowiedział mi wtedy **Bartosz Kita** z bloga `Tester Programuje <https://testerprogramuje.pl/>`_. Sam pomysł był prosty i do tej pory mocno żałuję, że pomimo gotowego kodu, nie znalazłem czasu na nagranie krótkiego filmu, gdzie bym o tym opowiedział (wybacz Bartek, bo pomysł był przedni). O co chodzi? Najlepiej niech sam autor o tym opowie:
 
 .. youtube:: jLV1VaneJWs
 
@@ -34,28 +34,28 @@ Zanim jednak to zrobię, miej na uwadze, że zostanie tu złamane kilka reguł f
 Założenia
 =========
 
-Aby cała powyższa zabawa w ogóle nam się udała, musimy przyjąć pewne założenia i mieć świadomość, że stworzony framework będzie miał dosyć ograniczoną funkcjonalność (choć bardzo łatwo będzie można ją rozszerzyć). Założenia jakie przyjąłem, prezentują się następująco:
+Aby cała powyższa zabawa w ogóle nam się udała, musimy przyjąć pewne założenia i mieć świadomość, że stworzony framework będzie miał dosyć ograniczoną funkcjonalność (choć bardzo łatwo będzie można ją rozszerzyć). Założenia, jakie przyjąłem, prezentują się następująco:
 
 * zajmiemy się testami REST API - wysyłając zapytanie do REST API, w odpowiedzi zawsze otrzymamy `kod statusu odpowiedzi <https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml>`_, a tworzony framework będzie sprawdzał właśnie ten kod,
 * dane testowe będą przechowywane poza kodem Pythona - takie podejście pomoże nam zaoszczędzić kilka linijek kodu, ale również umożliwi tworzenie kolejnych testów tylko poprzez edycję zewnętrznego pliku oraz nie będzie wymagało znajomości Pythona,
 * framework powinien wygenerować jakąś formę raportu - co to za testy, po których uruchomieniu nie dostaniemy jakiegoś raportu?
 
-Założenia są proste ale na pierwszy rzut oka wydaje się to praktycznie niemożliwe. A gdzieś napisałem, że tworzony kod będzie prosty i że to zadanie będzie łatwe do wykonania?
+Założenia są proste, ale na pierwszy rzut oka wydaje się to praktycznie niemożliwe. A gdzieś napisałem, że tworzony kod będzie prosty i że to zadanie będzie łatwe do wykonania?
 
 Co będziemy testować?
 =====================
 
-Skoro już wiemy, że chcemy testować jakieś REST API, to przydało by się nam takie. Po adresem https://reqres.in/ znajduje się przykładowe i dosyć proste API. Pomimo swoich ograniczeń na nasze potrzeby jest w zupełności wystarczające.
+Skoro już wiemy, że chcemy testować jakieś REST API, to przydałoby się nam takie. Pod adresem https://reqres.in/ znajduje się przykładowe i dosyć proste API. Pomimo swoich ograniczeń na nasze potrzeby jest w zupełności wystarczające.
 
 Potrzebne biblioteki
 ====================
 
-Skoro znamy już założenia zastanówmy się z czego możemy skorzystać, aby maksymalnie ograniczyć potrzebną ilość linii kodu.
+Skoro znamy już założenia, zastanówmy się, z czego możemy skorzystać, aby maksymalnie ograniczyć potrzebną ilość linii kodu.
 
 request
 -------
 
-Najpopularniejszą i najbardziej rozbudowaną biblioteką do wysyłania zapytań do REST API jest biblioteka `requests <https://requests.readthedocs.io/en/master/>`_. Biblioteka wymaga instalacji, gdyż nie jest częścią biblioteki standardowej i możemy to zrobić wydając następującą komendę:
+Najpopularniejszą i najbardziej rozbudowaną biblioteką do wysyłania zapytań do REST API jest biblioteka `requests <https://requests.readthedocs.io/en/master/>`_. Biblioteka wymaga instalacji, gdyż nie jest częścią biblioteki standardowej i możemy to zrobić, wydając następującą komendę:
 
 .. code:: bash
 
@@ -69,7 +69,7 @@ unittest
 xmlrunner
 ---------
 
-`Xmlrunner <https://unittest-xml-reporting.readthedocs.io/en/latest/>`_ jest tzw. runnerem dla frameworka *unittest*, który umożliwia generowanie raportów w formacie XML, zgodnym ze `schematem JUnit <https://github.com/windyroad/JUnit-Schema>`_. Format ten akceptowany jest przez większość narzędzi CI/CD, a więc budowany framework można bardzo prosto z takimi narzędziami zintegrować oraz przeglądać raport z przeprowadzonych testów. W celu instalacji biblioteki, należy wydać następującą komendę:
+`Xmlrunner <https://unittest-xml-reporting.readthedocs.io/en/latest/>`_ jest tzw. runnerem dla frameworka *unittest*, który umożliwia generowanie raportów w formacie XML, zgodnym ze `schematem JUnit <https://github.com/windyroad/JUnit-Schema>`_. Format ten akceptowany jest przez większość narzędzi CI/CD, a więc budowany framework można bardzo prosto z takimi narzędziami zintegrować oraz przeglądać raport z przeprowadzonych testów. W celu instalacji biblioteki należy wydać następującą komendę:
 
 .. code:: bash
 
@@ -84,7 +84,7 @@ Standardowa biblioteka Pythona, a więc nie wymaga instalacji. Biblioteka ta umo
 Kodujemy
 ========
 
-Skoro mamy już wszystkie potrzebne elementy tej całej układanki to zacznijmy w końcu pisać ten kod. Na początek stwórzmy sobie 2 pliki: :code:`tests.py` i :code:`tests.json`. Jak już będziemy je mieli to przejdźmy do pliku `tests.py`.
+Skoro mamy już wszystkie potrzebne elementy tej całej układanki to zacznijmy w końcu pisać ten kod. Na początek stwórzmy sobie 2 pliki: :code:`tests.py` i :code:`tests.json`. Mając je, przejdźmy do pliku :code:'tests.py'.
 
 import
 ------
@@ -100,7 +100,7 @@ Kolejność importów jest dowolna (choć i tutaj są pewne reguły, które wart
 Pierwszy test
 -------------
 
-Wiemy, że chcemy sprawdzać status odpowiedzi na wysłane żądanie, a więc zacznijmy od czegoś prostego: wyślemy proste żądanie typu GET na url https://reqres.in/api/users i sprawdzimy kod statusu odpowiedzi.
+Wiemy, że chcemy sprawdzać status odpowiedzi na wysłane żądanie, a więc zacznijmy od czegoś prostego: wyślemy proste żądanie typu GET na adres url https://reqres.in/api/users i sprawdzimy kod statusu odpowiedzi.
 
 .. code:: python
 
@@ -118,7 +118,7 @@ No ale gdzie tu test? No faktycznie nie ma go. Więc przeróbmy troszeczkę ten 
     response = requests.get("https://reqres.in/api/users")
     assert response.status_code == 200
 
-Po uruchomieniu tego kodu nic się nie wyświetli, gdyż wszystko jest w porządku. W ramach samdzielnego ćwiczenia sprawdź co się stanie jak podmienisz :code:`200` na :code:`202`.
+Po uruchomieniu tego kodu nic się nie wyświetli, gdyż wszystko jest w porządku. W ramach samodzielnego ćwiczenia sprawdź, co się stanie jak podmienisz :code:`200` na :code:`202`.
 
 Czy to już koniec? Na razie mamy 4 linie kodu (po importach zostawiamy jedną linię przerwy) a mamy do dyspozycji ich aż 16. No więc co dalej?
 
@@ -159,7 +159,7 @@ Wygląda to już zdecydowanie lepiej, ale to nie koniec naszej zabawy. Zajmijmy 
 tests.json
 ----------
 
-Zanim jednak dojdziemy do samego pliku, zmieńmy jeszcze jedną rzecz w naszym kodzie, tak abyś lepiej zrozumiał dlaczego pewne rzeczy działają. Zauważ, że w naszym kodzie, do tej pory używaliśmy :code:`requests.get`. Czy da się to jakoś sparametryzować? Jak to mawiają `ciekawość to pierwszy stopień do piekła` to poszukajmy do niego drzwi. Jeśli do edycji kodu, używasz PyCharma to klikając w :code:`get` z przytrzymanym klawiszem :code:`CTRL` przejdziesz to implementacji metody :code:`requests.get`. I cóż tam widzimy (pominąłem komentarze)?
+Zanim jednak dojdziemy do samego pliku, zmieńmy jeszcze jedną rzecz w naszym kodzie, tak abyś lepiej zrozumiał, dlaczego pewne rzeczy działają. Zauważ, że w naszym kodzie, do tej pory używaliśmy :code:'requests.get'. Czy da się to jakoś sparametryzować? Jak to mawiają 'ciekawość to pierwszy stopień do piekła' to poszukajmy do niego drzwi. Jeśli do edycji kodu, używasz PyCharma, to klikając w :code:'get' z przytrzymanym klawiszem :code:'CTRL' przejdziesz to implementacji metody :code:'requests.get'. I cóż tam widzimy (pominąłem komentarze)?
 
 .. code:: python
 
@@ -190,9 +190,9 @@ Zauważ, że podałem wprost nazwy parametrów przekazywanych do :code:`requests
 
 Przejdźmy zatem do przeniesienia danych testowych do pliku :code:`tests.json`. W pliku musimy przechować tak na prawdę 3 informacje dla pojedynczego testu (a dokładniej to 4, ale o tym będę mówił troskę dalej):
 
-- metoda do wysyłki żądania
-- url endpointu, na który wysyłamy żądanie
-- spodziewany kod statusu odpowiedzi
+- metoda do wysyłki żądania,
+- url endpointu, na który wysyłamy żądanie,
+- spodziewany kod statusu odpowiedzi.
 
 Zawartość pliku :code:`tests.json` prezentuje się tak:
 
@@ -229,16 +229,16 @@ Przeróbmy teraz nasz kod, tak aby skorzystał z tych danych:
 
 Co tu się zmieniło? Do zmiennej :code:`data` wczytaliśmy zawartość pliku :code:`tests.json` oraz podmieniliśmy wszystkie wartości testu na te odczytane z pliku. Zauważ, że dane pobrane z pliku i umieszczone w zmiennej :code:`data` tworzą słownik.
 
-Zanim przejdziemy dalej, popatrz na wartości wstawiane do argumentów wywołania metody `:code:requests.request`. Nie zauważasz tam pewnej prawidłowości?
+Zanim przejdziemy dalej, popatrz na wartości wstawiane do argumentów wywołania metody :code:`requests.request`. Nie zauważasz tam pewnej prawidłowości?
 
-Podpowiem: porównaj nazwę argumentu, do którego wstawiane są dane, z nazwą klucza z jakiego te dane są pobierane.
+Podpowiem: porównaj nazwę argumentu, do którego wstawiane są dane z nazwą klucza, z jakiego te dane są pobierane.
 
 Może da się to jakoś wykorzystać na naszą korzyść i zaoszczędzić ciut miejsca w kodzie? Przecież w tym momencie mamy już 14 linii kodu, a nie mamy jeszcze ani, większej ilości testów, ani raportów.
 
 Rozpakowywanie słownika
 -----------------------
 
-Jeśli czytałeś mój artykuł dotyczący `dekoratorów w Pythonie </posts/20200109/dekoratory-w-pythonie/>`_ to wspominam w nim o 2 sposobach przekazywania argumentów do funkcji: przez `args i kwargs </posts/20200109/dekoratory-w-pythonie/index.html#args-i-kwargs>`_ (jeśli nie wiesz o co chodzi to zanim przejdziesz dalej, polecam się z tym zapoznać). W naszym kodzie, przekazanie argumentów do metody :code:`requests.request` wykonaliśmy właśnie przy użyciu :code:`kwargs`, a więc defakto jako słownik, gdzie kluczem jest nazwa argumentu, a wartością danego klucza, wartość argumentu. Mówię o tym kawałku kodu:
+Jeśli czytałeś mój artykuł dotyczący `dekoratorów w Pythonie </posts/20200109/dekoratory-w-pythonie/>`_ to wspominam w nim o 2 sposobach przekazywania argumentów do funkcji: przez `args i kwargs </posts/20200109/dekoratory-w-pythonie/index.html#args-i-kwargs>`_ (jeśli nie wiesz o co chodzi, to zanim przejdziesz dalej, polecam się z tym zapoznać). W naszym kodzie przekazanie argumentów do metody :code:`requests.request` wykonaliśmy właśnie przy użyciu :code:`kwargs`, a więc de fakto jako słownik, gdzie kluczem jest nazwa argumentu, a wartością danego klucza, wartość argumentu. Mówię o tym kawałku kodu:
 
 .. code:: python
 
@@ -247,13 +247,13 @@ Jeśli czytałeś mój artykuł dotyczący `dekoratorów w Pythonie </posts/2020
         url=data['request']['url'],
     )
 
-W Pythonie istnieje mechanizm tzw. `rozpakowywania słownika`, który można wykorzystać do przekazania wartości do wywoływanej metody. Przyjrzyj się poniższemu zapisowi:
+W Pythonie istnieje mechanizm tzw. *rozpakowywania słownika*, który można wykorzystać do przekazania wartości do wywoływanej metody. Przyjrzyj się poniższemu zapisowi:
 
 .. code:: python
 
     response = requests.request(**data['request'])
 
-Zauważ proszę, że wykorzystałem w nim zapis :code:`**` przed nazwą zmiennej, która jest słownikiem. Jak to działa? Zmienna :code:`data['request']` przechowuje słownik z 2 kluczami: :code:`method` i :code:`url`. Zapis :code:`**` powoduje *rozpakowanie* słownika, a więc w przypadku wywołania metody, powoduje przypisanie konkretnym argumentów, wartości z odpowiadających ich nazwom kluczy ze słownika. Dlatego też, oba powyższe zapisy są ze sobą równoważne. Jak więc teraz prezentuje się nasz kod?
+Zauważ, że wykorzystałem w nim zapis :code:`**` przed nazwą zmiennej, która jest słownikiem. Jak to działa? Zmienna :code:`data['request']` przechowuje słownik z 2 kluczami: :code:`method` i :code:`url`. Zapis :code:`**` powoduje *rozpakowanie* słownika, a więc w przypadku wywołania metody, powoduje przypisanie konkretnym argumentów, wartości z odpowiadających ich nazwom kluczy ze słownika. Dlatego też oba powyższe zapisy są ze sobą równoważne. Jak więc teraz prezentuje się nasz kod?
 
 .. code:: python
 
@@ -308,7 +308,7 @@ Dochodzimy do najfajniejszej części tego wpisu, czyli jeszcze większej *magii
     if __name__ == '__main__':
         unittest.main()
 
-Tak na prawdę w dalszym ciągu pod względem funkcjonalnym oraz końcowego wynika, powyższy kod jest tym samym co poprzedni, gdzie metoda :code:`test_get_all_users` był zdefiniowa wewnątrz klasy :code:`Tests`.
+Tak naprawdę w dalszym ciągu pod względem funkcjonalnym oraz końcowego wynika, powyższy kod jest tym samym co poprzedni, gdzie metoda :code:`test_get_all_users` był zdefiniowa wewnątrz klasy :code:`Tests`.
 
 Jak to działa?
 
@@ -318,13 +318,13 @@ Jak to działa?
 
 3. Następnie wywołujemy metodę `setattr <https://docs.python.org/3/library/functions.html#setattr>`_, która jest metodą wbudowaną w język Python. Pozwala ona na wstawienie do obiektu, nowego atrybutu oraz przypisania mu wartości (o tym również wspominałem w artykule dotyczącym dekoratorów w sekcji `funkcja jest obiektem </posts/20200109/dekoratory-w-pythonie/index.html#funkcja-jest-obiektem>`_. Zauważ, że jej wywołanie przyjęło 3 argumenty:
 
-* obiekt do którego wstawiamy - u nas jest to klasa :code:`Tests`,
-* nazwę atrybutu pod jakim będzie znajdowała się wstawiona wartość - u nas jest to :code:`test_get_all_users`,
-* wartość jaka będzie przypisana do atrybutu - nas jest to adres w pamięci metody :code:`abstract_test` (widać to po braku :code:`()` na końcu).
+* obiekt, do którego wstawiamy - u nas jest to klasa :code:`Tests`,
+* nazwę atrybutu, pod jakim będzie znajdowała się wstawiona wartość - u nas jest to :code:`test_get_all_users`,
+* wartość, jaka będzie przypisana do atrybutu - nas jest to adres w pamięci metody :code:`abstract_test` (widać to po braku :code:`()` na końcu).
 
-Jeśli wywołamy powyższy kod to w dalszym ciągu otrzymujemy taki sam wynik.
+Jeśli wywołamy powyższy kod, to w dalszym ciągu otrzymujemy taki sam wynik.
 
-No dobra. Umiemy już dynamicznie wstawić metodę z testem do obiektu, ale to jeszcze nie do końca jest generator. Żeby nasz kod umiał coś więcej musimy dokonać jeszcze małych przeróbek w obu naszych plikach.
+No dobra. Umiemy już dynamicznie wstawić metodę z testem do obiektu, ale to jeszcze nie do końca jest generator. Żeby nasz kod umiał coś więcej, musimy dokonać jeszcze małych przeróbek w obu naszych plikach.
 
 Zacznijmy od pliku :code:`tests.json`:
 
@@ -342,7 +342,7 @@ Zacznijmy od pliku :code:`tests.json`:
       }
     }
 
-Tu zmiany są niewielkie, bo tak na prawdę, *nazwaliśmy* tylko już istniejące dane jako :code:`test_get_all_users`.
+Tu zmiany są niewielkie, bo tak naprawdę, *nazwaliśmy* tylko już istniejące dane jako :code:`test_get_all_users`.
 
 Teraz kolej na plik :code:`main.py`:
 
@@ -370,8 +370,8 @@ Co zmieniliśmy?
 
 1. Metoda :code:`abstract_test` oraz wywołanie metody :code:`setattr` ukryte zostało w metodzie :code:`add_test`. Zauważ, że metoda ta przyjmuje 2 atrybuty:
 
-* :code:`cls` - to klasa do której będziemy dodawać test,
-* :code:`name` - to nazwa testu jaki będziemy dodawać.
+* :code:`cls` - to klasa, do której będziemy dodawać test,
+* :code:`name` - to nazwa testu, jaki będziemy dodawać.
 
 2. W metodzie :code:`abstract_test` zmienił się sposób dotarcia do danych testowych w słowniku przechowywanym w zmiennej :code:`data`. Doszedł tam po prostu dodatkowy poziom zagnieżdżenia wynikający ze zmiany struktury danych w pliku :code:`tests.json`. Zauważ również, że zmienna :code:`name` nie jest argumentem wywołania metody :code:`abstract_test`, a metody nadrzędnej, czyli :code:`add_test`. Jak to możliwe, że to działa? Otóż zmienna :code:`name` staje się dla metody :code:`add_test` zmienną globalną, ze względu na jej zagnieżdżenie wewnątrz metody :code:`add_test`.
 
@@ -384,13 +384,13 @@ Czy to wszystko?
 Mamy 3 problemy:
 
 1. Mamy tylko 1 test.
-3. Brakuje nam jeszcze raportów.
+2. Brakuje nam jeszcze raportów.
 3. Mamy 17 linii kodu (o 1 za dużo).
 
 Więcej testów
 -------------
 
-Skoro tyle się napracowaliśmy to dorzućmy więcej testów. Jak możesz się domyślić, aby dopisać nowe testy, wystarczy odpowiednie dane umieścić w pliku :code:`tests.json`. Poniżej przykładowy zestaw testów:
+Skoro tyle się napracowaliśmy, to dorzućmy więcej testów. Jak możesz się domyślić, aby dopisać nowe testy, wystarczy odpowiednie dane umieścić w pliku :code:`tests.json`. Poniżej przykładowy zestaw testów:
 
 .. code:: json
 
@@ -464,7 +464,7 @@ To zadanie to w zasadzie już tylko drobna formalność. Spójrz na poniższy ko
 
 Co się zmieniło:
 
-1. Implementacja klasy :code:`Tests` mieści się w jednej linii (tak wiem znów naginam dobre zasady formatowania kodu).
+1. Implementacja klasy :code:`Tests` mieści się w jednej linii (tak wiem, znów naginam dobre zasady formatowania kodu).
 2. W wywołaniu metody :code:`unittest.main` jako argument :code:`testRunner` podałem do tej pory nie wykorzystywany :code:`xmlrunner`. Dzięki temu po uruchomieniu testów w konsoli zobaczymy poniższy tekst:
 
 .. code:: bash
@@ -481,17 +481,43 @@ Co się zmieniło:
 
 Dodatkowo w katalogu z naszymi plikami, pojawi się plik o rozszerzeniu :code:`.xml`, który jest naszym *raportem* z przeprowadzonych testów.
 
+Czy da się jeszcze lepiej?
+--------------------------
+
+Jak zauważył **Jakub Spórna** z bloga https://sporna.dev/, można zrobić jeszcze małe poprawki w kodzie, zarówno względem ilości linii, jak i również czytelności oraz zaoszczędzenia dodatkowej 1 linii kodu. Jak tego dokonać? **Jakub** zaproponował poniższy kod:
+
+.. code:: python
+
+    import unittest, xmlrunner, json, requests
+
+    class Tests(unittest.TestCase): pass
+
+    def add_test(cls, name, data):
+        def abstract_test(self):
+            self.assertEqual(requests.request(**data['request']).status_code, data['assert']['statusCode'])
+        setattr(cls, name, abstract_test)
+
+    with open('tests.json', 'r') as json_file:
+        for test_name, test_data in json.load(json_file).items():
+            add_test(Tests, test_name, test_data)
+
+    if __name__ == '__main__':
+        unittest.main(testRunner=xmlrunner.XMLTestRunner())
+
+Zakres zmian, nie wymaga zbyt dużego komentarza i powinny być zrozumiałe dla każdego, kto miał już choć trochę styczności z programowaniem w Pythonie.
+
+
 Podsumowanie
 ============
 
 Zmieściliśmy się w 16 linijkach kodu?
 
-Chyba nam się udało, choć nagięliśmy przy okazji kilka reguł dotyczących formatowania kodu w Pythonie, ale udało nam się zachować względną czytelność i dosyć sporą funkcjonalność.
+Chyba nam się udało (a po poprawkach od **Jakuba** mamy nawet jedną linijkę w zapasie). Choć nagięliśmy przy okazji kilka reguł dotyczących formatowania kodu w Pythonie, ale udało nam się zachować względną czytelność i dosyć sporą funkcjonalność.
 
 Mam nadzieję, że ten wpis pokaz Ci jak potężnym narzędziem potrafi być Python.
 
 Czy da się coś więcej z tego kodu wykrzesać?
 
-Oczywiście, że tak, ale wtedy nie zmieścimy się w 16 linijkach kodu. Jako ćwiczenie dla Ciebie mogę podpowiedzieć, że przy niewielkim nakładzie pracy, można dodać dodatkowe sprawdzenia, np. czy dane, które otrzymujemy w odpowiedzi na wysłane żądanie, są danymi jakich się spodziewamy. Jak to zrobić, to już zostawiam Tobie jako dalsze ćwiczenie swoich szarych komórek (ten kod dla mnie był takim właśnie ćwiczeniem).
+Oczywiście, że tak, ale wtedy nie zmieścimy się w 16 linijkach kodu. Jako ćwiczenie dla Ciebie mogę podpowiedzieć, że przy niewielkim nakładzie pracy, można dodać dodatkowe sprawdzenia, np. czy dane, które otrzymujemy w odpowiedzi na wysłane żądanie, są danymi, jakich się spodziewamy. Jak to zrobić, to już zostawiam Ci jako dalsze ćwiczenie swoich szarych komórek (ten kod dla mnie był takim właśnie ćwiczeniem).
 
 PS. Cały powyższy kod znajdziesz również w poniższym `repozytorium w GitHubie <https://github.com/mkusz/the_smallest_rest_api_testing_framework>`_.
