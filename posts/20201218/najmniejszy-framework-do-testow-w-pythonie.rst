@@ -1,6 +1,7 @@
 .. title: Najmniejszy framework do testów w Pythonie
 .. slug: najmniejszy-framework-do-testow-w-pythonie
 .. date: 2020-12-18 15:12:26 UTC+01:00
+.. updated: 2021-01-06 20:53:56 UTC+01:00
 .. tags: python, code16challenge, requests, unittest
 .. category: python
 .. link: 
@@ -19,6 +20,10 @@
 Jeśli interesujesz się choć trochę programowaniem, to zapewne trafiłeś kiedyś na artykuły porównujące, ile linii kodu potrzebnych jest do stworzenia uwielbianego *hello world* w różnych językach programowania. Sam zresztą pokazywałem, w pierwszym wpisie na tym blogu ile linii kodu potrzebne jest w Pythonie, aby wyświetlić proste `witaj świecie </posts/20191024/witaj-swiecie/>`_. A co by się stało, gdybyśmy w tych rozważaniach poszli ciut dalej i zastanowili się, ile potrzebnych jest linii kodu, aby stworzyć działający framework do testów?
 
 .. more
+
+.. class:: alert alert-primary
+
+    Do tego artykułu istnieje kontynuacja, ale zachęcam do przeczytania obu artykułów w kolejności, w jakiej były publikowane. Jeśli jednak znasz już ten artykuł, to kolejny zatytułowany jest `jeszcze mniejszy framework do testów </posts/jeszcze-mniejszy-framework-do-testow-w-pythonie/>`_ i również zachęcam do jego lektury.
 
 Ale skąd w ogóle ten pomysł?
 ============================
@@ -518,7 +523,12 @@ Czy da się coś więcej z tego kodu wykrzesać?
 
 Oczywiście, że tak, ale wtedy nie zmieścimy się w 16 linijkach kodu. Jako ćwiczenie dla Ciebie mogę podpowiedzieć, że przy niewielkim nakładzie pracy, można dodać dodatkowe sprawdzenia, np. czy dane, które otrzymujemy w odpowiedzi na wysłane żądanie, są danymi, jakich się spodziewamy. Jak to zrobić, to już zostawiam Ci jako dalsze ćwiczenie swoich szarych komórek (ten kod dla mnie był takim właśnie ćwiczeniem).
 
-Kontynuację zmagań z najmniejszym frameworkiem do testów, możesz odnaleźć w kolejnym artykule zatytułowanym `jeszcze mniejszy framework do testów </posts/jeszcze-mniejszy-framework-do-testow-w-pythonie/>`_
+.. class:: alert alert-primary
 
-PS. Cały powyższy kod znajdziesz również w poniższym `repozytorium w GitHubie <https://github.com/mkusz/the_smallest_rest_api_testing_framework/tree/first_article>`_.
+    Kontynuację zmagań z najmniejszym frameworkiem do testów, możesz odnaleźć w kolejnym artykule zatytułowanym `jeszcze mniejszy framework do testów </posts/jeszcze-mniejszy-framework-do-testow-w-pythonie/>`_. Zapraszam do jego lektury.
+
+Bonus
+=====
+
+Cały powyższy kod znajdziesz również w poniższym `repozytorium w GitHubie <https://github.com/mkusz/the_smallest_rest_api_testing_framework/tree/first_article>`_.
 

@@ -188,6 +188,13 @@ a.blog-nav-item span {
   display: none;
 }
 
+.alert-primary {
+  padding: 15px;
+  border: 2px solid #f9f2f4;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
 a.blog-nav-item:hover span {
   display: inline-block;
   position: absolute;
@@ -310,7 +317,6 @@ a.blog-nav-item:hover span {
 
 .sidebar-module img {
   margin-bottom: 15px;
-  #border: 2px solid #f5f5f5;
   border-radius: 4px;
 }
 
