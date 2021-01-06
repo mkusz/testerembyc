@@ -218,7 +218,7 @@ Na razie zysku brak. Ciągle mamy 9 linii kodu. Jednak dla wprawnego oka, przyzw
 dict comprehension
 ------------------
 
-Zwrot **dict comprehension** nie posiada sensownego tłumaczenia (dlatego będę używał go w oryginale). Czym jest **dict comprehension**? Jes to sposób na uproszczenie zapisu, tworzenia słownika z wykorzystaniem pętli :code:`for`, który opisany jest w `PEP 271 <https://www.python.org/dev/peps/pep-0274/>`_ (istnieje również bardzo podobny mechanizm jak **list comprehension**, który opisany jest w `PEP 202 <https://www.python.org/dev/peps/pep-0202/>`_). W skrócie zapis:
+Zwrot **dict comprehension** nie posiada sensownego tłumaczenia (dlatego będę używał go w oryginale). Czym jest **dict comprehension**? Jest to sposób na uproszczenie zapisu, tworzenia słownika z wykorzystaniem pętli :code:`for`, który opisany jest w `PEP 271 <https://www.python.org/dev/peps/pep-0274/>`_ (istnieje również bardzo podobny mechanizm jak **list comprehension**, który opisany jest w `PEP 202 <https://www.python.org/dev/peps/pep-0202/>`_). W skrócie zapis:
 
 .. code:: python
 
@@ -234,7 +234,7 @@ Zwrot **dict comprehension** nie posiada sensownego tłumaczenia (dlatego będę
 
 >>> {'a': 10, 'b': 20, 'c': 30, 'd': 40}
 
-Możemy zastąpić poprzez zapis:
+możemy zastąpić poprzez zapis:
 
 .. code:: python
 
@@ -317,8 +317,10 @@ Więcej testów w teście
 ----------------------
 
 Ponieważ wiemy już co jeszcze chcemy testować, musimy znaleźć sposób na pobranie potrzebnych informacji. Okazuje się, że wszystko tak na prawdę już w naszym kodzie jest, ale jeszcze z tych informacji nie robimy użytku. Te i inne dodatkowe informacje otrzymujemy w `odpowiedzi na wysłane żądanie <https://requests.readthedocs.io/en/master/api/#requests.Response>`_. Wartości, z których możemy skorzystać w teście to:
+
 - :code:`resposne.json()` - zwraca słownik z danymi, którymi odpowiedział endpoint,
 - :code:`response.elapsed.total_seconds()` - zawiera czas pomiędzy wysłaniem żądania, a otrzymaniem odpowiedzi.
+
 Istnieją również inne ciekawe wartości, z których można skorzystać, np. :code:`response.headers`, ale nie zmieścilibyśmy się w wymaganej ilości kodu oraz musielibyśmy przechowywać dużo więcej informacji w pliku **json**.
 
 Abyśmy mogli z tych informacji skorzystać, musimy dołożyć pewne dane do naszego pliku :code:`tests.json`:
@@ -395,6 +397,7 @@ Przeróbmy teraz nasz kod, tak aby skorzystał z tych danych:
     unittest.main(testRunner=xmlrunner.XMLTestRunner())
 
 Sprawdzenie czasu odpowiedzi nie powinno być zaskoczeniem. Natomiast jeśli chodzi o porównanie struktury danych odpowiedzi wymaga drobnej ekwilibrystyki na danych:
+
 - wyciągamy same klucze z odpowiedzi,
 - następnie listę zamieniamy na :code:`set`,
 - listę oczekiwanych kluczy również zamieniamy na :code:`set`.
