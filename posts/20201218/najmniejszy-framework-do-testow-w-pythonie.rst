@@ -167,8 +167,6 @@ Zanim jednak dojdziemy do samego pliku, zmieńmy jeszcze jedną rzecz w naszym k
         kwargs.setdefault('allow_redirects', True)
         return request('get', url, params=params, **kwargs)
 
-Pomijając pobieranie domyślnych wartości dla parametru :code:`allow_redirects` widzimy, że tak naprawdę metoda :code:`requests.get` to wywołanie metody :code:`requests.requst` z odpowiednimi parametrami, gdzie pierwszy parametr określa nam metodę wysyłki żądania (listę wszystkich parametrów można znaleźć w `dokumentacji <https://requests.readthedocs.io/en/master/api/>`_).
-
 No więc skoro samo biblioteka :code:`requests` tak robi, to dlaczego nie możemy my tak postąpić? Nasz kod po zmianach będzie wyglądał tak:
 
 .. code:: python
@@ -520,4 +518,7 @@ Czy da się coś więcej z tego kodu wykrzesać?
 
 Oczywiście, że tak, ale wtedy nie zmieścimy się w 16 linijkach kodu. Jako ćwiczenie dla Ciebie mogę podpowiedzieć, że przy niewielkim nakładzie pracy, można dodać dodatkowe sprawdzenia, np. czy dane, które otrzymujemy w odpowiedzi na wysłane żądanie, są danymi, jakich się spodziewamy. Jak to zrobić, to już zostawiam Ci jako dalsze ćwiczenie swoich szarych komórek (ten kod dla mnie był takim właśnie ćwiczeniem).
 
-PS. Cały powyższy kod znajdziesz również w poniższym `repozytorium w GitHubie <https://github.com/mkusz/the_smallest_rest_api_testing_framework>`_.
+Kontynuację zmagań z najmniejszym frameworkiem do testów, możesz odnaleźć w kolejnym artykule zatytułowanym `jeszcze mniejszy framework do testów </posts/jeszcze-mniejszy-framework-do-testow-w-pythonie/>`_
+
+PS. Cały powyższy kod znajdziesz również w poniższym `repozytorium w GitHubie <https://github.com/mkusz/the_smallest_rest_api_testing_framework/tree/first_article>`_.
+

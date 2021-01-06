@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://testerembyc.pl/</loc>
-  <lastmod>2020-12-07T15:12:00Z</lastmod>
+  <lastmod>2021-01-05T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/2019/</loc>
@@ -18,12 +18,16 @@
   <lastmod>2020-12-07T15:12:00Z</lastmod>
  </url>
  <url>
+  <loc>https://testerembyc.pl/2021/</loc>
+  <lastmod>2021-01-05T15:42:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://testerembyc.pl/archive.html</loc>
-  <lastmod>2020-12-18T15:10:00Z</lastmod>
+  <lastmod>2021-01-06T19:46:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/</loc>
-  <lastmod>2020-12-18T14:14:00Z</lastmod>
+  <lastmod>2021-01-05T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/cat_definicja/</loc>
@@ -68,6 +72,10 @@
  <url>
   <loc>https://testerembyc.pl/categories/kursy/</loc>
   <lastmod>2020-12-07T15:12:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/lambda/</loc>
+  <lastmod>2021-01-05T15:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/natura-testow/</loc>
@@ -166,11 +174,11 @@
   <lastmod>2020-12-07T15:12:00Z</lastmod>
  </url>
  <url>
-  <loc>https://testerembyc.pl/posts/20201207/test/</loc>
-  <lastmod>2020-12-07T13:12:00Z</lastmod>
- </url>
- <url>
   <loc>https://testerembyc.pl/posts/20201218/najmniejszy-framework-do-testow-w-pythonie/</loc>
   <lastmod>2020-12-18T14:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/posts/jeszcze-mniejszy-framework-do-testow-w-pythonie/</loc>
+  <lastmod>2021-01-05T17:22:00Z</lastmod>
  </url>
 </urlset>
