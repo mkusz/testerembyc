@@ -559,7 +559,7 @@ Dodatkowo linki do repozytorium z najciekawszymi (według mnie) wersjami kodu, k
 Bonus 2
 =======
 
-Po raz kolejny **Jakub Spórna** z bloga https://sporna.dev/ podrzucił jeszcze inną wersję frameworka. Tym razem wziął na tapetę wersję najbardziej rozbudowaną funkcjonalność i postanowił ją ciut bardziej pomniejszyć. Poniżej jego wersja (z minimalną modyfikacją dotyczącej nazw plikóœ):
+Po raz kolejny **Jakub Spórna** z bloga https://sporna.dev/ podrzucił jeszcze mniejszą wersję frameworka. Tym razem wziął na tapetę wersję najbardziej rozbudowaną funkcjonalność i postanowił ją troszeczkę bardziej pomniejszyć. Poniżej jego wersja (z minimalną modyfikacją dotyczącej nazw plików):
 
 .. code:: python
 
@@ -574,4 +574,4 @@ Po raz kolejny **Jakub Spórna** z bloga https://sporna.dev/ podrzucił jeszcze 
     globals().update({file_name: type(file_name, (unittest.TestCase, ), {name: test(data) for name, data in json.loads(open(file_name, 'r').read()).items()}) for file_name in glob.iglob("*.json")})
     unittest.main(testRunner=xmlrunner.XMLTestRunner())
 
-Nie będę już analizował zmian, gdyż pozostawię to dla Ciebie w ramach treningu.
+Nie będę już analizował zmian, gdyż pozostawię to dla Ciebie w ramach treningu. A może Ty również pokusisz się o jakaś wersję tego kodu, np. rozbudowaną o jakieś dodatkowe sprawdzenia?
