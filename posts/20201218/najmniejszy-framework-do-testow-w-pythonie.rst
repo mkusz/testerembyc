@@ -531,4 +531,3 @@ Bonus
 =====
 
 Cały powyższy kod znajdziesz również w poniższym `repozytorium w GitHubie <https://github.com/mkusz/the_smallest_rest_api_testing_framework/tree/first_article>`_.
-

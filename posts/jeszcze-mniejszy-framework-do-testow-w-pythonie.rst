@@ -555,3 +555,23 @@ Dodatkowo linki do repozytorium z najciekawszymi (według mnie) wersjami kodu, k
 * `więcej funkcjonalności <https://github.com/mkusz/the_smallest_rest_api_testing_framework/tree/more_functionality>`_,
 * `tylko 6 linii kodu <https://github.com/mkusz/the_smallest_rest_api_testing_framework/tree/6_lines>`_,
 * `zgodność z PEP-8 <https://github.com/mkusz/the_smallest_rest_api_testing_framework/tree/pep8_valid>`_.
+
+Bonus 2
+=======
+
+Po raz kolejny **Jakub Spórna** z bloga https://sporna.dev/ podrzucił jeszcze inną wersję frameworka. Tym razem wziął na tapetę wersję najbardziej rozbudowaną funkcjonalność i postanowił ją ciut bardziej pomniejszyć. Poniżej jego wersja (z minimalną modyfikacją dotyczącej nazw plikóœ):
+
+.. code:: python
+
+    import unittest, xmlrunner, json, requests, glob
+
+    def abstract_test(self, data, response):
+        self.assertEqual(response.status_code, data['assert']['statusCode'])
+        self.assertSetEqual(set(response.json().keys()), set(data['assert']['responseKeys']))
+        self.assertLessEqual(response.elapsed.total_seconds(), data['assert']['responseTime'])
+
+    test = lambda data: lambda self: abstract_test(self, data, requests.request(**data['request']))
+    globals().update({file_name: type(file_name, (unittest.TestCase, ), {name: test(data) for name, data in json.loads(open(file_name, 'r').read()).items()}) for file_name in glob.iglob("*.json")})
+    unittest.main(testRunner=xmlrunner.XMLTestRunner())
+
+Nie będę już analizował zmian, gdyż pozostawię to dla Ciebie w ramach treningu.
