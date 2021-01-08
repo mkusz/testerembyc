@@ -57,7 +57,7 @@ Jeśli jesteś tym *szczęśliwcem* i pracujesz już w branży IT jako tester, t
 Jak ja bym podszedł do tematu? Bardzo prosto:
 
 * nauczył się pojęć z `sylabusa <https://sjsi.org/ist-qb/do-pobrania/>`_ oraz starał się go zrozumieć,
-* poszukał `przykładowych pytań egzaminacyjnych <https://sjsi.org/ist-qb/do-pobrania/>`_ i zrozumiał, dlaczego takie, a nie inne odpowiedzi są prawidłowe  (w tym może pomóc `ta grupa na Facebooku <https://www.facebook.com/groups/194288250951242/>`_,
+* poszukał `przykładowych pytań egzaminacyjnych <https://sjsi.org/ist-qb/do-pobrania/>`_ i zrozumiał, dlaczego takie, a nie inne odpowiedzi są prawidłowe  (w tym może pomóc `ta grupa na Facebooku <https://www.facebook.com/groups/194288250951242/>`_),
 * w CV wpisałbym znajomość sylabusa ISTQB,
 * jeśli pracodawca wymaga certyfikatu w pracy, to zapłaci Ci za egzamin.
 

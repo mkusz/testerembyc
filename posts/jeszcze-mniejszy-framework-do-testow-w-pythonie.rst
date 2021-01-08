@@ -89,7 +89,7 @@ Wyrażenia Lambda
 
 Zanim jednak będziemy bardziej odchudzać kod frameworku, musimy poznać czym są tzw. **wyrażenia Lambda** w Pythonie.
 
-**Wyrażenia Lmabda** to krótki, anonimowe funkcje (opisane w `PEP 312 <https://www.python.org/dev/peps/pep-0312/>`_ oraz `dokumentacji <https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions>`_). Funkcje takie są określane jako anonimowe ponieważ zdefiniowane są w miejscu ich użycia. **Funkcje Lambda** mogą przyjmować dowolną liczbę argumentów ale mogą zawierać tylko jedno wyrażenie. Ale jak działa Lambda?
+**Wyrażenia Lambda** to krótkie, anonimowe funkcje (opisane w `PEP 312 <https://www.python.org/dev/peps/pep-0312/>`_ oraz `dokumentacji <https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions>`_). Funkcje takie są określane jako anonimowe ponieważ zdefiniowane są w miejscu ich użycia. **Funkcje Lambda** mogą przyjmować dowolną liczbę argumentów ale mogą zawierać tylko jedno wyrażenie. Ale jak działa Lambda?
 
 Zacznijmy od czegoś prostego, czyli suma 2 liczb:
 
