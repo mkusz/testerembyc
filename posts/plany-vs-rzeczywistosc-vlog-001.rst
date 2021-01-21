@@ -6,6 +6,7 @@
 .. link:
 .. description: Jak rzeczywistość potrafi modyfikować wszelkie plany, czyli jak w projektach IT zmieniające się wymagania potrafią wpłynąć na jakość oprogramowania oraz sam proces testowania.
 .. type: text
+.. template: newsletter.tmpl
 
 Zapraszam do krótkiego filmu, w którym opowiem o tym jak rzeczywistość potrafi modyfikować wszelkie plany, czyli jak w projektach IT zmieniające się wymagania potrafią wpłynąć na jakość oprogramowania oraz sam proces testowania.
 
