@@ -23,11 +23,11 @@
  </url>
  <url>
   <loc>https://testerembyc.pl/archive.html</loc>
-  <lastmod>2021-01-07T20:51:00Z</lastmod>
+  <lastmod>2021-01-21T13:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/</loc>
-  <lastmod>2021-01-05T15:42:00Z</lastmod>
+  <lastmod>2021-01-21T13:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/cat_definicja/</loc>
@@ -44,6 +44,10 @@
  <url>
   <loc>https://testerembyc.pl/categories/cat_python/</loc>
   <lastmod>2020-08-30T21:12:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/cat_vlog/</loc>
+  <lastmod>2021-01-21T13:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/code16challenge/</loc>
@@ -90,6 +94,10 @@
   <lastmod>2020-08-30T21:12:00Z</lastmod>
  </url>
  <url>
+  <loc>https://testerembyc.pl/categories/plany/</loc>
+  <lastmod>2021-01-21T13:38:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://testerembyc.pl/categories/python/</loc>
   <lastmod>2020-08-30T21:12:00Z</lastmod>
  </url>
@@ -102,12 +110,20 @@
   <lastmod>2020-08-30T21:12:00Z</lastmod>
  </url>
  <url>
+  <loc>https://testerembyc.pl/categories/rzeczywistosc/</loc>
+  <lastmod>2021-01-21T13:38:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://testerembyc.pl/categories/testy/</loc>
   <lastmod>2020-08-30T21:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/unittest/</loc>
   <lastmod>2020-12-18T14:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/categories/vlog/</loc>
+  <lastmod>2021-01-21T13:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://testerembyc.pl/categories/witaj/</loc>
@@ -180,5 +196,9 @@
  <url>
   <loc>https://testerembyc.pl/posts/jeszcze-mniejszy-framework-do-testow-w-pythonie/</loc>
   <lastmod>2021-01-05T17:22:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://testerembyc.pl/posts/plany-vs-rzeczywistosc-vlog-001/</loc>
+  <lastmod>2021-01-21T13:33:00Z</lastmod>
  </url>
 </urlset>
